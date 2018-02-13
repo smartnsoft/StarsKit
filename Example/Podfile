@@ -1,0 +1,9 @@
+use_frameworks!
+
+target 'StarsKit_Example' do
+  pod 'StarsKit', :path => '../'
+
+  target 'StarsKit_Tests' do
+    inherit! :search_paths
+  end
+end

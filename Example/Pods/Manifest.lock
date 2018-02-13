@@ -1,0 +1,16 @@
+PODS:
+  - StarsKit (0.1.0)
+
+DEPENDENCIES:
+  - StarsKit (from `../`)
+
+EXTERNAL SOURCES:
+  StarsKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  StarsKit: c19db79fec2a4c455c06ae37ceb9058eb672b68c
+
+PODFILE CHECKSUM: 660d5a17a03747e4af6ff082f621b5522b0ea061
+
+COCOAPODS: 1.4.0
