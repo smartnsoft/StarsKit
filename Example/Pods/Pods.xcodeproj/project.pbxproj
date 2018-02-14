@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C4861D614BC890747B9CC02EAA4964E /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5611DE4F335F8316E6224E18B2CBC46E /* ReplaceMe.swift */; };
-		3D7D67BDF3FF4916838479AE47F6D3B8 /* Pods-StarsKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 38276722C4A0492A87FE41BFED2A91CE /* Pods-StarsKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7958BE26FBEB14A49AEDFB68693D9EC8 /* StarsKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 120AD411ACDBD4C9F71A532510B9CA44 /* StarsKit-dummy.m */; };
-		85EEA440FD0AB38E8F725CC0C524AC5E /* Pods-StarsKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 37B31E42DC163C7A678F18FBB6E902FC /* Pods-StarsKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1949D67A73854B0ED15AE48D33B54A7A /* StarsKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5E1052F3CAB2CD2A725C4A89FB5E8C0 /* StarsKit.bundle */; };
+		362E38F947CE15FD69981BBCA30F0DF8 /* StarsKitContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831ACE768208DC0968313E3F3474E04A /* StarsKitContext.swift */; };
+		3D7D67BDF3FF4916838479AE47F6D3B8 /* Pods-StarsKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54E1D99071A3BA0EC29B73A0FE478B27 /* Pods-StarsKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48FDD5040D5BD63DED0FF30353A5D6C6 /* StarsKitConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D800D2A0CBA8B39CC1FB1663B0CF74B6 /* StarsKitConstants.swift */; };
+		6529C36499FB8E0DD2EFB056DC088D2A /* StarsKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68912EC6EA953855B95AAB0A579CFA51 /* StarsKitDelegate.swift */; };
 		90D6EF6337C24E0E1326AB1855393A0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		ABD9D3D0E4C7F8490FF36D44CD81BB49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		B47DB9E2928400B0080DA453972F048D /* StarsKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 08BFA6C034EE42F545C57254E99CDB91 /* StarsKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF050B7DD63C65D0BD5D2BEAD0B802E6 /* Pods-StarsKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE072F16998B0508D74A0251405CABD /* Pods-StarsKit_Example-dummy.m */; };
+		91C7BA20846E3315E50713F4142A2A9D /* StarsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3F221900D8D84B166EFB8CF50E45C /* StarsKit.swift */; };
+		A5CC8748794927926C853C5210B1E72F /* StarsKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3E83DBD511CE67B391762EB6124A524F /* StarsKit.bundle */; };
+		B2255B3C69B97DA9DFDA4AD57ED2E2DD /* StarsKitConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01357F66D81776949601A55A57233C96 /* StarsKitConfiguration.swift */; };
+		B47DB9E2928400B0080DA453972F048D /* StarsKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B0D5B79FB9ABD33CCD45C70BDA7BE6B5 /* StarsKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF050B7DD63C65D0BD5D2BEAD0B802E6 /* Pods-StarsKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8818E95E3E95E91CEA5956A1BB0A3D2B /* Pods-StarsKit_Example-dummy.m */; };
+		DDFEB0589DB06D820F04532171591F7A /* StarsKitChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB732B9AB305723FA083F684A3A8D57C /* StarsKitChecker.swift */; };
+		E22705E838651567B72E0972C9742A6F /* StarsKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F2839BF4B10D771280F4603185B2A3 /* StarsKit-dummy.m */; };
 		F40539459D1B0DE57347251003613430 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		F60B66558C738AACD914A4F2208E69AB /* Pods-StarsKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A87A695962EC67612B34F28A00A574 /* Pods-StarsKit_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,55 +31,51 @@
 			remoteGlobalIDString = 676F38A1F56E96392E0B2CB6D7576381;
 			remoteInfo = StarsKit;
 		};
+		8294FD316A3BFE325E83DA94CE9B4C2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CABCC70CF36C0846ABE5DF9B2EDFEE1D;
+			remoteInfo = "StarsKit-StarsKit";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		022005410E0F620CCD52D2F68F917BAF /* Pods-StarsKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StarsKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		08BFA6C034EE42F545C57254E99CDB91 /* StarsKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StarsKit-umbrella.h"; sourceTree = "<group>"; };
-		09ABD824849E2B1B2D8AA1AA7DD6E252 /* Pods-StarsKit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StarsKit_Tests-resources.sh"; sourceTree = "<group>"; };
-		0AF931F770D2C516F95726C46BB697A8 /* Pods-StarsKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StarsKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		0DA5CAFE8F254C471F546927A5AEBCB4 /* StarsKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = StarsKit.modulemap; sourceTree = "<group>"; };
-		120AD411ACDBD4C9F71A532510B9CA44 /* StarsKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StarsKit-dummy.m"; sourceTree = "<group>"; };
-		16813954C9FDFEC62C19812F5A569B43 /* Pods-StarsKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-StarsKit_Example.modulemap"; sourceTree = "<group>"; };
-		1FF0DF38826B93EB9A2E150EF41E0DE7 /* Pods-StarsKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StarsKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		25A87A695962EC67612B34F28A00A574 /* Pods-StarsKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StarsKit_Tests-dummy.m"; sourceTree = "<group>"; };
-		2892CB080EBC363257B9FC44359F09AC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		37B31E42DC163C7A678F18FBB6E902FC /* Pods-StarsKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StarsKit_Tests-umbrella.h"; sourceTree = "<group>"; };
-		38276722C4A0492A87FE41BFED2A91CE /* Pods-StarsKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StarsKit_Example-umbrella.h"; sourceTree = "<group>"; };
-		3A09F9C255B7F6FE1D1DD52761F748B3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		3DB264F55BD94CC0166EB65F21B8A7B3 /* StarsKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StarsKit.xcconfig; sourceTree = "<group>"; };
-		44EB620CD47FC57D8811B0F56F48EA1A /* Pods_StarsKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_StarsKit_Tests.framework; path = "Pods-StarsKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5611DE4F335F8316E6224E18B2CBC46E /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = StarsKit/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		01357F66D81776949601A55A57233C96 /* StarsKitConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarsKitConfiguration.swift; path = StarsKit/Classes/Logic/StarsKitConfiguration.swift; sourceTree = "<group>"; };
+		0CAC9350193E5FE798B883AEE53B5E44 /* Pods-StarsKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StarsKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		16F3F221900D8D84B166EFB8CF50E45C /* StarsKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarsKit.swift; path = StarsKit/Classes/Logic/StarsKit.swift; sourceTree = "<group>"; };
+		1904C0F43B5F83F1504C918A3291A003 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		19BC034111B82FFA96503303417D14E6 /* Pods-StarsKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-StarsKit_Example.modulemap"; sourceTree = "<group>"; };
+		26CEAA1826D43FD39823A019C4AE4ABF /* StarsKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = StarsKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2ACACE68776AB3822DBEF509C4556035 /* StarsKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = StarsKit.modulemap; sourceTree = "<group>"; };
+		3E83DBD511CE67B391762EB6124A524F /* StarsKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = StarsKit.bundle; path = "StarsKit-StarsKit.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FD58734A53B4FF6029AAC196AD20B9E /* Pods-StarsKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StarsKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		54E1D99071A3BA0EC29B73A0FE478B27 /* Pods-StarsKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StarsKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		77F913ABB2F989EB19E006879CA5206D /* Pods-StarsKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StarsKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		7CDC1E4F8D2ECEAC1D27499EED9FE400 /* Pods-StarsKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StarsKit_Example-frameworks.sh"; sourceTree = "<group>"; };
-		7E7C76E49C4D346FC14B35C00AF292D9 /* StarsKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StarsKit-prefix.pch"; sourceTree = "<group>"; };
+		68912EC6EA953855B95AAB0A579CFA51 /* StarsKitDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarsKitDelegate.swift; path = StarsKit/Classes/Logic/StarsKitDelegate.swift; sourceTree = "<group>"; };
+		6EBA4DE9B25A00DEE3C9E1A0A4126B9E /* Pods-StarsKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StarsKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		73EB7CBCFADD487834D3AB737C8B09C3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		831ACE768208DC0968313E3F3474E04A /* StarsKitContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarsKitContext.swift; path = StarsKit/Classes/Logic/StarsKitContext.swift; sourceTree = "<group>"; };
+		8818E95E3E95E91CEA5956A1BB0A3D2B /* Pods-StarsKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StarsKit_Example-dummy.m"; sourceTree = "<group>"; };
+		9133C3069D7CF002F4E078DDC51382FA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96E59D8BB55874AE10E2DD08FA13EB2A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CC407A0F8CD0701FC8491AFF1132FAE /* Pods-StarsKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StarsKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9FE072F16998B0508D74A0251405CABD /* Pods-StarsKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StarsKit_Example-dummy.m"; sourceTree = "<group>"; };
-		A3DD8A61FB960F38E737C6C0014B5C0F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B10F71C311AC8AB1590B890C1293E5B9 /* Pods_StarsKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_StarsKit_Example.framework; path = "Pods-StarsKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA29933D659F3E754C4727548526EC7E /* Pods-StarsKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StarsKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		C211E797D4C25593382D20CD8D0328F9 /* Pods-StarsKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StarsKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		C85F9C8EEF79AC8E558FBBE3CC69FA51 /* Pods-StarsKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StarsKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		CAF1C1FF1DE3F5CF53CF58E72E386E19 /* Pods-StarsKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StarsKit_Example-resources.sh"; sourceTree = "<group>"; };
-		DCA0B864AA75D0C989FDBFFEE5AF23EB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD03172D391737AB5FB623FDF51DCA40 /* StarsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = StarsKit.framework; path = StarsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF66E68A064501195D0B16CDABB6E34B /* Pods-StarsKit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StarsKit_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		EFB2C21AB0FF22930708A55E9E7D8EE8 /* StarsKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = StarsKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		FDD98679302E737DE65662911FD0E768 /* Pods-StarsKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-StarsKit_Tests.modulemap"; sourceTree = "<group>"; };
+		A0D2D092D09DD5CA258D839E0E91A3D9 /* Pods-StarsKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StarsKit_Example-frameworks.sh"; sourceTree = "<group>"; };
+		A9F366CA5094777F4BB0138E46C3F27C /* StarsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = StarsKit.framework; path = StarsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACA33F0E68B6D0F07DC565A46D9A29E8 /* StarsKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StarsKit-prefix.pch"; sourceTree = "<group>"; };
+		B0D5B79FB9ABD33CCD45C70BDA7BE6B5 /* StarsKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StarsKit-umbrella.h"; sourceTree = "<group>"; };
+		B2EA63DAD55DBC476B2B935D742F9CB2 /* StarsKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StarsKit.xcconfig; sourceTree = "<group>"; };
+		B5E1052F3CAB2CD2A725C4A89FB5E8C0 /* StarsKit.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = StarsKit.bundle; path = StarsKit/Assets/StarsKit.bundle; sourceTree = "<group>"; };
+		B8F2839BF4B10D771280F4603185B2A3 /* StarsKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StarsKit-dummy.m"; sourceTree = "<group>"; };
+		C515BC355804A964EFAE6CCE5EF3C95B /* ResourceBundle-StarsKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-StarsKit-Info.plist"; sourceTree = "<group>"; };
+		C9389B0704AB9C458AB3893FB99F02DF /* Pods-StarsKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StarsKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		CEC174D16674A6F42ED45361A08891F9 /* Pods-StarsKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StarsKit_Example-resources.sh"; sourceTree = "<group>"; };
+		D800D2A0CBA8B39CC1FB1663B0CF74B6 /* StarsKitConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarsKitConstants.swift; path = StarsKit/Classes/Logic/StarsKitConstants.swift; sourceTree = "<group>"; };
+		E3D1B262596964043E65E1DAD622CE78 /* Pods_StarsKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_StarsKit_Example.framework; path = "Pods-StarsKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E68E9B4C1D86A8961A844E04B59A3829 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		EB732B9AB305723FA083F684A3A8D57C /* StarsKitChecker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarsKitChecker.swift; path = StarsKit/Classes/Logic/StarsKitChecker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7BEBB115B1210565EDE182358110C27C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ABD9D3D0E4C7F8490FF36D44CD81BB49 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		87F19DDA4E7C4F10847323CBB1FE2228 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -92,63 +92,103 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5460C920EF11AEBF93FE45AF4DAFB73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2449D805B42C898FD475A185D9B07D0E /* Targets Support Files */ = {
+		0C73D468A5128F6DC429FDDAE3EEBB41 /* StarsKit */ = {
 			isa = PBXGroup;
 			children = (
-				2A7365AF735036CD6D905E0CCDC36551 /* Pods-StarsKit_Example */,
-				C9A9BB872A0D25878A911C8DDD9887BA /* Pods-StarsKit_Tests */,
+				16F3F221900D8D84B166EFB8CF50E45C /* StarsKit.swift */,
+				EB732B9AB305723FA083F684A3A8D57C /* StarsKitChecker.swift */,
+				01357F66D81776949601A55A57233C96 /* StarsKitConfiguration.swift */,
+				D800D2A0CBA8B39CC1FB1663B0CF74B6 /* StarsKitConstants.swift */,
+				831ACE768208DC0968313E3F3474E04A /* StarsKitContext.swift */,
+				68912EC6EA953855B95AAB0A579CFA51 /* StarsKitDelegate.swift */,
+				7A9D1AB4713E8973F214C8DC0DF42BD5 /* Pod */,
+				D48E5106AC163E73D0B483D1CC9DDF2C /* Resources */,
+				35D50A2DB0FCEA89A861F8D5125C097A /* Support Files */,
 			);
-			name = "Targets Support Files";
+			name = StarsKit;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		2A7365AF735036CD6D905E0CCDC36551 /* Pods-StarsKit_Example */ = {
+		10FAD6D79A867E7C89CBEF5A6DFDDE11 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				96E59D8BB55874AE10E2DD08FA13EB2A /* Info.plist */,
-				16813954C9FDFEC62C19812F5A569B43 /* Pods-StarsKit_Example.modulemap */,
-				1FF0DF38826B93EB9A2E150EF41E0DE7 /* Pods-StarsKit_Example-acknowledgements.markdown */,
-				C211E797D4C25593382D20CD8D0328F9 /* Pods-StarsKit_Example-acknowledgements.plist */,
-				9FE072F16998B0508D74A0251405CABD /* Pods-StarsKit_Example-dummy.m */,
-				7CDC1E4F8D2ECEAC1D27499EED9FE400 /* Pods-StarsKit_Example-frameworks.sh */,
-				CAF1C1FF1DE3F5CF53CF58E72E386E19 /* Pods-StarsKit_Example-resources.sh */,
-				38276722C4A0492A87FE41BFED2A91CE /* Pods-StarsKit_Example-umbrella.h */,
-				77F913ABB2F989EB19E006879CA5206D /* Pods-StarsKit_Example.debug.xcconfig */,
-				C85F9C8EEF79AC8E558FBBE3CC69FA51 /* Pods-StarsKit_Example.release.xcconfig */,
+				E3D1B262596964043E65E1DAD622CE78 /* Pods_StarsKit_Example.framework */,
+				3E83DBD511CE67B391762EB6124A524F /* StarsKit.bundle */,
+				A9F366CA5094777F4BB0138E46C3F27C /* StarsKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29C048919BF61456146AD8FB9F38733E /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C73D468A5128F6DC429FDDAE3EEBB41 /* StarsKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		35D50A2DB0FCEA89A861F8D5125C097A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9133C3069D7CF002F4E078DDC51382FA /* Info.plist */,
+				C515BC355804A964EFAE6CCE5EF3C95B /* ResourceBundle-StarsKit-Info.plist */,
+				2ACACE68776AB3822DBEF509C4556035 /* StarsKit.modulemap */,
+				B2EA63DAD55DBC476B2B935D742F9CB2 /* StarsKit.xcconfig */,
+				B8F2839BF4B10D771280F4603185B2A3 /* StarsKit-dummy.m */,
+				ACA33F0E68B6D0F07DC565A46D9A29E8 /* StarsKit-prefix.pch */,
+				B0D5B79FB9ABD33CCD45C70BDA7BE6B5 /* StarsKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/StarsKit";
+			sourceTree = "<group>";
+		};
+		40055E64129B0C5E9FAC79A18DDA27D9 /* Pods-StarsKit_Example */ = {
+			isa = PBXGroup;
+			children = (
+				73EB7CBCFADD487834D3AB737C8B09C3 /* Info.plist */,
+				19BC034111B82FFA96503303417D14E6 /* Pods-StarsKit_Example.modulemap */,
+				6EBA4DE9B25A00DEE3C9E1A0A4126B9E /* Pods-StarsKit_Example-acknowledgements.markdown */,
+				4FD58734A53B4FF6029AAC196AD20B9E /* Pods-StarsKit_Example-acknowledgements.plist */,
+				8818E95E3E95E91CEA5956A1BB0A3D2B /* Pods-StarsKit_Example-dummy.m */,
+				A0D2D092D09DD5CA258D839E0E91A3D9 /* Pods-StarsKit_Example-frameworks.sh */,
+				CEC174D16674A6F42ED45361A08891F9 /* Pods-StarsKit_Example-resources.sh */,
+				54E1D99071A3BA0EC29B73A0FE478B27 /* Pods-StarsKit_Example-umbrella.h */,
+				0CAC9350193E5FE798B883AEE53B5E44 /* Pods-StarsKit_Example.debug.xcconfig */,
+				C9389B0704AB9C458AB3893FB99F02DF /* Pods-StarsKit_Example.release.xcconfig */,
 			);
 			name = "Pods-StarsKit_Example";
 			path = "Target Support Files/Pods-StarsKit_Example";
 			sourceTree = "<group>";
 		};
-		48F1315952CECDE7B4C418E6C76B0A5E /* Development Pods */ = {
+		7A9D1AB4713E8973F214C8DC0DF42BD5 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				C38B4B53FE5F61933C40FE36B6BCBC8D /* StarsKit */,
+				1904C0F43B5F83F1504C918A3291A003 /* LICENSE */,
+				E68E9B4C1D86A8961A844E04B59A3829 /* README.md */,
+				26CEAA1826D43FD39823A019C4AE4ABF /* StarsKit.podspec */,
 			);
-			name = "Development Pods";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				48F1315952CECDE7B4C418E6C76B0A5E /* Development Pods */,
+				29C048919BF61456146AD8FB9F38733E /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				E24B8A6422FC1756553A85420893D6B8 /* Products */,
-				2449D805B42C898FD475A185D9B07D0E /* Targets Support Files */,
+				10FAD6D79A867E7C89CBEF5A6DFDDE11 /* Products */,
+				CEBC477A710DC5AEE7C21DB81DCF4457 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		A6204EBD206A41B30AC93B6CB07ED904 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				3A09F9C255B7F6FE1D1DD52761F748B3 /* LICENSE */,
-				2892CB080EBC363257B9FC44359F09AC /* README.md */,
-				EFB2C21AB0FF22930708A55E9E7D8EE8 /* StarsKit.podspec */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -159,33 +199,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C38B4B53FE5F61933C40FE36B6BCBC8D /* StarsKit */ = {
+		CEBC477A710DC5AEE7C21DB81DCF4457 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5611DE4F335F8316E6224E18B2CBC46E /* ReplaceMe.swift */,
-				A6204EBD206A41B30AC93B6CB07ED904 /* Pod */,
-				E5BE8970F0A4B272BA23ACB98F9731BB /* Support Files */,
+				40055E64129B0C5E9FAC79A18DDA27D9 /* Pods-StarsKit_Example */,
 			);
-			name = StarsKit;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		C9A9BB872A0D25878A911C8DDD9887BA /* Pods-StarsKit_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				DCA0B864AA75D0C989FDBFFEE5AF23EB /* Info.plist */,
-				FDD98679302E737DE65662911FD0E768 /* Pods-StarsKit_Tests.modulemap */,
-				9CC407A0F8CD0701FC8491AFF1132FAE /* Pods-StarsKit_Tests-acknowledgements.markdown */,
-				BA29933D659F3E754C4727548526EC7E /* Pods-StarsKit_Tests-acknowledgements.plist */,
-				25A87A695962EC67612B34F28A00A574 /* Pods-StarsKit_Tests-dummy.m */,
-				DF66E68A064501195D0B16CDABB6E34B /* Pods-StarsKit_Tests-frameworks.sh */,
-				09ABD824849E2B1B2D8AA1AA7DD6E252 /* Pods-StarsKit_Tests-resources.sh */,
-				37B31E42DC163C7A678F18FBB6E902FC /* Pods-StarsKit_Tests-umbrella.h */,
-				0AF931F770D2C516F95726C46BB697A8 /* Pods-StarsKit_Tests.debug.xcconfig */,
-				022005410E0F620CCD52D2F68F917BAF /* Pods-StarsKit_Tests.release.xcconfig */,
-			);
-			name = "Pods-StarsKit_Tests";
-			path = "Target Support Files/Pods-StarsKit_Tests";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
@@ -196,41 +215,17 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		E24B8A6422FC1756553A85420893D6B8 /* Products */ = {
+		D48E5106AC163E73D0B483D1CC9DDF2C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B10F71C311AC8AB1590B890C1293E5B9 /* Pods_StarsKit_Example.framework */,
-				44EB620CD47FC57D8811B0F56F48EA1A /* Pods_StarsKit_Tests.framework */,
-				DD03172D391737AB5FB623FDF51DCA40 /* StarsKit.framework */,
+				B5E1052F3CAB2CD2A725C4A89FB5E8C0 /* StarsKit.bundle */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E5BE8970F0A4B272BA23ACB98F9731BB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A3DD8A61FB960F38E737C6C0014B5C0F /* Info.plist */,
-				0DA5CAFE8F254C471F546927A5AEBCB4 /* StarsKit.modulemap */,
-				3DB264F55BD94CC0166EB65F21B8A7B3 /* StarsKit.xcconfig */,
-				120AD411ACDBD4C9F71A532510B9CA44 /* StarsKit-dummy.m */,
-				7E7C76E49C4D346FC14B35C00AF292D9 /* StarsKit-prefix.pch */,
-				08BFA6C034EE42F545C57254E99CDB91 /* StarsKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/StarsKit";
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2F9DB2E48FF43D684B79F82EBD77142F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				85EEA440FD0AB38E8F725CC0C524AC5E /* Pods-StarsKit_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		87B4F6F84DF7F3518155FD19A504527D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -250,23 +245,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		30BFC0801CBEBC997E01BA0FDAE134C2 /* Pods-StarsKit_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4BB5269EB07FB9E55FC4ADD08A9E8163 /* Build configuration list for PBXNativeTarget "Pods-StarsKit_Tests" */;
-			buildPhases = (
-				7051BAF556090B634DA62A4E5BB56107 /* Sources */,
-				7BEBB115B1210565EDE182358110C27C /* Frameworks */,
-				2F9DB2E48FF43D684B79F82EBD77142F /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-StarsKit_Tests";
-			productName = "Pods-StarsKit_Tests";
-			productReference = 44EB620CD47FC57D8811B0F56F48EA1A /* Pods_StarsKit_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		380D9C7DC8F6514AF82186940E28994B /* Pods-StarsKit_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50FE93AEA57EB8F25DBF7C02C0845158 /* Build configuration list for PBXNativeTarget "Pods-StarsKit_Example" */;
@@ -282,25 +260,44 @@
 			);
 			name = "Pods-StarsKit_Example";
 			productName = "Pods-StarsKit_Example";
-			productReference = B10F71C311AC8AB1590B890C1293E5B9 /* Pods_StarsKit_Example.framework */;
+			productReference = E3D1B262596964043E65E1DAD622CE78 /* Pods_StarsKit_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		676F38A1F56E96392E0B2CB6D7576381 /* StarsKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57688B9ACC2871E6D91A4719E5595760 /* Build configuration list for PBXNativeTarget "StarsKit" */;
 			buildPhases = (
-				935722369B7345B658ACBD05597C51E8 /* Sources */,
+				07AA495C39AA6DDBC2BA5FA667C707A8 /* Sources */,
 				D227D42D89784B4D9659E8CEB2DF02C8 /* Frameworks */,
+				6962A49CA92AAB3EE803DE5FD93C8EC1 /* Resources */,
 				87B4F6F84DF7F3518155FD19A504527D /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FABA18C6321736B1206E5452BA432235 /* PBXTargetDependency */,
 			);
 			name = StarsKit;
 			productName = StarsKit;
-			productReference = DD03172D391737AB5FB623FDF51DCA40 /* StarsKit.framework */;
+			productReference = A9F366CA5094777F4BB0138E46C3F27C /* StarsKit.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		CABCC70CF36C0846ABE5DF9B2EDFEE1D /* StarsKit-StarsKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9283C53664B083297F9FA9051E78BCD /* Build configuration list for PBXNativeTarget "StarsKit-StarsKit" */;
+			buildPhases = (
+				64CED63A00E6BEBC0EE5B09B13C14584 /* Sources */,
+				E5460C920EF11AEBF93FE45AF4DAFB73 /* Frameworks */,
+				B31EC42CA8F134791434D44A419825E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StarsKit-StarsKit";
+			productName = "StarsKit-StarsKit";
+			productReference = 3E83DBD511CE67B391762EB6124A524F /* StarsKit.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -319,32 +316,55 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = E24B8A6422FC1756553A85420893D6B8 /* Products */;
+			productRefGroup = 10FAD6D79A867E7C89CBEF5A6DFDDE11 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				380D9C7DC8F6514AF82186940E28994B /* Pods-StarsKit_Example */,
-				30BFC0801CBEBC997E01BA0FDAE134C2 /* Pods-StarsKit_Tests */,
 				676F38A1F56E96392E0B2CB6D7576381 /* StarsKit */,
+				CABCC70CF36C0846ABE5DF9B2EDFEE1D /* StarsKit-StarsKit */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		7051BAF556090B634DA62A4E5BB56107 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		6962A49CA92AAB3EE803DE5FD93C8EC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F60B66558C738AACD914A4F2208E69AB /* Pods-StarsKit_Tests-dummy.m in Sources */,
+				A5CC8748794927926C853C5210B1E72F /* StarsKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		935722369B7345B658ACBD05597C51E8 /* Sources */ = {
+		B31EC42CA8F134791434D44A419825E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1949D67A73854B0ED15AE48D33B54A7A /* StarsKit.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07AA495C39AA6DDBC2BA5FA667C707A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C4861D614BC890747B9CC02EAA4964E /* ReplaceMe.swift in Sources */,
-				7958BE26FBEB14A49AEDFB68693D9EC8 /* StarsKit-dummy.m in Sources */,
+				E22705E838651567B72E0972C9742A6F /* StarsKit-dummy.m in Sources */,
+				91C7BA20846E3315E50713F4142A2A9D /* StarsKit.swift in Sources */,
+				DDFEB0589DB06D820F04532171591F7A /* StarsKitChecker.swift in Sources */,
+				B2255B3C69B97DA9DFDA4AD57ED2E2DD /* StarsKitConfiguration.swift in Sources */,
+				48FDD5040D5BD63DED0FF30353A5D6C6 /* StarsKitConstants.swift in Sources */,
+				362E38F947CE15FD69981BBCA30F0DF8 /* StarsKitContext.swift in Sources */,
+				6529C36499FB8E0DD2EFB056DC088D2A /* StarsKitDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64CED63A00E6BEBC0EE5B09B13C14584 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,12 +385,34 @@
 			target = 676F38A1F56E96392E0B2CB6D7576381 /* StarsKit */;
 			targetProxy = 2FFC8A3BB5B007D1729F36F8549B5CED /* PBXContainerItemProxy */;
 		};
+		FABA18C6321736B1206E5452BA432235 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "StarsKit-StarsKit";
+			target = CABCC70CF36C0846ABE5DF9B2EDFEE1D /* StarsKit-StarsKit */;
+			targetProxy = 8294FD316A3BFE325E83DA94CE9B4C2B /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1C301D8CE9AD292DFDA5CA720F01869F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2EA63DAD55DBC476B2B935D742F9CB2 /* StarsKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/StarsKit";
+				INFOPLIST_FILE = "Target Support Files/StarsKit/ResourceBundle-StarsKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = StarsKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		3CE3D4C48329E67FB5D5977A3C9688E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DB264F55BD94CC0166EB65F21B8A7B3 /* StarsKit.xcconfig */;
+			baseConfigurationReference = B2EA63DAD55DBC476B2B935D742F9CB2 /* StarsKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -454,42 +496,9 @@
 			};
 			name = Release;
 		};
-		834E8A897A0E4AAAC02A07FA6B54F8A2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 022005410E0F620CCD52D2F68F917BAF /* Pods-StarsKit_Tests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-StarsKit_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-StarsKit_Tests/Pods-StarsKit_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_StarsKit_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		9C11F69B5A25441B017B233C10F1925D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C85F9C8EEF79AC8E558FBBE3CC69FA51 /* Pods-StarsKit_Example.release.xcconfig */;
+			baseConfigurationReference = C9389B0704AB9C458AB3893FB99F02DF /* Pods-StarsKit_Example.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -518,6 +527,22 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A7FC85FFB3DCBFA6DF51B6EE4E569928 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2EA63DAD55DBC476B2B935D742F9CB2 /* StarsKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/StarsKit";
+				INFOPLIST_FILE = "Target Support Files/StarsKit/ResourceBundle-StarsKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = StarsKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -583,7 +608,7 @@
 		};
 		B89BC3CEE6C1D492671205F1793C6846 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77F913ABB2F989EB19E006879CA5206D /* Pods-StarsKit_Example.debug.xcconfig */;
+			baseConfigurationReference = 0CAC9350193E5FE798B883AEE53B5E44 /* Pods-StarsKit_Example.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -615,41 +640,9 @@
 			};
 			name = Debug;
 		};
-		D376D4525D706659B144EB1A7E89EC8C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AF931F770D2C516F95726C46BB697A8 /* Pods-StarsKit_Tests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-StarsKit_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-StarsKit_Tests/Pods-StarsKit_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_StarsKit_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		E31B20EDF60300111B15E02BAA261582 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DB264F55BD94CC0166EB65F21B8A7B3 /* StarsKit.xcconfig */;
+			baseConfigurationReference = B2EA63DAD55DBC476B2B935D742F9CB2 /* StarsKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -691,15 +684,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4BB5269EB07FB9E55FC4ADD08A9E8163 /* Build configuration list for PBXNativeTarget "Pods-StarsKit_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D376D4525D706659B144EB1A7E89EC8C /* Debug */,
-				834E8A897A0E4AAAC02A07FA6B54F8A2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		50FE93AEA57EB8F25DBF7C02C0845158 /* Build configuration list for PBXNativeTarget "Pods-StarsKit_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -714,6 +698,15 @@
 			buildConfigurations = (
 				3CE3D4C48329E67FB5D5977A3C9688E6 /* Debug */,
 				E31B20EDF60300111B15E02BAA261582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9283C53664B083297F9FA9051E78BCD /* Build configuration list for PBXNativeTarget "StarsKit-StarsKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C301D8CE9AD292DFDA5CA720F01869F /* Debug */,
+				A7FC85FFB3DCBFA6DF51B6EE4E569928 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

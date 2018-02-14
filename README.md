@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/StarsKit.svg?style=flat)](http://cocoapods.org/pods/StarsKit)
 
 
-StarsKit is a lightfull Swift library to simplify your app rating workflow.
+StarsKit is a lightfull Swift library to simplify and configure your app rating workflow.
 It can be based on remote, local or manual configuration with optionnals properties.
 
 ## Main features

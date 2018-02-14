@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "StarsKit/Classes/**/*"
+  "source_files": "StarsKit/Classes/**/*",
+  "resource_bundles": {
+    "StarsKit": [
+      "StarsKit/Assets/*"
+    ]
+  }
 }
