@@ -32,6 +32,10 @@ public class StarsPopViewController: UIViewController {
   private var graphicContext: StarsKitGraphicContext = StarsKit.shared.graphicContext
   private var coordinator: StarsRatingCoordinator?
   
+  public override var preferredStatusBarStyle: UIStatusBarStyle {
+    return self.graphicContext.preferredStatusBarStyle
+  }
+  
   init(graphicContext: StarsKitGraphicContext) {
     let nibName = "StarsPopViewController"
     let bundle: Bundle = bundleForResource(name: nibName, ofType: "nib")
@@ -46,11 +50,23 @@ public class StarsPopViewController: UIViewController {
   
   override public func viewDidLoad() {
     super.viewDidLoad()
+  
+    self.prepareView()
     
     self.coordinator = StarsRatingCoordinator(starsPopViewController: self,
                                               context: StarsKit.shared.context,
                                               graphicContext: self.graphicContext)
     self.coordinator?.start()
+    
+
+  }
+  
+  private func prepareView() {
+    self.view.layer.cornerRadius = self.graphicContext.cornerRadius
+    self.view.layer.masksToBounds = true
+    
+    self.ibBackgroundImageView.image = self.graphicContext.backgroundHeaderTitleImage
+    self.ibBackgroundImageView.backgroundColor = self.graphicContext.backgroundHeaderColor
   }
   
 }

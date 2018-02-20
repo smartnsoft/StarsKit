@@ -22,10 +22,28 @@
 
 import Foundation
 import UIKit
+import Cosmos
 
 public class StarsKitGraphicContext {
-  public var starTintColor = UIColor.blue
-  public var starEmptyImage: UIImage?
-  public var starImage: UIImage?
+  
+  public var mainTitleFont: UIFont?
+  public var mainTitleColor: UIColor?
+  
+  public var indicationTitleFont: UIFont?
+  public var indicationTitleColor: UIColor?
+  
+  public var actionButtonBackgroundColor: UIFont?
+  public var actionButtonTitleColor: UIColor?
+  public var actionButtonTitleFont: UIFont?
+  
+  public var laterTitleFont: UIFont?
+  public var laterTitleTintColor: UIColor?
+  
+  public var backgroundHeaderTitleImage: UIImage?
+  public var backgroundHeaderColor: UIColor = .blue
+  public var cornerRadius: CGFloat = 0
+  
   public var preferredStatusBarStyle = UIStatusBarStyle.default
+  
+  public var cosmosSettings: CosmosSettings = CosmosSettings.default
 }

@@ -24,10 +24,10 @@ import UIKit
 
 public class StoreViewController: UIViewController {
   
-  private var graphicContext: StarsKitGraphicContext?
+  private var graphicContext: StarsKitGraphicContext = StarsKit.shared.graphicContext
   private var coordinator: StarsRatingCoordinator?
-  
-  init(graphicContext: StarsKitGraphicContext?, coordinator: StarsRatingCoordinator) {
+    
+  init(graphicContext: StarsKitGraphicContext, coordinator: StarsRatingCoordinator) {
     let nibName = "StoreViewController"
     let bundle: Bundle = bundleForResource(name: nibName, ofType: "nib")
     super.init(nibName: nibName, bundle: bundle)
