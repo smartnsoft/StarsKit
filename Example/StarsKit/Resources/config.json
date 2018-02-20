@@ -1,0 +1,19 @@
+{
+    "disabled": false,
+    "displaySessionCount": 3,
+    "mainTitle": "Votre avis nous intéresse",
+    "mainText": "Aimez-vous l’application StarsKit ?",
+    "positiveStarsLimit": 4,
+    "dislikeMainTitle": "Votre avis nous intéresse",
+    "dislikeMainText": "Aidez-nous à améliorer l’application StarsKit",
+    "dislikeActionButton": "Faire une suggestion",
+    "dislikeExitButton": "Plus tard",
+    "likeMainTitle": "Vous aimez notre application",
+    "likeMainText": "Faites-le nous savoir en partageant votre avis sur le store",
+    "likeActionButton": "C’est parti",
+    "likeExitButton": "Plus tard",
+    "emailSupport": "starskit@smartnsoft.com",
+    "emailObject": "Applications StarsKit",
+    "daysWithoutCrash": 15,
+    "daysBeforeAskingAgain": 3
+}

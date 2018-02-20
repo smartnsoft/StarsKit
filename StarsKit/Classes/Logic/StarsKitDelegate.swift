@@ -27,6 +27,9 @@ public protocol StarsKitDelegate: class {
   // Ask which controller is needed to display the rate pop-up
   func presenterController() -> UIViewController
   
+  /// Only call when the default behavior is not used
+  func needDisplayRateScreen() -> Bool
+  
   /// This callback fire when the user change the app rate on the view
   ///
   /// - Parameters:

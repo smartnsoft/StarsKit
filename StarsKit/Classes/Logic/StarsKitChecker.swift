@@ -23,9 +23,28 @@
 import Foundation
 
 public final class StarsKitChecker {
-  static func displayRateScreenIfNeeded() {
-    guard StarsKit.shared.configuration.enabled else { return }
+  
+  @discardableResult
+  public static func needDisplayRateScreen(`for` client: StarsKit = StarsKit.shared) -> Bool {
+    guard !StarsKit.shared.configuration.disabled else { return false }
     
-    //Start algorithm checking
+    let configuration = client.configuration
+    let context = client.context
+    
+    // - Si le nombre de sessions minimum pour lui demander sont atteintes (défini dans la config et > 0)
+    // - Si on ne lui a pas déjà demandé trop de fois (défini dans la config et > 0)
+    // - Si l’utilisateur n’a pas déjà cliqué sur un bouton d’action (store ou envoi du courriel)
+    // - Si l’utilisateur a dit “plus tard” la fois précédente, mais que le délai, en jours, entre 2 demandes est écoulé (défini dans la config et > 0)
+    // - Si le dernier crash remonte à plus de X temps en jours (défini dans la config et > 0)
+    if context.nbSessions >= configuration.displaySessionCount
+      && context.nbReminders < configuration.maxNumberOfReminder
+      && !context.userAlreadyRespondsToAction
+      && (context.lastDisplayDate?.timeIntervalSinceNow ?? TimeInterval.greatestFiniteMagnitude) > (Double(configuration.daysBeforeAskingAgain) * 24 * 3600)
+      && (context.lastCrashDate?.timeIntervalSinceNow ?? TimeInterval.greatestFiniteMagnitude) > (Double(configuration.daysWithoutCrash) * 24 * 3600)
+      {
+      return true
+    }
+    return false
+    
   }
 }

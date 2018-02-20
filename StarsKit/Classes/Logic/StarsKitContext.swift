@@ -40,7 +40,18 @@ public final class StarsKitContext {
     }
     
     set {
+      self.lastCrashDate = Date()
       UserDefaults.standard.set(newValue, forKey: StarsKitProperties.nbCrashes.userDefaultsKey)
+    }
+  }
+  
+  public internal(set) var nbReminders: Int {
+    get {
+      return UserDefaults.standard.integer(forKey: StarsKitProperties.nbReminders.userDefaultsKey)
+    }
+    
+    set {
+      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.nbReminders.userDefaultsKey)
     }
   }
   
@@ -51,6 +62,26 @@ public final class StarsKitContext {
     
     set {
       UserDefaults.standard.set(newValue, forKey: StarsKitProperties.lastDisplayDate.userDefaultsKey)
+    }
+  }
+  
+  public internal(set) var lastCrashDate: Date? {
+    get {
+      return UserDefaults.standard.object(forKey: StarsKitProperties.lastCrashDate.userDefaultsKey) as? Date
+    }
+    
+    set {
+      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.lastCrashDate.userDefaultsKey)
+    }
+  }
+  
+  public internal(set) var userAlreadyRespondsToAction: Bool {
+    get {
+      return UserDefaults.standard.bool(forKey: StarsKitProperties.userAlreadyRespondsToAction.userDefaultsKey)
+    }
+    
+    set {
+      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.userAlreadyRespondsToAction.userDefaultsKey)
     }
   }
 }

@@ -27,7 +27,7 @@ import Foundation
 public final class StarsKitConfiguration {
   
   // MARK: Properties
-  public var localLocalizableStringsEnabled: Bool {
+  public internal(set) var localLocalizableStringsEnabled: Bool {
     get {
       return UserDefaults.standard.bool(forKey: StarsKitProperties.localLocalizableStringsEnabled.userDefaultsKey)
     }
@@ -37,17 +37,17 @@ public final class StarsKitConfiguration {
     }
   }
   
-  public var enabled: Bool {
+  public internal(set) var disabled: Bool {
     get {
-      return UserDefaults.standard.bool(forKey: StarsKitProperties.enabled.userDefaultsKey)
+      return UserDefaults.standard.bool(forKey: StarsKitProperties.disabled.userDefaultsKey)
     }
     
     set {
-      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.enabled.userDefaultsKey)
+      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.disabled.userDefaultsKey)
     }
   }
 
-  public private(set) var displaySessionCount: Int {
+  public internal(set) var displaySessionCount: Int {
     get {
       return UserDefaults.standard.integer(forKey: StarsKitProperties.displaySessionCount.userDefaultsKey)
     }
@@ -97,6 +97,16 @@ public final class StarsKitConfiguration {
     }
   }
   
+  public private(set) var daysBeforeAskingAgain: Int {
+    get {
+      return UserDefaults.standard.integer(forKey: StarsKitProperties.daysBeforeAskingAgain.userDefaultsKey)
+    }
+    
+    set {
+      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.daysBeforeAskingAgain.userDefaultsKey)
+    }
+  }
+  
   //MARK: Configuration update
   
   /// Update the StarsKit configuration. It will change the fire values.
@@ -126,8 +136,8 @@ public final class StarsKitConfiguration {
   ///
   /// - Parameter config: Key-Value dictionnary with StarsKitProperties keys
   private func updateMetrics(from config: [String: Any?]) {
-    if let isEnabled = config[StarsKitProperties.enabled.rawValue] as? Bool {
-      self.enabled = isEnabled
+    if let isDisabled = config[StarsKitProperties.disabled.rawValue] as? Bool {
+      self.disabled = isDisabled
     }
     if let isLocalLocalizableStringsEnabled = config[StarsKitProperties.localLocalizableStringsEnabled.rawValue] as? Bool {
       self.localLocalizableStringsEnabled = isLocalLocalizableStringsEnabled

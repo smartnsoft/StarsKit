@@ -30,6 +30,8 @@ public class StarsKit {
   
   public var configuration = StarsKitConfiguration()
   public var context = StarsKitContext()
+  public var useDefaultBehavior = true
+  public var priorityUseNativeRate = false
   
   public weak var delegate: StarsKitDelegate?
   
@@ -38,9 +40,17 @@ public class StarsKit {
     self.delegate = delegate
   }
   
-  // MARK: Metrics updates
   public func checkRateDisplay() {
-    StarsKitChecker.displayRateScreenIfNeeded()
+    if (self.useDefaultBehavior && StarsKitChecker.needDisplayRateScreen(for: self))
+      || self.delegate?.needDisplayRateScreen() == true {
+      if self.priorityUseNativeRate {
+        //USe 10.3 + native app rating
+      } else {
+        if let controller = self.delegate?.presenterController() {
+          //
+        }
+      }
+    }
   }
   
   /// Reset all metrics context

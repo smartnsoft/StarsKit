@@ -1,7 +1,7 @@
 {
   "name": "StarsKit",
   "version": "0.1.0",
-  "summary": "StarsKit is a lightfull Swift library to simplify your app rating workflow.",
+  "summary": "StarsKit is a lightfull Swift library to simplify and configure your app rating workflow.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/smartnsoft/StarsKit",
   "license": {
