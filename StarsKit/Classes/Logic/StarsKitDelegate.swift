@@ -37,13 +37,7 @@ public protocol StarsKitDelegate: class {
   ///   - rate: The user app rate level
   func didUpdateRating(from context: StarsKitContext, to rate: Int)
   
-  func willDismissRatingView(from client: StarsKitContext)
-  func didChooseRateLater(from client: StarsKitContext)
-  
-  func willDismissLikeScreen(from client: StarsKitContext)
-  func didDismissLikeScreen(from client: StarsKitContext)
-  
-  func didExitLikeScreen(from client: StarsKitContext)
-  func didDismissUnlikeScreen(from client: StarsKitContext)
+  func didChooseAction(`at` step: RatingStep, from context: StarsKitContext)
+  func didChooseLater(`at` step: RatingStep, from context: StarsKitContext)
   
 }

@@ -21,7 +21,15 @@
   "source_files": "StarsKit/Classes/**/*",
   "resource_bundles": {
     "StarsKit": [
-      "StarsKit/Assets/*"
+      "StarsKit/Classes/**/*.xib"
+    ]
+  },
+  "dependencies": {
+    "Cosmos": [
+      "~> 15.0"
+    ],
+    "Extra": [
+      "~> 1.1.0"
     ]
   }
 }

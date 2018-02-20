@@ -1,9 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/StarsKit"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Cosmos" "${PODS_CONFIGURATION_BUILD_DIR}/Extra" "${PODS_CONFIGURATION_BUILD_DIR}/StarsKit"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/StarsKit/StarsKit.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "StarsKit"
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Cosmos/Cosmos.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Extra/Extra.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/StarsKit/StarsKit.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "Cosmos" -framework "Extra" -framework "StarsKit"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

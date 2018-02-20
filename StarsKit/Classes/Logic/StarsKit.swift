@@ -22,6 +22,7 @@
 
 
 import Foundation
+import StoreKit
 
 /// Global StarsKit client
 public class StarsKit {
@@ -30,6 +31,7 @@ public class StarsKit {
   
   public var configuration = StarsKitConfiguration()
   public var context = StarsKitContext()
+  public var graphicContext = StarsKitGraphicContext()
   public var useDefaultBehavior = true
   public var priorityUseNativeRate = false
   
@@ -44,10 +46,13 @@ public class StarsKit {
     if (self.useDefaultBehavior && StarsKitChecker.needDisplayRateScreen(for: self))
       || self.delegate?.needDisplayRateScreen() == true {
       if self.priorityUseNativeRate {
-        //USe 10.3 + native app rating
+        //Use 10.3 + native app rating
+        if #available(iOS 10.3, *) {
+          SKStoreReviewController.requestReview()
+        }
       } else {
         if let controller = self.delegate?.presenterController() {
-          //
+          controller.present(StarsPopViewController(graphicContext: self.graphicContext), animated: true, completion: nil)
         }
       }
     }
@@ -65,8 +70,17 @@ public class StarsKit {
   }
   
   // MARK: Config update
-  public func updateConfig(with values: [String: Any?]) {
+  public func updateConfig(from values: [String: Any?]) {
     self.configuration.update(with: values)
   }
   
+}
+
+func bundleForResource(name: String, ofType type: String) -> Bundle {
+  
+  if(Bundle.main.path(forResource: name, ofType: type) != nil) {
+    return Bundle.main
+  }
+  
+  return Bundle(for: StarsKit.self)
 }

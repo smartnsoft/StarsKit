@@ -7,149 +7,315 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1949D67A73854B0ED15AE48D33B54A7A /* StarsKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5E1052F3CAB2CD2A725C4A89FB5E8C0 /* StarsKit.bundle */; };
-		362E38F947CE15FD69981BBCA30F0DF8 /* StarsKitContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831ACE768208DC0968313E3F3474E04A /* StarsKitContext.swift */; };
-		3D7D67BDF3FF4916838479AE47F6D3B8 /* Pods-StarsKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54E1D99071A3BA0EC29B73A0FE478B27 /* Pods-StarsKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		48FDD5040D5BD63DED0FF30353A5D6C6 /* StarsKitConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D800D2A0CBA8B39CC1FB1663B0CF74B6 /* StarsKitConstants.swift */; };
-		6529C36499FB8E0DD2EFB056DC088D2A /* StarsKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68912EC6EA953855B95AAB0A579CFA51 /* StarsKitDelegate.swift */; };
-		90D6EF6337C24E0E1326AB1855393A0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		91C7BA20846E3315E50713F4142A2A9D /* StarsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3F221900D8D84B166EFB8CF50E45C /* StarsKit.swift */; };
-		A5CC8748794927926C853C5210B1E72F /* StarsKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3E83DBD511CE67B391762EB6124A524F /* StarsKit.bundle */; };
-		B2255B3C69B97DA9DFDA4AD57ED2E2DD /* StarsKitConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01357F66D81776949601A55A57233C96 /* StarsKitConfiguration.swift */; };
-		B47DB9E2928400B0080DA453972F048D /* StarsKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B0D5B79FB9ABD33CCD45C70BDA7BE6B5 /* StarsKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF050B7DD63C65D0BD5D2BEAD0B802E6 /* Pods-StarsKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8818E95E3E95E91CEA5956A1BB0A3D2B /* Pods-StarsKit_Example-dummy.m */; };
-		DDFEB0589DB06D820F04532171591F7A /* StarsKitChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB732B9AB305723FA083F684A3A8D57C /* StarsKitChecker.swift */; };
-		E22705E838651567B72E0972C9742A6F /* StarsKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F2839BF4B10D771280F4603185B2A3 /* StarsKit-dummy.m */; };
-		F40539459D1B0DE57347251003613430 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		0099D8110BACAD6D065846DDCCEBC95F /* StarsKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD9384A6928DB3EF7AB76103498DDEC9 /* StarsKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		015C902B9C0E63DA0519A0D34E10F739 /* CosmosSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A81FFE57D8CF29CF7304B6D57B4AA /* CosmosSettings.swift */; };
+		05CE6ACDB00B51867E366D93D77B4400 /* UIColor+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F32F2458D5D71CFA8D7D756F2F28E8 /* UIColor+Extra.swift */; };
+		06FFB41E148B93A20B7CB950CA7B370F /* UICollectionViewCell+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDFB263F63630F6170545953DDAA7E9 /* UICollectionViewCell+Extra.swift */; };
+		0D1E5823AD5750C6F0DD46C599A88AA5 /* StarsPopViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFFE5E63B81C28FE781D31EF9D6F39 /* StarsPopViewController.xib */; };
+		0D5F52B9C4F1A551B7B17D5020997A79 /* StarsRatingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73682065799FD3C71EFF89CFA5C4384A /* StarsRatingCoordinator.swift */; };
+		0EC88D04EAE0CD3EFD3C3C89C1B9F45F /* CosmosLocalizedRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDA384B66D092A326DEBFC7C43BEE1 /* CosmosLocalizedRating.swift */; };
+		1A2C1E858AE1D05B1CDBE706B6D832BB /* StoreViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 96BD71D9C4730BAC648D714BE36EFBB2 /* StoreViewController.xib */; };
+		1B745EA591E215D4B7E51E18FFD22DD0 /* Extra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EC1F687D0CA32FDE997EB0888D6AE2 /* Extra.framework */; };
+		1D83B5BF02693D22BA6B0E6BEB66DF84 /* UIImage+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E42091CA61423895DE489A222679B0 /* UIImage+Extra.swift */; };
+		212C02FDF7F2DD7638C3CAA4FB983995 /* Extra-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9737C6FFEBD325223450549B51C6BF14 /* Extra-dummy.m */; };
+		2341060BE5E2599FD61D826000E07A02 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249A6061B71D8F3B6D478F7029BEBD5F /* FeedbackViewController.xib */; };
+		25DFA72039CBA011EBA738AA73084A8E /* CosmosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D8CD2B9EFA5AE9442F5750AACE9EA7 /* CosmosSize.swift */; };
+		2663CE179506DC80D0AE3F2DE94774B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35DD53B2A8538F8C28F0B4CC327D4AF /* UIKit.framework */; };
+		2B25C94F4C6A4F05E4D209216AB7E305 /* StarsRateViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 451ED1ADF876BAB92F0AB03D8C6B2C3C /* StarsRateViewController.xib */; };
+		2CAF8D3E1A7923196257CE2E9D71ACFB /* UIButton+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375E6BED6DC586EFC80D08094E915A41 /* UIButton+Extra.swift */; };
+		3362893EEEA22A163960F8ADD0454CC5 /* UIViewController+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4861B6F2B69AEE014FAFEFABE2CB9FD7 /* UIViewController+Extra.swift */; };
+		342AB0065D8FBF4E451632A4A7E5BF8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B65FA81A0960822B18E759CAD46B39 /* Foundation.framework */; };
+		3530F401EA678F0C151A0BB1C39BCCCD /* UITextView+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6974CE894286BBE3EC7DD3E878E4031B /* UITextView+Extra.swift */; };
+		371F422D050761A63F0156F537B8902D /* CosmosDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9575A58DF0FE06CEE4341A3D1D0C4C33 /* CosmosDefaultSettings.swift */; };
+		3A61639328FF26632666B0142236C1F1 /* StarsKitGraphicContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF6B61F540781D278BA6AEF571AE1EC /* StarsKitGraphicContext.swift */; };
+		3DF6ECF23D38E7DA5B5B2B43707F2F4D /* Cosmos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FF6CFF76EE705F2209D5A4818D1697 /* Cosmos-dummy.m */; };
+		3F6A3A7B88341A59AD3B9B6B5ED45967 /* Cosmos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811AAA10299E0D7985E3681F9E8A41DA /* Cosmos.framework */; };
+		424AD9605CBDCD867083B9820784E0AC /* CosmosText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CCA515B886F670036D04218560374D /* CosmosText.swift */; };
+		43EFE78E6FD78B0502014C9F2AF73C53 /* Extra-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B1765EFF83D6FE45F4F6509A2C355D60 /* Extra-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44AA838455DAF3D6D0B930E6A7DB02E8 /* StarsKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA02B55EFCE741018000EB99BFC86B /* StarsKit-dummy.m */; };
+		45F546D14166EDEE46371951EC705C03 /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F9B1C74832048BE0776DCF58B326F8 /* CosmosView.swift */; };
+		49A343FF2DC2EC8EBA0B4E48CA640249 /* String+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942D43434B967AEA19E692717FF1C04A /* String+Extra.swift */; };
+		4F40A9CBB316E7100828F0C6F5714946 /* CosmosTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C61CC6DFB49C869BBF10537C639DBE /* CosmosTouch.swift */; };
+		50B2D9A63B8890EDE22DBFC06D70ADB3 /* StarsRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C46DDA740375982AF1C725F0C1093E /* StarsRateViewController.swift */; };
+		51CA376022E63DAFC7A7DBFC1E513B30 /* StarsKitContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EAA0B3EB6E47A64821E5D54F18A337 /* StarsKitContext.swift */; };
+		52EC1EF9BB1F78065D2B806F2B057607 /* StarsKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1FE5FCBB244B331D06E2AA69276569 /* StarsKitDelegate.swift */; };
+		5E628D5DFE625A5AB13AE1B7D9432F9C /* UIView+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A982F44D47C24CDBBE7A313E97DBAA /* UIView+Extra.swift */; };
+		61F10DEC803501B7536CF0CDCFEC7E5E /* StarsPopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CDFFE5E63B81C28FE781D31EF9D6F39 /* StarsPopViewController.xib */; };
+		6204A1ED769D7B110A36CFA426E65308 /* StarsPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DC21F55564156F978621F2D3604054 /* StarsPopViewController.swift */; };
+		6A985E99A311107535434E95497D2E96 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8430CB34800930990AFFA9EB764DE6 /* FeedbackViewController.swift */; };
+		6AB22931DA71D88DD4E4DBBA22AAC604 /* StarsKitConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF28EC5A7EFFDB1372C67EE2C6E6AE0 /* StarsKitConfiguration.swift */; };
+		6CFA32E71FB156DCA6E19593FA7F44C4 /* UITableView+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D8B97E5CFB8CE9DCAC2DFF62D19A34 /* UITableView+Extra.swift */; };
+		6D9C6A91F517ACEF223E613F374FFDEA /* Pods-StarsKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8818E95E3E95E91CEA5956A1BB0A3D2B /* Pods-StarsKit_Example-dummy.m */; };
+		7CC5A43D7E1372EB6292FCBC0151A36E /* CosmosAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9EBC3E1349867CFAB3F372D91FCCD8 /* CosmosAccessibility.swift */; };
+		863FD2CEAE2B34DD70D143481E6803C4 /* Sequence+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68150217B98FD779861CDA1834493663 /* Sequence+Extra.swift */; };
+		86F66D0F3A2BE20AC757830AAD8C0770 /* FeedbackViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 249A6061B71D8F3B6D478F7029BEBD5F /* FeedbackViewController.xib */; };
+		88BA9FFC474BD7B995A0CEA06FF431F7 /* StarFillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF77EE2B48805492F7A3C23A15F6526 /* StarFillMode.swift */; };
+		8933BEECD36E5849C72667089C2B3AF3 /* Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA8836A851FC11374267C38444AAEE8 /* Extra.swift */; };
+		8E087492FB996E92C0F3932EF431EB55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B65FA81A0960822B18E759CAD46B39 /* Foundation.framework */; };
+		8EA107E487A3C098FE1C498743EC129B /* StarsRateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 451ED1ADF876BAB92F0AB03D8C6B2C3C /* StarsRateViewController.xib */; };
+		99F08F6FE2B165EEBD5E01EDDA176620 /* CosmosRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47550944AF3B6078DAAFC89F7607304B /* CosmosRating.swift */; };
+		9F934C68DF8C6865CEF0810B87C3AEC6 /* StarsKitConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F676786E5906CBFB159F068164AFB3A3 /* StarsKitConstants.swift */; };
+		A3D0F95BF16C16CAF39C0438C6EE4784 /* Pods-StarsKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54E1D99071A3BA0EC29B73A0FE478B27 /* Pods-StarsKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A474153C5A831C6CE599FD110D11DC1E /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A03CED275C637BCEED90154C9FE84A /* StoreViewController.swift */; };
+		A8D0F1C3405DD1451822DBEDCB4925BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B65FA81A0960822B18E759CAD46B39 /* Foundation.framework */; };
+		AA445AE78F10F25B75A0DAFB70357894 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A0A9F85B5547E30A9FADB0BBE8FE407 /* QuartzCore.framework */; };
+		AA971D9492DD9B9E288045C2C0CC9A99 /* CosmosLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F110C5D93FA440D479B5C21F22F5F20B /* CosmosLayers.swift */; };
+		B5686AAF68CB97355839F2D1C6F3FFB4 /* UIApplication+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F0796F03644961BEEFA73BA5B9D7C /* UIApplication+Extra.swift */; };
+		C0D79FC10D3EA2178FECD00B8AE9BA43 /* UIDevice+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A2E55F2CECF7920FAED651D74E58EE /* UIDevice+Extra.swift */; };
+		C49233C5B55EEA7AD4BF3C298512B511 /* StarsKitChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F38EF9D3D8FC6D0EB777EB7A141AA49 /* StarsKitChecker.swift */; };
+		C79D2F2FCE3EF9B31D1222E0C4A59DC5 /* RightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A1D7E056024E1A763C52221BC9E741 /* RightToLeft.swift */; };
+		C95B658D689425ED9DAA95EB479B44A6 /* StarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FAAB00B78C7E5632B697535E85BBCA /* StarLayer.swift */; };
+		CBAA94966FD2225F6135C4DF99569A3E /* UICollectionView+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B5E192994E17F8B14CD8074A3B83D8 /* UICollectionView+Extra.swift */; };
+		D26C1F4EEB5E699979D01AC60A32230A /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96BD71D9C4730BAC648D714BE36EFBB2 /* StoreViewController.xib */; };
+		DE5E91A47C1BF6869DF17747D61C2FF1 /* Cosmos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E6AFE6438285A55A5F212D9A6576C80E /* Cosmos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2D8D1AA0D41C73C4B570DE682C05D72 /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42637F7BBEC8EEB103C620FFD4E3465C /* CosmosTouchTarget.swift */; };
+		E5F9265CF37C7D288A263252470EDA26 /* UITableViewCell+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77F4630C3FDAAD9760A9F0075EDDD74 /* UITableViewCell+Extra.swift */; };
+		E80E887121143BB3C7AD521B0FE83E01 /* StarsKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B090A205748994CA16397D4D024E1532 /* StarsKit.bundle */; };
+		E9EF9BB6C749D8D42661BB07C18C87FE /* UINavigationController+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06417E5E7B082DE774326D820FF8C2F /* UINavigationController+Extra.swift */; };
+		EAB765E3572BED8EB346C92C2AD607F9 /* StarsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65C1FBB2206B8D71FEBACD8DD5DB5AF /* StarsKit.swift */; };
+		ED43812A62A56669E0959CCE49E6824C /* ExtraUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42B7B875CFC44F256F623DC84205856 /* ExtraUIKit.swift */; };
+		F27E879DFB83E828A694B389643E4C82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B65FA81A0960822B18E759CAD46B39 /* Foundation.framework */; };
+		F66DE3EF01408C42C115587B201CB541 /* CosmosLayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E1CE0F742F241890878E65FAE172F /* CosmosLayerHelper.swift */; };
+		FFD42657529E19672E948A9AC31C7797 /* UILabel+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9D5D51E806D21751A5ED584DEB0802 /* UILabel+Extra.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2FFC8A3BB5B007D1729F36F8549B5CED /* PBXContainerItemProxy */ = {
+		1CCCBE7DE166E79F41B13596D1980D5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 676F38A1F56E96392E0B2CB6D7576381;
-			remoteInfo = StarsKit;
+			remoteGlobalIDString = 69372ED6C65E76C8D3584984511EA640;
+			remoteInfo = Extra;
 		};
-		8294FD316A3BFE325E83DA94CE9B4C2B /* PBXContainerItemProxy */ = {
+		94AB28B889939AAF2AF300C4A4C8BFC4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CABCC70CF36C0846ABE5DF9B2EDFEE1D;
+			remoteGlobalIDString = 69372ED6C65E76C8D3584984511EA640;
+			remoteInfo = Extra;
+		};
+		ADA42F530101A18D372C3F80B0B5AFDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E7C31E7C73673381CDB47C7420E2A46;
 			remoteInfo = "StarsKit-StarsKit";
+		};
+		B77A2CF0169CAF3B73D68636B56DA2E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FDC533A4360A68ABDCE852F04B30927;
+			remoteInfo = Cosmos;
+		};
+		C89E0E3B25690265E1808956C8A92D91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FDC533A4360A68ABDCE852F04B30927;
+			remoteInfo = Cosmos;
+		};
+		FF768997CCCE05F8C869D8D8253CFD89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91702C48BB08960994AC585EDF01D477;
+			remoteInfo = StarsKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01357F66D81776949601A55A57233C96 /* StarsKitConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarsKitConfiguration.swift; path = StarsKit/Classes/Logic/StarsKitConfiguration.swift; sourceTree = "<group>"; };
+		06B65FA81A0960822B18E759CAD46B39 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		07C61CC6DFB49C869BBF10537C639DBE /* CosmosTouch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouch.swift; path = Cosmos/CosmosTouch.swift; sourceTree = "<group>"; };
+		08DDA384B66D092A326DEBFC7C43BEE1 /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLocalizedRating.swift; path = Cosmos/CosmosLocalizedRating.swift; sourceTree = "<group>"; };
+		0BF77EE2B48805492F7A3C23A15F6526 /* StarFillMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarFillMode.swift; path = Cosmos/StarFillMode.swift; sourceTree = "<group>"; };
 		0CAC9350193E5FE798B883AEE53B5E44 /* Pods-StarsKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StarsKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		16F3F221900D8D84B166EFB8CF50E45C /* StarsKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarsKit.swift; path = StarsKit/Classes/Logic/StarsKit.swift; sourceTree = "<group>"; };
-		1904C0F43B5F83F1504C918A3291A003 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		0D901A64D84A5FF8CE61D21B500AC4AE /* Cosmos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-prefix.pch"; sourceTree = "<group>"; };
+		0EBA02B55EFCE741018000EB99BFC86B /* StarsKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StarsKit-dummy.m"; sourceTree = "<group>"; };
+		0F466FD071992C26313C5102DDCEB932 /* Cosmos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Cosmos.modulemap; sourceTree = "<group>"; };
+		12CCA515B886F670036D04218560374D /* CosmosText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosText.swift; path = Cosmos/CosmosText.swift; sourceTree = "<group>"; };
+		13A03CED275C637BCEED90154C9FE84A /* StoreViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		1518338D3CC20F1AC16F8D72D3556ED1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19BC034111B82FFA96503303417D14E6 /* Pods-StarsKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-StarsKit_Example.modulemap"; sourceTree = "<group>"; };
-		26CEAA1826D43FD39823A019C4AE4ABF /* StarsKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = StarsKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		2ACACE68776AB3822DBEF509C4556035 /* StarsKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = StarsKit.modulemap; sourceTree = "<group>"; };
-		3E83DBD511CE67B391762EB6124A524F /* StarsKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = StarsKit.bundle; path = "StarsKit-StarsKit.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A0A9F85B5547E30A9FADB0BBE8FE407 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		20A1D7E056024E1A763C52221BC9E741 /* RightToLeft.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RightToLeft.swift; path = Cosmos/Helpers/RightToLeft.swift; sourceTree = "<group>"; };
+		249A6061B71D8F3B6D478F7029BEBD5F /* FeedbackViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
+		2A3F78172F596C35676CBA6F596CD212 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		2F38EF9D3D8FC6D0EB777EB7A141AA49 /* StarsKitChecker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitChecker.swift; sourceTree = "<group>"; };
+		375E6BED6DC586EFC80D08094E915A41 /* UIButton+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Extra.swift"; path = "Extra/Classes/UIKit/UIButton+Extra.swift"; sourceTree = "<group>"; };
+		37A982F44D47C24CDBBE7A313E97DBAA /* UIView+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extra.swift"; path = "Extra/Classes/UIKit/UIView+Extra.swift"; sourceTree = "<group>"; };
+		3B9D5D51E806D21751A5ED584DEB0802 /* UILabel+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+Extra.swift"; path = "Extra/Classes/UIKit/UILabel+Extra.swift"; sourceTree = "<group>"; };
+		3E2DB3B7D55FEEEA290C9ED269A32937 /* StarsKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StarsKit.xcconfig; sourceTree = "<group>"; };
+		41E42091CA61423895DE489A222679B0 /* UIImage+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Extra.swift"; path = "Extra/Classes/UIKit/UIImage+Extra.swift"; sourceTree = "<group>"; };
+		42637F7BBEC8EEB103C620FFD4E3465C /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouchTarget.swift; path = Cosmos/Helpers/CosmosTouchTarget.swift; sourceTree = "<group>"; };
+		451ED1ADF876BAB92F0AB03D8C6B2C3C /* StarsRateViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = StarsRateViewController.xib; sourceTree = "<group>"; };
+		47550944AF3B6078DAAFC89F7607304B /* CosmosRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosRating.swift; path = Cosmos/CosmosRating.swift; sourceTree = "<group>"; };
+		4861B6F2B69AEE014FAFEFABE2CB9FD7 /* UIViewController+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extra.swift"; path = "Extra/Classes/UIKit/UIViewController+Extra.swift"; sourceTree = "<group>"; };
+		49FF272B94FB79C323F0CF1E407BA97C /* Extra-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Extra-prefix.pch"; sourceTree = "<group>"; };
+		4CDFFE5E63B81C28FE781D31EF9D6F39 /* StarsPopViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = StarsPopViewController.xib; sourceTree = "<group>"; };
 		4FD58734A53B4FF6029AAC196AD20B9E /* Pods-StarsKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StarsKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		54E1D99071A3BA0EC29B73A0FE478B27 /* Pods-StarsKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StarsKit_Example-umbrella.h"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		68912EC6EA953855B95AAB0A579CFA51 /* StarsKitDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarsKitDelegate.swift; path = StarsKit/Classes/Logic/StarsKitDelegate.swift; sourceTree = "<group>"; };
+		57A2E55F2CECF7920FAED651D74E58EE /* UIDevice+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extra.swift"; path = "Extra/Classes/UIKit/UIDevice+Extra.swift"; sourceTree = "<group>"; };
+		61EAA0B3EB6E47A64821E5D54F18A337 /* StarsKitContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitContext.swift; sourceTree = "<group>"; };
+		68150217B98FD779861CDA1834493663 /* Sequence+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Sequence+Extra.swift"; path = "Extra/Classes/Foundation/Sequence+Extra.swift"; sourceTree = "<group>"; };
+		68B836B7D70A52EB1AE1328C3BF46128 /* Extra.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Extra.modulemap; sourceTree = "<group>"; };
+		6974CE894286BBE3EC7DD3E878E4031B /* UITextView+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextView+Extra.swift"; path = "Extra/Classes/UIKit/UITextView+Extra.swift"; sourceTree = "<group>"; };
 		6EBA4DE9B25A00DEE3C9E1A0A4126B9E /* Pods-StarsKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StarsKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		72D8CD2B9EFA5AE9442F5750AACE9EA7 /* CosmosSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSize.swift; path = Cosmos/CosmosSize.swift; sourceTree = "<group>"; };
+		73682065799FD3C71EFF89CFA5C4384A /* StarsRatingCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsRatingCoordinator.swift; sourceTree = "<group>"; };
 		73EB7CBCFADD487834D3AB737C8B09C3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		831ACE768208DC0968313E3F3474E04A /* StarsKitContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarsKitContext.swift; path = StarsKit/Classes/Logic/StarsKitContext.swift; sourceTree = "<group>"; };
+		74D8B97E5CFB8CE9DCAC2DFF62D19A34 /* UITableView+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+Extra.swift"; path = "Extra/Classes/UIKit/UITableView+Extra.swift"; sourceTree = "<group>"; };
+		79F9B1C74832048BE0776DCF58B326F8 /* CosmosView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosView.swift; path = Cosmos/CosmosView.swift; sourceTree = "<group>"; };
+		7CF28EC5A7EFFDB1372C67EE2C6E6AE0 /* StarsKitConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitConfiguration.swift; sourceTree = "<group>"; };
+		7FF6B61F540781D278BA6AEF571AE1EC /* StarsKitGraphicContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitGraphicContext.swift; sourceTree = "<group>"; };
+		811AAA10299E0D7985E3681F9E8A41DA /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		821D569C5598DEC4179EF574C68DC607 /* Cosmos.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cosmos.xcconfig; sourceTree = "<group>"; };
+		8717C7FCECA19D5B5F8868EEAD974FF2 /* ResourceBundle-StarsKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-StarsKit-Info.plist"; sourceTree = "<group>"; };
 		8818E95E3E95E91CEA5956A1BB0A3D2B /* Pods-StarsKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StarsKit_Example-dummy.m"; sourceTree = "<group>"; };
-		9133C3069D7CF002F4E078DDC51382FA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88C46DDA740375982AF1C725F0C1093E /* StarsRateViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsRateViewController.swift; sourceTree = "<group>"; };
+		8B9706CF96B93A352334FA595BEFAFBA /* Extra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Extra.framework; path = Extra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BA8836A851FC11374267C38444AAEE8 /* Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extra.swift; path = Extra/Classes/Extra/Extra.swift; sourceTree = "<group>"; };
+		8C8430CB34800930990AFFA9EB764DE6 /* FeedbackViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		942D43434B967AEA19E692717FF1C04A /* String+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extra.swift"; path = "Extra/Classes/Foundation/String+Extra.swift"; sourceTree = "<group>"; };
+		9575A58DF0FE06CEE4341A3D1D0C4C33 /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosDefaultSettings.swift; path = Cosmos/CosmosDefaultSettings.swift; sourceTree = "<group>"; };
+		96BD71D9C4730BAC648D714BE36EFBB2 /* StoreViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = StoreViewController.xib; sourceTree = "<group>"; };
+		9737C6FFEBD325223450549B51C6BF14 /* Extra-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Extra-dummy.m"; sourceTree = "<group>"; };
+		9C49A78ABC06B828B95E8A51E116185A /* StarsKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StarsKit-prefix.pch"; sourceTree = "<group>"; };
 		A0D2D092D09DD5CA258D839E0E91A3D9 /* Pods-StarsKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StarsKit_Example-frameworks.sh"; sourceTree = "<group>"; };
-		A9F366CA5094777F4BB0138E46C3F27C /* StarsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = StarsKit.framework; path = StarsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACA33F0E68B6D0F07DC565A46D9A29E8 /* StarsKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StarsKit-prefix.pch"; sourceTree = "<group>"; };
-		B0D5B79FB9ABD33CCD45C70BDA7BE6B5 /* StarsKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StarsKit-umbrella.h"; sourceTree = "<group>"; };
-		B2EA63DAD55DBC476B2B935D742F9CB2 /* StarsKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StarsKit.xcconfig; sourceTree = "<group>"; };
-		B5E1052F3CAB2CD2A725C4A89FB5E8C0 /* StarsKit.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = StarsKit.bundle; path = StarsKit/Assets/StarsKit.bundle; sourceTree = "<group>"; };
-		B8F2839BF4B10D771280F4603185B2A3 /* StarsKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StarsKit-dummy.m"; sourceTree = "<group>"; };
-		C515BC355804A964EFAE6CCE5EF3C95B /* ResourceBundle-StarsKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-StarsKit-Info.plist"; sourceTree = "<group>"; };
+		A14F0796F03644961BEEFA73BA5B9D7C /* UIApplication+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Extra.swift"; path = "Extra/Classes/UIKit/UIApplication+Extra.swift"; sourceTree = "<group>"; };
+		A42B7B875CFC44F256F623DC84205856 /* ExtraUIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtraUIKit.swift; path = Extra/Classes/UIKit/ExtraUIKit.swift; sourceTree = "<group>"; };
+		A77F4630C3FDAAD9760A9F0075EDDD74 /* UITableViewCell+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Extra.swift"; path = "Extra/Classes/UIKit/UITableViewCell+Extra.swift"; sourceTree = "<group>"; };
+		A7FAAB00B78C7E5632B697535E85BBCA /* StarLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarLayer.swift; path = Cosmos/StarLayer.swift; sourceTree = "<group>"; };
+		AB9EBC3E1349867CFAB3F372D91FCCD8 /* CosmosAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosAccessibility.swift; path = Cosmos/CosmosAccessibility.swift; sourceTree = "<group>"; };
+		B06417E5E7B082DE774326D820FF8C2F /* UINavigationController+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Extra.swift"; path = "Extra/Classes/UIKit/UINavigationController+Extra.swift"; sourceTree = "<group>"; };
+		B090A205748994CA16397D4D024E1532 /* StarsKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = StarsKit.bundle; path = "StarsKit-StarsKit.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1765EFF83D6FE45F4F6509A2C355D60 /* Extra-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Extra-umbrella.h"; sourceTree = "<group>"; };
+		B19C2080EC68865ACF095DA103F6DEF3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B35DD53B2A8538F8C28F0B4CC327D4AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B9FF6CFF76EE705F2209D5A4818D1697 /* Cosmos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cosmos-dummy.m"; sourceTree = "<group>"; };
+		BC93A99EBE442E8BAC2AA7F4EE1927A6 /* StarsKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = StarsKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BD9384A6928DB3EF7AB76103498DDEC9 /* StarsKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StarsKit-umbrella.h"; sourceTree = "<group>"; };
+		C0EC1F687D0CA32FDE997EB0888D6AE2 /* Extra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Extra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5DC21F55564156F978621F2D3604054 /* StarsPopViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsPopViewController.swift; sourceTree = "<group>"; };
 		C9389B0704AB9C458AB3893FB99F02DF /* Pods-StarsKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StarsKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CEC174D16674A6F42ED45361A08891F9 /* Pods-StarsKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StarsKit_Example-resources.sh"; sourceTree = "<group>"; };
-		D800D2A0CBA8B39CC1FB1663B0CF74B6 /* StarsKitConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarsKitConstants.swift; path = StarsKit/Classes/Logic/StarsKitConstants.swift; sourceTree = "<group>"; };
-		E3D1B262596964043E65E1DAD622CE78 /* Pods_StarsKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_StarsKit_Example.framework; path = "Pods-StarsKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E68E9B4C1D86A8961A844E04B59A3829 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		EB732B9AB305723FA083F684A3A8D57C /* StarsKitChecker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarsKitChecker.swift; path = StarsKit/Classes/Logic/StarsKitChecker.swift; sourceTree = "<group>"; };
+		CF1E1CE0F742F241890878E65FAE172F /* CosmosLayerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayerHelper.swift; path = Cosmos/CosmosLayerHelper.swift; sourceTree = "<group>"; };
+		CFDFB263F63630F6170545953DDAA7E9 /* UICollectionViewCell+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionViewCell+Extra.swift"; path = "Extra/Classes/UIKit/UICollectionViewCell+Extra.swift"; sourceTree = "<group>"; };
+		D55A81FFE57D8CF29CF7304B6D57B4AA /* CosmosSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSettings.swift; path = Cosmos/CosmosSettings.swift; sourceTree = "<group>"; };
+		D66F7E3C7D9A69F72A76A16D7871F01C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		E2E0FF82E3D2BDF5E7C2B0A9EAF52C56 /* Pods_StarsKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_StarsKit_Example.framework; path = "Pods-StarsKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E60A11D5ADB2D9DC5EB30D9E44D772B7 /* StarsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = StarsKit.framework; path = StarsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E65C1FBB2206B8D71FEBACD8DD5DB5AF /* StarsKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKit.swift; sourceTree = "<group>"; };
+		E6AFE6438285A55A5F212D9A6576C80E /* Cosmos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-umbrella.h"; sourceTree = "<group>"; };
+		EC74EDB45824190D939D402DDFC2478C /* StarsKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = StarsKit.modulemap; sourceTree = "<group>"; };
+		F035EC7B8590433BE884CFAAF7F8CE26 /* Extra.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Extra.xcconfig; sourceTree = "<group>"; };
+		F0B5E192994E17F8B14CD8074A3B83D8 /* UICollectionView+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Extra.swift"; path = "Extra/Classes/UIKit/UICollectionView+Extra.swift"; sourceTree = "<group>"; };
+		F110C5D93FA440D479B5C21F22F5F20B /* CosmosLayers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayers.swift; path = Cosmos/CosmosLayers.swift; sourceTree = "<group>"; };
+		F3F32F2458D5D71CFA8D7D756F2F28E8 /* UIColor+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extra.swift"; path = "Extra/Classes/UIKit/UIColor+Extra.swift"; sourceTree = "<group>"; };
+		F676786E5906CBFB159F068164AFB3A3 /* StarsKitConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitConstants.swift; sourceTree = "<group>"; };
+		F8C8AB32737B923E1C908B213AC1DF63 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA1FE5FCBB244B331D06E2AA69276569 /* StarsKitDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitDelegate.swift; sourceTree = "<group>"; };
+		FF8029897302F17BD4BD765C38E22B42 /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cosmos.framework; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		87F19DDA4E7C4F10847323CBB1FE2228 /* Frameworks */ = {
+		23E1D2C8911A1F4127AF93A478D985B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F40539459D1B0DE57347251003613430 /* Foundation.framework in Frameworks */,
+				A8D0F1C3405DD1451822DBEDCB4925BC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D227D42D89784B4D9659E8CEB2DF02C8 /* Frameworks */ = {
+		8DFD4EB859842F029E2FA72822CDB9F4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90D6EF6337C24E0E1326AB1855393A0E /* Foundation.framework in Frameworks */,
+				8E087492FB996E92C0F3932EF431EB55 /* Foundation.framework in Frameworks */,
+				AA445AE78F10F25B75A0DAFB70357894 /* QuartzCore.framework in Frameworks */,
+				2663CE179506DC80D0AE3F2DE94774B9 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E5460C920EF11AEBF93FE45AF4DAFB73 /* Frameworks */ = {
+		9B1C58485E905D801D29048720DBEBEC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D1BC0640BCFC6D64379291BE7B51015 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				342AB0065D8FBF4E451632A4A7E5BF8A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A95C596301A98654869CC89BE68F7882 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F6A3A7B88341A59AD3B9B6B5ED45967 /* Cosmos.framework in Frameworks */,
+				1B745EA591E215D4B7E51E18FFD22DD0 /* Extra.framework in Frameworks */,
+				F27E879DFB83E828A694B389643E4C82 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C73D468A5128F6DC429FDDAE3EEBB41 /* StarsKit */ = {
+		00E7938343E730DE34F753B6DDD77487 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				16F3F221900D8D84B166EFB8CF50E45C /* StarsKit.swift */,
-				EB732B9AB305723FA083F684A3A8D57C /* StarsKitChecker.swift */,
-				01357F66D81776949601A55A57233C96 /* StarsKitConfiguration.swift */,
-				D800D2A0CBA8B39CC1FB1663B0CF74B6 /* StarsKitConstants.swift */,
-				831ACE768208DC0968313E3F3474E04A /* StarsKitContext.swift */,
-				68912EC6EA953855B95AAB0A579CFA51 /* StarsKitDelegate.swift */,
-				7A9D1AB4713E8973F214C8DC0DF42BD5 /* Pod */,
-				D48E5106AC163E73D0B483D1CC9DDF2C /* Resources */,
-				35D50A2DB0FCEA89A861F8D5125C097A /* Support Files */,
+				8BA8836A851FC11374267C38444AAEE8 /* Extra.swift */,
+				68150217B98FD779861CDA1834493663 /* Sequence+Extra.swift */,
+				942D43434B967AEA19E692717FF1C04A /* String+Extra.swift */,
+			);
+			name = Foundation;
+			sourceTree = "<group>";
+		};
+		1673B698EF30976E5809AC1C0BA7DD28 /* StarsKit */ = {
+			isa = PBXGroup;
+			children = (
+				EFCD33C56B9CA07455E5421614D280E1 /* Logic */,
+				D53C6CB9F9FE72F0FE3F1F8F6D870056 /* Pod */,
+				3197E906411D381BC35C05DCC1539CBC /* Resources */,
+				EBBCB3F53CEA066D919BAAB70C9F1193 /* Support Files */,
+				F4C62132156C77FB49541DD865E0565D /* UI */,
 			);
 			name = StarsKit;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		10FAD6D79A867E7C89CBEF5A6DFDDE11 /* Products */ = {
+		2A087F620FE2C64AAF41F15B29A0E450 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E3D1B262596964043E65E1DAD622CE78 /* Pods_StarsKit_Example.framework */,
-				3E83DBD511CE67B391762EB6124A524F /* StarsKit.bundle */,
-				A9F366CA5094777F4BB0138E46C3F27C /* StarsKit.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		29C048919BF61456146AD8FB9F38733E /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0C73D468A5128F6DC429FDDAE3EEBB41 /* StarsKit */,
+				1673B698EF30976E5809AC1C0BA7DD28 /* StarsKit */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		35D50A2DB0FCEA89A861F8D5125C097A /* Support Files */ = {
+		3197E906411D381BC35C05DCC1539CBC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9133C3069D7CF002F4E078DDC51382FA /* Info.plist */,
-				C515BC355804A964EFAE6CCE5EF3C95B /* ResourceBundle-StarsKit-Info.plist */,
-				2ACACE68776AB3822DBEF509C4556035 /* StarsKit.modulemap */,
-				B2EA63DAD55DBC476B2B935D742F9CB2 /* StarsKit.xcconfig */,
-				B8F2839BF4B10D771280F4603185B2A3 /* StarsKit-dummy.m */,
-				ACA33F0E68B6D0F07DC565A46D9A29E8 /* StarsKit-prefix.pch */,
-				B0D5B79FB9ABD33CCD45C70BDA7BE6B5 /* StarsKit-umbrella.h */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		344E943879C4C2C118778C380464DCDC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F466FD071992C26313C5102DDCEB932 /* Cosmos.modulemap */,
+				821D569C5598DEC4179EF574C68DC607 /* Cosmos.xcconfig */,
+				B9FF6CFF76EE705F2209D5A4818D1697 /* Cosmos-dummy.m */,
+				0D901A64D84A5FF8CE61D21B500AC4AE /* Cosmos-prefix.pch */,
+				E6AFE6438285A55A5F212D9A6576C80E /* Cosmos-umbrella.h */,
+				1518338D3CC20F1AC16F8D72D3556ED1 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "Example/Pods/Target Support Files/StarsKit";
+			path = "../Target Support Files/Cosmos";
 			sourceTree = "<group>";
 		};
 		40055E64129B0C5E9FAC79A18DDA27D9 /* Pods-StarsKit_Example */ = {
@@ -170,33 +336,106 @@
 			path = "Target Support Files/Pods-StarsKit_Example";
 			sourceTree = "<group>";
 		};
-		7A9D1AB4713E8973F214C8DC0DF42BD5 /* Pod */ = {
+		4C3201669FB8BE622B4751339DD66855 /* Cosmos */ = {
 			isa = PBXGroup;
 			children = (
-				1904C0F43B5F83F1504C918A3291A003 /* LICENSE */,
-				E68E9B4C1D86A8961A844E04B59A3829 /* README.md */,
-				26CEAA1826D43FD39823A019C4AE4ABF /* StarsKit.podspec */,
+				AB9EBC3E1349867CFAB3F372D91FCCD8 /* CosmosAccessibility.swift */,
+				9575A58DF0FE06CEE4341A3D1D0C4C33 /* CosmosDefaultSettings.swift */,
+				CF1E1CE0F742F241890878E65FAE172F /* CosmosLayerHelper.swift */,
+				F110C5D93FA440D479B5C21F22F5F20B /* CosmosLayers.swift */,
+				08DDA384B66D092A326DEBFC7C43BEE1 /* CosmosLocalizedRating.swift */,
+				47550944AF3B6078DAAFC89F7607304B /* CosmosRating.swift */,
+				D55A81FFE57D8CF29CF7304B6D57B4AA /* CosmosSettings.swift */,
+				72D8CD2B9EFA5AE9442F5750AACE9EA7 /* CosmosSize.swift */,
+				12CCA515B886F670036D04218560374D /* CosmosText.swift */,
+				07C61CC6DFB49C869BBF10537C639DBE /* CosmosTouch.swift */,
+				42637F7BBEC8EEB103C620FFD4E3465C /* CosmosTouchTarget.swift */,
+				79F9B1C74832048BE0776DCF58B326F8 /* CosmosView.swift */,
+				20A1D7E056024E1A763C52221BC9E741 /* RightToLeft.swift */,
+				0BF77EE2B48805492F7A3C23A15F6526 /* StarFillMode.swift */,
+				A7FAAB00B78C7E5632B697535E85BBCA /* StarLayer.swift */,
+				344E943879C4C2C118778C380464DCDC /* Support Files */,
 			);
-			name = Pod;
+			name = Cosmos;
+			path = Cosmos;
+			sourceTree = "<group>";
+		};
+		5135356FF37B1B9879FD18645B7A0143 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				06B65FA81A0960822B18E759CAD46B39 /* Foundation.framework */,
+				1A0A9F85B5547E30A9FADB0BBE8FE407 /* QuartzCore.framework */,
+				B35DD53B2A8538F8C28F0B4CC327D4AF /* UIKit.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				29C048919BF61456146AD8FB9F38733E /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				10FAD6D79A867E7C89CBEF5A6DFDDE11 /* Products */,
+				2A087F620FE2C64AAF41F15B29A0E450 /* Development Pods */,
+				E4B7DD8029F1A62ADEA98B949DF6C8D6 /* Frameworks */,
+				B4BF0EB2A9DACC6B7DBC7D6A15B87D5E /* Pods */,
+				F026D1A9FFE6FEF4B293AC871D494E10 /* Products */,
 				CEBC477A710DC5AEE7C21DB81DCF4457 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		8AD23EF7230219557FFB7CEDEEFE8514 /* Extra */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				00E7938343E730DE34F753B6DDD77487 /* Foundation */,
+				C2495E788EB7377363F4C633EB6FA5EB /* Support Files */,
+				B6D6571845A122FF0695F839DD9A71DB /* UIKit */,
 			);
-			name = Frameworks;
+			name = Extra;
+			path = Extra;
+			sourceTree = "<group>";
+		};
+		B4BF0EB2A9DACC6B7DBC7D6A15B87D5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C3201669FB8BE622B4751339DD66855 /* Cosmos */,
+				8AD23EF7230219557FFB7CEDEEFE8514 /* Extra */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B6D6571845A122FF0695F839DD9A71DB /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				A42B7B875CFC44F256F623DC84205856 /* ExtraUIKit.swift */,
+				A14F0796F03644961BEEFA73BA5B9D7C /* UIApplication+Extra.swift */,
+				375E6BED6DC586EFC80D08094E915A41 /* UIButton+Extra.swift */,
+				F0B5E192994E17F8B14CD8074A3B83D8 /* UICollectionView+Extra.swift */,
+				CFDFB263F63630F6170545953DDAA7E9 /* UICollectionViewCell+Extra.swift */,
+				F3F32F2458D5D71CFA8D7D756F2F28E8 /* UIColor+Extra.swift */,
+				57A2E55F2CECF7920FAED651D74E58EE /* UIDevice+Extra.swift */,
+				41E42091CA61423895DE489A222679B0 /* UIImage+Extra.swift */,
+				3B9D5D51E806D21751A5ED584DEB0802 /* UILabel+Extra.swift */,
+				B06417E5E7B082DE774326D820FF8C2F /* UINavigationController+Extra.swift */,
+				74D8B97E5CFB8CE9DCAC2DFF62D19A34 /* UITableView+Extra.swift */,
+				A77F4630C3FDAAD9760A9F0075EDDD74 /* UITableViewCell+Extra.swift */,
+				6974CE894286BBE3EC7DD3E878E4031B /* UITextView+Extra.swift */,
+				37A982F44D47C24CDBBE7A313E97DBAA /* UIView+Extra.swift */,
+				4861B6F2B69AEE014FAFEFABE2CB9FD7 /* UIViewController+Extra.swift */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		C2495E788EB7377363F4C633EB6FA5EB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				68B836B7D70A52EB1AE1328C3BF46128 /* Extra.modulemap */,
+				F035EC7B8590433BE884CFAAF7F8CE26 /* Extra.xcconfig */,
+				9737C6FFEBD325223450549B51C6BF14 /* Extra-dummy.m */,
+				49FF272B94FB79C323F0CF1E407BA97C /* Extra-prefix.pch */,
+				B1765EFF83D6FE45F4F6509A2C355D60 /* Extra-umbrella.h */,
+				F8C8AB32737B923E1C908B213AC1DF63 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Extra";
 			sourceTree = "<group>";
 		};
 		CEBC477A710DC5AEE7C21DB81DCF4457 /* Targets Support Files */ = {
@@ -207,88 +446,130 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		D53C6CB9F9FE72F0FE3F1F8F6D870056 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				D66F7E3C7D9A69F72A76A16D7871F01C /* LICENSE */,
+				2A3F78172F596C35676CBA6F596CD212 /* README.md */,
+				BC93A99EBE442E8BAC2AA7F4EE1927A6 /* StarsKit.podspec */,
 			);
-			name = iOS;
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		D48E5106AC163E73D0B483D1CC9DDF2C /* Resources */ = {
+		E4B7DD8029F1A62ADEA98B949DF6C8D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B5E1052F3CAB2CD2A725C4A89FB5E8C0 /* StarsKit.bundle */,
+				811AAA10299E0D7985E3681F9E8A41DA /* Cosmos.framework */,
+				C0EC1F687D0CA32FDE997EB0888D6AE2 /* Extra.framework */,
+				5135356FF37B1B9879FD18645B7A0143 /* iOS */,
 			);
-			name = Resources;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBBCB3F53CEA066D919BAAB70C9F1193 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B19C2080EC68865ACF095DA103F6DEF3 /* Info.plist */,
+				8717C7FCECA19D5B5F8868EEAD974FF2 /* ResourceBundle-StarsKit-Info.plist */,
+				EC74EDB45824190D939D402DDFC2478C /* StarsKit.modulemap */,
+				3E2DB3B7D55FEEEA290C9ED269A32937 /* StarsKit.xcconfig */,
+				0EBA02B55EFCE741018000EB99BFC86B /* StarsKit-dummy.m */,
+				9C49A78ABC06B828B95E8A51E116185A /* StarsKit-prefix.pch */,
+				BD9384A6928DB3EF7AB76103498DDEC9 /* StarsKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/StarsKit";
+			sourceTree = "<group>";
+		};
+		EFCD33C56B9CA07455E5421614D280E1 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				E65C1FBB2206B8D71FEBACD8DD5DB5AF /* StarsKit.swift */,
+				2F38EF9D3D8FC6D0EB777EB7A141AA49 /* StarsKitChecker.swift */,
+				7CF28EC5A7EFFDB1372C67EE2C6E6AE0 /* StarsKitConfiguration.swift */,
+				F676786E5906CBFB159F068164AFB3A3 /* StarsKitConstants.swift */,
+				61EAA0B3EB6E47A64821E5D54F18A337 /* StarsKitContext.swift */,
+				FA1FE5FCBB244B331D06E2AA69276569 /* StarsKitDelegate.swift */,
+			);
+			name = Logic;
+			path = StarsKit/Classes/Logic;
+			sourceTree = "<group>";
+		};
+		F026D1A9FFE6FEF4B293AC871D494E10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF8029897302F17BD4BD765C38E22B42 /* Cosmos.framework */,
+				8B9706CF96B93A352334FA595BEFAFBA /* Extra.framework */,
+				E2E0FF82E3D2BDF5E7C2B0A9EAF52C56 /* Pods_StarsKit_Example.framework */,
+				B090A205748994CA16397D4D024E1532 /* StarsKit.bundle */,
+				E60A11D5ADB2D9DC5EB30D9E44D772B7 /* StarsKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4C62132156C77FB49541DD865E0565D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8C8430CB34800930990AFFA9EB764DE6 /* FeedbackViewController.swift */,
+				249A6061B71D8F3B6D478F7029BEBD5F /* FeedbackViewController.xib */,
+				7FF6B61F540781D278BA6AEF571AE1EC /* StarsKitGraphicContext.swift */,
+				C5DC21F55564156F978621F2D3604054 /* StarsPopViewController.swift */,
+				4CDFFE5E63B81C28FE781D31EF9D6F39 /* StarsPopViewController.xib */,
+				88C46DDA740375982AF1C725F0C1093E /* StarsRateViewController.swift */,
+				451ED1ADF876BAB92F0AB03D8C6B2C3C /* StarsRateViewController.xib */,
+				73682065799FD3C71EFF89CFA5C4384A /* StarsRatingCoordinator.swift */,
+				13A03CED275C637BCEED90154C9FE84A /* StoreViewController.swift */,
+				96BD71D9C4730BAC648D714BE36EFBB2 /* StoreViewController.xib */,
+			);
+			name = UI;
+			path = StarsKit/Classes/UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		87B4F6F84DF7F3518155FD19A504527D /* Headers */ = {
+		15A5986307FF6B693BEBC15F54F55EF5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B47DB9E2928400B0080DA453972F048D /* StarsKit-umbrella.h in Headers */,
+				A3D0F95BF16C16CAF39C0438C6EE4784 /* Pods-StarsKit_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D88ACFD8439BA4D2235BD51E1E225D87 /* Headers */ = {
+		6C2B4DAF7AF14335DC695B6CC0ECDE1B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D7D67BDF3FF4916838479AE47F6D3B8 /* Pods-StarsKit_Example-umbrella.h in Headers */,
+				43EFE78E6FD78B0502014C9F2AF73C53 /* Extra-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		886DE96822F2E4C795730A55DA2831D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0099D8110BACAD6D065846DDCCEBC95F /* StarsKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7F72A88918035AFA923560A84B87C61 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE5E91A47C1BF6869DF17747D61C2FF1 /* Cosmos-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		380D9C7DC8F6514AF82186940E28994B /* Pods-StarsKit_Example */ = {
+		3E7C31E7C73673381CDB47C7420E2A46 /* StarsKit-StarsKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50FE93AEA57EB8F25DBF7C02C0845158 /* Build configuration list for PBXNativeTarget "Pods-StarsKit_Example" */;
+			buildConfigurationList = 7398147E882692A3E1A28B3655CCBCA2 /* Build configuration list for PBXNativeTarget "StarsKit-StarsKit" */;
 			buildPhases = (
-				A5720181329337750C6FD466A6625583 /* Sources */,
-				87F19DDA4E7C4F10847323CBB1FE2228 /* Frameworks */,
-				D88ACFD8439BA4D2235BD51E1E225D87 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8A0A4B1350C0D133226750CD672C551B /* PBXTargetDependency */,
-			);
-			name = "Pods-StarsKit_Example";
-			productName = "Pods-StarsKit_Example";
-			productReference = E3D1B262596964043E65E1DAD622CE78 /* Pods_StarsKit_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		676F38A1F56E96392E0B2CB6D7576381 /* StarsKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 57688B9ACC2871E6D91A4719E5595760 /* Build configuration list for PBXNativeTarget "StarsKit" */;
-			buildPhases = (
-				07AA495C39AA6DDBC2BA5FA667C707A8 /* Sources */,
-				D227D42D89784B4D9659E8CEB2DF02C8 /* Frameworks */,
-				6962A49CA92AAB3EE803DE5FD93C8EC1 /* Resources */,
-				87B4F6F84DF7F3518155FD19A504527D /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FABA18C6321736B1206E5452BA432235 /* PBXTargetDependency */,
-			);
-			name = StarsKit;
-			productName = StarsKit;
-			productReference = A9F366CA5094777F4BB0138E46C3F27C /* StarsKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		CABCC70CF36C0846ABE5DF9B2EDFEE1D /* StarsKit-StarsKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B9283C53664B083297F9FA9051E78BCD /* Build configuration list for PBXNativeTarget "StarsKit-StarsKit" */;
-			buildPhases = (
-				64CED63A00E6BEBC0EE5B09B13C14584 /* Sources */,
-				E5460C920EF11AEBF93FE45AF4DAFB73 /* Frameworks */,
-				B31EC42CA8F134791434D44A419825E5 /* Resources */,
+				83BA97DA6DBBF299F074C2353BBFA6E7 /* Sources */,
+				9B1C58485E905D801D29048720DBEBEC /* Frameworks */,
+				7DB65600AA3E35EA3B2E0717BA885308 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -296,8 +577,83 @@
 			);
 			name = "StarsKit-StarsKit";
 			productName = "StarsKit-StarsKit";
-			productReference = 3E83DBD511CE67B391762EB6124A524F /* StarsKit.bundle */;
+			productReference = B090A205748994CA16397D4D024E1532 /* StarsKit.bundle */;
 			productType = "com.apple.product-type.bundle";
+		};
+		4FDC533A4360A68ABDCE852F04B30927 /* Cosmos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38CA41A3E689F135BAEECE91B63D9EA0 /* Build configuration list for PBXNativeTarget "Cosmos" */;
+			buildPhases = (
+				64A8AA816E108F31E7CEE1A683E42839 /* Sources */,
+				23E1D2C8911A1F4127AF93A478D985B5 /* Frameworks */,
+				B7F72A88918035AFA923560A84B87C61 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cosmos;
+			productName = Cosmos;
+			productReference = FF8029897302F17BD4BD765C38E22B42 /* Cosmos.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		69372ED6C65E76C8D3584984511EA640 /* Extra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C365690DC46BB0366D07F9A2D8B5D151 /* Build configuration list for PBXNativeTarget "Extra" */;
+			buildPhases = (
+				BFE262BEBB9E5BD5A7F85CA31046BA2F /* Sources */,
+				8DFD4EB859842F029E2FA72822CDB9F4 /* Frameworks */,
+				6C2B4DAF7AF14335DC695B6CC0ECDE1B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Extra;
+			productName = Extra;
+			productReference = 8B9706CF96B93A352334FA595BEFAFBA /* Extra.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		91702C48BB08960994AC585EDF01D477 /* StarsKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00D2E61AA855DBD39C18BD1EDDAE2512 /* Build configuration list for PBXNativeTarget "StarsKit" */;
+			buildPhases = (
+				27FB213AD89F8B41ECAE38CCF32EDDFB /* Sources */,
+				A95C596301A98654869CC89BE68F7882 /* Frameworks */,
+				CBC442D55751A8AB18BBCD5AB155487E /* Resources */,
+				886DE96822F2E4C795730A55DA2831D5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDFFCB771E0644DB21AE3596F055B343 /* PBXTargetDependency */,
+				81EA7F7806E96FCCD5AD0E9B616DEA6A /* PBXTargetDependency */,
+				B205287D024FC7A2A0A10BFF942A2C7C /* PBXTargetDependency */,
+			);
+			name = StarsKit;
+			productName = StarsKit;
+			productReference = E60A11D5ADB2D9DC5EB30D9E44D772B7 /* StarsKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E0532E0A714C3BA7FEBA4141A653BC49 /* Pods-StarsKit_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA826DA5F154126820D794A086DCDE37 /* Build configuration list for PBXNativeTarget "Pods-StarsKit_Example" */;
+			buildPhases = (
+				DEFC58189DB4A551580ECE6AADB14D52 /* Sources */,
+				9D1BC0640BCFC6D64379291BE7B51015 /* Frameworks */,
+				15A5986307FF6B693BEBC15F54F55EF5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A75A3772A4A3281B9E6860FB21D054C /* PBXTargetDependency */,
+				8203B9680055A00B844447CF4D9B31DC /* PBXTargetDependency */,
+				844AB14C059189CBFE5C428EA2DA210D /* PBXTargetDependency */,
+			);
+			name = "Pods-StarsKit_Example";
+			productName = "Pods-StarsKit_Example";
+			productReference = E2E0FF82E3D2BDF5E7C2B0A9EAF52C56 /* Pods_StarsKit_Example.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -316,87 +672,269 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 10FAD6D79A867E7C89CBEF5A6DFDDE11 /* Products */;
+			productRefGroup = F026D1A9FFE6FEF4B293AC871D494E10 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				380D9C7DC8F6514AF82186940E28994B /* Pods-StarsKit_Example */,
-				676F38A1F56E96392E0B2CB6D7576381 /* StarsKit */,
-				CABCC70CF36C0846ABE5DF9B2EDFEE1D /* StarsKit-StarsKit */,
+				4FDC533A4360A68ABDCE852F04B30927 /* Cosmos */,
+				69372ED6C65E76C8D3584984511EA640 /* Extra */,
+				E0532E0A714C3BA7FEBA4141A653BC49 /* Pods-StarsKit_Example */,
+				91702C48BB08960994AC585EDF01D477 /* StarsKit */,
+				3E7C31E7C73673381CDB47C7420E2A46 /* StarsKit-StarsKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6962A49CA92AAB3EE803DE5FD93C8EC1 /* Resources */ = {
+		7DB65600AA3E35EA3B2E0717BA885308 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5CC8748794927926C853C5210B1E72F /* StarsKit.bundle in Resources */,
+				2341060BE5E2599FD61D826000E07A02 /* FeedbackViewController.xib in Resources */,
+				61F10DEC803501B7536CF0CDCFEC7E5E /* StarsPopViewController.xib in Resources */,
+				8EA107E487A3C098FE1C498743EC129B /* StarsRateViewController.xib in Resources */,
+				D26C1F4EEB5E699979D01AC60A32230A /* StoreViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B31EC42CA8F134791434D44A419825E5 /* Resources */ = {
+		CBC442D55751A8AB18BBCD5AB155487E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1949D67A73854B0ED15AE48D33B54A7A /* StarsKit.bundle in Resources */,
+				E80E887121143BB3C7AD521B0FE83E01 /* StarsKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		07AA495C39AA6DDBC2BA5FA667C707A8 /* Sources */ = {
+		27FB213AD89F8B41ECAE38CCF32EDDFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E22705E838651567B72E0972C9742A6F /* StarsKit-dummy.m in Sources */,
-				91C7BA20846E3315E50713F4142A2A9D /* StarsKit.swift in Sources */,
-				DDFEB0589DB06D820F04532171591F7A /* StarsKitChecker.swift in Sources */,
-				B2255B3C69B97DA9DFDA4AD57ED2E2DD /* StarsKitConfiguration.swift in Sources */,
-				48FDD5040D5BD63DED0FF30353A5D6C6 /* StarsKitConstants.swift in Sources */,
-				362E38F947CE15FD69981BBCA30F0DF8 /* StarsKitContext.swift in Sources */,
-				6529C36499FB8E0DD2EFB056DC088D2A /* StarsKitDelegate.swift in Sources */,
+				6A985E99A311107535434E95497D2E96 /* FeedbackViewController.swift in Sources */,
+				86F66D0F3A2BE20AC757830AAD8C0770 /* FeedbackViewController.xib in Sources */,
+				44AA838455DAF3D6D0B930E6A7DB02E8 /* StarsKit-dummy.m in Sources */,
+				EAB765E3572BED8EB346C92C2AD607F9 /* StarsKit.swift in Sources */,
+				C49233C5B55EEA7AD4BF3C298512B511 /* StarsKitChecker.swift in Sources */,
+				6AB22931DA71D88DD4E4DBBA22AAC604 /* StarsKitConfiguration.swift in Sources */,
+				9F934C68DF8C6865CEF0810B87C3AEC6 /* StarsKitConstants.swift in Sources */,
+				51CA376022E63DAFC7A7DBFC1E513B30 /* StarsKitContext.swift in Sources */,
+				52EC1EF9BB1F78065D2B806F2B057607 /* StarsKitDelegate.swift in Sources */,
+				3A61639328FF26632666B0142236C1F1 /* StarsKitGraphicContext.swift in Sources */,
+				6204A1ED769D7B110A36CFA426E65308 /* StarsPopViewController.swift in Sources */,
+				0D1E5823AD5750C6F0DD46C599A88AA5 /* StarsPopViewController.xib in Sources */,
+				50B2D9A63B8890EDE22DBFC06D70ADB3 /* StarsRateViewController.swift in Sources */,
+				2B25C94F4C6A4F05E4D209216AB7E305 /* StarsRateViewController.xib in Sources */,
+				0D5F52B9C4F1A551B7B17D5020997A79 /* StarsRatingCoordinator.swift in Sources */,
+				A474153C5A831C6CE599FD110D11DC1E /* StoreViewController.swift in Sources */,
+				1A2C1E858AE1D05B1CDBE706B6D832BB /* StoreViewController.xib in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		64CED63A00E6BEBC0EE5B09B13C14584 /* Sources */ = {
+		64A8AA816E108F31E7CEE1A683E42839 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DF6ECF23D38E7DA5B5B2B43707F2F4D /* Cosmos-dummy.m in Sources */,
+				7CC5A43D7E1372EB6292FCBC0151A36E /* CosmosAccessibility.swift in Sources */,
+				371F422D050761A63F0156F537B8902D /* CosmosDefaultSettings.swift in Sources */,
+				F66DE3EF01408C42C115587B201CB541 /* CosmosLayerHelper.swift in Sources */,
+				AA971D9492DD9B9E288045C2C0CC9A99 /* CosmosLayers.swift in Sources */,
+				0EC88D04EAE0CD3EFD3C3C89C1B9F45F /* CosmosLocalizedRating.swift in Sources */,
+				99F08F6FE2B165EEBD5E01EDDA176620 /* CosmosRating.swift in Sources */,
+				015C902B9C0E63DA0519A0D34E10F739 /* CosmosSettings.swift in Sources */,
+				25DFA72039CBA011EBA738AA73084A8E /* CosmosSize.swift in Sources */,
+				424AD9605CBDCD867083B9820784E0AC /* CosmosText.swift in Sources */,
+				4F40A9CBB316E7100828F0C6F5714946 /* CosmosTouch.swift in Sources */,
+				E2D8D1AA0D41C73C4B570DE682C05D72 /* CosmosTouchTarget.swift in Sources */,
+				45F546D14166EDEE46371951EC705C03 /* CosmosView.swift in Sources */,
+				C79D2F2FCE3EF9B31D1222E0C4A59DC5 /* RightToLeft.swift in Sources */,
+				88BA9FFC474BD7B995A0CEA06FF431F7 /* StarFillMode.swift in Sources */,
+				C95B658D689425ED9DAA95EB479B44A6 /* StarLayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83BA97DA6DBBF299F074C2353BBFA6E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5720181329337750C6FD466A6625583 /* Sources */ = {
+		BFE262BEBB9E5BD5A7F85CA31046BA2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF050B7DD63C65D0BD5D2BEAD0B802E6 /* Pods-StarsKit_Example-dummy.m in Sources */,
+				212C02FDF7F2DD7638C3CAA4FB983995 /* Extra-dummy.m in Sources */,
+				8933BEECD36E5849C72667089C2B3AF3 /* Extra.swift in Sources */,
+				ED43812A62A56669E0959CCE49E6824C /* ExtraUIKit.swift in Sources */,
+				863FD2CEAE2B34DD70D143481E6803C4 /* Sequence+Extra.swift in Sources */,
+				49A343FF2DC2EC8EBA0B4E48CA640249 /* String+Extra.swift in Sources */,
+				B5686AAF68CB97355839F2D1C6F3FFB4 /* UIApplication+Extra.swift in Sources */,
+				2CAF8D3E1A7923196257CE2E9D71ACFB /* UIButton+Extra.swift in Sources */,
+				CBAA94966FD2225F6135C4DF99569A3E /* UICollectionView+Extra.swift in Sources */,
+				06FFB41E148B93A20B7CB950CA7B370F /* UICollectionViewCell+Extra.swift in Sources */,
+				05CE6ACDB00B51867E366D93D77B4400 /* UIColor+Extra.swift in Sources */,
+				C0D79FC10D3EA2178FECD00B8AE9BA43 /* UIDevice+Extra.swift in Sources */,
+				1D83B5BF02693D22BA6B0E6BEB66DF84 /* UIImage+Extra.swift in Sources */,
+				FFD42657529E19672E948A9AC31C7797 /* UILabel+Extra.swift in Sources */,
+				E9EF9BB6C749D8D42661BB07C18C87FE /* UINavigationController+Extra.swift in Sources */,
+				6CFA32E71FB156DCA6E19593FA7F44C4 /* UITableView+Extra.swift in Sources */,
+				E5F9265CF37C7D288A263252470EDA26 /* UITableViewCell+Extra.swift in Sources */,
+				3530F401EA678F0C151A0BB1C39BCCCD /* UITextView+Extra.swift in Sources */,
+				5E628D5DFE625A5AB13AE1B7D9432F9C /* UIView+Extra.swift in Sources */,
+				3362893EEEA22A163960F8ADD0454CC5 /* UIViewController+Extra.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEFC58189DB4A551580ECE6AADB14D52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D9C6A91F517ACEF223E613F374FFDEA /* Pods-StarsKit_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8A0A4B1350C0D133226750CD672C551B /* PBXTargetDependency */ = {
+		6A75A3772A4A3281B9E6860FB21D054C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cosmos;
+			target = 4FDC533A4360A68ABDCE852F04B30927 /* Cosmos */;
+			targetProxy = C89E0E3B25690265E1808956C8A92D91 /* PBXContainerItemProxy */;
+		};
+		81EA7F7806E96FCCD5AD0E9B616DEA6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Extra;
+			target = 69372ED6C65E76C8D3584984511EA640 /* Extra */;
+			targetProxy = 1CCCBE7DE166E79F41B13596D1980D5E /* PBXContainerItemProxy */;
+		};
+		8203B9680055A00B844447CF4D9B31DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Extra;
+			target = 69372ED6C65E76C8D3584984511EA640 /* Extra */;
+			targetProxy = 94AB28B889939AAF2AF300C4A4C8BFC4 /* PBXContainerItemProxy */;
+		};
+		844AB14C059189CBFE5C428EA2DA210D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = StarsKit;
-			target = 676F38A1F56E96392E0B2CB6D7576381 /* StarsKit */;
-			targetProxy = 2FFC8A3BB5B007D1729F36F8549B5CED /* PBXContainerItemProxy */;
+			target = 91702C48BB08960994AC585EDF01D477 /* StarsKit */;
+			targetProxy = FF768997CCCE05F8C869D8D8253CFD89 /* PBXContainerItemProxy */;
 		};
-		FABA18C6321736B1206E5452BA432235 /* PBXTargetDependency */ = {
+		B205287D024FC7A2A0A10BFF942A2C7C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "StarsKit-StarsKit";
-			target = CABCC70CF36C0846ABE5DF9B2EDFEE1D /* StarsKit-StarsKit */;
-			targetProxy = 8294FD316A3BFE325E83DA94CE9B4C2B /* PBXContainerItemProxy */;
+			target = 3E7C31E7C73673381CDB47C7420E2A46 /* StarsKit-StarsKit */;
+			targetProxy = ADA42F530101A18D372C3F80B0B5AFDC /* PBXContainerItemProxy */;
+		};
+		DDFFCB771E0644DB21AE3596F055B343 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cosmos;
+			target = 4FDC533A4360A68ABDCE852F04B30927 /* Cosmos */;
+			targetProxy = B77A2CF0169CAF3B73D68636B56DA2E1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1C301D8CE9AD292DFDA5CA720F01869F /* Debug */ = {
+		0F8669FB327A1961C6B9772E7C207F1A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2EA63DAD55DBC476B2B935D742F9CB2 /* StarsKit.xcconfig */;
+			baseConfigurationReference = F035EC7B8590433BE884CFAAF7F8CE26 /* Extra.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Extra/Extra-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Extra/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Extra/Extra.modulemap";
+				PRODUCT_NAME = Extra;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3C3CD1E40291640D21DD308DAF3CFE6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F035EC7B8590433BE884CFAAF7F8CE26 /* Extra.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Extra/Extra-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Extra/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Extra/Extra.modulemap";
+				PRODUCT_NAME = Extra;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3D3F44B66A238CE49A52F23A785FABEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 821D569C5598DEC4179EF574C68DC607 /* Cosmos.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Cosmos/Cosmos-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cosmos/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cosmos/Cosmos.modulemap";
+				PRODUCT_NAME = Cosmos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		58722AC610E75F7F1AE99816D2E8FAF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E2DB3B7D55FEEEA290C9ED269A32937 /* StarsKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/StarsKit";
@@ -408,11 +946,77 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
 		};
-		3CE3D4C48329E67FB5D5977A3C9688E6 /* Debug */ = {
+		641299A52868AFA832E2EC41C64BBA9D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2EA63DAD55DBC476B2B935D742F9CB2 /* StarsKit.xcconfig */;
+			baseConfigurationReference = C9389B0704AB9C458AB3893FB99F02DF /* Pods-StarsKit_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-StarsKit_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StarsKit_Example/Pods-StarsKit_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_StarsKit_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		659C49EB78C223808F096000090DE9DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 821D569C5598DEC4179EF574C68DC607 /* Cosmos.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Cosmos/Cosmos-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cosmos/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cosmos/Cosmos.modulemap";
+				PRODUCT_NAME = Cosmos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6BB10695D148212062401208550B1262 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E2DB3B7D55FEEEA290C9ED269A32937 /* StarsKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -496,9 +1100,41 @@
 			};
 			name = Release;
 		};
-		9C11F69B5A25441B017B233C10F1925D /* Release */ = {
+		77906F32154383531EDCC6F3896F4F88 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9389B0704AB9C458AB3893FB99F02DF /* Pods-StarsKit_Example.release.xcconfig */;
+			baseConfigurationReference = 3E2DB3B7D55FEEEA290C9ED269A32937 /* StarsKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/StarsKit/StarsKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/StarsKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/StarsKit/StarsKit.modulemap";
+				PRODUCT_NAME = StarsKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9CBD861C8729D8B1EAAE74D0DF33C747 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CAC9350193E5FE798B883AEE53B5E44 /* Pods-StarsKit_Example.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -522,29 +1158,13 @@
 				PRODUCT_NAME = Pods_StarsKit_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
-		};
-		A7FC85FFB3DCBFA6DF51B6EE4E569928 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2EA63DAD55DBC476B2B935D742F9CB2 /* StarsKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/StarsKit";
-				INFOPLIST_FILE = "Target Support Files/StarsKit/ResourceBundle-StarsKit-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = StarsKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
+			name = Debug;
 		};
 		B57951D085A1B98A97F8A1062A5E5C5B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -606,75 +1226,34 @@
 			};
 			name = Debug;
 		};
-		B89BC3CEE6C1D492671205F1793C6846 /* Debug */ = {
+		C8D61661262C9EC3F19D76F9C0D71171 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0CAC9350193E5FE798B883AEE53B5E44 /* Pods-StarsKit_Example.debug.xcconfig */;
+			baseConfigurationReference = 3E2DB3B7D55FEEEA290C9ED269A32937 /* StarsKit.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-StarsKit_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/StarsKit";
+				INFOPLIST_FILE = "Target Support Files/StarsKit/ResourceBundle-StarsKit-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-StarsKit_Example/Pods-StarsKit_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_StarsKit_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E31B20EDF60300111B15E02BAA261582 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2EA63DAD55DBC476B2B935D742F9CB2 /* StarsKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/StarsKit/StarsKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/StarsKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/StarsKit/StarsKit.modulemap";
 				PRODUCT_NAME = StarsKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		00D2E61AA855DBD39C18BD1EDDAE2512 /* Build configuration list for PBXNativeTarget "StarsKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BB10695D148212062401208550B1262 /* Debug */,
+				77906F32154383531EDCC6F3896F4F88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -684,29 +1263,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50FE93AEA57EB8F25DBF7C02C0845158 /* Build configuration list for PBXNativeTarget "Pods-StarsKit_Example" */ = {
+		38CA41A3E689F135BAEECE91B63D9EA0 /* Build configuration list for PBXNativeTarget "Cosmos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B89BC3CEE6C1D492671205F1793C6846 /* Debug */,
-				9C11F69B5A25441B017B233C10F1925D /* Release */,
+				3D3F44B66A238CE49A52F23A785FABEA /* Debug */,
+				659C49EB78C223808F096000090DE9DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57688B9ACC2871E6D91A4719E5595760 /* Build configuration list for PBXNativeTarget "StarsKit" */ = {
+		7398147E882692A3E1A28B3655CCBCA2 /* Build configuration list for PBXNativeTarget "StarsKit-StarsKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3CE3D4C48329E67FB5D5977A3C9688E6 /* Debug */,
-				E31B20EDF60300111B15E02BAA261582 /* Release */,
+				C8D61661262C9EC3F19D76F9C0D71171 /* Debug */,
+				58722AC610E75F7F1AE99816D2E8FAF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9283C53664B083297F9FA9051E78BCD /* Build configuration list for PBXNativeTarget "StarsKit-StarsKit" */ = {
+		C365690DC46BB0366D07F9A2D8B5D151 /* Build configuration list for PBXNativeTarget "Extra" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1C301D8CE9AD292DFDA5CA720F01869F /* Debug */,
-				A7FC85FFB3DCBFA6DF51B6EE4E569928 /* Release */,
+				0F8669FB327A1961C6B9772E7C207F1A /* Debug */,
+				3C3CD1E40291640D21DD308DAF3CFE6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA826DA5F154126820D794A086DCDE37 /* Build configuration list for PBXNativeTarget "Pods-StarsKit_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CBD861C8729D8B1EAAE74D0DF33C747 /* Debug */,
+				641299A52868AFA832E2EC41C64BBA9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

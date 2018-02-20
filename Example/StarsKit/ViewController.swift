@@ -17,10 +17,11 @@ class ViewController: UIViewController {
       do {
         let data = try Data(contentsOf: URL(fileURLWithPath: path))
         if let localJSONConfiguration = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any?] {
-          StarsKit.shared.updateConfig(with: localJSONConfiguration)
+          StarsKit.shared.updateConfig(from: localJSONConfiguration)
           StarsKit.shared.incrementSession()
+          StarsKit.shared.priorityUseNativeRate = false
           StarsKit.shared.delegate = self
-          StarsKit.shared.checkRateDisplay()
+          
         }
       } catch {
         // handle error
@@ -28,11 +29,24 @@ class ViewController: UIViewController {
     }
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    StarsKit.shared.checkRateDisplay()
+  }
+  
 }
 
 
 // MARK: - StarsKitDelegate
 extension ViewController: StarsKitDelegate {
+  func didChooseAction(at step: RatingStep, from context: StarsKitContext) {
+    //
+  }
+  
+  func didChooseLater(at step: RatingStep, from context: StarsKitContext) {
+    //
+  }
+  
   
   func needDisplayRateScreen() -> Bool {
     return true
@@ -43,30 +57,6 @@ extension ViewController: StarsKitDelegate {
   }
   
   func didUpdateRating(from context: StarsKitContext, to rate: Int) {
-    //
-  }
-  
-  func willDismissRatingView(from client: StarsKitContext) {
-    //
-  }
-  
-  func didChooseRateLater(from client: StarsKitContext) {
-    //
-  }
-  
-  func willDismissLikeScreen(from client: StarsKitContext) {
-    //
-  }
-  
-  func didDismissLikeScreen(from client: StarsKitContext) {
-    //
-  }
-  
-  func didExitLikeScreen(from client: StarsKitContext) {
-    //
-  }
-  
-  func didDismissUnlikeScreen(from client: StarsKitContext) {
     //
   }
   

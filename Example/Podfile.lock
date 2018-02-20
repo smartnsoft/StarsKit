@@ -1,5 +1,13 @@
 PODS:
-  - StarsKit (0.1.0)
+  - Cosmos (15.0.0)
+  - Extra (1.1.0):
+    - Extra/Foundation (= 1.1.0)
+    - Extra/UIKit (= 1.1.0)
+  - Extra/Foundation (1.1.0)
+  - Extra/UIKit (1.1.0)
+  - StarsKit (0.1.0):
+    - Cosmos (~> 15.0)
+    - Extra (~> 1.1.0)
 
 DEPENDENCIES:
   - StarsKit (from `../`)
@@ -9,7 +17,9 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  StarsKit: c3bc2bea9f455779f999c34d1c2c357166ed8143
+  Cosmos: a6dbd3d0baa0cc8f51f8598f7508d5a09d0a9ade
+  Extra: 34839d5a5fcaa1a957ea0b5ebcac88ba807bad43
+  StarsKit: 45ed270e289c21b0edad5ad2226200dd7bb031d8
 
 PODFILE CHECKSUM: fbfc0135d9a1bf9c702d3335966ea7bb7862f075
 
