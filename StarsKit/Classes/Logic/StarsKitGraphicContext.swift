@@ -46,8 +46,12 @@ public class StarsKitGraphicContext {
   public lazy var backgroundHeaderColor: UIColor = .white
   public lazy var cornerRadius: CGFloat = 10
   
-  public lazy var emptyStarImage: UIImage? = UIImage(named: "shape_default", in: Bundle(for: StarsKit.self), compatibleWith: nil)
-  public lazy var filledStarImage: UIImage? = UIImage(named: "shape_selected", in: Bundle(for: StarsKit.self), compatibleWith: nil)
+  public lazy var emptyStarImage: UIImage? = UIImage(named: "shape_default",
+                                                     in: Bundle(for: StarsKit.self),
+                                                     compatibleWith: nil)
+  public lazy var filledStarImage: UIImage? = UIImage(named: "shape_selected",
+                                                      in: Bundle(for: StarsKit.self),
+                                                      compatibleWith: nil)
   
   public lazy var preferredStatusBarStyle = UIStatusBarStyle.lightContent
   

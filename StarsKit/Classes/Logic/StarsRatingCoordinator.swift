@@ -49,6 +49,7 @@ final class StarsRatingCoordinator {
        context: StarsKitContext,
        graphicContext: StarsKitGraphicContext,
        delegate: StarsRatingCoordinatorDelegate?) {
+    
     self.starsPopViewController = starsPopViewController
     self.graphicContext = graphicContext
     self.context = context
@@ -108,18 +109,18 @@ final class StarsRatingCoordinator {
   // MARK: Step ending events
   func didChooseFeedback() {
     StarsKit.shared.context.userAlreadyRespondsToAction = true
-    StarsKit.shared.delegate?.didChooseAction(at: self.step, from: self.context)
+    StarsKit.shared.delegate?.didChooseAction(at: self.step)
     self.starsPopViewController?.dismiss(animated: true, completion: nil)
   }
   
   func didChooseStoreReview() {
     StarsKit.shared.context.userAlreadyRespondsToAction = true
-    StarsKit.shared.delegate?.didChooseAction(at: self.step, from: self.context)
+    StarsKit.shared.delegate?.didChooseAction(at: self.step)
     self.starsPopViewController?.dismiss(animated: true, completion: nil)
   }
   
   func later() {
-    StarsKit.shared.delegate?.didChooseLater(at: self.step, from: self.context)
+    StarsKit.shared.delegate?.didChooseLater(at: self.step)
     self.starsPopViewController?.dismiss(animated: true, completion: nil)
   }
   

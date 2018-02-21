@@ -1,8 +1,9 @@
 {
     "disabled": false,
     "displaySessionCount": 3,
-    "mainTitle": "Votre avis nous intéresse",
+    "mainTitle": "(Config) Votre avis nous intéresse",
     "mainText": "Aimez-vous l’application StarsKit ?",
+    "mainActionButton": "Valider",
     "positiveStarsLimit": 4,
     "dislikeMainTitle": "Votre avis nous intéresse",
     "dislikeMainText": "Aidez-nous à améliorer l’application StarsKit",

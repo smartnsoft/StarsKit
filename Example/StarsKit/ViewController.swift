@@ -27,13 +27,10 @@ class ViewController: UIViewController {
         let data = try Data(contentsOf: URL(fileURLWithPath: path))
         if let localJSONConfiguration = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any?] {
           StarsKit.shared.updateConfig(from: localJSONConfiguration)
-          StarsKit.shared.incrementSession()
-          //
-          //StarsKit.shared.validateRatingButtonEnable = false
-          StarsKit.shared.localLocalizableStringsEnabled = true
-          StarsKit.shared.graphicContext.backgroundHeaderTitleImage = UIImage.gradient(from: UIColor.ex.fromHexa("#0024a6"),
-                                                                                       end: UIColor.ex.fromHexa("#d8012a"),
-                                                                                       rect: CGRect(x: 0, y: 0, width: 50, height: 50))
+          let bgImage = UIImage.gradient(from: UIColor.ex.fromHexa("#0024a6"),
+                                         end: UIColor.ex.fromHexa("#d8012a"),
+                                         rect: CGRect(x: 0, y: 0, width: 50, height: 50))
+          StarsKit.shared.graphicContext.backgroundHeaderTitleImage = bgImage
           StarsKit.shared.delegate = self
           self.updateDisplayMetrics()
         }
@@ -53,6 +50,9 @@ class ViewController: UIViewController {
     StarsKit.shared.priorityUseNativeRate = sender.isOn
   }
   
+  @IBAction func didSwitchLocalizable(_ sender: UISwitch) {
+    StarsKit.shared.localLocalizableStringsEnabled = sender.isOn
+  }
   @IBAction func didTapShowRatingButton(_ sender: Any) {
     StarsKit.shared.checkRateDisplay()
     self.updateDisplayMetrics()
@@ -62,6 +62,12 @@ class ViewController: UIViewController {
     StarsKit.shared.context.nbCrashes += 1
     self.updateDisplayMetrics()
   }
+  
+  @IBAction func didTapResetMetrics(_ sender: Any) {
+    StarsKit.shared.resetContext()
+    self.updateDisplayMetrics()
+  }
+  
   @IBAction func didTapIncrementSession(_ sender: Any) {
     StarsKit.shared.context.nbSessions += 1
     self.updateDisplayMetrics()
@@ -74,11 +80,11 @@ extension ViewController: StarsKitDelegate {
     print("Did validate rating to rate \(rate)")
   }
   
-  func didChooseAction(at step: RatingStep, from context: StarsKitContext) {
+  func didChooseAction(at step: RatingStep) {
     print("Did choose action button at step \(step)")
   }
   
-  func didChooseLater(at step: RatingStep, from context: StarsKitContext) {
+  func didChooseLater(at step: RatingStep) {
     print("Did choose later button at step \(step)")
   }
   

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4402EF10203E1E39004E82AE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4402EF0E203E1E39004E82AE /* Localizable.strings */; };
 		4421E1F6203D8ECB004F058F /* UIImage+StarsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4421E1F5203D8ECB004F058F /* UIImage+StarsKit.swift */; };
 		442A9027203C75EB00512A74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442A9026203C75EB00512A74 /* LaunchScreen.storyboard */; };
 		442A9029203C76B900512A74 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 442A9028203C76B900512A74 /* config.json */; };
@@ -23,6 +24,8 @@
 		0E99C04096DE554B6BD01760 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2D51679C39681124B4443E86 /* Pods_StarsKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarsKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4402EF0D203DE876004E82AE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		4402EF11203E1E42004E82AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4402EF12203E1E45004E82AE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4421E1F5203D8ECB004F058F /* UIImage+StarsKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+StarsKit.swift"; sourceTree = "<group>"; };
 		442A9026203C75EB00512A74 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		442A9028203C76B900512A74 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 				442A9026203C75EB00512A74 /* LaunchScreen.storyboard */,
+				4402EF0E203E1E39004E82AE /* Localizable.strings */,
 			);
 			name = "Example for StarsKit";
 			path = StarsKit;
@@ -198,6 +202,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
@@ -214,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4402EF10203E1E39004E82AE /* Localizable.strings in Resources */,
 				442A9027203C75EB00512A74 /* LaunchScreen.storyboard in Resources */,
 				442A9029203C76B900512A74 /* config.json in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
@@ -297,6 +303,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		4402EF0E203E1E39004E82AE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4402EF11203E1E42004E82AE /* en */,
+				4402EF12203E1E45004E82AE /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
