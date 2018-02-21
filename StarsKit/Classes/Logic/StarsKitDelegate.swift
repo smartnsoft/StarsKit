@@ -36,6 +36,7 @@ public protocol StarsKitDelegate: class {
   ///   - context: The context when the event fire
   ///   - rate: The user app rate level
   func didUpdateRating(from context: StarsKitContext, to rate: Int)
+  func didValidateRating(to rate: Int)
   
   func didChooseAction(`at` step: RatingStep, from context: StarsKitContext)
   func didChooseLater(`at` step: RatingStep, from context: StarsKitContext)

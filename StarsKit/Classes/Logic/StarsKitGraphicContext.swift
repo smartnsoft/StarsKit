@@ -23,30 +23,50 @@
 import Foundation
 import UIKit
 import Cosmos
+import Jelly
 
+
+/// UI customization properties for your rating steps screens
 public class StarsKitGraphicContext {
   
-  public var mainTitleFont: UIFont = UIFont.boldSystemFont(ofSize: 16)
-  public var mainTitleColor: UIColor = .white
+  public lazy var mainTitleFont: UIFont = UIFont.boldSystemFont(ofSize: 16)
+  public lazy var mainTitleColor: UIColor = .white
   
-  public var indicationTitleFont: UIFont = UIFont.boldSystemFont(ofSize: 18)
-  public var indicationTitleColor: UIColor = .darkGray
+  public lazy var indicationTitleFont: UIFont = UIFont.boldSystemFont(ofSize: 18)
+  public lazy var indicationTitleColor: UIColor = .darkGray
   
-  public var actionButtonBackgroundColor: UIColor = .blue
-  public var actionButtonTitleColor: UIColor = .white
-  public var actionButtonTitleFont: UIFont = UIFont.boldSystemFont(ofSize: 15)
+  public lazy var actionButtonBackgroundColor: UIColor = .blue
+  public lazy var actionButtonTitleColor: UIColor = .white
+  public lazy var actionButtonTitleFont: UIFont = UIFont.boldSystemFont(ofSize: 15)
   
-  public var laterTitleFont: UIFont = UIFont.boldSystemFont(ofSize: 15)
-  public var laterTitleTintColor: UIColor = .lightGray
+  public lazy var laterTitleFont: UIFont = UIFont.boldSystemFont(ofSize: 15)
+  public lazy var laterTitleTintColor: UIColor = .lightGray
   
   public var backgroundHeaderTitleImage: UIImage?
-  public var backgroundHeaderColor: UIColor = .white
-  public var cornerRadius: CGFloat = 10
+  public lazy var backgroundHeaderColor: UIColor = .white
+  public lazy var cornerRadius: CGFloat = 10
   
-  public var emptyStarImage: UIImage? = UIImage(named: "shape_default", in: Bundle(for: StarsKit.self), compatibleWith: nil)
-  public var filledStarImage: UIImage? = UIImage(named: "shape_selected", in: Bundle(for: StarsKit.self), compatibleWith: nil)
+  public lazy var emptyStarImage: UIImage? = UIImage(named: "shape_default", in: Bundle(for: StarsKit.self), compatibleWith: nil)
+  public lazy var filledStarImage: UIImage? = UIImage(named: "shape_selected", in: Bundle(for: StarsKit.self), compatibleWith: nil)
   
-  public var preferredStatusBarStyle = UIStatusBarStyle.lightContent
+  public lazy var preferredStatusBarStyle = UIStatusBarStyle.lightContent
   
-  public var cosmosSettings: CosmosSettings = CosmosSettings.default
+  // Third parties customizations
+  lazy var defaultJellyPresentation: JellyPresentation = {
+    var presentation = JellySlideInPresentation(cornerRadius: Double(self.cornerRadius),
+                                                backgroundStyle: .blur(effectStyle: .extraLight),
+                                                duration: .medium,
+                                                directionShow: .top,
+                                                directionDismiss: .bottom,
+                                                widthForViewController: .custom(value: 280),
+                                                heightForViewController: .custom(value: 250))
+    presentation.isTapBackgroundToDismissEnabled = false
+    return presentation
+  }()
+  
+  public lazy var cosmosSettings: CosmosSettings = CosmosSettings.default
+  
+  public lazy var jellyCustomTransition: JellyPresentation = {
+    self.defaultJellyPresentation
+  }()
 }

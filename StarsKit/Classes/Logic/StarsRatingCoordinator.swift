@@ -26,7 +26,7 @@ protocol StarsRatingCoordinatorDelegate: class {
   func didSwitchToStep(_ step: RatingStep)
 }
 
-/// Coordinate rating workflow
+/// Coordinate the rating workflow
 final class StarsRatingCoordinator {
   
   private var graphicContext: StarsKitGraphicContext
@@ -74,6 +74,7 @@ final class StarsRatingCoordinator {
   }
   
   func validateRating(to rate: Double) {
+    StarsKit.shared.delegate?.didValidateRating(to: Int(rate))
     if Int(rate) < StarsKit.shared.configuration.positiveStarsLimit {
       self.makeFeedback()
     } else {

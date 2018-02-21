@@ -23,13 +23,13 @@
 import UIKit
 import Cosmos
 
-public class StarsRateViewController: StepViewController {
+final public class StarsRateViewController: StepViewController {
   
   @IBOutlet weak var ibCosmosView: CosmosView!
   
   init(graphicContext: StarsKitGraphicContext, coordinator: StarsRatingCoordinator) {
     let nibName = "StarsRateViewController"
-    let bundle: Bundle = bundleForResource(name: nibName, ofType: "nib")
+    let bundle: Bundle = Bundle.bundleForResource(name: nibName, ofType: "nib")
     super.init(nibName: nibName, bundle: bundle)
     self.graphicContext = graphicContext
     self.coordinator = coordinator

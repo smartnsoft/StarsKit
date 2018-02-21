@@ -30,13 +30,23 @@ public class StarsKit {
   
   public static let shared = StarsKit()
   
+  // StarsKit contexts and configuration
   public var configuration = StarsKitConfiguration()
   public var context = StarsKitContext()
   public var graphicContext = StarsKitGraphicContext()
   
+  // Defines if you want to submit immediatelly after Stars touches
+  // or validate after with a specific submit button
   public var validateRatingButtonEnable = true
+  
+  // Defines if StarsKit will appluy its own behavior process or if you want to apply yours
   public var useDefaultBehavior = true
+  
+  // Defines if you want to enable the StoreKit Rating Controller (from iOS 10.3 only)
   public var priorityUseNativeRate = false
+  
+  // Define if StarsKit use the Localizable strings (and your overrided ones)
+  // or if it uses the configuration strings ones
   public var localLocalizableStringsEnabled = false
   
   fileprivate var jellyAnimator: JellyAnimator?
@@ -48,6 +58,7 @@ public class StarsKit {
     self.delegate = delegate
   }
   
+  /// Start the rating checking and display the rating view if needed
   public func checkRateDisplay() {
     if (self.useDefaultBehavior && StarsKitChecker.needDisplayRateScreen(for: self))
       || self.delegate?.needDisplayRateScreen() == true {
@@ -60,15 +71,7 @@ public class StarsKit {
         if let controller = self.delegate?.presenterController() {
           
           let alertController = StarsPopViewController(graphicContext: self.graphicContext)
-          // Custom Alert
-          var alertPresentation = JellySlideInPresentation(cornerRadius: Double(self.graphicContext.cornerRadius),
-                                                           backgroundStyle: .blur(effectStyle: .extraLight),
-                                                           duration: .medium,
-                                                           directionShow: .top,
-                                                           directionDismiss: .bottom,
-                                                           widthForViewController: .custom(value: 280),
-                                                           heightForViewController: .custom(value: 250))
-          alertPresentation.isTapBackgroundToDismissEnabled = false
+          let alertPresentation = self.graphicContext.jellyCustomTransition
           self.jellyAnimator = JellyAnimator(presentation: alertPresentation)
           self.jellyAnimator?.prepare(viewController: alertController)
           
@@ -78,7 +81,7 @@ public class StarsKit {
     }
   }
   
-  /// Reset all metrics context
+  /// MARK: Metrics update
   public func resetContext() {
     self.context.nbCrashes = 0
     self.context.nbSessions = 0
@@ -89,18 +92,20 @@ public class StarsKit {
     self.context.nbSessions += sessionCount
   }
   
-  // MARK: Config update
   public func updateConfig(from values: [String: Any?]) {
     self.configuration.update(with: values)
   }
   
 }
 
-func bundleForResource(name: String, ofType type: String) -> Bundle {
-  
-  if(Bundle.main.path(forResource: name, ofType: type) != nil) {
-    return Bundle.main
+// MARK: - Bundle
+extension Bundle {
+  static func bundleForResource(name: String, ofType type: String) -> Bundle {
+    
+    if(Bundle.main.path(forResource: name, ofType: type) != nil) {
+      return Bundle.main
+    }
+    
+    return Bundle(for: StarsKit.self)
   }
-  
-  return Bundle(for: StarsKit.self)
 }

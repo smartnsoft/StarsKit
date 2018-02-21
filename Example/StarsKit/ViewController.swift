@@ -41,9 +41,12 @@ class ViewController: UIViewController {
   
 }
 
-
 // MARK: - StarsKitDelegate
 extension ViewController: StarsKitDelegate {
+  func didValidateRating(to rate: Int) {
+    print("Did validate rating to rate \(rate)")
+  }
+  
   func didChooseAction(at step: RatingStep, from context: StarsKitContext) {
     print("Did choose action button at step \(step)")
   }

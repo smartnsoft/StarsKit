@@ -27,7 +27,6 @@ import Foundation
 public final class StarsKitConfiguration {
   
   // MARK: Properties
-  
   public internal(set) var disabled: Bool {
     get {
       return UserDefaults.standard.bool(forKey: StarsKitProperties.disabled.userDefaultsKey)
@@ -146,6 +145,16 @@ public final class StarsKitConfiguration {
     UserDefaults.standard.setValue(string, forKey: key.userDefaultsKey)
   }
   
+  
+  /// Returns the localizable title for a specific key.
+  ///
+  /// It will check if the localizable strings behavior is enabled.
+  ///
+  /// If it is, it will also check if you override the localizable keys in your bundle.
+  ///
+  /// If not, it will check the configuration given values
+  /// - Parameter key: The localizable enum key to check
+  /// - Returns: The translated value
   func localizableTitle(`for` key: StarsKitLocalizableKeys) -> String {
     if StarsKit.shared.localLocalizableStringsEnabled {
       let overridedLocalizable = NSLocalizedString(key.localizableKey, bundle: Bundle.main, comment: "")

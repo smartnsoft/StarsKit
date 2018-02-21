@@ -23,11 +23,11 @@
 import UIKit
 import Extra
 
-public class FeedbackViewController: StepViewController {
+final public class FeedbackViewController: StepViewController {
   
   init(graphicContext: StarsKitGraphicContext, coordinator: StarsRatingCoordinator) {
     let nibName = "FeedbackViewController"
-    let bundle: Bundle = bundleForResource(name: nibName, ofType: "nib")
+    let bundle: Bundle = Bundle.bundleForResource(name: nibName, ofType: "nib")
     super.init(nibName: nibName, bundle: bundle)
     self.graphicContext = graphicContext
     self.coordinator = coordinator

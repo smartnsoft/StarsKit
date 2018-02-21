@@ -23,11 +23,14 @@
 import UIKit
 import Extra
 
-public class StarsPopViewController: UIViewController {
+
+/// The root view controller of the rating process
+/// It will use child view containement to display other steps
+final public class StarsPopViewController: UIViewController {
   
   @IBOutlet weak var ibTitleLabel: UILabel!
-  @IBOutlet weak var ibContainerView: UIView!
   @IBOutlet weak var ibBackgroundImageView: UIImageView!
+  @IBOutlet weak var ibContainerView: UIView!
   
   private var graphicContext: StarsKitGraphicContext = StarsKit.shared.graphicContext
   private var coordinator: StarsRatingCoordinator?
@@ -38,7 +41,7 @@ public class StarsPopViewController: UIViewController {
   
   init(graphicContext: StarsKitGraphicContext) {
     let nibName = "StarsPopViewController"
-    let bundle: Bundle = bundleForResource(name: nibName, ofType: "nib")
+    let bundle: Bundle = Bundle.bundleForResource(name: nibName, ofType: "nib")
     
     super.init(nibName: nibName, bundle: bundle)
     self.graphicContext = graphicContext

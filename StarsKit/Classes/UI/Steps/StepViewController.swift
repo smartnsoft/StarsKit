@@ -22,6 +22,9 @@
 
 import UIKit
 
+/// Main default implementation of a step controller.
+///
+/// It contains and text description, action button and dismiss button.
 public class StepViewController: UIViewController {
   
   var graphicContext: StarsKitGraphicContext = StarsKit.shared.graphicContext
@@ -31,6 +34,7 @@ public class StepViewController: UIViewController {
   @IBOutlet weak var ibActionButton: UIButton!
   @IBOutlet weak var ibLaterButton: UIButton!
   
+  // MARK: Initializers
   public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
   }
@@ -39,11 +43,13 @@ public class StepViewController: UIViewController {
     super.init(coder: aDecoder)
   }
   
+  // MARK: View Life Cycle
   override public func viewDidLoad() {
     super.viewDidLoad()
     self.prepareViews()
   }
   
+  // MARK: View customization
   func prepareViews() {
     self.ibIndicatorLabel.numberOfLines = 0
     self.ibIndicatorLabel.textAlignment = .center

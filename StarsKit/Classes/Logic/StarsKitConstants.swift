@@ -22,22 +22,25 @@
 
 import Foundation
 
-/// Localizable strings keys to translate into screen
-/// You can override them into a StarsKitLocalizable.Strings file in your app bundle
-/// Use the StarsKitConfiguration localLocalizableStringsEnabled property to enable Localizable.strings or specific strings
+/// Localizable strings keys to translate into screen.
 ///
-/// - mainTitle: Title displayed in the main rate screen
-/// - mainText: Text description to ask user about his feeling on the app
-/// - dislikeMainTitle: Title displayed in the dislike resume screen
-/// - dislikeMainText: Text description to ask user gives feedback if he dislikes the app
-/// - dislikeActionButton: Dislike screen's action button title
-/// - dislikeExitButton: Dislike screen's exit button title
-/// - likeMainTitle: Like screen's action button title
-/// - likeMainText: Like screen's action button title
-/// - likeActionButton: Title displayed in the like feedback screen
-/// - likeExitButton: Like screen's exit button title
-/// - emailHeaderContent: Email body start text
-/// - emailFooterContent: Email body end text informations
+/// You can override them into a StarsKitLocalizable.Strings file in your app bundle.
+///
+/// Use the StarsKitConfiguration localLocalizableStringsEnabled property to enable Localizable.strings or specific strings.
+///
+/// - **mainTitle**: Title displayed in the main rate screen
+/// - **mainText**: Text description to ask user about his feeling on the app
+/// - **mainActionButton**: Button title display to submit the rating
+/// - **dislikeMainTitle**: Title displayed in the dislike resume screen
+/// - **dislikeMainText**: Text description to ask user gives feedback if he dislikes the app
+/// - **dislikeActionButton**: Dislike screen's action button title
+/// - **dislikeExitButton**: Dislike screen's exit button title
+/// - **likeMainTitle**: Like screen's action button title
+/// - **likeMainText**: Like screen's action button title
+/// - **likeActionButton**: Title displayed in the like feedback screen
+/// - **likeExitButton**: Like screen's exit button title
+/// - **emailHeaderContent**: Email body start text
+/// - **emailFooterContent**: Email body end text informations
 public enum StarsKitLocalizableKeys: String {
   case mainTitle
   case mainText
@@ -73,9 +76,10 @@ public enum StarsKitLocalizableKeys: String {
 }
 
 
-/// Main properties that StarsKit check to display or not the app rating screen
+/// Main properties that StarsKit check to display or not the app rating screen.
+///
+/// Those keys will be used in the configuration update via a dictionnary.
 internal enum StarsKitProperties: String {
-  
   case disabled
   case localLocalizableStringsEnabled
   case displaySessionCount

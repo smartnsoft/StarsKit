@@ -55,7 +55,7 @@ public final class StarsKitContext {
     }
   }
   
-  public var lastDisplayDate: Date? {
+  public internal(set) var lastDisplayDate: Date? {
     get {
       return UserDefaults.standard.object(forKey: StarsKitProperties.lastDisplayDate.userDefaultsKey) as? Date
     }

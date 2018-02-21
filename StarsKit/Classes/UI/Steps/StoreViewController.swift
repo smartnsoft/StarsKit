@@ -22,11 +22,14 @@
 
 import UIKit
 
-public class StoreViewController: StepViewController {
+
+/// When the user like the app, it will be redirect to this screen
+final public class StoreViewController: StepViewController {
   
+  // MARK: Initializers
   init(graphicContext: StarsKitGraphicContext, coordinator: StarsRatingCoordinator) {
     let nibName = "StoreViewController"
-    let bundle: Bundle = bundleForResource(name: nibName, ofType: "nib")
+    let bundle: Bundle = Bundle.bundleForResource(name: nibName, ofType: "nib")
     super.init(nibName: nibName, bundle: bundle)
     self.graphicContext = graphicContext
     self.coordinator = coordinator
@@ -36,6 +39,7 @@ public class StoreViewController: StepViewController {
     super.init(coder: aDecoder)
   }
   
+  // MARK: 
   @IBAction public func didChooseAction(_ sender: Any) {
     self.coordinator?.didChooseStoreReview()
   }
