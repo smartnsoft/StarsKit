@@ -24,16 +24,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="n8l-NS-SXc">
-                    <rect key="frame" x="0.0" y="0.0" width="589" height="324"/>
+                    <rect key="frame" x="0.0" y="0.0" width="589" height="304"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd4-cH-rYm">
-                            <rect key="frame" x="30" y="0.0" width="529" height="204"/>
+                            <rect key="frame" x="30" y="0.0" width="529" height="184"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQr-b1-zBx">
-                            <rect key="frame" x="30" y="224" width="529" height="40"/>
+                            <rect key="frame" x="30" y="204" width="529" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="kXv-Kb-YmN"/>
                             </constraints>
@@ -43,7 +43,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDP-66-3JZ">
-                            <rect key="frame" x="30" y="284" width="529" height="40"/>
+                            <rect key="frame" x="30" y="264" width="529" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="NRO-Ea-E1a"/>
                             </constraints>
@@ -68,7 +68,7 @@
                 <constraint firstItem="n8l-NS-SXc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1NH-as-1MM"/>
                 <constraint firstItem="n8l-NS-SXc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2eJ-8f-4bH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="n8l-NS-SXc" secondAttribute="trailing" id="FiC-6Q-amv"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="n8l-NS-SXc" secondAttribute="bottom" id="Q4Z-GX-akE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="n8l-NS-SXc" secondAttribute="bottom" constant="20" id="Q4Z-GX-akE"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

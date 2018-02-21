@@ -22,6 +22,7 @@
 		053750C0D92FE3A6234ECBCD /* Pods-StarsKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarsKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarsKit_Example/Pods-StarsKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		0E99C04096DE554B6BD01760 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2D51679C39681124B4443E86 /* Pods_StarsKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarsKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4402EF0D203DE876004E82AE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		4421E1F5203D8ECB004F058F /* UIImage+StarsKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+StarsKit.swift"; sourceTree = "<group>"; };
 		442A9026203C75EB00512A74 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		442A9028203C76B900512A74 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
@@ -83,10 +84,10 @@
 		607FACD21AFB9204008FA782 /* Example for StarsKit */ = {
 			isa = PBXGroup;
 			children = (
-				4421E1F5203D8ECB004F058F /* UIImage+StarsKit.swift */,
-				442A9025203C753600512A74 /* Resources */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				4421E1F5203D8ECB004F058F /* UIImage+StarsKit.swift */,
+				442A9025203C753600512A74 /* Resources */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -300,6 +301,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				607FACDA1AFB9204008FA782 /* Base */,
+				4402EF0D203DE876004E82AE /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -311,6 +313,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -364,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

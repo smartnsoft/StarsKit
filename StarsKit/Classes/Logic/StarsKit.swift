@@ -33,8 +33,11 @@ public class StarsKit {
   public var configuration = StarsKitConfiguration()
   public var context = StarsKitContext()
   public var graphicContext = StarsKitGraphicContext()
+  
+  public var validateRatingButtonEnable = true
   public var useDefaultBehavior = true
   public var priorityUseNativeRate = false
+  public var localLocalizableStringsEnabled = false
   
   fileprivate var jellyAnimator: JellyAnimator?
   
@@ -64,10 +67,11 @@ public class StarsKit {
                                                            directionShow: .top,
                                                            directionDismiss: .bottom,
                                                            widthForViewController: .custom(value: 280),
-                                                           heightForViewController: .custom(value: 300))
+                                                           heightForViewController: .custom(value: 250))
           alertPresentation.isTapBackgroundToDismissEnabled = false
           self.jellyAnimator = JellyAnimator(presentation: alertPresentation)
           self.jellyAnimator?.prepare(viewController: alertController)
+          
           controller.present(alertController, animated: true, completion: nil)
         }
       }

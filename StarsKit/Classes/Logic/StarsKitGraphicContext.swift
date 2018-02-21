@@ -46,7 +46,7 @@ public class StarsKitGraphicContext {
   public var emptyStarImage: UIImage? = UIImage(named: "shape_default", in: Bundle(for: StarsKit.self), compatibleWith: nil)
   public var filledStarImage: UIImage? = UIImage(named: "shape_selected", in: Bundle(for: StarsKit.self), compatibleWith: nil)
   
-  public var preferredStatusBarStyle = UIStatusBarStyle.default
+  public var preferredStatusBarStyle = UIStatusBarStyle.lightContent
   
   public var cosmosSettings: CosmosSettings = CosmosSettings.default
 }

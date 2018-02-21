@@ -41,6 +41,7 @@ import Foundation
 public enum StarsKitLocalizableKeys: String {
   case mainTitle
   case mainText
+  case mainActionButton
   case dislikeMainTitle
   case dislikeMainText
   case dislikeActionButton
@@ -52,6 +53,7 @@ public enum StarsKitLocalizableKeys: String {
   
   static let allValues: [StarsKitLocalizableKeys] = [.mainTitle,
                                                      .mainText,
+                                                     .mainActionButton,
                                                      .dislikeMainTitle,
                                                      .dislikeMainText,
                                                      .dislikeActionButton,

@@ -21,7 +21,7 @@
   "source_files": "StarsKit/Classes/**/*",
   "resource_bundles": {
     "StarsKit": [
-      "StarsKit/Assets/StarsKit.bundle",
+      "StarsKit/Assets/StarsKit.bundle/*.lproj/*.strings",
       "StarsKit/Assets/StarsKitImages.xcassets"
     ]
   },

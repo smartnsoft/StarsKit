@@ -7,24 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		004DCCABD68F15CBC5BA745A2154A122 /* StarsRatingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABF61CF20C167A86C2D223C362EBA1 /* StarsRatingCoordinator.swift */; };
 		015C902B9C0E63DA0519A0D34E10F739 /* CosmosSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A523F5966CDAA7AA9DF10DD7FBFE6E7 /* CosmosSettings.swift */; };
-		031A43DEF9FAD3415CAD903F29FE6C62 /* StarsKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 29654923A3A6860A6B3AC452A4B01A5E /* StarsKit.bundle */; };
 		05CE6ACDB00B51867E366D93D77B4400 /* UIColor+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053FF0F80A42E09B456CBC811C184D28 /* UIColor+Extra.swift */; };
 		05EC946C9DC9AB0AFDC70D658BCC6C89 /* JellyShiftInPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A2E5393A8C3A7209FE440DA73B445 /* JellyShiftInPresentation.swift */; };
 		06FFB41E148B93A20B7CB950CA7B370F /* UICollectionViewCell+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B928433F7D382DCF78D3B0FD38B53 /* UICollectionViewCell+Extra.swift */; };
-		0904BBDE5D9AC1E1B598561D71E86CCD /* StarsKitImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40F0A09988B680BDAC5E53067EF3B239 /* StarsKitImages.xcassets */; };
 		0CF49F861976DF018EA063C3FA60E955 /* JellyFadeInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7373003DFEE56B6297B280ACCB92565F /* JellyFadeInPresentationAnimator.swift */; };
 		0EC88D04EAE0CD3EFD3C3C89C1B9F45F /* CosmosLocalizedRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ECCA93FBA3EB7CF2966F2E16EA82E0 /* CosmosLocalizedRating.swift */; };
 		122E7E255FC600F7CF9E21F8F977C0A1 /* StarsKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D6D4F6344E58147E96C6545483DD2D6 /* StarsKit.bundle */; };
-		19CA22005B4123D480906710D4A8DDD0 /* StarsPopViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 0F19E9385D8E65D53238F6565A26CD84 /* StarsPopViewController.xib */; };
 		1D83B5BF02693D22BA6B0E6BEB66DF84 /* UIImage+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8782B3A37769DBB5511E15649DA29E75 /* UIImage+Extra.swift */; };
-		1F2042E62A5D8C4DACB69CD6AA3220EF /* FeedbackViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 6C6C88255C46A1F9545CCE6A13D63C89 /* FeedbackViewController.xib */; };
+		202193A4DACE717DFCE3AEC687AA52A2 /* StarsRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48201953F6BA9EC216BD2720CDE4E70D /* StarsRateViewController.swift */; };
 		212C02FDF7F2DD7638C3CAA4FB983995 /* Extra-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB157765BC09C58E52B0C90619C8C71 /* Extra-dummy.m */; };
 		23CDA1074E3D3E72D9CAF8E8FBD35DB2 /* JellySlideInPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03F1BDB3B4A46AF761B115811584907 /* JellySlideInPresentation.swift */; };
 		25DFA72039CBA011EBA738AA73084A8E /* CosmosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB9AC8F38186645FCCF1726E375916 /* CosmosSize.swift */; };
 		2663CE179506DC80D0AE3F2DE94774B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FCA542BCEE86E85494EEA82F5F4243 /* UIKit.framework */; };
 		27FA5743EFEA23AEA490361C6D379BE3 /* Extra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E64CEF5E7E6ED2B0263B822811D77D /* Extra.framework */; };
-		28A1FEF524E45A6F20E7AAA52CCE469E /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823DC61E65E29FAADFE9D502DB9F3A4A /* StoreViewController.swift */; };
 		296D08EA16B75022CAE82C89E93D3CA3 /* Jelly-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 747D50CC8E23CC093955726D1C9AC3C1 /* Jelly-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CAF8D3E1A7923196257CE2E9D71ACFB /* UIButton+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DA947FCDF11AC2D2A8021586AD519 /* UIButton+Extra.swift */; };
 		2F20AB9F93BAF0466C6B8FCBED57383A /* JellyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4082D88B1BBC70701885429A216EA44 /* JellyConstants.swift */; };
@@ -32,43 +29,46 @@
 		30DA0D1439D194BCF12A1F8938E7B369 /* Pods-StarsKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8818E95E3E95E91CEA5956A1BB0A3D2B /* Pods-StarsKit_Example-dummy.m */; };
 		3362893EEEA22A163960F8ADD0454CC5 /* UIViewController+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5FE2B37FD0B564E9CBE75C56B1BCE6 /* UIViewController+Extra.swift */; };
 		3530F401EA678F0C151A0BB1C39BCCCD /* UITextView+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDC4A50FAF2C9C007CCBF889BD2DB1C /* UITextView+Extra.swift */; };
+		360BC34A5DFA06E2E8B1A5BF9E73450F /* StarsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8F4682BCEDDF5191F6314C6E1D5A3 /* StarsKit.swift */; };
 		371F422D050761A63F0156F537B8902D /* CosmosDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B192206676A2B61EF9A763274B9E0E7 /* CosmosDefaultSettings.swift */; };
+		3A953DF1222A0E51AE3F36CEE177BD0F /* StarsKitConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0696AFE0327249F4B0999B2C6092A8 /* StarsKitConfiguration.swift */; };
 		3DF6ECF23D38E7DA5B5B2B43707F2F4D /* Cosmos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF5E02D2A08AB1D6BB57729FD74BC68 /* Cosmos-dummy.m */; };
-		406FF4EC600C286C1984FB9D38C2D440 /* StarsKitChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EACDAB3F5B74BBE62C4FA07942733F /* StarsKitChecker.swift */; };
 		424AD9605CBDCD867083B9820784E0AC /* CosmosText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D8A1247A380983A975307B4403631 /* CosmosText.swift */; };
 		43EFE78E6FD78B0502014C9F2AF73C53 /* Extra-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 114206350CC4C6DECBE232E957B7FF4C /* Extra-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4421E1FA203DC6AA004F058F /* StarsKitImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40F0A09988B680BDAC5E53067EF3B239 /* StarsKitImages.xcassets */; };
 		45F546D14166EDEE46371951EC705C03 /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C8CC3BF8740B3A2B1722931D6EE4B /* CosmosView.swift */; };
-		4927C71515A548616D696B883EF2B35E /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897D1A5101E98383EDC21867B299EDB /* FeedbackViewController.swift */; };
+		47F5DACB3EEECCDD60DB512E3F30CBD9 /* StarsPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC91F6DECEF7025D47B44B8BA386A8 /* StarsPopViewController.swift */; };
 		49A343FF2DC2EC8EBA0B4E48CA640249 /* String+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E23FC00D390FC7543CD4169AA2A3E7B /* String+Extra.swift */; };
-		4B6EBA62977881A2A80AB2F5542DC5AC /* StarsKitConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355E38E9A75E5942558C64CB7FBED0F8 /* StarsKitConstants.swift */; };
+		4C6F879D2984D9FB759FB4AAE21E5F0E /* StarsKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C87FCC22368BF042B989DCCF5ECFFA7 /* StarsKit.strings */; };
 		4F40A9CBB316E7100828F0C6F5714946 /* CosmosTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A2ADCC2D3381CA41B5DD11DF52CAD /* CosmosTouch.swift */; };
 		5528487B8CA7F7D304BDC4F48BE73726 /* Jelly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D688F2A89632132DBDF57BF6BAE3F36 /* Jelly.swift */; };
-		5BC5DF99F5B9B42C8FD66085BAF9C052 /* StarsKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EE6A6E5F6F7630172C0E6D4B7B393F4 /* StarsKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BC5DF99F5B9B42C8FD66085BAF9C052 /* StarsKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48734E453F9395B4245078C4AC56D8C4 /* StarsKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D69F8F2B8D94A8A53BC65F3FDC37544 /* StarsKitGraphicContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97041504C885165BB4CFC907DA655E15 /* StarsKitGraphicContext.swift */; };
 		5E628D5DFE625A5AB13AE1B7D9432F9C /* UIView+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5051BD1998A03822AA40ECD33220E54 /* UIView+Extra.swift */; };
+		5EE4DDF8DC8A857D1B6BDF00EFD8A50E /* StarsKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0738FB5B63E394530A0F10E4C6AD5316 /* StarsKitDelegate.swift */; };
 		607C656B600E80F321686A0DD904066F /* Jelly-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB89EF24A13CDDEDF38346C24E99762 /* Jelly-dummy.m */; };
 		60EB29DA0B1AC0CB12A2B60A14C101B5 /* Pods-StarsKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54E1D99071A3BA0EC29B73A0FE478B27 /* Pods-StarsKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6383C5DDE76CBB20CCE80D7EE4489FA6 /* StarsPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CA286D32D4A3F2734F9AE0E37B2BB4 /* StarsPopViewController.swift */; };
 		6452AD1788F97D7E5E4B09BCC59DD187 /* Jelly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300729E2C188E1262F96A7CB7AAA362D /* Jelly.framework */; };
-		6564828F177A04CEA68D8B7D7385CFFC /* StarsKitGraphicContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700E91F7EB7E6A95F58C4423DABE77BA /* StarsKitGraphicContext.swift */; };
-		66461B698972E3EE44ADFF7EC3D47717 /* StarsKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F70CBC79320D82DB39BC341F901B5 /* StarsKitDelegate.swift */; };
+		64BE888183DF4204EBC4E89C90EC6AC4 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE65D70CD0051B22597D1DF14276BA97 /* StoreViewController.swift */; };
 		6CFA32E71FB156DCA6E19593FA7F44C4 /* UITableView+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = D522CB0EBABED5547F3C435BDFC86437 /* UITableView+Extra.swift */; };
 		6F72C954CC8512BFC9A04BACB4DE3280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A353E43BD2FE18729F69FED3CC852CD9 /* Foundation.framework */; };
-		72149618700CA093AF115A7C9D4CB821 /* StarsKitContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBDA99B0C6607B4B0E5BAF4123A846A /* StarsKitContext.swift */; };
 		7CC5A43D7E1372EB6292FCBC0151A36E /* CosmosAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DB75CE145023DC493AAACEE3014269 /* CosmosAccessibility.swift */; };
 		7D685EF740B61FBFAAC60304CA2E84A1 /* JellyAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9BBB30DEE940C3D725460F7166FC6F /* JellyAnimator.swift */; };
-		7DCD3F3A7187F4A212CF7AA1BACA6197 /* StarsRatingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F383E7CBC0EC39D70B3D622BF54216E /* StarsRatingCoordinator.swift */; };
-		85A1E4EE4F5F46424EC6A1C0C43A5736 /* StarsKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3578CD8CB6E9308DA2CA7895EA3260DF /* StarsKit-dummy.m */; };
+		803DC064495DFCB2D8B56A366EEC99BE /* StarsPopViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 42326B3C69289CD3BD554987E4737831 /* StarsPopViewController.xib */; };
 		863FD2CEAE2B34DD70D143481E6803C4 /* Sequence+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0467FBB4D8746CC25F0D428BADB98 /* Sequence+Extra.swift */; };
+		86B517FA7EE3A19DE61911E096F0341A /* StoreViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = C862BBF944DF812B296AA24FE9CF6FFB /* StoreViewController.xib */; };
 		88BA9FFC474BD7B995A0CEA06FF431F7 /* StarFillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F013D6EB126EE3EDFD3761F4F8F9BEA9 /* StarFillMode.swift */; };
 		8933BEECD36E5849C72667089C2B3AF3 /* Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA71071FB51095519D94649C91D4467 /* Extra.swift */; };
 		8A6FC1367146555F0E9F2E026A9798F4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FCA542BCEE86E85494EEA82F5F4243 /* UIKit.framework */; };
 		8E087492FB996E92C0F3932EF431EB55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A353E43BD2FE18729F69FED3CC852CD9 /* Foundation.framework */; };
 		99E867EAAA1E5C553DC3D710EF4FC77F /* JellyShiftInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81E6DE2123732ABA081BA5472AC22A /* JellyShiftInPresentationAnimator.swift */; };
 		99F08F6FE2B165EEBD5E01EDDA176620 /* CosmosRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7F9D8D555EEE20DC55886533911945 /* CosmosRating.swift */; };
+		9E87F55A601E30061352F84DE57C7110 /* StarsKitChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD7C8E291EB9373A7A58C11F824C270 /* StarsKitChecker.swift */; };
+		9EC5E295E36919081168B7BD1EF10AC8 /* StarsKitConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DB50C63659DB47EBFC815BE9ECD5C2 /* StarsKitConstants.swift */; };
 		A084E411B238604F4EB2CAE768C66BD1 /* UIViewControllerAnimatedTransitioning+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECCCCDAF0345D9E4275DBD2C6553364 /* UIViewControllerAnimatedTransitioning+Extension.swift */; };
 		A0BF05A1C4863372A7D9F24881B00F55 /* UIView+Jelly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EF6E286226DDFBFFD4F1D41C8F0171 /* UIView+Jelly.swift */; };
 		A0EF4FC6C455C59C0F60AAA7A54731D4 /* JellyFadeInPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6190AABFAE7265111883D62CFEE4EF71 /* JellyFadeInPresentation.swift */; };
+		A1D7A2F507A72C1BCAD1EC6C791C60E9 /* StarsKitImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39F3E7636A31923AAEBEB4BF321C7E70 /* StarsKitImages.xcassets */; };
+		A7359C2A5F586B400C4B5E769FCFDB94 /* StarsKitContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6FDD50D237A1ADBA6DE6CBE88848F7 /* StarsKitContext.swift */; };
 		A867263C360C948CFF7378C06EACA536 /* JellyPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515CE5AAA0342A1223615EC61505CDEF /* JellyPresentationController.swift */; };
 		A8D0F1C3405DD1451822DBEDCB4925BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A353E43BD2FE18729F69FED3CC852CD9 /* Foundation.framework */; };
 		AA445AE78F10F25B75A0DAFB70357894 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC879BE332E27E7D2F77B053416AE18 /* QuartzCore.framework */; };
@@ -80,19 +80,20 @@
 		CB06F67C64C60CBA399057F1281134FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A353E43BD2FE18729F69FED3CC852CD9 /* Foundation.framework */; };
 		CBAA94966FD2225F6135C4DF99569A3E /* UICollectionView+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3865469FAD786F15B8A4ADE0F9D929FA /* UICollectionView+Extra.swift */; };
 		CC4E8B690C4539BB5785C1037FC871FB /* Cosmos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EB2414043D97EB216C20FE44B66D8A /* Cosmos.framework */; };
-		D10F1C6A4F93C72F0E16AF01CC5023AA /* StarsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D0F2827ADE73AF6E60FD8B95305C4C /* StarsKit.swift */; };
-		D3AF41F6DB4C4A5293E60755104D99BF /* StarsRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B0C25F82DCBE33B56679E92491031 /* StarsRateViewController.swift */; };
-		D4AF33E77EAA1D9725D7229C9EBA5412 /* StarsKitConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFBACBEF2B9D9A262045193B11CAC41 /* StarsKitConfiguration.swift */; };
+		CD3CEE54FEB7E5E8B2B61EF406E27A9B /* StarsKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B975AF3DAC0B74CB45D59A0A00F9EA1E /* StarsKit-dummy.m */; };
 		D4DB9A0250270EF06A0BA7925A9F16D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A353E43BD2FE18729F69FED3CC852CD9 /* Foundation.framework */; };
-		D8930E9756B17AFB6F37F964D79D4865 /* StarsRateViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 64BC916CB14EA9B83DD3C7E043D85E2F /* StarsRateViewController.xib */; };
 		DCC01B1A2A8E9B5DAB8C7A7F3265B2F7 /* JellyPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898C13D83BB620FA831911F055F04D15 /* JellyPresentation.swift */; };
 		DE5E91A47C1BF6869DF17747D61C2FF1 /* Cosmos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 277C3643C8443ACFAC2F2EA689A7B6A5 /* Cosmos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E044E34238ECB44AD5C45BC23593D45E /* StoreViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B761E718C2041D24CE1EC69DCE5B1 /* StoreViewController.xib */; };
+		E0CA7EDB2809CBAACE6694B89D48D862 /* FeedbackViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 854F3C3D92CD2D8C6EBAB568683CB315 /* FeedbackViewController.xib */; };
 		E2D8D1AA0D41C73C4B570DE682C05D72 /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF07E01F721FF836137F55962D12E1A0 /* CosmosTouchTarget.swift */; };
 		E5F9265CF37C7D288A263252470EDA26 /* UITableViewCell+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C4131E62CEC9C8D21D252C1BAE8E2D /* UITableViewCell+Extra.swift */; };
+		E60BBBD9BD0E05911DCBBADCAC67260A /* StepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4693E2CCEC900ECC35B77D8A76DDE /* StepViewController.swift */; };
+		E8E9835410ECCFD5CB207EF84174A899 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC77D0571B60C0A0D283E7A46177CC28 /* FeedbackViewController.swift */; };
 		E9EF9BB6C749D8D42661BB07C18C87FE /* UINavigationController+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB372F265F936FECB072165FED01D9 /* UINavigationController+Extra.swift */; };
+		EC9EAF3C379EC8D7E2DE1E8BAE3F983A /* RatingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BCD10D500B7C8F2BA6FA29DB697B3 /* RatingStep.swift */; };
 		ED43812A62A56669E0959CCE49E6824C /* ExtraUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6748AB23E197C7182AC578E24EB0D /* ExtraUIKit.swift */; };
 		F66DE3EF01408C42C115587B201CB541 /* CosmosLayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5635C0F2B0886616F04DE0D0DA303C /* CosmosLayerHelper.swift */; };
+		FFA953CACACEE03953BB60FA5E29AD67 /* StarsRateViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 5D5791A254AFF7711B0BDEBD1369D7FC /* StarsRateViewController.xib */; };
 		FFD42657529E19672E948A9AC31C7797 /* UILabel+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A3D980ECEB6C1FEAF2B803A47F90D9 /* UILabel+Extra.swift */; };
 /* End PBXBuildFile section */
 
@@ -159,14 +160,14 @@
 		04044586CC37FFC78CBB30BA4703EE66 /* CosmosLayers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayers.swift; path = Cosmos/CosmosLayers.swift; sourceTree = "<group>"; };
 		053FF0F80A42E09B456CBC811C184D28 /* UIColor+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extra.swift"; path = "Extra/Classes/UIKit/UIColor+Extra.swift"; sourceTree = "<group>"; };
 		066B2F80DB9705DC4A92DBDB05C51B36 /* RightToLeft.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RightToLeft.swift; path = Cosmos/Helpers/RightToLeft.swift; sourceTree = "<group>"; };
+		0738FB5B63E394530A0F10E4C6AD5316 /* StarsKitDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitDelegate.swift; sourceTree = "<group>"; };
 		0ACB372F265F936FECB072165FED01D9 /* UINavigationController+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Extra.swift"; path = "Extra/Classes/UIKit/UINavigationController+Extra.swift"; sourceTree = "<group>"; };
-		0B2B761E718C2041D24CE1EC69DCE5B1 /* StoreViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = StoreViewController.xib; sourceTree = "<group>"; };
 		0B5FE2B37FD0B564E9CBE75C56B1BCE6 /* UIViewController+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extra.swift"; path = "Extra/Classes/UIKit/UIViewController+Extra.swift"; sourceTree = "<group>"; };
 		0CAC9350193E5FE798B883AEE53B5E44 /* Pods-StarsKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StarsKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		0D00E7FD6BAC04EFE1E85F9BC3F842D0 /* Extra.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Extra.modulemap; sourceTree = "<group>"; };
-		0D515DDF9846BAAFB61852874D7E271E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		0F19E9385D8E65D53238F6565A26CD84 /* StarsPopViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = StarsPopViewController.xib; sourceTree = "<group>"; };
 		114206350CC4C6DECBE232E957B7FF4C /* Extra-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Extra-umbrella.h"; sourceTree = "<group>"; };
+		117B7657534BC82241648FC17381E065 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		14ABF61CF20C167A86C2D223C362EBA1 /* StarsRatingCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsRatingCoordinator.swift; sourceTree = "<group>"; };
 		16DB75CE145023DC493AAACEE3014269 /* CosmosAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosAccessibility.swift; path = Cosmos/CosmosAccessibility.swift; sourceTree = "<group>"; };
 		1861AC33D78EB6BCEF1B0B6184D216DE /* Extra.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Extra.xcconfig; sourceTree = "<group>"; };
 		19BC034111B82FFA96503303417D14E6 /* Pods-StarsKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-StarsKit_Example.modulemap"; sourceTree = "<group>"; };
@@ -175,48 +176,44 @@
 		1EDC4A50FAF2C9C007CCBF889BD2DB1C /* UITextView+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextView+Extra.swift"; path = "Extra/Classes/UIKit/UITextView+Extra.swift"; sourceTree = "<group>"; };
 		239CBCF6D756078AB35FE920EC343750 /* Cosmos.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cosmos.xcconfig; sourceTree = "<group>"; };
 		277C3643C8443ACFAC2F2EA689A7B6A5 /* Cosmos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-umbrella.h"; sourceTree = "<group>"; };
-		29654923A3A6860A6B3AC452A4B01A5E /* StarsKit.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = StarsKit.bundle; path = StarsKit/Assets/StarsKit.bundle; sourceTree = "<group>"; };
 		2BB89EF24A13CDDEDF38346C24E99762 /* Jelly-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Jelly-dummy.m"; sourceTree = "<group>"; };
-		2EFBACBEF2B9D9A262045193B11CAC41 /* StarsKitConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitConfiguration.swift; sourceTree = "<group>"; };
 		300729E2C188E1262F96A7CB7AAA362D /* Jelly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Jelly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		355E38E9A75E5942558C64CB7FBED0F8 /* StarsKitConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitConstants.swift; sourceTree = "<group>"; };
-		3578CD8CB6E9308DA2CA7895EA3260DF /* StarsKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StarsKit-dummy.m"; sourceTree = "<group>"; };
 		36AAD3493D02297F92493AF89BD321B5 /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3865469FAD786F15B8A4ADE0F9D929FA /* UICollectionView+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Extra.swift"; path = "Extra/Classes/UIKit/UICollectionView+Extra.swift"; sourceTree = "<group>"; };
-		3DBDA99B0C6607B4B0E5BAF4123A846A /* StarsKitContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitContext.swift; sourceTree = "<group>"; };
+		39F3E7636A31923AAEBEB4BF321C7E70 /* StarsKitImages.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = StarsKitImages.xcassets; path = StarsKit/Assets/StarsKitImages.xcassets; sourceTree = "<group>"; };
 		3E23FC00D390FC7543CD4169AA2A3E7B /* String+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extra.swift"; path = "Extra/Classes/Foundation/String+Extra.swift"; sourceTree = "<group>"; };
 		3EA71071FB51095519D94649C91D4467 /* Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extra.swift; path = Extra/Classes/Extra/Extra.swift; sourceTree = "<group>"; };
-		40F0A09988B680BDAC5E53067EF3B239 /* StarsKitImages.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = StarsKitImages.xcassets; path = StarsKit/Assets/StarsKitImages.xcassets; sourceTree = "<group>"; };
-		41CA286D32D4A3F2734F9AE0E37B2BB4 /* StarsPopViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsPopViewController.swift; sourceTree = "<group>"; };
+		42326B3C69289CD3BD554987E4737831 /* StarsPopViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = StarsPopViewController.xib; sourceTree = "<group>"; };
 		43EC6971D3C209AB8A114FBF5312E418 /* UIDevice+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extra.swift"; path = "Extra/Classes/UIKit/UIDevice+Extra.swift"; sourceTree = "<group>"; };
 		45BB9AC8F38186645FCCF1726E375916 /* CosmosSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSize.swift; path = Cosmos/CosmosSize.swift; sourceTree = "<group>"; };
 		465A2ADCC2D3381CA41B5DD11DF52CAD /* CosmosTouch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouch.swift; path = Cosmos/CosmosTouch.swift; sourceTree = "<group>"; };
-		47D0F2827ADE73AF6E60FD8B95305C4C /* StarsKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKit.swift; sourceTree = "<group>"; };
+		48201953F6BA9EC216BD2720CDE4E70D /* StarsRateViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsRateViewController.swift; sourceTree = "<group>"; };
+		48734E453F9395B4245078C4AC56D8C4 /* StarsKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StarsKit-umbrella.h"; sourceTree = "<group>"; };
 		4FD58734A53B4FF6029AAC196AD20B9E /* Pods-StarsKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StarsKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		502BCD10D500B7C8F2BA6FA29DB697B3 /* RatingStep.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RatingStep.swift; sourceTree = "<group>"; };
 		515CE5AAA0342A1223615EC61505CDEF /* JellyPresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JellyPresentationController.swift; path = Jelly/Classes/JellyPresentationController.swift; sourceTree = "<group>"; };
 		5196769CE26B4B43934E0999D00B5E1D /* JellySlideInPresentationAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JellySlideInPresentationAnimator.swift; path = Jelly/Classes/JellySlideInPresentationAnimator.swift; sourceTree = "<group>"; };
 		54A0467FBB4D8746CC25F0D428BADB98 /* Sequence+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Sequence+Extra.swift"; path = "Extra/Classes/Foundation/Sequence+Extra.swift"; sourceTree = "<group>"; };
 		54E1D99071A3BA0EC29B73A0FE478B27 /* Pods-StarsKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StarsKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		55E64CEF5E7E6ED2B0263B822811D77D /* Extra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Extra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5897D1A5101E98383EDC21867B299EDB /* FeedbackViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		5C7CC6BF4921C77452729FFE9382FC29 /* Extra-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Extra-prefix.pch"; sourceTree = "<group>"; };
+		5D5791A254AFF7711B0BDEBD1369D7FC /* StarsRateViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = StarsRateViewController.xib; sourceTree = "<group>"; };
 		5D6D4F6344E58147E96C6545483DD2D6 /* StarsKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarsKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EE6A6E5F6F7630172C0E6D4B7B393F4 /* StarsKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StarsKit-umbrella.h"; sourceTree = "<group>"; };
 		6190AABFAE7265111883D62CFEE4EF71 /* JellyFadeInPresentation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JellyFadeInPresentation.swift; path = Jelly/Classes/JellyFadeInPresentation.swift; sourceTree = "<group>"; };
-		64BC916CB14EA9B83DD3C7E043D85E2F /* StarsRateViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = StarsRateViewController.xib; sourceTree = "<group>"; };
+		622E56B62BB9CAF6CDC6CAC0FD0BEBED /* StarsKit.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = StarsKit.strings; path = fr.lproj/StarsKit.strings; sourceTree = "<group>"; };
 		65ECCA93FBA3EB7CF2966F2E16EA82E0 /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLocalizedRating.swift; path = Cosmos/CosmosLocalizedRating.swift; sourceTree = "<group>"; };
-		6C6C88255C46A1F9545CCE6A13D63C89 /* FeedbackViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
 		6E5635C0F2B0886616F04DE0D0DA303C /* CosmosLayerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayerHelper.swift; path = Cosmos/CosmosLayerHelper.swift; sourceTree = "<group>"; };
 		6EBA4DE9B25A00DEE3C9E1A0A4126B9E /* Pods-StarsKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StarsKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		700E91F7EB7E6A95F58C4423DABE77BA /* StarsKitGraphicContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitGraphicContext.swift; sourceTree = "<group>"; };
+		722669713B6FC8048AEB1F7C32D5C27E /* StarsKit.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = StarsKit.strings; path = en.lproj/StarsKit.strings; sourceTree = "<group>"; };
 		7373003DFEE56B6297B280ACCB92565F /* JellyFadeInPresentationAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JellyFadeInPresentationAnimator.swift; path = Jelly/Classes/JellyFadeInPresentationAnimator.swift; sourceTree = "<group>"; };
 		73EB7CBCFADD487834D3AB737C8B09C3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		747D50CC8E23CC093955726D1C9AC3C1 /* Jelly-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Jelly-umbrella.h"; sourceTree = "<group>"; };
 		7B192206676A2B61EF9A763274B9E0E7 /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosDefaultSettings.swift; path = Cosmos/CosmosDefaultSettings.swift; sourceTree = "<group>"; };
-		823DC61E65E29FAADFE9D502DB9F3A4A /* StoreViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		854F3C3D92CD2D8C6EBAB568683CB315 /* FeedbackViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
 		85FCA542BCEE86E85494EEA82F5F4243 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		864BB5B935EE9E8E6D8E00D3BB3B855C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86A3D980ECEB6C1FEAF2B803A47F90D9 /* UILabel+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+Extra.swift"; path = "Extra/Classes/UIKit/UILabel+Extra.swift"; sourceTree = "<group>"; };
+		86E59A3D0ABDD7A7E85B3CF7293B7274 /* ResourceBundle-StarsKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-StarsKit-Info.plist"; sourceTree = "<group>"; };
 		8782B3A37769DBB5511E15649DA29E75 /* UIImage+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Extra.swift"; path = "Extra/Classes/UIKit/UIImage+Extra.swift"; sourceTree = "<group>"; };
 		8818E95E3E95E91CEA5956A1BB0A3D2B /* Pods-StarsKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StarsKit_Example-dummy.m"; sourceTree = "<group>"; };
 		898C13D83BB620FA831911F055F04D15 /* JellyPresentation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JellyPresentation.swift; path = Jelly/Classes/JellyPresentation.swift; sourceTree = "<group>"; };
@@ -224,7 +221,7 @@
 		9219A2B21F68B24736A244D10E1CE427 /* Cosmos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Cosmos.modulemap; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96C4131E62CEC9C8D21D252C1BAE8E2D /* UITableViewCell+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Extra.swift"; path = "Extra/Classes/UIKit/UITableViewCell+Extra.swift"; sourceTree = "<group>"; };
-		9A376945BA9FD6F50085E95248AC4692 /* ResourceBundle-StarsKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-StarsKit-Info.plist"; sourceTree = "<group>"; };
+		97041504C885165BB4CFC907DA655E15 /* StarsKitGraphicContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitGraphicContext.swift; sourceTree = "<group>"; };
 		9A4098B69BE4E0420BE5AF3737350EA2 /* Extra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Extra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A523F5966CDAA7AA9DF10DD7FBFE6E7 /* CosmosSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSettings.swift; path = Cosmos/CosmosSettings.swift; sourceTree = "<group>"; };
 		9A5D72CD72F4F466B6E113DC11DF4875 /* Jelly.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Jelly.modulemap; sourceTree = "<group>"; };
@@ -233,41 +230,48 @@
 		9DF5E02D2A08AB1D6BB57729FD74BC68 /* Cosmos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cosmos-dummy.m"; sourceTree = "<group>"; };
 		9E93087FD3B23CB84794D58A45AF844B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9ECCCCDAF0345D9E4275DBD2C6553364 /* UIViewControllerAnimatedTransitioning+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewControllerAnimatedTransitioning+Extension.swift"; path = "Jelly/Classes/UIViewControllerAnimatedTransitioning+Extension.swift"; sourceTree = "<group>"; };
-		9F383E7CBC0EC39D70B3D622BF54216E /* StarsRatingCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsRatingCoordinator.swift; sourceTree = "<group>"; };
+		9FF8F4682BCEDDF5191F6314C6E1D5A3 /* StarsKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKit.swift; sourceTree = "<group>"; };
 		A0D2D092D09DD5CA258D839E0E91A3D9 /* Pods-StarsKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StarsKit_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A2F8482999B161AFEC91EAA0B953F51D /* StarLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarLayer.swift; path = Cosmos/StarLayer.swift; sourceTree = "<group>"; };
 		A353E43BD2FE18729F69FED3CC852CD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A3EACDAB3F5B74BBE62C4FA07942733F /* StarsKitChecker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitChecker.swift; sourceTree = "<group>"; };
 		A4082D88B1BBC70701885429A216EA44 /* JellyConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JellyConstants.swift; path = Jelly/Classes/JellyConstants.swift; sourceTree = "<group>"; };
-		A4A922C5440E0E1CEC2F1F99A0CC74E1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		A54F70CBC79320D82DB39BC341F901B5 /* StarsKitDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitDelegate.swift; sourceTree = "<group>"; };
+		A6CC746980720AB6902EFC4C1EE36106 /* StarsKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = StarsKit.modulemap; sourceTree = "<group>"; };
+		A80EEFD6ACCD9BBD1899CEB994C528CC /* StarsKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = StarsKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AAC879BE332E27E7D2F77B053416AE18 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		AF07E01F721FF836137F55962D12E1A0 /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouchTarget.swift; path = Cosmos/Helpers/CosmosTouchTarget.swift; sourceTree = "<group>"; };
 		AF9BBB30DEE940C3D725460F7166FC6F /* JellyAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JellyAnimator.swift; path = Jelly/Classes/JellyAnimator.swift; sourceTree = "<group>"; };
 		B03F1BDB3B4A46AF761B115811584907 /* JellySlideInPresentation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JellySlideInPresentation.swift; path = Jelly/Classes/JellySlideInPresentation.swift; sourceTree = "<group>"; };
 		B0A4A33445B900D3A8AC8749DBCEF2F3 /* Jelly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Jelly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3509D8AF4B57338372ABDD5D550B16F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6A564C1187373DF49C96FD8212623E1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8EF6E286226DDFBFFD4F1D41C8F0171 /* UIView+Jelly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Jelly.swift"; path = "Jelly/Classes/UIView+Jelly.swift"; sourceTree = "<group>"; };
+		B95A13A2A7D9480F062D90C69B4DA32A /* StarsKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StarsKit.xcconfig; sourceTree = "<group>"; };
+		B975AF3DAC0B74CB45D59A0A00F9EA1E /* StarsKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StarsKit-dummy.m"; sourceTree = "<group>"; };
+		BBA9E074CC0C7ADBC919750014CCC435 /* StarsKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StarsKit-prefix.pch"; sourceTree = "<group>"; };
+		BC77D0571B60C0A0D283E7A46177CC28 /* FeedbackViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		BDD7C8E291EB9373A7A58C11F824C270 /* StarsKitChecker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitChecker.swift; sourceTree = "<group>"; };
 		C54DA947FCDF11AC2D2A8021586AD519 /* UIButton+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Extra.swift"; path = "Extra/Classes/UIKit/UIButton+Extra.swift"; sourceTree = "<group>"; };
+		C862BBF944DF812B296AA24FE9CF6FFB /* StoreViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = StoreViewController.xib; sourceTree = "<group>"; };
 		C9389B0704AB9C458AB3893FB99F02DF /* Pods-StarsKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StarsKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CD01D26AF9ADCBC6E4D6EF75964D137D /* Jelly-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Jelly-prefix.pch"; sourceTree = "<group>"; };
 		CEC174D16674A6F42ED45361A08891F9 /* Pods-StarsKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StarsKit_Example-resources.sh"; sourceTree = "<group>"; };
+		CF4B0DE8FFC922A6F036DC1814333BA3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D198CE72FBD40F9101EB14FDE6010AA5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D31C8CC3BF8740B3A2B1722931D6EE4B /* CosmosView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosView.swift; path = Cosmos/CosmosView.swift; sourceTree = "<group>"; };
 		D522CB0EBABED5547F3C435BDFC86437 /* UITableView+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+Extra.swift"; path = "Extra/Classes/UIKit/UITableView+Extra.swift"; sourceTree = "<group>"; };
-		D609BE3DA7497F4AA39AA028A8B660D2 /* StarsKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = StarsKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D97B0C25F82DCBE33B56679E92491031 /* StarsRateViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsRateViewController.swift; sourceTree = "<group>"; };
-		DBE5F1EC3878D2171FD28EE201984E57 /* StarsKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StarsKit.xcconfig; sourceTree = "<group>"; };
+		D8E4693E2CCEC900ECC35B77D8A76DDE /* StepViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StepViewController.swift; sourceTree = "<group>"; };
 		DD0A2E5393A8C3A7209FE440DA73B445 /* JellyShiftInPresentation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JellyShiftInPresentation.swift; path = Jelly/Classes/JellyShiftInPresentation.swift; sourceTree = "<group>"; };
+		DD6FDD50D237A1ADBA6DE6CBE88848F7 /* StarsKitContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitContext.swift; sourceTree = "<group>"; };
 		E0C6A7A74FB32BB0A973E1BAAC37297F /* Pods_StarsKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarsKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E309645540306ABB4DF79E5A10065B7C /* UIApplication+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Extra.swift"; path = "Extra/Classes/UIKit/UIApplication+Extra.swift"; sourceTree = "<group>"; };
+		E3FC91F6DECEF7025D47B44B8BA386A8 /* StarsPopViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsPopViewController.swift; sourceTree = "<group>"; };
 		E48B928433F7D382DCF78D3B0FD38B53 /* UICollectionViewCell+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionViewCell+Extra.swift"; path = "Extra/Classes/UIKit/UICollectionViewCell+Extra.swift"; sourceTree = "<group>"; };
 		E4EB2414043D97EB216C20FE44B66D8A /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5051BD1998A03822AA40ECD33220E54 /* UIView+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extra.swift"; path = "Extra/Classes/UIKit/UIView+Extra.swift"; sourceTree = "<group>"; };
-		E75A0F22786D1F909A570D1A98772840 /* StarsKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StarsKit-prefix.pch"; sourceTree = "<group>"; };
+		E8DB50C63659DB47EBFC815BE9ECD5C2 /* StarsKitConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitConstants.swift; sourceTree = "<group>"; };
 		EA3F63F163A4AE5EE5E7CBADA6B1CFC5 /* Cosmos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-prefix.pch"; sourceTree = "<group>"; };
 		EA7F9D8D555EEE20DC55886533911945 /* CosmosRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosRating.swift; path = Cosmos/CosmosRating.swift; sourceTree = "<group>"; };
-		EECE58872CC48100D836F1DA880C27AD /* StarsKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = StarsKit.modulemap; sourceTree = "<group>"; };
+		EC0696AFE0327249F4B0999B2C6092A8 /* StarsKitConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitConfiguration.swift; sourceTree = "<group>"; };
+		EE65D70CD0051B22597D1DF14276BA97 /* StoreViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		F013D6EB126EE3EDFD3761F4F8F9BEA9 /* StarFillMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarFillMode.swift; path = Cosmos/StarFillMode.swift; sourceTree = "<group>"; };
 		F55FDA57467E209596F7AE0BBBBA5B02 /* StarsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StarsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86D8A1247A380983A975307B4403631 /* CosmosText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosText.swift; path = Cosmos/CosmosText.swift; sourceTree = "<group>"; };
@@ -330,19 +334,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01CA0F1E529E8E92B5CD0AC356B4B5A8 /* StarsKit */ = {
-			isa = PBXGroup;
-			children = (
-				F673F185475C5E765B463C0D22A1B829 /* Logic */,
-				22FE622CF28904C68CD3C965996424E5 /* Pod */,
-				6D6CC231E76E863E89E8BD8B507315CF /* Resources */,
-				D623A55CE48DF38A8BFA91150C04652D /* Support Files */,
-				9CC658DD496E40619766E8A1A8395469 /* UI */,
-			);
-			name = StarsKit;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		0360273B9840DC02C8B0178FB73AF927 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +342,20 @@
 				85FCA542BCEE86E85494EEA82F5F4243 /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		181790EA76F4BE367AE3076E46F7A78B /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				BC77D0571B60C0A0D283E7A46177CC28 /* FeedbackViewController.swift */,
+				854F3C3D92CD2D8C6EBAB568683CB315 /* FeedbackViewController.xib */,
+				48201953F6BA9EC216BD2720CDE4E70D /* StarsRateViewController.swift */,
+				5D5791A254AFF7711B0BDEBD1369D7FC /* StarsRateViewController.xib */,
+				D8E4693E2CCEC900ECC35B77D8A76DDE /* StepViewController.swift */,
+				EE65D70CD0051B22597D1DF14276BA97 /* StoreViewController.swift */,
+				C862BBF944DF812B296AA24FE9CF6FFB /* StoreViewController.xib */,
+			);
+			path = Steps;
 			sourceTree = "<group>";
 		};
 		1A35256ACE63DDF14567AEDB60EAE656 /* Cosmos */ = {
@@ -376,22 +381,47 @@
 			path = Cosmos;
 			sourceTree = "<group>";
 		};
-		22FE622CF28904C68CD3C965996424E5 /* Pod */ = {
+		225EF1E6C09EC3CC4EE3B0B7CFFB212A /* StarsKit.bundle */ = {
 			isa = PBXGroup;
 			children = (
-				0D515DDF9846BAAFB61852874D7E271E /* LICENSE */,
-				A4A922C5440E0E1CEC2F1F99A0CC74E1 /* README.md */,
-				D609BE3DA7497F4AA39AA028A8B660D2 /* StarsKit.podspec */,
+				6C87FCC22368BF042B989DCCF5ECFFA7 /* StarsKit.strings */,
 			);
-			name = Pod;
+			name = StarsKit.bundle;
+			path = StarsKit/Assets/StarsKit.bundle;
 			sourceTree = "<group>";
 		};
 		2A087F620FE2C64AAF41F15B29A0E450 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				01CA0F1E529E8E92B5CD0AC356B4B5A8 /* StarsKit */,
+				E35A5F4B5487B2727E2AD34769210326 /* StarsKit */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		3046165069006B33498D6D0BCD822CCB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D198CE72FBD40F9101EB14FDE6010AA5 /* Info.plist */,
+				86E59A3D0ABDD7A7E85B3CF7293B7274 /* ResourceBundle-StarsKit-Info.plist */,
+				A6CC746980720AB6902EFC4C1EE36106 /* StarsKit.modulemap */,
+				B95A13A2A7D9480F062D90C69B4DA32A /* StarsKit.xcconfig */,
+				B975AF3DAC0B74CB45D59A0A00F9EA1E /* StarsKit-dummy.m */,
+				BBA9E074CC0C7ADBC919750014CCC435 /* StarsKit-prefix.pch */,
+				48734E453F9395B4245078C4AC56D8C4 /* StarsKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/StarsKit";
+			sourceTree = "<group>";
+		};
+		326685BC26518A4091BA9CAF2D4FA629 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E3FC91F6DECEF7025D47B44B8BA386A8 /* StarsPopViewController.swift */,
+				42326B3C69289CD3BD554987E4737831 /* StarsPopViewController.xib */,
+				181790EA76F4BE367AE3076E46F7A78B /* Steps */,
+			);
+			name = UI;
+			path = StarsKit/Classes/UI;
 			sourceTree = "<group>";
 		};
 		3F550046D2C8A7E5DF5B7E632318F86D /* Support Files */ = {
@@ -426,6 +456,15 @@
 			path = "Target Support Files/Pods-StarsKit_Example";
 			sourceTree = "<group>";
 		};
+		66408FA18070BF240F6012CF262FCE3A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				39F3E7636A31923AAEBEB4BF321C7E70 /* StarsKitImages.xcassets */,
+				225EF1E6C09EC3CC4EE3B0B7CFFB212A /* StarsKit.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		698491B9880F676C757B391B541DF131 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -448,15 +487,6 @@
 			name = UIKit;
 			sourceTree = "<group>";
 		};
-		6D6CC231E76E863E89E8BD8B507315CF /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				29654923A3A6860A6B3AC452A4B01A5E /* StarsKit.bundle */,
-				40F0A09988B680BDAC5E53067EF3B239 /* StarsKitImages.xcassets */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -477,24 +507,6 @@
 				3E23FC00D390FC7543CD4169AA2A3E7B /* String+Extra.swift */,
 			);
 			name = Foundation;
-			sourceTree = "<group>";
-		};
-		9CC658DD496E40619766E8A1A8395469 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				5897D1A5101E98383EDC21867B299EDB /* FeedbackViewController.swift */,
-				6C6C88255C46A1F9545CCE6A13D63C89 /* FeedbackViewController.xib */,
-				700E91F7EB7E6A95F58C4423DABE77BA /* StarsKitGraphicContext.swift */,
-				41CA286D32D4A3F2734F9AE0E37B2BB4 /* StarsPopViewController.swift */,
-				0F19E9385D8E65D53238F6565A26CD84 /* StarsPopViewController.xib */,
-				D97B0C25F82DCBE33B56679E92491031 /* StarsRateViewController.swift */,
-				64BC916CB14EA9B83DD3C7E043D85E2F /* StarsRateViewController.xib */,
-				9F383E7CBC0EC39D70B3D622BF54216E /* StarsRatingCoordinator.swift */,
-				823DC61E65E29FAADFE9D502DB9F3A4A /* StoreViewController.swift */,
-				0B2B761E718C2041D24CE1EC69DCE5B1 /* StoreViewController.xib */,
-			);
-			name = UI;
-			path = StarsKit/Classes/UI;
 			sourceTree = "<group>";
 		};
 		A83FABC16DFE67C4FDCD5D442AA34447 /* Support Files */ = {
@@ -524,27 +536,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C11997C0D76CA495AC375F39201314E6 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				502BCD10D500B7C8F2BA6FA29DB697B3 /* RatingStep.swift */,
+				9FF8F4682BCEDDF5191F6314C6E1D5A3 /* StarsKit.swift */,
+				BDD7C8E291EB9373A7A58C11F824C270 /* StarsKitChecker.swift */,
+				EC0696AFE0327249F4B0999B2C6092A8 /* StarsKitConfiguration.swift */,
+				E8DB50C63659DB47EBFC815BE9ECD5C2 /* StarsKitConstants.swift */,
+				DD6FDD50D237A1ADBA6DE6CBE88848F7 /* StarsKitContext.swift */,
+				0738FB5B63E394530A0F10E4C6AD5316 /* StarsKitDelegate.swift */,
+				97041504C885165BB4CFC907DA655E15 /* StarsKitGraphicContext.swift */,
+				14ABF61CF20C167A86C2D223C362EBA1 /* StarsRatingCoordinator.swift */,
+			);
+			name = Logic;
+			path = StarsKit/Classes/Logic;
+			sourceTree = "<group>";
+		};
 		CEBC477A710DC5AEE7C21DB81DCF4457 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
 				40055E64129B0C5E9FAC79A18DDA27D9 /* Pods-StarsKit_Example */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		D623A55CE48DF38A8BFA91150C04652D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B3509D8AF4B57338372ABDD5D550B16F /* Info.plist */,
-				9A376945BA9FD6F50085E95248AC4692 /* ResourceBundle-StarsKit-Info.plist */,
-				EECE58872CC48100D836F1DA880C27AD /* StarsKit.modulemap */,
-				DBE5F1EC3878D2171FD28EE201984E57 /* StarsKit.xcconfig */,
-				3578CD8CB6E9308DA2CA7895EA3260DF /* StarsKit-dummy.m */,
-				E75A0F22786D1F909A570D1A98772840 /* StarsKit-prefix.pch */,
-				5EE6A6E5F6F7630172C0E6D4B7B393F4 /* StarsKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/StarsKit";
 			sourceTree = "<group>";
 		};
 		D8A5407C849B0C7BB8EF95A4C2DA1594 /* Support Files */ = {
@@ -582,6 +596,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E35A5F4B5487B2727E2AD34769210326 /* StarsKit */ = {
+			isa = PBXGroup;
+			children = (
+				C11997C0D76CA495AC375F39201314E6 /* Logic */,
+				E5BBB70A810E067E89BC2860B321B751 /* Pod */,
+				66408FA18070BF240F6012CF262FCE3A /* Resources */,
+				3046165069006B33498D6D0BCD822CCB /* Support Files */,
+				326685BC26518A4091BA9CAF2D4FA629 /* UI */,
+			);
+			name = StarsKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		E5BBB70A810E067E89BC2860B321B751 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				CF4B0DE8FFC922A6F036DC1814333BA3 /* LICENSE */,
+				117B7657534BC82241648FC17381E065 /* README.md */,
+				A80EEFD6ACCD9BBD1899CEB994C528CC /* StarsKit.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		F4013902FBC7B33D4F51B43463EB83AD /* Jelly */ = {
 			isa = PBXGroup;
 			children = (
@@ -601,20 +638,6 @@
 				3F550046D2C8A7E5DF5B7E632318F86D /* Support Files */,
 			);
 			path = Jelly;
-			sourceTree = "<group>";
-		};
-		F673F185475C5E765B463C0D22A1B829 /* Logic */ = {
-			isa = PBXGroup;
-			children = (
-				47D0F2827ADE73AF6E60FD8B95305C4C /* StarsKit.swift */,
-				A3EACDAB3F5B74BBE62C4FA07942733F /* StarsKitChecker.swift */,
-				2EFBACBEF2B9D9A262045193B11CAC41 /* StarsKitConfiguration.swift */,
-				355E38E9A75E5942558C64CB7FBED0F8 /* StarsKitConstants.swift */,
-				3DBDA99B0C6607B4B0E5BAF4123A846A /* StarsKitContext.swift */,
-				A54F70CBC79320D82DB39BC341F901B5 /* StarsKitDelegate.swift */,
-			);
-			name = Logic;
-			path = StarsKit/Classes/Logic;
 			sourceTree = "<group>";
 		};
 		FEC7E37421260E91D2AAB0E6D523FCDE /* Extra */ = {
@@ -734,7 +757,7 @@
 			buildPhases = (
 				812C09BEE070514219E66CC3587CFAF6 /* Sources */,
 				8C6C1429204B922B54B66D0B7753B192 /* Frameworks */,
-				50EDAE7A08189A863C14BCB5F29F10E4 /* Resources */,
+				9AAA0D4BABDADC02971A906A93F0F825 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -766,7 +789,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE0F0CC9076AF2C18196B99DF89F2F58 /* Build configuration list for PBXNativeTarget "StarsKit" */;
 			buildPhases = (
-				CAE18263079CBAFDA3B9D1C4039A03D6 /* Sources */,
+				48236A2CCBFA3FE63F916683A289211C /* Sources */,
 				1E176276F638D8774CA1C4476CFBEA3F /* Frameworks */,
 				23005F5A2E1F5BC14CD73EEC1807C140 /* Resources */,
 				73529C21C51EC1F21031D079BA9E365C /* Headers */,
@@ -820,17 +843,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4421E1FA203DC6AA004F058F /* StarsKitImages.xcassets in Resources */,
 				122E7E255FC600F7CF9E21F8F977C0A1 /* StarsKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		50EDAE7A08189A863C14BCB5F29F10E4 /* Resources */ = {
+		9AAA0D4BABDADC02971A906A93F0F825 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				031A43DEF9FAD3415CAD903F29FE6C62 /* StarsKit.bundle in Resources */,
-				0904BBDE5D9AC1E1B598561D71E86CCD /* StarsKitImages.xcassets in Resources */,
+				4C6F879D2984D9FB759FB4AAE21E5F0E /* StarsKit.strings in Resources */,
+				A1D7A2F507A72C1BCAD1EC6C791C60E9 /* StarsKitImages.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -842,6 +864,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				30DA0D1439D194BCF12A1F8938E7B369 /* Pods-StarsKit_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48236A2CCBFA3FE63F916683A289211C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8E9835410ECCFD5CB207EF84174A899 /* FeedbackViewController.swift in Sources */,
+				E0CA7EDB2809CBAACE6694B89D48D862 /* FeedbackViewController.xib in Sources */,
+				EC9EAF3C379EC8D7E2DE1E8BAE3F983A /* RatingStep.swift in Sources */,
+				CD3CEE54FEB7E5E8B2B61EF406E27A9B /* StarsKit-dummy.m in Sources */,
+				360BC34A5DFA06E2E8B1A5BF9E73450F /* StarsKit.swift in Sources */,
+				9E87F55A601E30061352F84DE57C7110 /* StarsKitChecker.swift in Sources */,
+				3A953DF1222A0E51AE3F36CEE177BD0F /* StarsKitConfiguration.swift in Sources */,
+				9EC5E295E36919081168B7BD1EF10AC8 /* StarsKitConstants.swift in Sources */,
+				A7359C2A5F586B400C4B5E769FCFDB94 /* StarsKitContext.swift in Sources */,
+				5EE4DDF8DC8A857D1B6BDF00EFD8A50E /* StarsKitDelegate.swift in Sources */,
+				5D69F8F2B8D94A8A53BC65F3FDC37544 /* StarsKitGraphicContext.swift in Sources */,
+				47F5DACB3EEECCDD60DB512E3F30CBD9 /* StarsPopViewController.swift in Sources */,
+				803DC064495DFCB2D8B56A366EEC99BE /* StarsPopViewController.xib in Sources */,
+				202193A4DACE717DFCE3AEC687AA52A2 /* StarsRateViewController.swift in Sources */,
+				FFA953CACACEE03953BB60FA5E29AD67 /* StarsRateViewController.xib in Sources */,
+				004DCCABD68F15CBC5BA745A2154A122 /* StarsRatingCoordinator.swift in Sources */,
+				E60BBBD9BD0E05911DCBBADCAC67260A /* StepViewController.swift in Sources */,
+				64BE888183DF4204EBC4E89C90EC6AC4 /* StoreViewController.swift in Sources */,
+				86B517FA7EE3A19DE61911E096F0341A /* StoreViewController.xib in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -898,30 +946,6 @@
 				3530F401EA678F0C151A0BB1C39BCCCD /* UITextView+Extra.swift in Sources */,
 				5E628D5DFE625A5AB13AE1B7D9432F9C /* UIView+Extra.swift in Sources */,
 				3362893EEEA22A163960F8ADD0454CC5 /* UIViewController+Extra.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CAE18263079CBAFDA3B9D1C4039A03D6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4927C71515A548616D696B883EF2B35E /* FeedbackViewController.swift in Sources */,
-				1F2042E62A5D8C4DACB69CD6AA3220EF /* FeedbackViewController.xib in Sources */,
-				85A1E4EE4F5F46424EC6A1C0C43A5736 /* StarsKit-dummy.m in Sources */,
-				D10F1C6A4F93C72F0E16AF01CC5023AA /* StarsKit.swift in Sources */,
-				406FF4EC600C286C1984FB9D38C2D440 /* StarsKitChecker.swift in Sources */,
-				D4AF33E77EAA1D9725D7229C9EBA5412 /* StarsKitConfiguration.swift in Sources */,
-				4B6EBA62977881A2A80AB2F5542DC5AC /* StarsKitConstants.swift in Sources */,
-				72149618700CA093AF115A7C9D4CB821 /* StarsKitContext.swift in Sources */,
-				66461B698972E3EE44ADFF7EC3D47717 /* StarsKitDelegate.swift in Sources */,
-				6564828F177A04CEA68D8B7D7385CFFC /* StarsKitGraphicContext.swift in Sources */,
-				6383C5DDE76CBB20CCE80D7EE4489FA6 /* StarsPopViewController.swift in Sources */,
-				19CA22005B4123D480906710D4A8DDD0 /* StarsPopViewController.xib in Sources */,
-				D3AF41F6DB4C4A5293E60755104D99BF /* StarsRateViewController.swift in Sources */,
-				D8930E9756B17AFB6F37F964D79D4865 /* StarsRateViewController.xib in Sources */,
-				7DCD3F3A7187F4A212CF7AA1BACA6197 /* StarsRatingCoordinator.swift in Sources */,
-				28A1FEF524E45A6F20E7AAA52CCE469E /* StoreViewController.swift in Sources */,
-				E044E34238ECB44AD5C45BC23593D45E /* StoreViewController.xib in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -999,6 +1023,19 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		6C87FCC22368BF042B989DCCF5ECFFA7 /* StarsKit.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				722669713B6FC8048AEB1F7C32D5C27E /* StarsKit.strings */,
+				622E56B62BB9CAF6CDC6CAC0FD0BEBED /* StarsKit.strings */,
+			);
+			name = StarsKit.strings;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		0F8669FB327A1961C6B9772E7C207F1A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1033,7 +1070,7 @@
 		};
 		19E256FE968DEA1D1317CC8E62A6A326 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBE5F1EC3878D2171FD28EE201984E57 /* StarsKit.xcconfig */;
+			baseConfigurationReference = B95A13A2A7D9480F062D90C69B4DA32A /* StarsKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1095,7 +1132,7 @@
 		};
 		3331DED5F75A33917FCD4D5D13CE036D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBE5F1EC3878D2171FD28EE201984E57 /* StarsKit.xcconfig */;
+			baseConfigurationReference = B95A13A2A7D9480F062D90C69B4DA32A /* StarsKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/StarsKit";
@@ -1174,7 +1211,7 @@
 		};
 		3D8F422F385BF11A243CF6B7EC533165 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBE5F1EC3878D2171FD28EE201984E57 /* StarsKit.xcconfig */;
+			baseConfigurationReference = B95A13A2A7D9480F062D90C69B4DA32A /* StarsKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1240,7 +1277,7 @@
 		};
 		598DE607BE58EC8C6C50C9B59D5ADEBB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBE5F1EC3878D2171FD28EE201984E57 /* StarsKit.xcconfig */;
+			baseConfigurationReference = B95A13A2A7D9480F062D90C69B4DA32A /* StarsKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/StarsKit";

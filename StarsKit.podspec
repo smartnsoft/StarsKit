@@ -33,7 +33,7 @@ TODO: Add long description of the pod here.
   s.source_files = 'StarsKit/Classes/**/*'
 
   s.resource_bundles = {
-    'StarsKit' => ['StarsKit/Assets/StarsKit.bundle', 'StarsKit/Assets/StarsKitImages.xcassets']
+    'StarsKit' => ['StarsKit/Assets/StarsKit.bundle/*.lproj/*.strings', 'StarsKit/Assets/StarsKitImages.xcassets']
   }
 
   # s.frameworks = 'UIKit', 'MapKit'

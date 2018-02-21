@@ -22,29 +22,6 @@
 
 import Foundation
 
-
-/// Step of the rating process
-///
-/// - rating: User has to choose a rating
-/// - feedback: User has to choose giving a feedback because of disliking
-/// - storeReview: User has the choice of giving an AppStore review
-public enum RatingStep {
-  case rating(context: StarsKitContext)
-  case feedback(context: StarsKitContext)
-  case storeReview(context: StarsKitContext)
-  
-  func title() -> String {
-    switch self {
-    case .rating:
-      return StarsKit.shared.configuration.localizableTitle(for: StarsKitLocalizableKeys.mainTitle)
-    case .feedback:
-      return StarsKit.shared.configuration.localizableTitle(for: StarsKitLocalizableKeys.dislikeMainTitle)
-    case .storeReview:
-      return StarsKit.shared.configuration.localizableTitle(for: StarsKitLocalizableKeys.likeMainTitle)
-    }
-  }
-}
-
 protocol StarsRatingCoordinatorDelegate: class {
   func didSwitchToStep(_ step: RatingStep)
 }
@@ -55,7 +32,7 @@ final class StarsRatingCoordinator {
   private var graphicContext: StarsKitGraphicContext
   private var context: StarsKitContext
   
-  private var step: RatingStep {
+  private(set) var step: RatingStep {
     didSet {
       self.delegate?.didSwitchToStep(self.step)
     }
@@ -90,9 +67,14 @@ final class StarsRatingCoordinator {
   }
   
   func endRating(to rate: Double) {
-    let rate = Int(rate)
-    StarsKit.shared.delegate?.didUpdateRating(from: self.context, to: rate)
-    if rate < StarsKit.shared.configuration.positiveStarsLimit {
+    StarsKit.shared.delegate?.didUpdateRating(from: self.context, to: Int(rate))
+    if !StarsKit.shared.validateRatingButtonEnable {
+      self.validateRating(to: rate)
+    }
+  }
+  
+  func validateRating(to rate: Double) {
+    if Int(rate) < StarsKit.shared.configuration.positiveStarsLimit {
       self.makeFeedback()
     } else {
       self.makeStoreReview()

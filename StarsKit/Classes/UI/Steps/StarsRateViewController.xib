@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StarsRateViewController" customModule="StarsKit" customModuleProvider="target">
             <connections>
+                <outlet property="ibActionButton" destination="ukm-JX-UCC" id="o4H-9S-gWh"/>
                 <outlet property="ibCosmosView" destination="VOZ-fG-jjk" id="ahP-LG-FEb"/>
                 <outlet property="ibIndicatorLabel" destination="pNY-HG-oer" id="nTZ-m4-F7B"/>
                 <outlet property="ibLaterButton" destination="cnS-nd-VTc" id="SXN-Ry-Sfy"/>
@@ -24,16 +25,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="e6b-Xs-CAc">
-                    <rect key="frame" x="0.0" y="0.0" width="383" height="225"/>
+                    <rect key="frame" x="0.0" y="0.0" width="383" height="205"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNY-HG-oer">
-                            <rect key="frame" x="30" y="0.0" width="323" height="33"/>
+                            <rect key="frame" x="30" y="0.0" width="323" height="20"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOZ-fG-jjk" customClass="CosmosView" customModule="Cosmos">
-                            <rect key="frame" x="30" y="53" width="323" height="112"/>
+                            <rect key="frame" x="30" y="40" width="323" height="105"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="cFo-jS-vBk"/>
@@ -47,28 +48,40 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnS-nd-VTc">
-                            <rect key="frame" x="30" y="185" width="323" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="t6p-gJ-08i"/>
-                            </constraints>
-                            <state key="normal" title="Button"/>
-                            <connections>
-                                <action selector="didChooseDismissAction:" destination="-1" eventType="touchUpInside" id="dPO-qL-Z6P"/>
-                            </connections>
-                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3ZT-1G-8aI">
+                            <rect key="frame" x="30" y="165" width="323" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnS-nd-VTc">
+                                    <rect key="frame" x="0.0" y="0.0" width="151.5" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="t6p-gJ-08i"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="didChooseDismissAction:" destination="-1" eventType="touchUpInside" id="dPO-qL-Z6P"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukm-JX-UCC">
+                                    <rect key="frame" x="171.5" y="0.0" width="151.5" height="40"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="didTapActionButton:" destination="-1" eventType="touchUpInside" id="Ojf-kB-cWn"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="cnS-nd-VTc" firstAttribute="leading" secondItem="e6b-Xs-CAc" secondAttribute="leading" constant="30" id="Afr-xi-YHN"/>
+                        <constraint firstAttribute="trailing" secondItem="3ZT-1G-8aI" secondAttribute="trailing" constant="30" id="7sP-tc-dIL"/>
                         <constraint firstAttribute="trailing" secondItem="pNY-HG-oer" secondAttribute="trailing" constant="30" id="c3q-2x-Pu1"/>
-                        <constraint firstAttribute="trailing" secondItem="cnS-nd-VTc" secondAttribute="trailing" constant="30" id="lnM-E5-G0c"/>
+                        <constraint firstItem="3ZT-1G-8aI" firstAttribute="leading" secondItem="e6b-Xs-CAc" secondAttribute="leading" constant="30" id="rgv-GG-bE9"/>
                         <constraint firstItem="pNY-HG-oer" firstAttribute="leading" secondItem="e6b-Xs-CAc" secondAttribute="leading" constant="30" id="tX7-TQ-ENc"/>
                     </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="e6b-Xs-CAc" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="80K-AW-ClN"/>
+                <constraint firstItem="e6b-Xs-CAc" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-20" id="Kb4-jB-pGl"/>
                 <constraint firstItem="e6b-Xs-CAc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gX5-YS-pKd"/>
                 <constraint firstItem="e6b-Xs-CAc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="oT6-SZ-U6I"/>
                 <constraint firstItem="e6b-Xs-CAc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rPj-zr-Ws1"/>

@@ -27,15 +27,6 @@ import Foundation
 public final class StarsKitConfiguration {
   
   // MARK: Properties
-  public internal(set) var localLocalizableStringsEnabled: Bool {
-    get {
-      return UserDefaults.standard.bool(forKey: StarsKitProperties.localLocalizableStringsEnabled.userDefaultsKey)
-    }
-    
-    set {
-      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.localLocalizableStringsEnabled.userDefaultsKey)
-    }
-  }
   
   public internal(set) var disabled: Bool {
     get {
@@ -46,7 +37,7 @@ public final class StarsKitConfiguration {
       UserDefaults.standard.set(newValue, forKey: StarsKitProperties.disabled.userDefaultsKey)
     }
   }
-
+  
   public internal(set) var displaySessionCount: Int {
     get {
       return UserDefaults.standard.integer(forKey: StarsKitProperties.displaySessionCount.userDefaultsKey)
@@ -139,9 +130,6 @@ public final class StarsKitConfiguration {
     if let isDisabled = config[StarsKitProperties.disabled.rawValue] as? Bool {
       self.disabled = isDisabled
     }
-    if let isLocalLocalizableStringsEnabled = config[StarsKitProperties.localLocalizableStringsEnabled.rawValue] as? Bool {
-      self.localLocalizableStringsEnabled = isLocalLocalizableStringsEnabled
-    }
     
     StarsKitProperties.allIntValues.forEach { (property) in
       if let intValue = config[property.rawValue] as? Int {
@@ -159,10 +147,20 @@ public final class StarsKitConfiguration {
   }
   
   func localizableTitle(`for` key: StarsKitLocalizableKeys) -> String {
-    if self.localLocalizableStringsEnabled {
-      return NSLocalizedString(key.localizableKey, comment: "")
+    if StarsKit.shared.localLocalizableStringsEnabled {
+      let overridedLocalizable = NSLocalizedString(key.localizableKey, bundle: Bundle.main, comment: "")
+      if overridedLocalizable == key.localizableKey {
+        let bundlePath = Bundle(for: StarsKit.self).path(forResource: "StarsKit", ofType: "bundle")
+        if let bundlePath = bundlePath, let resourceBundle = Bundle(path: bundlePath) {
+          return NSLocalizedString(key.localizableKey, tableName: "StarsKit", bundle: resourceBundle, comment: "")
+        }
+      } else {
+        return overridedLocalizable
+      }
     } else {
       return UserDefaults.standard.string(forKey: key.userDefaultsKey) ?? ""
     }
+    return ""
   }
+  
 }

@@ -50,7 +50,6 @@ public class StarsPopViewController: UIViewController {
   
   override public func viewDidLoad() {
     super.viewDidLoad()
-  
     
     self.prepareView()
     self.coordinator = StarsRatingCoordinator(starsPopViewController: self,
@@ -59,7 +58,7 @@ public class StarsPopViewController: UIViewController {
                                               delegate: self)
     self.coordinator?.start()
     
-
+    
   }
   
   private func prepareView() {

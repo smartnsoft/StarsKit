@@ -20,9 +20,11 @@ class ViewController: UIViewController {
         if let localJSONConfiguration = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any?] {
           StarsKit.shared.updateConfig(from: localJSONConfiguration)
           StarsKit.shared.incrementSession()
-          StarsKit.shared.priorityUseNativeRate = false
-          StarsKit.shared.graphicContext.backgroundHeaderTitleImage = UIImage.gradient(from: UIColor.ex.fromHexa("#d8012a"),
-                                                                                       end: UIColor.ex.fromHexa("#0024a6"),
+          //StarsKit.shared.priorityUseNativeRate = true
+          //StarsKit.shared.validateRatingButtonEnable = false
+          StarsKit.shared.localLocalizableStringsEnabled = true
+          StarsKit.shared.graphicContext.backgroundHeaderTitleImage = UIImage.gradient(from: UIColor.ex.fromHexa("#0024a6"),
+                                                                                       end: UIColor.ex.fromHexa("#d8012a"),
                                                                                        rect: CGRect(x: 0, y: 0, width: 50, height: 50))
           StarsKit.shared.delegate = self
           
