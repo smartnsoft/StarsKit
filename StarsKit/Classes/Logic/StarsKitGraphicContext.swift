@@ -54,6 +54,7 @@ public class StarsKitGraphicContext {
                                                       compatibleWith: nil)
   
   public lazy var preferredStatusBarStyle = UIStatusBarStyle.lightContent
+  public lazy var stepTransitionOptions: UIViewAnimationOptions = .transitionCrossDissolve
   
   // Third parties customizations
   lazy var defaultJellyPresentation: JellyPresentation = {

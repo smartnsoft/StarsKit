@@ -38,6 +38,6 @@ TODO: Add long description of the pod here.
 
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'Cosmos', '~> 15.0'
-  s.dependency 'Extra', '~> 1.1'
+  s.dependency 'Extra/UIKit', '~> 1.1'
   s.dependency 'Jelly', '~> 1.2'
 end

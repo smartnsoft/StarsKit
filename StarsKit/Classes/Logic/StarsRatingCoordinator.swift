@@ -102,7 +102,8 @@ final class StarsRatingCoordinator {
       self.storeViewController = storeViewController
       starsPopViewController.ex.switchChilds(from: self.rateViewController,
                                              to: storeViewController,
-                                             in: starsPopViewController.ibContainerView)
+                                             in: starsPopViewController.ibContainerView,
+                                             transitionOptions: self.graphicContext.stepTransitionOptions)
     }
   }
   
