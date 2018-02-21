@@ -74,6 +74,7 @@ final class StarsRatingCoordinator {
   }
   
   func validateRating(to rate: Double) {
+    StarsKit.shared.context.userAlreadyRespondsToAction = true
     StarsKit.shared.delegate?.didValidateRating(to: Int(rate))
     if Int(rate) < StarsKit.shared.configuration.positiveStarsLimit {
       self.makeFeedback()
@@ -106,11 +107,13 @@ final class StarsRatingCoordinator {
   
   // MARK: Step ending events
   func didChooseFeedback() {
+    StarsKit.shared.context.userAlreadyRespondsToAction = true
     StarsKit.shared.delegate?.didChooseAction(at: self.step, from: self.context)
     self.starsPopViewController?.dismiss(animated: true, completion: nil)
   }
   
   func didChooseStoreReview() {
+    StarsKit.shared.context.userAlreadyRespondsToAction = true
     StarsKit.shared.delegate?.didChooseAction(at: self.step, from: self.context)
     self.starsPopViewController?.dismiss(animated: true, completion: nil)
   }

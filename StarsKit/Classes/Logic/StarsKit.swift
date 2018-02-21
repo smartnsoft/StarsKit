@@ -60,8 +60,13 @@ public class StarsKit {
   
   /// Start the rating checking and display the rating view if needed
   public func checkRateDisplay() {
+    
     if (self.useDefaultBehavior && StarsKitChecker.needDisplayRateScreen(for: self))
       || self.delegate?.needDisplayRateScreen() == true {
+      
+      self.context.nbReminders += 1
+      self.context.lastDisplayDate = Date()
+      
       if self.priorityUseNativeRate {
         //Use 10.3 + native app rating
         if #available(iOS 10.3, *) {
@@ -82,10 +87,19 @@ public class StarsKit {
   }
   
   /// MARK: Metrics update
+  
+  /// **Warning**: Be sure about calling a reset context !
   public func resetContext() {
-    self.context.nbCrashes = 0
+    self.resetCrashMetrics()
     self.context.nbSessions = 0
+    self.context.nbReminders = 0
+    self.context.userAlreadyRespondsToAction = false
     self.context.lastDisplayDate = nil
+  }
+  
+  public func resetCrashMetrics() {
+    self.context.nbCrashes = 0
+    self.context.lastCrashDate = nil
   }
   
   public func incrementSession(by sessionCount: Int = 1) {
