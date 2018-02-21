@@ -132,15 +132,15 @@
 		0CAC9350193E5FE798B883AEE53B5E44 /* Pods-StarsKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StarsKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		0D901A64D84A5FF8CE61D21B500AC4AE /* Cosmos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-prefix.pch"; sourceTree = "<group>"; };
 		0EBA02B55EFCE741018000EB99BFC86B /* StarsKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StarsKit-dummy.m"; sourceTree = "<group>"; };
-		0F466FD071992C26313C5102DDCEB932 /* Cosmos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Cosmos.modulemap; sourceTree = "<group>"; };
+		0F466FD071992C26313C5102DDCEB932 /* Cosmos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Cosmos.modulemap; sourceTree = "<group>"; };
 		12CCA515B886F670036D04218560374D /* CosmosText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosText.swift; path = Cosmos/CosmosText.swift; sourceTree = "<group>"; };
 		13A03CED275C637BCEED90154C9FE84A /* StoreViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		1518338D3CC20F1AC16F8D72D3556ED1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19BC034111B82FFA96503303417D14E6 /* Pods-StarsKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-StarsKit_Example.modulemap"; sourceTree = "<group>"; };
+		19BC034111B82FFA96503303417D14E6 /* Pods-StarsKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-StarsKit_Example.modulemap"; sourceTree = "<group>"; };
 		1A0A9F85B5547E30A9FADB0BBE8FE407 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		20A1D7E056024E1A763C52221BC9E741 /* RightToLeft.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RightToLeft.swift; path = Cosmos/Helpers/RightToLeft.swift; sourceTree = "<group>"; };
 		249A6061B71D8F3B6D478F7029BEBD5F /* FeedbackViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
-		2A3F78172F596C35676CBA6F596CD212 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		2A3F78172F596C35676CBA6F596CD212 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2F38EF9D3D8FC6D0EB777EB7A141AA49 /* StarsKitChecker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitChecker.swift; sourceTree = "<group>"; };
 		375E6BED6DC586EFC80D08094E915A41 /* UIButton+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Extra.swift"; path = "Extra/Classes/UIKit/UIButton+Extra.swift"; sourceTree = "<group>"; };
 		37A982F44D47C24CDBBE7A313E97DBAA /* UIView+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extra.swift"; path = "Extra/Classes/UIKit/UIView+Extra.swift"; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 		57A2E55F2CECF7920FAED651D74E58EE /* UIDevice+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extra.swift"; path = "Extra/Classes/UIKit/UIDevice+Extra.swift"; sourceTree = "<group>"; };
 		61EAA0B3EB6E47A64821E5D54F18A337 /* StarsKitContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitContext.swift; sourceTree = "<group>"; };
 		68150217B98FD779861CDA1834493663 /* Sequence+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Sequence+Extra.swift"; path = "Extra/Classes/Foundation/Sequence+Extra.swift"; sourceTree = "<group>"; };
-		68B836B7D70A52EB1AE1328C3BF46128 /* Extra.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Extra.modulemap; sourceTree = "<group>"; };
+		68B836B7D70A52EB1AE1328C3BF46128 /* Extra.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Extra.modulemap; sourceTree = "<group>"; };
 		6974CE894286BBE3EC7DD3E878E4031B /* UITextView+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextView+Extra.swift"; path = "Extra/Classes/UIKit/UITextView+Extra.swift"; sourceTree = "<group>"; };
 		6EBA4DE9B25A00DEE3C9E1A0A4126B9E /* Pods-StarsKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StarsKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		72D8CD2B9EFA5AE9442F5750AACE9EA7 /* CosmosSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSize.swift; path = Cosmos/CosmosSize.swift; sourceTree = "<group>"; };
@@ -173,10 +173,10 @@
 		8717C7FCECA19D5B5F8868EEAD974FF2 /* ResourceBundle-StarsKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-StarsKit-Info.plist"; sourceTree = "<group>"; };
 		8818E95E3E95E91CEA5956A1BB0A3D2B /* Pods-StarsKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StarsKit_Example-dummy.m"; sourceTree = "<group>"; };
 		88C46DDA740375982AF1C725F0C1093E /* StarsRateViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsRateViewController.swift; sourceTree = "<group>"; };
-		8B9706CF96B93A352334FA595BEFAFBA /* Extra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Extra.framework; path = Extra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B9706CF96B93A352334FA595BEFAFBA /* Extra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Extra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA8836A851FC11374267C38444AAEE8 /* Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extra.swift; path = Extra/Classes/Extra/Extra.swift; sourceTree = "<group>"; };
 		8C8430CB34800930990AFFA9EB764DE6 /* FeedbackViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		942D43434B967AEA19E692717FF1C04A /* String+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extra.swift"; path = "Extra/Classes/Foundation/String+Extra.swift"; sourceTree = "<group>"; };
 		9575A58DF0FE06CEE4341A3D1D0C4C33 /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosDefaultSettings.swift; path = Cosmos/CosmosDefaultSettings.swift; sourceTree = "<group>"; };
 		96BD71D9C4730BAC648D714BE36EFBB2 /* StoreViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = StoreViewController.xib; sourceTree = "<group>"; };
@@ -189,12 +189,12 @@
 		A7FAAB00B78C7E5632B697535E85BBCA /* StarLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarLayer.swift; path = Cosmos/StarLayer.swift; sourceTree = "<group>"; };
 		AB9EBC3E1349867CFAB3F372D91FCCD8 /* CosmosAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosAccessibility.swift; path = Cosmos/CosmosAccessibility.swift; sourceTree = "<group>"; };
 		B06417E5E7B082DE774326D820FF8C2F /* UINavigationController+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Extra.swift"; path = "Extra/Classes/UIKit/UINavigationController+Extra.swift"; sourceTree = "<group>"; };
-		B090A205748994CA16397D4D024E1532 /* StarsKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = StarsKit.bundle; path = "StarsKit-StarsKit.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B090A205748994CA16397D4D024E1532 /* StarsKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarsKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1765EFF83D6FE45F4F6509A2C355D60 /* Extra-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Extra-umbrella.h"; sourceTree = "<group>"; };
 		B19C2080EC68865ACF095DA103F6DEF3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B35DD53B2A8538F8C28F0B4CC327D4AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B9FF6CFF76EE705F2209D5A4818D1697 /* Cosmos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cosmos-dummy.m"; sourceTree = "<group>"; };
-		BC93A99EBE442E8BAC2AA7F4EE1927A6 /* StarsKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = StarsKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BC93A99EBE442E8BAC2AA7F4EE1927A6 /* StarsKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = StarsKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BD9384A6928DB3EF7AB76103498DDEC9 /* StarsKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StarsKit-umbrella.h"; sourceTree = "<group>"; };
 		C0EC1F687D0CA32FDE997EB0888D6AE2 /* Extra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Extra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5DC21F55564156F978621F2D3604054 /* StarsPopViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsPopViewController.swift; sourceTree = "<group>"; };
@@ -203,12 +203,12 @@
 		CF1E1CE0F742F241890878E65FAE172F /* CosmosLayerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayerHelper.swift; path = Cosmos/CosmosLayerHelper.swift; sourceTree = "<group>"; };
 		CFDFB263F63630F6170545953DDAA7E9 /* UICollectionViewCell+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionViewCell+Extra.swift"; path = "Extra/Classes/UIKit/UICollectionViewCell+Extra.swift"; sourceTree = "<group>"; };
 		D55A81FFE57D8CF29CF7304B6D57B4AA /* CosmosSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSettings.swift; path = Cosmos/CosmosSettings.swift; sourceTree = "<group>"; };
-		D66F7E3C7D9A69F72A76A16D7871F01C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		E2E0FF82E3D2BDF5E7C2B0A9EAF52C56 /* Pods_StarsKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_StarsKit_Example.framework; path = "Pods-StarsKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E60A11D5ADB2D9DC5EB30D9E44D772B7 /* StarsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = StarsKit.framework; path = StarsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D66F7E3C7D9A69F72A76A16D7871F01C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E2E0FF82E3D2BDF5E7C2B0A9EAF52C56 /* Pods_StarsKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarsKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E60A11D5ADB2D9DC5EB30D9E44D772B7 /* StarsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StarsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E65C1FBB2206B8D71FEBACD8DD5DB5AF /* StarsKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKit.swift; sourceTree = "<group>"; };
 		E6AFE6438285A55A5F212D9A6576C80E /* Cosmos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-umbrella.h"; sourceTree = "<group>"; };
-		EC74EDB45824190D939D402DDFC2478C /* StarsKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = StarsKit.modulemap; sourceTree = "<group>"; };
+		EC74EDB45824190D939D402DDFC2478C /* StarsKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = StarsKit.modulemap; sourceTree = "<group>"; };
 		F035EC7B8590433BE884CFAAF7F8CE26 /* Extra.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Extra.xcconfig; sourceTree = "<group>"; };
 		F0B5E192994E17F8B14CD8074A3B83D8 /* UICollectionView+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Extra.swift"; path = "Extra/Classes/UIKit/UICollectionView+Extra.swift"; sourceTree = "<group>"; };
 		F110C5D93FA440D479B5C21F22F5F20B /* CosmosLayers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayers.swift; path = Cosmos/CosmosLayers.swift; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 		F676786E5906CBFB159F068164AFB3A3 /* StarsKitConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitConstants.swift; sourceTree = "<group>"; };
 		F8C8AB32737B923E1C908B213AC1DF63 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA1FE5FCBB244B331D06E2AA69276569 /* StarsKitDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StarsKitDelegate.swift; sourceTree = "<group>"; };
-		FF8029897302F17BD4BD765C38E22B42 /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cosmos.framework; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF8029897302F17BD4BD765C38E22B42 /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,7 +356,6 @@
 				A7FAAB00B78C7E5632B697535E85BBCA /* StarLayer.swift */,
 				344E943879C4C2C118778C380464DCDC /* Support Files */,
 			);
-			name = Cosmos;
 			path = Cosmos;
 			sourceTree = "<group>";
 		};
@@ -389,7 +388,6 @@
 				C2495E788EB7377363F4C633EB6FA5EB /* Support Files */,
 				B6D6571845A122FF0695F839DD9A71DB /* UIKit */,
 			);
-			name = Extra;
 			path = Extra;
 			sourceTree = "<group>";
 		};

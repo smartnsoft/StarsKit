@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4421E1F6203D8ECB004F058F /* UIImage+StarsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4421E1F5203D8ECB004F058F /* UIImage+StarsKit.swift */; };
 		442A9027203C75EB00512A74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442A9026203C75EB00512A74 /* LaunchScreen.storyboard */; };
 		442A9029203C76B900512A74 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 442A9028203C76B900512A74 /* config.json */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 		053750C0D92FE3A6234ECBCD /* Pods-StarsKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarsKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarsKit_Example/Pods-StarsKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		0E99C04096DE554B6BD01760 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2D51679C39681124B4443E86 /* Pods_StarsKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarsKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4421E1F5203D8ECB004F058F /* UIImage+StarsKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+StarsKit.swift"; sourceTree = "<group>"; };
 		442A9026203C75EB00512A74 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		442A9028203C76B900512A74 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		5A7F55B5009841DA7B6DDAC3 /* Pods_StarsKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarsKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,7 @@
 		607FACD21AFB9204008FA782 /* Example for StarsKit */ = {
 			isa = PBXGroup;
 			children = (
+				4421E1F5203D8ECB004F058F /* UIImage+StarsKit.swift */,
 				442A9025203C753600512A74 /* Resources */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
@@ -284,6 +287,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				4421E1F6203D8ECB004F058F /* UIImage+StarsKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

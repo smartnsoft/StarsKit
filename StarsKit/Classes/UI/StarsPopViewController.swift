@@ -70,6 +70,7 @@ public class StarsPopViewController: UIViewController {
     self.ibBackgroundImageView.backgroundColor = self.graphicContext.backgroundHeaderColor
     
     self.ibTitleLabel.font = self.graphicContext.mainTitleFont
+    self.ibTitleLabel.textColor = self.graphicContext.mainTitleColor
     
   }
   
