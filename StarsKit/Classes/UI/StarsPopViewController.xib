@@ -25,6 +25,9 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6vh-jv-ZDR" userLabel="BackgroundTitleView">
                     <rect key="frame" x="0.0" y="0.0" width="413" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51" id="bDU-fD-e5d"/>
+                    </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guq-Mg-2qz" userLabel="TitleView">
                     <rect key="frame" x="20" y="15" width="373" height="21"/>
@@ -47,9 +50,9 @@
                 <constraint firstItem="guq-Mg-2qz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="SsZ-5I-Lps"/>
                 <constraint firstItem="WZK-B1-cdf" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ZZx-ll-MpT"/>
                 <constraint firstItem="WZK-B1-cdf" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="gDj-sB-FE3"/>
-                <constraint firstItem="6vh-jv-ZDR" firstAttribute="bottom" secondItem="guq-Mg-2qz" secondAttribute="bottom" constant="15" id="h4W-bj-mxm"/>
                 <constraint firstItem="6vh-jv-ZDR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pPk-vC-h9r"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="guq-Mg-2qz" secondAttribute="trailing" constant="20" id="qmv-AK-gWd"/>
+                <constraint firstItem="WZK-B1-cdf" firstAttribute="top" secondItem="guq-Mg-2qz" secondAttribute="bottom" constant="15" id="v5j-cs-LZJ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

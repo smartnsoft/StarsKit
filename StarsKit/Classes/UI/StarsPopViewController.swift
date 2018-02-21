@@ -63,8 +63,6 @@ public class StarsPopViewController: UIViewController {
   }
   
   private func prepareView() {
-    self.view.layer.cornerRadius = self.graphicContext.cornerRadius
-    self.view.layer.masksToBounds = true
     
     self.ibBackgroundImageView.image = self.graphicContext.backgroundHeaderTitleImage
     self.ibBackgroundImageView.backgroundColor = self.graphicContext.backgroundHeaderColor

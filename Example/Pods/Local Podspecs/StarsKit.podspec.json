@@ -21,7 +21,8 @@
   "source_files": "StarsKit/Classes/**/*",
   "resource_bundles": {
     "StarsKit": [
-      "StarsKit/Classes/**/*.xib"
+      "StarsKit/Assets/StarsKit.bundle",
+      "StarsKit/Assets/StarsKitImages.xcassets"
     ]
   },
   "dependencies": {
@@ -29,7 +30,10 @@
       "~> 15.0"
     ],
     "Extra": [
-      "~> 1.1.0"
+      "~> 1.1"
+    ],
+    "Jelly": [
+      "~> 1.2"
     ]
   }
 }

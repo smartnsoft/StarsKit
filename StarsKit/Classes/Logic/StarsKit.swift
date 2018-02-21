@@ -23,6 +23,7 @@
 
 import Foundation
 import StoreKit
+import Jelly
 
 /// Global StarsKit client
 public class StarsKit {
@@ -34,6 +35,8 @@ public class StarsKit {
   public var graphicContext = StarsKitGraphicContext()
   public var useDefaultBehavior = true
   public var priorityUseNativeRate = false
+  
+  fileprivate var jellyAnimator: JellyAnimator?
   
   public weak var delegate: StarsKitDelegate?
   
@@ -52,7 +55,20 @@ public class StarsKit {
         }
       } else {
         if let controller = self.delegate?.presenterController() {
-          controller.present(StarsPopViewController(graphicContext: self.graphicContext), animated: true, completion: nil)
+          
+          let alertController = StarsPopViewController(graphicContext: self.graphicContext)
+          // Custom Alert
+          var alertPresentation = JellySlideInPresentation(cornerRadius: Double(self.graphicContext.cornerRadius),
+                                                           backgroundStyle: .blur(effectStyle: .extraLight),
+                                                           duration: .medium,
+                                                           directionShow: .top,
+                                                           directionDismiss: .bottom,
+                                                           widthForViewController: .custom(value: 280),
+                                                           heightForViewController: .custom(value: 300))
+          alertPresentation.isTapBackgroundToDismissEnabled = false
+          self.jellyAnimator = JellyAnimator(presentation: alertPresentation)
+          self.jellyAnimator?.prepare(viewController: alertController)
+          controller.present(alertController, animated: true, completion: nil)
         }
       }
     }

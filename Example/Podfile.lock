@@ -5,9 +5,11 @@ PODS:
     - Extra/UIKit (= 1.1.0)
   - Extra/Foundation (1.1.0)
   - Extra/UIKit (1.1.0)
+  - Jelly (1.2.4)
   - StarsKit (0.1.0):
     - Cosmos (~> 15.0)
-    - Extra (~> 1.1.0)
+    - Extra (~> 1.1)
+    - Jelly (~> 1.2)
 
 DEPENDENCIES:
   - StarsKit (from `../`)
@@ -19,7 +21,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Cosmos: a6dbd3d0baa0cc8f51f8598f7508d5a09d0a9ade
   Extra: 34839d5a5fcaa1a957ea0b5ebcac88ba807bad43
-  StarsKit: 45ed270e289c21b0edad5ad2226200dd7bb031d8
+  Jelly: 70e542dd201460211f0f20042bc2c2d31ae239a1
+  StarsKit: d62feb612b594eec2d09e61c9c547ef439d9acb7
 
 PODFILE CHECKSUM: fbfc0135d9a1bf9c702d3335966ea7bb7862f075
 

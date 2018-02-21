@@ -61,7 +61,13 @@ public class StarsRateViewController: UIViewController {
     self.ibLaterButton.tintColor = self.graphicContext.laterTitleTintColor
     self.ibLaterButton.titleLabel?.font = self.graphicContext.laterTitleFont
     
-    self.ibCosmosView.settings = StarsKit.shared.graphicContext.cosmosSettings
+    var cosmosSettings = StarsKit.shared.graphicContext.cosmosSettings
+    cosmosSettings.emptyImage = self.graphicContext.emptyStarImage
+    cosmosSettings.filledImage = self.graphicContext.filledStarImage
+    cosmosSettings.fillMode = .full
+    cosmosSettings.starSize = 33
+    self.ibCosmosView.settings = cosmosSettings
+    
     self.ibCosmosView.didFinishTouchingCosmos = { [weak self] rating in
       self?.coordinator?.endRating(to: rating)
     }
