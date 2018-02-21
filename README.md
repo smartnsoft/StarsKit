@@ -1,11 +1,11 @@
 # StarsKit
 
-[![CI Status](http://img.shields.io/travis/5018f8cb1e0f36a3fc9dbcfb9b424c62bd36a049/StarsKit.svg?style=flat)](https://travis-ci.org/5018f8cb1e0f36a3fc9dbcfb9b424c62bd36a049/StarsKit)
+[![CI Status](http://img.shields.io/travis/smartnsoft/StarsKit.svg?style=flat)](https://travis-ci.org/smartnsoft/StarsKit)
 [![Version](https://img.shields.io/cocoapods/v/StarsKit.svg?style=flat)](http://cocoapods.org/pods/StarsKit)
 [![License](https://img.shields.io/cocoapods/l/StarsKit.svg?style=flat)](http://cocoapods.org/pods/StarsKit)
 [![Platform](https://img.shields.io/cocoapods/p/StarsKit.svg?style=flat)](http://cocoapods.org/pods/StarsKit)
 
-![](./img/Cover.jpg)
+<img width=100% src="./img/Cover.jpg">
 
 **Look at this beautiful MouSTARche!**
 
@@ -51,7 +51,7 @@ You can also display the native `StoreKit` screen:
 ### Features list
 
 - [X] Use localizable or configuration strings
-- [X] Default localizables strings
+- [X] Default localizables strings : EN, FR
 - [X] Overridable localizables strings
 - [X] Static configuration strings
 - [X] Cocoapods integration
@@ -113,7 +113,7 @@ let localJSONConfiguration = try JSONSerialization.jsonObject(with: data, option
 StarsKit.shared.updateConfig(from: localJSONConfiguration)
 ```
 
-### Update the metrics with `StarsKitContext`
+### `StarsKitContext`: update the metrics 
 
 To trigger the pop-up rating display, you have to update the metrics.
 
@@ -130,8 +130,65 @@ StarsKit.shared.incrementSession(by: 10)
 StarsKit.shared.resetContext()
 ```
 
-### UI customization with `StarsKitGraphicContext`
+### `StarsKitGraphicContext`: UI customization
 
+Customizable items :
+
+- titles fonts
+- titles colors 
+- button tintColor
+- button backgroundColor
+- header background image
+- ViewController presentation transition (via Jelly)
+- Stars style (via Cosmos)
+
+### Override localizable strings
+
+Simple add in your Localizable strings the localizable key(s) to override
+
+See the default `StarsKit.strings` keys.
+
+```
+"starskit.mainTitle" = "My overrided title";
+```
+
+### Override step controllers
+
+### Listen to callbacks - See `StarsKitDelegate`
+
+
+``` swift
+// MARK: - StarsKitDelegate
+extension ViewController: StarsKitDelegate {
+  func didValidateRating(to rate: Int) {
+    print("Did validate rating to rate \(rate)")
+  }
+  
+  func didChooseAction(at step: RatingStep) {
+    print("Did choose action button at step \(step)")
+  }
+  
+  func didChooseLater(at step: RatingStep) {
+    print("Did choose later button at step \(step)")
+  }
+  
+  func needDisplayRateScreen() -> Bool {
+    //Implement your own behavior if you want
+    return false
+  }
+  
+  func presenterController() -> UIViewController {
+    // Return the controller where the rate screen will be presented
+    // The current, the top most one, anywhere, anyone
+    return self
+  }
+  
+  func didUpdateRating(from context: StarsKitContext, to rate: Int) {
+    print("Did update rating at \(rate)")
+  }
+  
+}
+```
 
 ## Contributors
 

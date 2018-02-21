@@ -88,12 +88,14 @@ extension ViewController: StarsKitDelegate {
     print("Did choose later button at step \(step)")
   }
   
-  
   func needDisplayRateScreen() -> Bool {
+    //Implement your own behavior if you want
     return false
   }
   
   func presenterController() -> UIViewController {
+    // Return the controller where the rate screen will be presented
+    // The current, the top most one, anywhere, anyone
     return self
   }
   
