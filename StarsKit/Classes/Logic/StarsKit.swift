@@ -59,10 +59,11 @@ public class StarsKit {
   }
   
   /// Start the rating checking and display the rating view if needed
-  public func checkRateDisplay() {
+  public func checkRateDisplay(forced: Bool = false) {
     
-    if (self.useDefaultBehavior && StarsKitChecker.needDisplayRateScreen(for: self))
-      || self.delegate?.needDisplayRateScreen() == true {
+    if forced
+      || (self.useDefaultBehavior && StarsKitChecker.needDisplayRateScreen(for: self))
+      || (self.delegate != nil && self.delegate?.needDisplayRateScreen() == true) {
       
       self.context.nbReminders += 1
       self.context.lastDisplayDate = Date()
