@@ -51,11 +51,12 @@ public class StarsPopViewController: UIViewController {
   override public func viewDidLoad() {
     super.viewDidLoad()
   
-    self.prepareView()
     
+    self.prepareView()
     self.coordinator = StarsRatingCoordinator(starsPopViewController: self,
                                               context: StarsKit.shared.context,
-                                              graphicContext: self.graphicContext)
+                                              graphicContext: self.graphicContext,
+                                              delegate: self)
     self.coordinator?.start()
     
 
@@ -67,6 +68,17 @@ public class StarsPopViewController: UIViewController {
     
     self.ibBackgroundImageView.image = self.graphicContext.backgroundHeaderTitleImage
     self.ibBackgroundImageView.backgroundColor = self.graphicContext.backgroundHeaderColor
+    
+    self.ibTitleLabel.font = self.graphicContext.mainTitleFont
+    
   }
   
+}
+
+
+// MARK: - StarsRatingCoordinatorDelegate
+extension StarsPopViewController: StarsRatingCoordinatorDelegate {
+  func didSwitchToStep(_ step: RatingStep) {
+    self.ibTitleLabel.text = step.title()
+  }
 }

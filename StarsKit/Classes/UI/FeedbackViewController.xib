@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedbackViewController" customModule="StarsKit" customModuleProvider="target">
             <connections>
+                <outlet property="ibActionButton" destination="XQr-b1-zBx" id="oWF-32-XdC"/>
+                <outlet property="ibIndicatorLabel" destination="Dd4-cH-rYm" id="cMA-GK-pxW"/>
+                <outlet property="ibLaterButton" destination="NDP-66-3JZ" id="QGW-KJ-xGp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,33 +23,47 @@
             <rect key="frame" x="0.0" y="0.0" width="589" height="324"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="n8l-NS-SXc">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="n8l-NS-SXc">
                     <rect key="frame" x="0.0" y="0.0" width="589" height="324"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd4-cH-rYm">
-                            <rect key="frame" x="273.5" y="0.0" width="42" height="108"/>
+                            <rect key="frame" x="30" y="0.0" width="529" height="204"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQr-b1-zBx">
-                            <rect key="frame" x="271.5" y="108" width="46" height="108"/>
+                            <rect key="frame" x="30" y="224" width="529" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="kXv-Kb-YmN"/>
+                            </constraints>
                             <state key="normal" title="Button"/>
                             <connections>
                                 <action selector="didChooseAction:" destination="-1" eventType="touchUpInside" id="6pD-8R-70F"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDP-66-3JZ">
-                            <rect key="frame" x="271.5" y="216" width="46" height="108"/>
+                            <rect key="frame" x="30" y="284" width="529" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="NRO-Ea-E1a"/>
+                            </constraints>
                             <state key="normal" title="Button"/>
                             <connections>
                                 <action selector="didChooseDismissAction:" destination="-1" eventType="touchUpInside" id="QDJ-Cz-xn5"/>
                             </connections>
                         </button>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="Dd4-cH-rYm" firstAttribute="leading" secondItem="n8l-NS-SXc" secondAttribute="leading" constant="30" id="GBy-tm-W6I"/>
+                        <constraint firstItem="XQr-b1-zBx" firstAttribute="leading" secondItem="n8l-NS-SXc" secondAttribute="leading" constant="30" id="YYC-OM-RRG"/>
+                        <constraint firstItem="NDP-66-3JZ" firstAttribute="leading" secondItem="n8l-NS-SXc" secondAttribute="leading" constant="30" id="f9n-H9-RLf"/>
+                        <constraint firstAttribute="trailing" secondItem="NDP-66-3JZ" secondAttribute="trailing" constant="30" id="k6N-Wr-m3H"/>
+                        <constraint firstAttribute="trailing" secondItem="Dd4-cH-rYm" secondAttribute="trailing" constant="30" id="v0D-A8-rNX"/>
+                        <constraint firstAttribute="trailing" secondItem="XQr-b1-zBx" secondAttribute="trailing" constant="30" id="xVO-EG-3rS"/>
+                    </constraints>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.068409402583913592" blue="0.081648422828636491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="n8l-NS-SXc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1NH-as-1MM"/>
                 <constraint firstItem="n8l-NS-SXc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2eJ-8f-4bH"/>

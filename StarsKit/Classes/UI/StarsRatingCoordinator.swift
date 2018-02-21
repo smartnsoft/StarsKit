@@ -32,6 +32,21 @@ public enum RatingStep {
   case rating(context: StarsKitContext)
   case feedback(context: StarsKitContext)
   case storeReview(context: StarsKitContext)
+  
+  func title() -> String {
+    switch self {
+    case .rating:
+      return StarsKit.shared.configuration.localizableTitle(for: StarsKitLocalizableKeys.mainTitle)
+    case .feedback:
+      return StarsKit.shared.configuration.localizableTitle(for: StarsKitLocalizableKeys.dislikeMainTitle)
+    case .storeReview:
+      return StarsKit.shared.configuration.localizableTitle(for: StarsKitLocalizableKeys.likeMainTitle)
+    }
+  }
+}
+
+protocol StarsRatingCoordinatorDelegate: class {
+  func didSwitchToStep(_ step: RatingStep)
 }
 
 /// Coordinate rating workflow
@@ -40,23 +55,33 @@ final class StarsRatingCoordinator {
   private var graphicContext: StarsKitGraphicContext
   private var context: StarsKitContext
   
-  private var step: RatingStep
+  private var step: RatingStep {
+    didSet {
+      self.delegate?.didSwitchToStep(self.step)
+    }
+  }
   
   private weak var starsPopViewController: StarsPopViewController?
   private var rateViewController: StarsRateViewController?
   private var storeViewController: StoreViewController?
   private var feedbackViewController: FeedbackViewController?
+  private weak var delegate: StarsRatingCoordinatorDelegate?
   
   // MARK: Initializers
-  init(starsPopViewController: StarsPopViewController, context: StarsKitContext, graphicContext: StarsKitGraphicContext) {
+  init(starsPopViewController: StarsPopViewController,
+       context: StarsKitContext,
+       graphicContext: StarsKitGraphicContext,
+       delegate: StarsRatingCoordinatorDelegate?) {
     self.starsPopViewController = starsPopViewController
     self.graphicContext = graphicContext
     self.context = context
+    self.delegate = delegate
     self.step = RatingStep.rating(context: context)
   }
   
   // MARK: Workflow
   func start() {
+    self.step = RatingStep.rating(context: context)
     self.rateViewController = StarsRateViewController(graphicContext: self.graphicContext, coordinator: self)
     if let starsPopViewController = self.starsPopViewController, let starsRateController = self.rateViewController {
       starsPopViewController.ex.addChildViewController(starsRateController,

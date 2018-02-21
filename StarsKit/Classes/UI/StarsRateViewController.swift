@@ -26,10 +26,11 @@ import Cosmos
 public class StarsRateViewController: UIViewController {
   
   @IBOutlet weak var ibCosmosView: CosmosView!
+  @IBOutlet weak var ibIndicatorLabel: UILabel!
+  @IBOutlet weak var ibLaterButton: UIButton!
   
   private var graphicContext: StarsKitGraphicContext = StarsKit.shared.graphicContext
   private var coordinator: StarsRatingCoordinator?
-  
   
   init(graphicContext: StarsKitGraphicContext, coordinator: StarsRatingCoordinator) {
     let nibName = "StarsRateViewController"
@@ -46,8 +47,23 @@ public class StarsRateViewController: UIViewController {
   override public func viewDidLoad() {
     super.viewDidLoad()
     
-    self.ibCosmosView.didFinishTouchingCosmos = { rating in
-      self.coordinator?.endRating(to: rating)
+    self.prepareViews()
+  }
+  
+  private func prepareViews() {
+    
+    self.ibIndicatorLabel.numberOfLines = 0
+    self.ibIndicatorLabel.textAlignment = .center
+    self.ibIndicatorLabel.text = StarsKit.shared.configuration.localizableTitle(for: StarsKitLocalizableKeys.mainText)
+    
+    let laterTitle = StarsKit.shared.configuration.localizableTitle(for: StarsKitLocalizableKeys.dislikeExitButton)
+    self.ibLaterButton.setTitle(laterTitle, for: .normal)
+    self.ibLaterButton.tintColor = self.graphicContext.laterTitleTintColor
+    self.ibLaterButton.titleLabel?.font = self.graphicContext.laterTitleFont
+    
+    self.ibCosmosView.settings = StarsKit.shared.graphicContext.cosmosSettings
+    self.ibCosmosView.didFinishTouchingCosmos = { [weak self] rating in
+      self?.coordinator?.endRating(to: rating)
     }
   }
   

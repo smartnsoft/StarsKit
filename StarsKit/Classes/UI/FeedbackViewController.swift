@@ -21,11 +21,16 @@
 // SOFTWARE.
 
 import UIKit
+import Extra
 
 public class FeedbackViewController: UIViewController {
   
   private var graphicContext: StarsKitGraphicContext = StarsKit.shared.graphicContext
   private var coordinator: StarsRatingCoordinator?
+
+  @IBOutlet weak var ibIndicatorLabel: UILabel!
+  @IBOutlet weak var ibActionButton: UIButton!
+  @IBOutlet weak var ibLaterButton: UIButton!
   
   init(graphicContext: StarsKitGraphicContext, coordinator: StarsRatingCoordinator) {
     let nibName = "FeedbackViewController"
@@ -42,7 +47,27 @@ public class FeedbackViewController: UIViewController {
   override public func viewDidLoad() {
     super.viewDidLoad()
     
-    // Do any additional setup after loading the view.
+    self.prepareViews()
+    
+  }
+  
+  private func prepareViews() {
+    self.ibIndicatorLabel.numberOfLines = 0
+    self.ibIndicatorLabel.textAlignment = .center
+    self.ibIndicatorLabel.text = StarsKit.shared.configuration.localizableTitle(for: StarsKitLocalizableKeys.dislikeMainText)
+    
+    let actionTitle = StarsKit.shared.configuration.localizableTitle(for: StarsKitLocalizableKeys.dislikeActionButton)
+    self.ibActionButton.setTitle(actionTitle, for: .normal)
+    self.ibActionButton.tintColor = self.graphicContext.actionButtonTitleColor
+    self.ibActionButton.layer.masksToBounds = true
+    self.ibActionButton.layer.cornerRadius = 5
+    self.ibActionButton.setBackgroundImage(self.graphicContext.actionButtonBackgroundColor.ex.toImage(), for: .normal)
+    self.ibActionButton.titleLabel?.font = self.graphicContext.actionButtonTitleFont
+    
+    let laterTitle = StarsKit.shared.configuration.localizableTitle(for: StarsKitLocalizableKeys.dislikeExitButton)
+    self.ibLaterButton.setTitle(laterTitle, for: .normal)
+    self.ibLaterButton.tintColor = self.graphicContext.laterTitleTintColor
+    self.ibLaterButton.titleLabel?.font = self.graphicContext.laterTitleFont
   }
   
   @IBAction public func didChooseAction(_ sender: Any) {

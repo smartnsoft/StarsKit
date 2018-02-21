@@ -26,21 +26,21 @@ import Cosmos
 
 public class StarsKitGraphicContext {
   
-  public var mainTitleFont: UIFont?
-  public var mainTitleColor: UIColor?
+  public var mainTitleFont: UIFont = UIFont.boldSystemFont(ofSize: 16)
+  public var mainTitleColor: UIColor = .white
   
-  public var indicationTitleFont: UIFont?
-  public var indicationTitleColor: UIColor?
+  public var indicationTitleFont: UIFont = UIFont.boldSystemFont(ofSize: 18)
+  public var indicationTitleColor: UIColor = .darkGray
   
-  public var actionButtonBackgroundColor: UIFont?
-  public var actionButtonTitleColor: UIColor?
-  public var actionButtonTitleFont: UIFont?
+  public var actionButtonBackgroundColor: UIColor = .blue
+  public var actionButtonTitleColor: UIColor = .white
+  public var actionButtonTitleFont: UIFont = UIFont.boldSystemFont(ofSize: 15)
   
-  public var laterTitleFont: UIFont?
-  public var laterTitleTintColor: UIColor?
+  public var laterTitleFont: UIFont = UIFont.boldSystemFont(ofSize: 15)
+  public var laterTitleTintColor: UIColor = .lightGray
   
   public var backgroundHeaderTitleImage: UIImage?
-  public var backgroundHeaderColor: UIColor = .blue
+  public var backgroundHeaderColor: UIColor = .white
   public var cornerRadius: CGFloat = 0
   
   public var preferredStatusBarStyle = UIStatusBarStyle.default

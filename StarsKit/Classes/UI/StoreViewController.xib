@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StoreViewController" customModule="StarsKit" customModuleProvider="target">
             <connections>
+                <outlet property="ibActionButton" destination="5QS-7s-xMj" id="hzT-VI-D8C"/>
+                <outlet property="ibIndicatorLabel" destination="IJK-OU-amE" id="vEz-pD-bol"/>
+                <outlet property="ibLaterButton" destination="HSv-4Y-xqK" id="rQi-Ae-cm4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,33 +23,47 @@
             <rect key="frame" x="0.0" y="0.0" width="449" height="346"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="35s-Cl-jTt">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="35s-Cl-jTt">
                     <rect key="frame" x="0.0" y="0.0" width="449" height="346"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJK-OU-amE">
-                            <rect key="frame" x="203.5" y="0.0" width="42" height="115.5"/>
+                            <rect key="frame" x="30" y="0.0" width="389" height="226"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QS-7s-xMj">
-                            <rect key="frame" x="201.5" y="115.5" width="46" height="115"/>
+                            <rect key="frame" x="30" y="246" width="389" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="ZhN-fM-cVg"/>
+                            </constraints>
                             <state key="normal" title="Button"/>
                             <connections>
                                 <action selector="didChooseAction:" destination="-1" eventType="touchUpInside" id="Hsb-gM-yhq"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSv-4Y-xqK">
-                            <rect key="frame" x="201.5" y="230.5" width="46" height="115.5"/>
+                            <rect key="frame" x="30" y="306" width="389" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="895-zD-kmn"/>
+                            </constraints>
                             <state key="normal" title="Button"/>
                             <connections>
                                 <action selector="didChooseDismissAction:" destination="-1" eventType="touchUpInside" id="1Gt-Me-UGf"/>
                             </connections>
                         </button>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="IJK-OU-amE" firstAttribute="leading" secondItem="35s-Cl-jTt" secondAttribute="leading" constant="30" id="2G8-dH-lwZ"/>
+                        <constraint firstItem="5QS-7s-xMj" firstAttribute="leading" secondItem="35s-Cl-jTt" secondAttribute="leading" constant="30" id="6CY-Zs-idk"/>
+                        <constraint firstAttribute="trailing" secondItem="5QS-7s-xMj" secondAttribute="trailing" constant="30" id="9s6-Zh-CCo"/>
+                        <constraint firstItem="HSv-4Y-xqK" firstAttribute="leading" secondItem="35s-Cl-jTt" secondAttribute="leading" constant="30" id="LNS-OQ-SU7"/>
+                        <constraint firstAttribute="trailing" secondItem="HSv-4Y-xqK" secondAttribute="trailing" constant="30" id="N14-IR-gGc"/>
+                        <constraint firstAttribute="trailing" secondItem="IJK-OU-amE" secondAttribute="trailing" constant="30" id="gnt-SH-uzZ"/>
+                    </constraints>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="0.19099891784530254" green="1" blue="0.3276170183922632" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="35s-Cl-jTt" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="X8I-vG-mcu"/>
                 <constraint firstItem="35s-Cl-jTt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Z3K-Fh-tey"/>

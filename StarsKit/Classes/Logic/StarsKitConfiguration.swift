@@ -158,7 +158,7 @@ public final class StarsKitConfiguration {
     UserDefaults.standard.setValue(string, forKey: key.userDefaultsKey)
   }
   
-  private func localizableTitle(`for` key: StarsKitLocalizableKeys) -> String {
+  func localizableTitle(`for` key: StarsKitLocalizableKeys) -> String {
     if self.localLocalizableStringsEnabled {
       return NSLocalizedString(key.localizableKey, comment: "")
     } else {

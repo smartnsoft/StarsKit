@@ -40,11 +40,11 @@ class ViewController: UIViewController {
 // MARK: - StarsKitDelegate
 extension ViewController: StarsKitDelegate {
   func didChooseAction(at step: RatingStep, from context: StarsKitContext) {
-    //
+    print("Did choose action button at step \(step)")
   }
   
   func didChooseLater(at step: RatingStep, from context: StarsKitContext) {
-    //
+    print("Did choose later button at step \(step)")
   }
   
   
@@ -57,9 +57,7 @@ extension ViewController: StarsKitDelegate {
   }
   
   func didUpdateRating(from context: StarsKitContext, to rate: Int) {
-    //
+    print("Did update rating at \(rate)")
   }
   
-  
 }
-
