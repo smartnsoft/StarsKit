@@ -1,6 +1,0 @@
-framework module StarsKit {
-  umbrella header "StarsKit-umbrella.h"
-
-  export *
-  module * { export * }
-}
