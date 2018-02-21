@@ -46,6 +46,7 @@ final public class StarsRateViewController: StepViewController {
       self.ibActionButton.isHidden = true
     } else {
       self.ibActionButton.isHidden = false
+      self.ibActionButton.isEnabled = false
     }
     
     var cosmosSettings = StarsKit.shared.graphicContext.cosmosSettings
