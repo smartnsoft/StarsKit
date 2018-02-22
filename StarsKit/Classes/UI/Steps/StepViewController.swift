@@ -28,7 +28,7 @@ import UIKit
 public class StepViewController: UIViewController {
   
   var graphicContext: StarsKitGraphicContext = StarsKit.shared.graphicContext
-  weak var coordinator: StarsRatingCoordinator?
+  weak var coordinator: RatingCoordinator?
   
   @IBOutlet weak var ibIndicatorLabel: UILabel?
   @IBOutlet weak var ibActionButton: UIButton?

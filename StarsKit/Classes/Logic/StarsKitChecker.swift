@@ -27,15 +27,11 @@ public final class StarsKitChecker {
   
   @discardableResult
   
+  
   /// Default display checking
   ///
-  // - Si le nombre de sessions minimum pour lui demander sont atteintes (défini dans la config et > 0)
-  // - Si on ne lui a pas déjà demandé trop de fois (défini dans la config et > 0)
-  // - Si l’utilisateur n’a pas déjà cliqué sur un bouton d’action (store ou envoi du courriel)
-  // - Si l’utilisateur a dit “plus tard” la fois précédente, mais que le délai, en jours, entre 2 demandes est écoulé (défini dans la config et > 0)
-  // - Si le dernier crash remonte à plus de X temps en jours (défini dans la config et > 0)
-  /// - Parameter client: StarsKit client
-  /// - Returns: true if the display if needed
+  /// - Parameter client: StareKit check instance
+  /// - Returns: True if display needed
   public static func needDisplayRateScreen(`for` client: StarsKit = StarsKit.shared) -> Bool {
     guard !StarsKit.shared.configuration.disabled else { return false }
     
@@ -43,9 +39,7 @@ public final class StarsKitChecker {
     let context = client.context
     
     if context.nbSessions >= configuration.displaySessionCount
-      // TODO
-      // Voir RatingManager
-      // && context.nbReminders < configuration.maxNumberOfReminder
+      && context.nbReminders < configuration.maxNumberOfReminder
       && !context.userAlreadyRespondsToAction
       && (context.lastDisplayDate == nil || Date().isAfter(context.lastDisplayDate,
                                                            pastDays: configuration.daysBeforeAskingAgain))
@@ -61,13 +55,13 @@ public final class StarsKitChecker {
 
 
 // MARK: - TimeInterval
-fileprivate extension TimeInterval {
+extension TimeInterval {
   static let dayInSeconds: TimeInterval = 24 * 60 * 60
 }
 
-fileprivate extension Date {
+extension Date {
   func isAfter(_ date: Date?, pastDays: Int) -> Bool {
-    return self.timeIntervalSinceReferenceDate > ((date?.timeIntervalSinceReferenceDate ?? 0)
+    return self.timeIntervalSinceReferenceDate > ((date?.timeIntervalSinceReferenceDate ?? self.timeIntervalSinceReferenceDate)
       + (Double(pastDays) * TimeInterval.dayInSeconds))
   }
 }

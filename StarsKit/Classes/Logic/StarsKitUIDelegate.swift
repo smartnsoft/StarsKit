@@ -20,32 +20,24 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import UIKit
+import Foundation
 
 
-/// When the user like the app, it will be redirect to this screen
-public class StoreViewController: StepViewController {
+/// StarsKit UI event delegation
+public protocol StarsKitUIDelegate: class {
   
-  // MARK: Initializers
-  init(graphicContext: StarsKitGraphicContext, coordinator: RatingCoordinator) {
-    let nibName = "StoreViewController"
-    let bundle: Bundle = Bundle.bundleForResource(name: nibName, ofType: "nib")
-    super.init(nibName: nibName, bundle: bundle)
-    self.graphicContext = graphicContext
-    self.coordinator = coordinator
-  }
+  /// Ask which controller is needed to display the rate pop-up
+  func presenterController() -> UIViewController
   
-  required public init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-  }
+  /// Rating screen is gonna to be displayed
+  func didRatingScreenWillAppear()
   
-  // MARK: 
-  @IBAction public func didChooseAction(_ sender: Any) {
-    self.coordinator?.didChooseStoreReview()
-  }
+  /// Rating screen definitly appear after animation
+  func didRatingScreenDidAppear()
   
-  @IBAction public func didChooseDismissAction(_ sender: Any) {
-    self.coordinator?.later()
-  }
+  /// Rating screen is gonna to be dismissed
+  func didRatingScreenWillDisappear()
   
+  /// Rating screen definitly disappear after animation
+  func didRatingScreenDidDisappear()
 }

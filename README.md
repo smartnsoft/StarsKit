@@ -87,6 +87,7 @@ You can also display the native `StoreKit` screen instead of custom screens (iOS
 - [X] Configurable with dictionnary / data or remote URL: everything you want!
 - [X] Native iOS 10.3+ StoreKit integration
 - [X] Overridable layouts
+- [X] Life cycle display events ([will/did]appear/disappear)
 - [ ] Additionnal condition checking on the default check
 - [ ] Carthage integration
 
@@ -141,8 +142,9 @@ You can set-up your own `configuration`, `context` and `graphicContext` for Star
 You can also decide of:
 
 - **`validateRatingButtonEnable`**: disable or enable the submit step rating. If disable, the rate will be instantly submit after touch.
-- **`useDefaultBehavior`**: disable the default StarsKit display checking behavior and implement your own in the **`StarsKitDelegate`** via 
+- **`useDefaultBehavior`**: disable the default StarsKit display checking behavior and implement your own in the `StarsKitDelegate`
 - **`priorityUseNativeRate`**: enable the native rating in iOS 10.3+, if not available, it will use the StarsKit screens 👌🏼
+- **`useSessionSpaceChecking`**: disable/enable the default checking of time ellapsed between sessions. If enable, when you update the session count, **the session count will only be updated if the time between session is completly ellapsed.**
 - **`localLocalizableStringsEnabled`**: enable the localization titles instead of configuration one. It will use the default StarKit strings. If you override them in your app localizable strings (with the same key), it will take them 😎.
 
 ### `StarsKitContext`: update the metrics 
@@ -224,7 +226,7 @@ See the default `StarsKit.strings` keys.
 
 ### Override step controllers
 
-### `StarsKitDelegate` : listen to callbacks
+### `StarsKitDelegate` : listen to rating callbacks
 
 
 ``` swift
@@ -248,16 +250,41 @@ extension ViewController: StarsKitDelegate {
     return false
   }
   
+  func didUpdateRating(from context: StarsKitContext, to rate: Int) {
+    print("Did update rating at \(rate)")
+  }
+  
+}
+```
+
+### `StarsKitUIDelegate` : listen to UI cycle events
+
+``` swift
+
+// MARK: - StarsKitUIDelegate
+extension ViewController: StarsKitUIDelegate {
+  
+  func didRatingScreenWillAppear() {
+    print("didRatingScreenWillAppear")
+  }
+  
+  func didRatingScreenDidAppear() {
+    print("didRatingScreenDidAppear")
+  }
+  
+  func didRatingScreenWillDisappear() {
+    print("didRatingScreenWillDisappear")
+  }
+  
+  func didRatingScreenDidDisappear() {
+    print("didRatingScreenDidDisappear")
+  }
+  
   func presenterController() -> UIViewController {
     // Return the controller where the rate screen will be presented
     // The current, the top most one, anywhere, anyone
     return self
   }
-  
-  func didUpdateRating(from context: StarsKitContext, to rate: Int) {
-    print("Did update rating at \(rate)")
-  }
-  
 }
 ```
 

@@ -26,62 +26,84 @@ public final class StarsKitContext {
   
   public var nbSessions: Int {
     get {
-      return UserDefaults.standard.integer(forKey: StarsKitProperties.nbSessions.userDefaultsKey)
+      return UserDefaults.standard.integer(forKey: StarsKitContextProperties.nbSessions.userDefaultsKey)
     }
     
     set {
-      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.nbSessions.userDefaultsKey)
+      if StarsKit.shared.useSessionSpaceChecking {
+        if self.lastSessionDate == nil || Date().isAfter(self.lastSessionDate, pastDays: StarsKit.shared.configuration.maxDaysBetweenSession) {
+          UserDefaults.standard.set(newValue, forKey: StarsKitContextProperties.nbSessions.userDefaultsKey)
+          self.lastSessionDate = Date()
+        }
+      } else {
+        UserDefaults.standard.set(newValue, forKey: StarsKitContextProperties.nbSessions.userDefaultsKey)
+        self.lastSessionDate = Date()
+      }
+      if newValue == 0 {
+        self.lastSessionDate = nil
+      }
+      
     }
   }
   
   public var nbCrashes: Int {
     get {
-      return UserDefaults.standard.integer(forKey: StarsKitProperties.nbCrashes.userDefaultsKey)
+      return UserDefaults.standard.integer(forKey: StarsKitContextProperties.nbCrashes.userDefaultsKey)
     }
     
     set {
       self.lastCrashDate = Date()
-      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.nbCrashes.userDefaultsKey)
+      UserDefaults.standard.set(newValue, forKey: StarsKitContextProperties.nbCrashes.userDefaultsKey)
     }
   }
   
   public internal(set) var nbReminders: Int {
     get {
-      return UserDefaults.standard.integer(forKey: StarsKitProperties.nbReminders.userDefaultsKey)
+      return UserDefaults.standard.integer(forKey: StarsKitContextProperties.nbReminders.userDefaultsKey)
     }
     
     set {
-      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.nbReminders.userDefaultsKey)
+      UserDefaults.standard.set(newValue, forKey: StarsKitContextProperties.nbReminders.userDefaultsKey)
     }
   }
   
   public internal(set) var lastDisplayDate: Date? {
     get {
-      return UserDefaults.standard.object(forKey: StarsKitProperties.lastDisplayDate.userDefaultsKey) as? Date
+      return UserDefaults.standard.object(forKey: StarsKitContextProperties.lastDisplayDate.userDefaultsKey) as? Date
     }
     
     set {
-      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.lastDisplayDate.userDefaultsKey)
+      UserDefaults.standard.set(newValue, forKey: StarsKitContextProperties.lastDisplayDate.userDefaultsKey)
+    }
+  }
+  
+  public internal(set) var lastSessionDate: Date? {
+    get {
+      return UserDefaults.standard.object(forKey: StarsKitContextProperties.lastSessionDate.userDefaultsKey) as? Date
+    }
+    
+    set {
+      UserDefaults.standard.set(newValue, forKey: StarsKitContextProperties.lastSessionDate.userDefaultsKey)
     }
   }
   
   public internal(set) var lastCrashDate: Date? {
     get {
-      return UserDefaults.standard.object(forKey: StarsKitProperties.lastCrashDate.userDefaultsKey) as? Date
+      return UserDefaults.standard.object(forKey: StarsKitContextProperties.lastCrashDate.userDefaultsKey) as? Date
     }
     
     set {
-      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.lastCrashDate.userDefaultsKey)
+      UserDefaults.standard.set(newValue, forKey: StarsKitContextProperties.lastCrashDate.userDefaultsKey)
     }
   }
   
   public internal(set) var userAlreadyRespondsToAction: Bool {
     get {
-      return UserDefaults.standard.bool(forKey: StarsKitProperties.userAlreadyRespondsToAction.userDefaultsKey)
+      return UserDefaults.standard.bool(forKey: StarsKitContextProperties.userAlreadyRespondsToAction.userDefaultsKey)
     }
     
     set {
-      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.userAlreadyRespondsToAction.userDefaultsKey)
+      UserDefaults.standard.set(newValue, forKey: StarsKitContextProperties.userAlreadyRespondsToAction.userDefaultsKey)
     }
   }
 }

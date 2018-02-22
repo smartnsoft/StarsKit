@@ -66,6 +66,7 @@ class ViewController: UIViewController {
                                          rect: CGRect(x: 0, y: 0, width: 50, height: 50))
           StarsKit.shared.graphicContext.backgroundHeaderTitleImage = bgImage
           StarsKit.shared.delegate = self
+          StarsKit.shared.uiDelegate = self
           self.updateDisplayMetrics()
         }
       } catch {
@@ -115,6 +116,7 @@ class ViewController: UIViewController {
 
 // MARK: - StarsKitDelegate
 extension ViewController: StarsKitDelegate {
+  
   func didValidateRating(to rate: Int) {
     print("Did validate rating to rate \(rate)")
   }
@@ -132,14 +134,35 @@ extension ViewController: StarsKitDelegate {
     return false
   }
   
+  func didUpdateRating(from context: StarsKitContext, to rate: Int) {
+    print("Did update rating at \(rate)")
+  }
+  
+}
+
+
+// MARK: - StarsKitUIDelegate
+extension ViewController: StarsKitUIDelegate {
+  
+  func didRatingScreenWillAppear() {
+    print("didRatingScreenWillAppear")
+  }
+  
+  func didRatingScreenDidAppear() {
+    print("didRatingScreenDidAppear")
+  }
+  
+  func didRatingScreenWillDisappear() {
+    print("didRatingScreenWillDisappear")
+  }
+  
+  func didRatingScreenDidDisappear() {
+    print("didRatingScreenDidDisappear")
+  }
+  
   func presenterController() -> UIViewController {
     // Return the controller where the rate screen will be presented
     // The current, the top most one, anywhere, anyone
     return self
   }
-  
-  func didUpdateRating(from context: StarsKitContext, to rate: Int) {
-    print("Did update rating at \(rate)")
-  }
-  
 }

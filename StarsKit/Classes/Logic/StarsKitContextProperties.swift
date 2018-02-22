@@ -20,32 +20,26 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import UIKit
+import Foundation
 
-
-/// When the user like the app, it will be redirect to this screen
-public class StoreViewController: StepViewController {
+/// Main context user properties keys
+///
+/// There are used to update the last StarsKit context
+internal enum StarsKitContextProperties: String {
+  case nbSessions
+  case nbCrashes
+  case nbReminders
+  case lastDisplayDate
+  case lastSessionDate
+  case lastCrashDate
+  case userAlreadyRespondsToAction
+  case localLocalizableStringsEnabled
   
-  // MARK: Initializers
-  init(graphicContext: StarsKitGraphicContext, coordinator: RatingCoordinator) {
-    let nibName = "StoreViewController"
-    let bundle: Bundle = Bundle.bundleForResource(name: nibName, ofType: "nib")
-    super.init(nibName: nibName, bundle: bundle)
-    self.graphicContext = graphicContext
-    self.coordinator = coordinator
+  static let allIntValues : [StarsKitContextProperties] = [.nbSessions,
+                                                           .nbCrashes,
+                                                           .nbReminders]
+  
+  var userDefaultsKey: String {
+    return "StarsKit.UserDefaults.context.\(self)"
   }
-  
-  required public init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-  }
-  
-  // MARK: 
-  @IBAction public func didChooseAction(_ sender: Any) {
-    self.coordinator?.didChooseStoreReview()
-  }
-  
-  @IBAction public func didChooseDismissAction(_ sender: Any) {
-    self.coordinator?.later()
-  }
-  
 }

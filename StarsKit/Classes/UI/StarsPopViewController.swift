@@ -32,7 +32,7 @@ public class StarsPopViewController: UIViewController {
   @IBOutlet weak var ibContainerView: UIView!
   
   private var graphicContext: StarsKitGraphicContext = StarsKit.shared.graphicContext
-  private var coordinator: StarsRatingCoordinator?
+  private var coordinator: RatingCoordinator?
   
   public override var preferredStatusBarStyle: UIStatusBarStyle {
     return self.graphicContext.preferredStatusBarStyle
@@ -54,7 +54,7 @@ public class StarsPopViewController: UIViewController {
     super.viewDidLoad()
     
     self.prepareView()
-    self.coordinator = StarsRatingCoordinator(starsPopViewController: self,
+    self.coordinator = RatingCoordinator(starsPopViewController: self,
                                               context: StarsKit.shared.context,
                                               graphicContext: self.graphicContext,
                                               delegate: self)
@@ -76,8 +76,8 @@ public class StarsPopViewController: UIViewController {
 }
 
 
-// MARK: - StarsRatingCoordinatorDelegate
-extension StarsPopViewController: StarsRatingCoordinatorDelegate {
+// MARK: - RatingCoordinatorDelegate
+extension StarsPopViewController: RatingCoordinatorDelegate {
   func didSwitchToStep(_ step: RatingStep) {
     self.ibTitleLabel.text = step.title()
   }

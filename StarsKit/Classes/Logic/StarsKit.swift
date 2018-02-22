@@ -28,37 +28,50 @@ import Jelly
 /// Global StarsKit client
 public class StarsKit {
   
+  /// Default StarsKit singleton instance
   public static let shared = StarsKit()
   
-  // StarsKit contexts and configuration
   public var configuration = StarsKitConfiguration()
   public var context = StarsKitContext()
   public var graphicContext = StarsKitGraphicContext()
   
-  // Defines if you want to submit immediatelly after Stars touches
-  // or validate after with a specific submit button
+  /// Defines if you want to submit immediatelly after Stars touches
+  /// or validate after with a specific submit button.
   public var validateRatingButtonEnable = true
   
-  // Defines if StarsKit will appluy its own behavior process or if you want to apply yours
+  /// Defines if StarsKit will appluy its own behavior process or if you want to apply yours.
   public var useDefaultBehavior = true
   
-  // Defines if you want to enable the StoreKit Rating Controller (from iOS 10.3 only)
+  /// Defines if you want to enable the StoreKit Rating Controller (from iOS 10.3 only).
   public var priorityUseNativeRate = false
   
-  // Define if StarsKit use the Localizable strings (and your overrided ones)
-  // or if it uses the configuration strings ones
+  /// Defines if you want to enable the time condition space between to sessions.
+  ///
+  /// If the session set is to close in the given period time, the session number will not be set.
+  ///
+  /// See `maxDaysBetweenSession` in `StarsKitConfiguration`.
+  public var useSessionSpaceChecking = true
+  
+  /// Defines if StarsKit uses the Localizable strings (and your overrided ones)
+  /// or if it uses the configuration strings ones
   public var localLocalizableStringsEnabled = false
   
   fileprivate var jellyAnimator: JellyAnimator?
   
+  
+  /// Use the StarsKitDelegate to have configuration & event feedbacks
   public weak var delegate: StarsKitDelegate?
   
+  /// Use the StarsKitUIDelegate to have UI feedbacks
+  public weak var uiDelegate: StarsKitUIDelegate?
+  
   // MARK: Initializer
-  public init(delegate: StarsKitDelegate? = nil) {
+  public init(delegate: StarsKitDelegate? = nil, uiDelegate: StarsKitUIDelegate? = nil) {
     self.delegate = delegate
+    self.uiDelegate = uiDelegate
   }
   
-  /// Start the rating checking and display the rating view if needed
+  /// Starts the rating checking and display the rating view if needed.
   @discardableResult
   public func displayRateIfNeeded(forced: Bool = false) -> Bool {
     
@@ -85,14 +98,16 @@ public class StarsKit {
   }
   
   private func displayRating() {
-    if let controller = self.delegate?.presenterController() {
+    if let controller = self.uiDelegate?.presenterController() {
       
       let alertController = StarsPopViewController(graphicContext: self.graphicContext)
       let alertPresentation = self.graphicContext.jellyCustomTransition
       self.jellyAnimator = JellyAnimator(presentation: alertPresentation)
       self.jellyAnimator?.prepare(viewController: alertController)
-      
-      controller.present(alertController, animated: true, completion: nil)
+      self.uiDelegate?.didRatingScreenWillAppear()
+      controller.present(alertController, animated: true, completion: {
+        self.uiDelegate?.didRatingScreenDidAppear()
+      })
     }
   }
   
@@ -105,12 +120,13 @@ public class StarsKit {
     self.context.nbReminders = 0
     self.context.userAlreadyRespondsToAction = false
     self.context.lastDisplayDate = nil
+    self.context.lastSessionDate = nil
   }
   
   public func resetConfig() {
     self.configuration.daysBeforeAskingAgain = 0
     self.configuration.daysWithoutCrash = 0
-    self.configuration.disabled = true
+    self.configuration.disabled = false
     self.configuration.displaySessionCount = 0
     self.configuration.maxDaysBetweenSession = 0
     self.configuration.maxNumberOfReminder = 0

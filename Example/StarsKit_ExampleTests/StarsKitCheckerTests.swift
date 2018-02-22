@@ -30,6 +30,7 @@ class StarsKitCheckerTests: XCTestCase {
   
   static func makeFakeSessions() {
     StarsKit.shared.context.nbSessions = 16
+    UserDefaults.standard.set(nil, forKey: "StarsKit.UserDefaults.lastSessionDate")
   }
   
   override func setUp() {
@@ -47,12 +48,12 @@ class StarsKitCheckerTests: XCTestCase {
   
   func testDisableConfig() {
     StarsKit.shared.updateConfig(from: StubsReader.config(from: "ConfigurationDisable"))
-    XCTAssert(StarsKit.shared.displayRateIfNeeded() == false, "Configuration doesn't correctly disable")
+    XCTAssertFalse(StarsKit.shared.displayRateIfNeeded(), "Configuration doesn't correctly disable")
   }
   
   func testEnableConfig() {
     StarsKitCheckerTests.makeFakeSessions()
-    XCTAssertTrue(StarsKit.shared.displayRateIfNeeded(), "Configuration doesn't correctly enable")
+    XCTAssertTrue(StarsKit.shared.displayRateIfNeeded(), "Configuration doesn't correctly be enabled")
   }
   
   func testDisplaySessionsEnought() {
@@ -76,7 +77,7 @@ class StarsKitCheckerTests: XCTestCase {
     StarsKit.shared.displayRateIfNeeded()
     if let lastDisplayDate = StarsKit.shared.context.lastDisplayDate {
       let expiredDisplayDate = lastDisplayDate - 4.days
-      UserDefaults.standard.set(expiredDisplayDate, forKey: "StarsKit.UserDefaults.lastDisplayDate")
+      UserDefaults.standard.set(expiredDisplayDate, forKey: "StarsKit.UserDefaults.context.lastDisplayDate")
     }
     XCTAssertTrue(StarsKit.shared.displayRateIfNeeded(), "Pop-up have to be displayed after be displayed enought after \(StarsKit.shared.configuration.daysBeforeAskingAgain) days")
   }
@@ -92,7 +93,7 @@ class StarsKitCheckerTests: XCTestCase {
     StarsKit.shared.context.nbCrashes = 1
     if let lastCrashDate = StarsKit.shared.context.lastCrashDate {
       let expiredCrashDate = lastCrashDate - 14.days
-      UserDefaults.standard.set(expiredCrashDate, forKey: "StarsKit.UserDefaults.lastCrashDate")
+      UserDefaults.standard.set(expiredCrashDate, forKey: "StarsKit.UserDefaults.context.lastCrashDate")
     }
     
     XCTAssertFalse(StarsKit.shared.displayRateIfNeeded(), "Pop-up have not to be displayed after a crash happened less than \(StarsKit.shared.configuration.daysWithoutCrash) days")
@@ -103,7 +104,7 @@ class StarsKitCheckerTests: XCTestCase {
     StarsKit.shared.context.nbCrashes = 1
     if let lastCrashDate = StarsKit.shared.context.lastCrashDate {
       let expiredCrashDate = lastCrashDate - 16.days
-      UserDefaults.standard.set(expiredCrashDate, forKey: "StarsKit.UserDefaults.lastCrashDate")
+      UserDefaults.standard.set(expiredCrashDate, forKey: "StarsKit.UserDefaults.context.lastCrashDate")
     }
     
     XCTAssertTrue(StarsKit.shared.displayRateIfNeeded(), "Pop-up have to be displayed after a crash happened more than \(StarsKit.shared.configuration.daysWithoutCrash) days")
@@ -117,9 +118,53 @@ class StarsKitCheckerTests: XCTestCase {
     
   }
   
+  func testReminders() {
+    
+    for _ in 1...3 {
+      StarsKit.shared.context.nbSessions += 6
+      StarsKit.shared.displayRateIfNeeded()
+      if let lastCrashDate = StarsKit.shared.context.lastDisplayDate {
+        let expiredCrashDate = lastCrashDate - 4.days
+        UserDefaults.standard.set(expiredCrashDate, forKey: "StarsKit.UserDefaults.context.lastDisplayDate")
+      }
+    }
+    print("nbReminders = \(StarsKit.shared.context.nbReminders)")
+    XCTAssertFalse(StarsKit.shared.displayRateIfNeeded(), "Custom checking needs to display rating")
+  }
+  
+  func testRemindersEnough() {
+    
+    for _ in 1...2 {
+      StarsKit.shared.context.nbSessions += 6
+      StarsKit.shared.displayRateIfNeeded()
+      if let lastCrashDate = StarsKit.shared.context.lastDisplayDate {
+        let expiredCrashDate = lastCrashDate - 4.days
+        UserDefaults.standard.set(expiredCrashDate, forKey: "StarsKit.UserDefaults.context.lastDisplayDate")
+      }
+    }
+    print("nbReminders = \(StarsKit.shared.context.nbReminders)")
+    XCTAssertTrue(StarsKit.shared.displayRateIfNeeded(), "Custom checking needs to display rating")
+  }
+  
 }
 
 final class StarsKitClient: StarsKitDelegate {
+  
+  func didRatingScreenWillAppear() {
+    //
+  }
+  
+  func didRatingScreenDidAppear() {
+    //
+  }
+  
+  func didRatingScreenWillDisappear() {
+    //
+  }
+  
+  func didRatingScreenDidDisappear() {
+    //
+  }
   
   func presenterController() -> UIViewController {
     return UIViewController()

@@ -20,32 +20,28 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import UIKit
+import Foundation
 
-
-/// When the user like the app, it will be redirect to this screen
-public class StoreViewController: StepViewController {
+/// Main properties that StarsKit check to display or not the app rating screen.
+///
+/// Those keys will be used in the configuration update via a dictionnary.
+internal enum StarsKitConfigProperties: String {
+  case disabled
+  case displaySessionCount
+  case positiveStarsLimit
+  case daysWithoutCrash
+  case daysBeforeAskingAgain
+  case maxNumberOfReminder
+  case maxDaysBetweenSession
   
-  // MARK: Initializers
-  init(graphicContext: StarsKitGraphicContext, coordinator: RatingCoordinator) {
-    let nibName = "StoreViewController"
-    let bundle: Bundle = Bundle.bundleForResource(name: nibName, ofType: "nib")
-    super.init(nibName: nibName, bundle: bundle)
-    self.graphicContext = graphicContext
-    self.coordinator = coordinator
+  static let allIntValues : [StarsKitConfigProperties] = [.displaySessionCount,
+                                                          .positiveStarsLimit,
+                                                          .daysWithoutCrash,
+                                                          .daysBeforeAskingAgain,
+                                                          .maxNumberOfReminder,
+                                                          .maxDaysBetweenSession]
+  
+  var userDefaultsKey: String {
+    return "StarsKit.UserDefaults.config.\(self)"
   }
-  
-  required public init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-  }
-  
-  // MARK: 
-  @IBAction public func didChooseAction(_ sender: Any) {
-    self.coordinator?.didChooseStoreReview()
-  }
-  
-  @IBAction public func didChooseDismissAction(_ sender: Any) {
-    self.coordinator?.later()
-  }
-  
 }

@@ -22,12 +22,12 @@
 
 import Foundation
 
-protocol StarsRatingCoordinatorDelegate: class {
+protocol RatingCoordinatorDelegate: class {
   func didSwitchToStep(_ step: RatingStep)
 }
 
 /// Coordinate the rating workflow
-final class StarsRatingCoordinator {
+final class RatingCoordinator {
   
   private var graphicContext: StarsKitGraphicContext
   private var context: StarsKitContext
@@ -42,13 +42,13 @@ final class StarsRatingCoordinator {
   private var rateViewController: StarsRateViewController?
   private var storeViewController: StoreViewController?
   private var feedbackViewController: FeedbackViewController?
-  private weak var delegate: StarsRatingCoordinatorDelegate?
+  private weak var delegate: RatingCoordinatorDelegate?
   
   // MARK: Initializers
   init(starsPopViewController: StarsPopViewController,
        context: StarsKitContext,
        graphicContext: StarsKitGraphicContext,
-       delegate: StarsRatingCoordinatorDelegate?) {
+       delegate: RatingCoordinatorDelegate?) {
     
     self.starsPopViewController = starsPopViewController
     self.graphicContext = graphicContext
@@ -111,18 +111,25 @@ final class StarsRatingCoordinator {
   func didChooseFeedback() {
     StarsKit.shared.context.userAlreadyRespondsToAction = true
     StarsKit.shared.delegate?.didChooseAction(at: self.step)
-    self.starsPopViewController?.dismiss(animated: true, completion: nil)
+    self.dismiss()
   }
   
   func didChooseStoreReview() {
     StarsKit.shared.context.userAlreadyRespondsToAction = true
     StarsKit.shared.delegate?.didChooseAction(at: self.step)
-    self.starsPopViewController?.dismiss(animated: true, completion: nil)
+    self.dismiss()
   }
   
   func later() {
     StarsKit.shared.delegate?.didChooseLater(at: self.step)
-    self.starsPopViewController?.dismiss(animated: true, completion: nil)
+    self.dismiss()
+  }
+  
+  private func dismiss() {
+    StarsKit.shared.uiDelegate?.didRatingScreenWillDisappear()
+    self.starsPopViewController?.dismiss(animated: true, completion: {
+      StarsKit.shared.uiDelegate?.didRatingScreenDidDisappear()
+    })
   }
   
 }

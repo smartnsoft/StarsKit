@@ -29,73 +29,71 @@ public final class StarsKitConfiguration {
   // MARK: Properties
   public internal(set) var disabled: Bool {
     get {
-      return UserDefaults.standard.bool(forKey: StarsKitProperties.disabled.userDefaultsKey)
+      return UserDefaults.standard.bool(forKey: StarsKitConfigProperties.disabled.userDefaultsKey)
     }
     
     set {
-      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.disabled.userDefaultsKey)
+      UserDefaults.standard.set(newValue, forKey: StarsKitConfigProperties.disabled.userDefaultsKey)
     }
   }
   
   public internal(set) var displaySessionCount: Int {
     get {
-      return UserDefaults.standard.integer(forKey: StarsKitProperties.displaySessionCount.userDefaultsKey)
+      return UserDefaults.standard.integer(forKey: StarsKitConfigProperties.displaySessionCount.userDefaultsKey)
     }
     
     set {
-      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.displaySessionCount.userDefaultsKey)
+      UserDefaults.standard.set(newValue, forKey: StarsKitConfigProperties.displaySessionCount.userDefaultsKey)
     }
   }
   
   public internal(set) var positiveStarsLimit: Int {
     get {
-      return UserDefaults.standard.integer(forKey: StarsKitProperties.positiveStarsLimit.userDefaultsKey)
+      return UserDefaults.standard.integer(forKey: StarsKitConfigProperties.positiveStarsLimit.userDefaultsKey)
     }
     
     set {
-      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.positiveStarsLimit.userDefaultsKey)
+      UserDefaults.standard.set(newValue, forKey: StarsKitConfigProperties.positiveStarsLimit.userDefaultsKey)
     }
   }
   
   public internal(set) var daysWithoutCrash: Int {
     get {
-      return UserDefaults.standard.integer(forKey: StarsKitProperties.daysWithoutCrash.userDefaultsKey)
+      return UserDefaults.standard.integer(forKey: StarsKitConfigProperties.daysWithoutCrash.userDefaultsKey)
     }
     
     set {
-      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.daysWithoutCrash.userDefaultsKey)
+      UserDefaults.standard.set(newValue, forKey: StarsKitConfigProperties.daysWithoutCrash.userDefaultsKey)
     }
   }
   
   public internal(set) var maxNumberOfReminder: Int {
     get {
-      return UserDefaults.standard.integer(forKey: StarsKitProperties.maxNumberOfReminder.userDefaultsKey)
+      return UserDefaults.standard.integer(forKey: StarsKitConfigProperties.maxNumberOfReminder.userDefaultsKey)
     }
     
     set {
-      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.maxNumberOfReminder.userDefaultsKey)
+      UserDefaults.standard.set(newValue, forKey: StarsKitConfigProperties.maxNumberOfReminder.userDefaultsKey)
     }
   }
   
-  // TODO: Espace maximum entre la dernière session affichée et la suivante,
-  // si supérieur, on ne l'affiche pas et on remet le compteur de session à 0
   public internal(set) var maxDaysBetweenSession: Int {
     get {
-      return UserDefaults.standard.integer(forKey: StarsKitProperties.maxDaysBetweenSession.userDefaultsKey)
+      return UserDefaults.standard.integer(forKey: StarsKitConfigProperties.maxDaysBetweenSession.userDefaultsKey)
     }
     
     set {
-      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.maxDaysBetweenSession.userDefaultsKey)
+      UserDefaults.standard.set(newValue, forKey: StarsKitConfigProperties.maxDaysBetweenSession.userDefaultsKey)
     }
   }
   
   public internal(set) var daysBeforeAskingAgain: Int {
     get {
-      return UserDefaults.standard.integer(forKey: StarsKitProperties.daysBeforeAskingAgain.userDefaultsKey)
+      return UserDefaults.standard.integer(forKey: StarsKitConfigProperties.daysBeforeAskingAgain.userDefaultsKey)
     }
     
     set {
-      UserDefaults.standard.set(newValue, forKey: StarsKitProperties.daysBeforeAskingAgain.userDefaultsKey)
+      UserDefaults.standard.set(newValue, forKey: StarsKitConfigProperties.daysBeforeAskingAgain.userDefaultsKey)
     }
   }
   
@@ -128,18 +126,18 @@ public final class StarsKitConfiguration {
   ///
   /// - Parameter config: Key-Value dictionnary with StarsKitProperties keys
   private func updateMetrics(from config: [String: Any?]) {
-    if let isDisabled = config[StarsKitProperties.disabled.rawValue] as? Bool {
+    if let isDisabled = config[StarsKitConfigProperties.disabled.rawValue] as? Bool {
       self.disabled = isDisabled
     }
     
-    StarsKitProperties.allIntValues.forEach { (property) in
+    StarsKitConfigProperties.allIntValues.forEach { (property) in
       if let intValue = config[property.rawValue] as? Int {
         self.updateInt(value: intValue, for: property)
       }
     }
   }
   
-  private func updateInt(value: Int, `for` property: StarsKitProperties) {
+  private func updateInt(value: Int, `for` property: StarsKitConfigProperties) {
     UserDefaults.standard.setValue(value, forKey: property.userDefaultsKey)
   }
   

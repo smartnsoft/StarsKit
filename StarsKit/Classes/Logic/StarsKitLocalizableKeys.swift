@@ -74,37 +74,3 @@ public enum StarsKitLocalizableKeys: String {
     return "starskit.\(self)"
   }
 }
-
-
-/// Main properties that StarsKit check to display or not the app rating screen.
-///
-/// Those keys will be used in the configuration update via a dictionnary.
-internal enum StarsKitProperties: String {
-  case disabled
-  case localLocalizableStringsEnabled
-  case displaySessionCount
-  case positiveStarsLimit
-  case daysWithoutCrash
-  case daysBeforeAskingAgain
-  case maxNumberOfReminder
-  case maxDaysBetweenSession
-  case nbSessions
-  case nbCrashes
-  case nbReminders
-  case lastDisplayDate
-  case lastCrashDate
-  case userAlreadyRespondsToAction
-  
-  static let allIntValues : [StarsKitProperties] = [.displaySessionCount,
-                                                    .positiveStarsLimit,
-                                                    .daysWithoutCrash,
-                                                    .daysBeforeAskingAgain,
-                                                    .maxNumberOfReminder,
-                                                    .maxDaysBetweenSession,
-                                                    .nbSessions,
-                                                    .nbCrashes]
-  
-  var userDefaultsKey: String {
-    return "StarsKit.UserDefaults.\(self)"
-  }
-}
