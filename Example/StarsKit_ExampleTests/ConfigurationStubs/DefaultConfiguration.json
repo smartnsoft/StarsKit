@@ -16,6 +16,7 @@
     "emailSupport": "starskit@smartnsoft.com",
     "emailObject": "Applications StarsKit",
     "maxNumberOfReminder": 3,
+    "maxDaysBetweenSession": 3,
     "daysWithoutCrash": 15,
     "daysBeforeAskingAgain": 3
 }

@@ -14,6 +14,7 @@
     "likeActionButton": "Let's go!",
     "likeExitButton": "Later 😥",
     "maxNumberOfReminder": 3,
+    "maxDaysBetweenSession": 3,
     "emailSupport": "starskit@smartnsoft.com",
     "emailObject": "Application StarsKit",
     "daysWithoutCrash": 15,
