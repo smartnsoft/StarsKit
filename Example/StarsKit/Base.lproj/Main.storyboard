@@ -50,7 +50,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="q8f-iY-N49">
                                         <rect key="frame" x="0.0" y="117.5" width="834" height="102"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use native rating:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dY-LA-p9U">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use native rating:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dY-LA-p9U">
                                                 <rect key="frame" x="0.0" y="40.5" width="417" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -78,7 +78,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OKp-X8-2NP">
                                         <rect key="frame" x="0.0" y="350.5" width="834" height="102"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use localization strings (or config)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qf2-bu-ZLW">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use localization strings (or config)" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qf2-bu-ZLW">
                                                 <rect key="frame" x="0.0" y="40.5" width="417" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -95,7 +95,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Ha-9J-PVc">
                                         <rect key="frame" x="0.0" y="472.5" width="834" height="102.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use custom rating controller:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wA1-kB-ab6">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use session interval checking " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wA1-kB-ab6">
                                                 <rect key="frame" x="0.0" y="41" width="417" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -103,6 +103,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gZR-S5-Q6W">
                                                 <rect key="frame" x="397" y="35.5" width="419" height="31"/>
+                                                <connections>
+                                                    <action selector="didSwitchSessionIntervalCheck:" destination="vXZ-lx-hvc" eventType="valueChanged" id="xwG-f5-Nb3"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -133,22 +136,22 @@
                                         <rect key="frame" x="0.0" y="681.5" width="834" height="366.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ylr-HF-jRR">
-                                                <rect key="frame" x="0.0" y="168" width="282" height="30"/>
-                                                <state key="normal" title="Increment session"/>
+                                                <rect key="frame" x="0.0" y="168" width="227" height="30"/>
+                                                <state key="normal" title="Session++"/>
                                                 <connections>
                                                     <action selector="didTapIncrementSession:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6qE-nf-oEn"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgx-kF-cKc">
-                                                <rect key="frame" x="262" y="168" width="250" height="30"/>
-                                                <state key="normal" title="Increment crash"/>
+                                                <rect key="frame" x="207" y="168" width="187" height="30"/>
+                                                <state key="normal" title="Crash++"/>
                                                 <connections>
                                                     <action selector="didTapIncrementCrash:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="epD-0a-e0D"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPU-2k-QMX">
-                                                <rect key="frame" x="512" y="168" width="302" height="30"/>
-                                                <state key="normal" title="Reset metrics"/>
+                                                <rect key="frame" x="394" y="168" width="420" height="30"/>
+                                                <state key="normal" title="Reset context"/>
                                                 <connections>
                                                     <action selector="didTapResetMetrics:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IOf-6X-GiG"/>
                                                 </connections>
@@ -172,6 +175,7 @@
                         <outlet property="ibLastCrashDate" destination="SAx-st-Quq" id="3q3-ED-dk4"/>
                         <outlet property="ibNbCrashLabel" destination="2Wv-MX-WL8" id="hj8-D4-9D9"/>
                         <outlet property="ibNbSessionsLabel" destination="k17-d9-qYT" id="Zrj-b9-2iD"/>
+                        <outlet property="ibSessionintervalChecking" destination="gZR-S5-Q6W" id="YFe-41-BG0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

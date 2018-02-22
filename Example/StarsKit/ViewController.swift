@@ -48,9 +48,13 @@ class ViewController: UIViewController {
   @IBOutlet weak var ibNbSessionsLabel: UILabel!
   @IBOutlet weak var ibNbCrashLabel: UILabel!
   @IBOutlet weak var ibLastCrashDate: UILabel!
+
+  @IBOutlet weak var ibSessionintervalChecking: UISwitch!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    self.ibSessionintervalChecking.isOn = StarsKit.shared.useSessionSpaceChecking
     
     let imageView = UIImageView(image: UIImage(named: "Cover"))
     imageView.contentMode = .scaleAspectFit
@@ -106,6 +110,11 @@ class ViewController: UIViewController {
   @IBAction func didChangeSegmentTransitionType(_ sender: UISegmentedControl) {
     let type = TransitionType(rawValue: sender.selectedSegmentIndex)
     type?.configure()
+  }
+  
+  @IBAction func didSwitchSessionIntervalCheck(_ sender: UISwitch) {
+    StarsKit.shared.useSessionSpaceChecking = sender.isOn
+    self.updateDisplayMetrics()
   }
   
   @IBAction func didTapIncrementSession(_ sender: Any) {
