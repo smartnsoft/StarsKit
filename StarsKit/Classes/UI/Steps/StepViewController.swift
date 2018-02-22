@@ -30,9 +30,9 @@ public class StepViewController: UIViewController {
   var graphicContext: StarsKitGraphicContext = StarsKit.shared.graphicContext
   weak var coordinator: StarsRatingCoordinator?
   
-  @IBOutlet weak var ibIndicatorLabel: UILabel!
-  @IBOutlet weak var ibActionButton: UIButton!
-  @IBOutlet weak var ibLaterButton: UIButton!
+  @IBOutlet weak var ibIndicatorLabel: UILabel?
+  @IBOutlet weak var ibActionButton: UIButton?
+  @IBOutlet weak var ibLaterButton: UIButton?
   
   // MARK: Initializers
   public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -51,21 +51,21 @@ public class StepViewController: UIViewController {
   
   // MARK: View customization
   func prepareViews() {
-    self.ibIndicatorLabel.numberOfLines = 0
-    self.ibIndicatorLabel.textAlignment = .center
-    self.ibIndicatorLabel.text = self.coordinator?.step.indicatorTitle()
-    self.ibIndicatorLabel.font = self.graphicContext.indicationTitleFont
+    self.ibIndicatorLabel?.numberOfLines = 0
+    self.ibIndicatorLabel?.textAlignment = .center
+    self.ibIndicatorLabel?.text = self.coordinator?.step.indicatorTitle()
+    self.ibIndicatorLabel?.font = self.graphicContext.indicationTitleFont
     
-    self.ibActionButton.setTitle(self.coordinator?.step.actionTitle(), for: .normal)
-    self.ibActionButton.tintColor = self.graphicContext.actionButtonTitleColor
-    self.ibActionButton.layer.masksToBounds = true
-    self.ibActionButton.layer.cornerRadius = 5
-    self.ibActionButton.setBackgroundImage(self.graphicContext.actionButtonBackgroundColor.ex.toImage(), for: .normal)
-    self.ibActionButton.titleLabel?.font = self.graphicContext.actionButtonTitleFont
+    self.ibActionButton?.setTitle(self.coordinator?.step.actionTitle(), for: .normal)
+    self.ibActionButton?.tintColor = self.graphicContext.actionButtonTitleColor
+    self.ibActionButton?.layer.masksToBounds = true
+    self.ibActionButton?.layer.cornerRadius = 5
+    self.ibActionButton?.setBackgroundImage(self.graphicContext.actionButtonBackgroundColor.ex.toImage(), for: .normal)
+    self.ibActionButton?.titleLabel?.font = self.graphicContext.actionButtonTitleFont
   
-    self.ibLaterButton.setTitle(self.coordinator?.step.laterTitle(), for: .normal)
-    self.ibLaterButton.tintColor = self.graphicContext.laterTitleTintColor
-    self.ibLaterButton.titleLabel?.font = self.graphicContext.laterTitleFont
+    self.ibLaterButton?.setTitle(self.coordinator?.step.laterTitle(), for: .normal)
+    self.ibLaterButton?.tintColor = self.graphicContext.laterTitleTintColor
+    self.ibLaterButton?.titleLabel?.font = self.graphicContext.laterTitleFont
   }
   
 }

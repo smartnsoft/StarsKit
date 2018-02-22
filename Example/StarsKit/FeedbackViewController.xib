@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedbackViewController" customModule="StarsKit">
+            <connections>
+                <outlet property="ibActionButton" destination="cVp-0p-Bhr" id="BAL-gW-X3y"/>
+                <outlet property="ibLaterButton" destination="PaW-2b-hfs" id="gOa-Lg-B8r"/>
+                <outlet property="view" destination="iN0-l3-epB" id="6ym-wF-qiU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="281" height="197"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NxA-yc-90x">
+                    <rect key="frame" x="0.0" y="0.0" width="281" height="197"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caC-Es-pAg">
+                            <rect key="frame" x="0.0" y="0.0" width="281" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8ux-DX-5Qa">
+                            <rect key="frame" x="0.0" y="20.5" width="281" height="176.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaW-2b-hfs">
+                                    <rect key="frame" x="0.0" y="73.5" width="130.5" height="30"/>
+                                    <state key="normal" title="Later !"/>
+                                    <connections>
+                                        <action selector="didChooseDismissAction:" destination="-1" eventType="touchUpInside" id="v7B-9W-T25"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVp-0p-Bhr">
+                                    <rect key="frame" x="150.5" y="73.5" width="130.5" height="30"/>
+                                    <state key="normal" title="Custom action button"/>
+                                    <connections>
+                                        <action selector="didChooseAction:" destination="-1" eventType="touchUpInside" id="pgT-k4-AHJ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NxA-yc-90x" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="JWx-Yq-Jig"/>
+                <constraint firstItem="NxA-yc-90x" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="UCq-Vm-6gA"/>
+                <constraint firstItem="NxA-yc-90x" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="iFj-Zn-nUE"/>
+                <constraint firstItem="NxA-yc-90x" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="w4O-O0-cDU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="322" y="-234"/>
+        </view>
+    </objects>
+</document>

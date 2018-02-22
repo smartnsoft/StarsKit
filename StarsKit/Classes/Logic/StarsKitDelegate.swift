@@ -28,7 +28,7 @@ public protocol StarsKitDelegate: class {
   func presenterController() -> UIViewController
   
   /// Only call when the default behavior is not used
-  func needDisplayRateScreen() -> Bool
+  func needCustomDisplayRateScreen() -> Bool
   
   /// This callback fire when the user change the app rate on the view
   ///
@@ -37,6 +37,8 @@ public protocol StarsKitDelegate: class {
   ///   - rate: The user app rate level
   func didUpdateRating(from context: StarsKitContext, to rate: Int)
   
+  //TODO: Start display
+  //TODO: End display
   
   /// User tap on the submit rating button
   ///

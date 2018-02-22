@@ -77,6 +77,8 @@ public final class StarsKitConfiguration {
     }
   }
   
+  // TODO: Espace maximum entre la dernière session affichée et la suivante,
+  // si supérieur, on ne l'affiche pas et on remet le compteur de session à 0
   public internal(set) var maxDaysBetweenSession: Int {
     get {
       return UserDefaults.standard.integer(forKey: StarsKitProperties.maxDaysBetweenSession.userDefaultsKey)

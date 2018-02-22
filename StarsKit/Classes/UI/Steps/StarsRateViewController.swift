@@ -43,10 +43,10 @@ final public class StarsRateViewController: StepViewController {
     super.prepareViews()
     
     if !StarsKit.shared.validateRatingButtonEnable {
-      self.ibActionButton.isHidden = true
+      self.ibActionButton?.isHidden = true
     } else {
-      self.ibActionButton.isHidden = false
-      self.ibActionButton.isEnabled = false
+      self.ibActionButton?.isHidden = false
+      self.ibActionButton?.isEnabled = false
     }
     
     var cosmosSettings = StarsKit.shared.graphicContext.cosmosSettings
@@ -58,7 +58,7 @@ final public class StarsRateViewController: StepViewController {
     
     self.ibCosmosView.didFinishTouchingCosmos = { [weak self] rating in
       self?.coordinator?.endRating(to: rating)
-      self?.ibActionButton.isEnabled = true
+      self?.ibActionButton?.isEnabled = true
     }
   }
 

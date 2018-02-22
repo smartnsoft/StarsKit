@@ -57,7 +57,7 @@ public class StarsKitGraphicContext {
   public lazy var stepTransitionOptions: UIViewAnimationOptions = .transitionCrossDissolve
   
   // Third parties customizations
-  lazy var defaultJellyPresentation: JellyPresentation = {
+  public lazy var defaultJellyPresentation: JellyPresentation = {
     var presentation = JellySlideInPresentation(cornerRadius: Double(self.cornerRadius),
                                                 backgroundStyle: .blur(effectStyle: .extraLight),
                                                 duration: .medium,

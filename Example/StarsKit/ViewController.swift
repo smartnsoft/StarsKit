@@ -8,6 +8,40 @@
 import UIKit
 import StarsKit
 import Extra
+import Jelly
+
+enum TransitionType: Int {
+  case `default`
+  case bottom
+  case slideIn
+  
+  func configure() {
+    var presentation: JellyPresentation
+    switch self {
+    case .default:
+      presentation = StarsKit.shared.graphicContext.defaultJellyPresentation
+    case .slideIn:
+      presentation = JellySlideInPresentation(cornerRadius: 15,
+                                              backgroundStyle: .blur(effectStyle: .dark),
+                                              jellyness: .jellier,
+                                              duration: .medium,
+                                              directionShow: .left,
+                                              directionDismiss: .right,
+                                              widthForViewController: .custom(value: 300),
+                                              heightForViewController: .custom(value: 300))
+    case .bottom:
+      presentation = {
+        var jellyShift = JellyShiftInPresentation()
+        jellyShift.direction = .bottom
+        jellyShift.backgroundStyle = .blur(effectStyle: .light)
+        jellyShift.size = .custom(value: 300)
+        return jellyShift
+      }()
+    }
+    
+    StarsKit.shared.graphicContext.jellyCustomTransition = presentation
+  }
+}
 
 class ViewController: UIViewController {
   
@@ -68,6 +102,11 @@ class ViewController: UIViewController {
     self.updateDisplayMetrics()
   }
   
+  @IBAction func didChangeSegmentTransitionType(_ sender: UISegmentedControl) {
+    let type = TransitionType(rawValue: sender.selectedSegmentIndex)
+    type?.configure()
+  }
+  
   @IBAction func didTapIncrementSession(_ sender: Any) {
     StarsKit.shared.context.nbSessions += 1
     self.updateDisplayMetrics()
@@ -88,7 +127,7 @@ extension ViewController: StarsKitDelegate {
     print("Did choose later button at step \(step)")
   }
   
-  func needDisplayRateScreen() -> Bool {
+  func needCustomDisplayRateScreen() -> Bool {
     //Implement your own behavior if you want
     return false
   }

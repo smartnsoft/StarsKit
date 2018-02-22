@@ -56,6 +56,7 @@
 		44CBCAF0203ED4110045F777 /* StarsKit_ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarsKit_ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44CBCAF2203ED4110045F777 /* StarsKit_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsKit_ExampleUITests.swift; sourceTree = "<group>"; };
 		44CBCAF4203ED4110045F777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44CBCAFA203EEFEC0045F777 /* FeedbackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
 		5A7F55B5009841DA7B6DDAC3 /* Pods_StarsKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarsKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* StarsKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarsKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -164,6 +165,7 @@
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				4421E1F5203D8ECB004F058F /* UIImage+StarsKit.swift */,
 				442A9025203C753600512A74 /* Resources */,
+				44CBCAFA203EEFEC0045F777 /* FeedbackViewController.xib */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,

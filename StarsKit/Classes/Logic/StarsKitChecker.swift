@@ -43,7 +43,9 @@ public final class StarsKitChecker {
     let context = client.context
     
     if context.nbSessions >= configuration.displaySessionCount
-      //&& context.nbReminders < configuration.maxNumberOfReminder
+      // TODO
+      // Voir RatingManager
+      // && context.nbReminders < configuration.maxNumberOfReminder
       && !context.userAlreadyRespondsToAction
       && (context.lastDisplayDate == nil || Date().isAfter(context.lastDisplayDate,
                                                            pastDays: configuration.daysBeforeAskingAgain))

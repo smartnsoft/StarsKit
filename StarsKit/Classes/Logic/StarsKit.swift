@@ -64,7 +64,7 @@ public class StarsKit {
     
     if forced
       || (self.useDefaultBehavior && StarsKitChecker.needDisplayRateScreen(for: self))
-      || (self.delegate != nil && self.delegate?.needDisplayRateScreen() == true) {
+      || (self.delegate != nil && self.delegate?.needCustomDisplayRateScreen() == true) {
       
       self.context.nbReminders += 1
       self.context.lastDisplayDate = Date()
@@ -73,21 +73,27 @@ public class StarsKit {
         //Use 10.3 + native app rating
         if #available(iOS 10.3, *) {
           SKStoreReviewController.requestReview()
+        } else {
+          self.displayRating()
         }
       } else {
-        if let controller = self.delegate?.presenterController() {
-          
-          let alertController = StarsPopViewController(graphicContext: self.graphicContext)
-          let alertPresentation = self.graphicContext.jellyCustomTransition
-          self.jellyAnimator = JellyAnimator(presentation: alertPresentation)
-          self.jellyAnimator?.prepare(viewController: alertController)
-          
-          controller.present(alertController, animated: true, completion: nil)
-        }
+        self.displayRating()
       }
       return true
     }
     return false
+  }
+  
+  private func displayRating() {
+    if let controller = self.delegate?.presenterController() {
+      
+      let alertController = StarsPopViewController(graphicContext: self.graphicContext)
+      let alertPresentation = self.graphicContext.jellyCustomTransition
+      self.jellyAnimator = JellyAnimator(presentation: alertPresentation)
+      self.jellyAnimator?.prepare(viewController: alertController)
+      
+      controller.present(alertController, animated: true, completion: nil)
+    }
   }
   
   /// MARK: Metrics update

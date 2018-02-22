@@ -7,81 +7,19 @@
 
 <img width=100% src="./img/Cover.jpg">
 
-**Look at this beautiful MouSTARche!**
+### Look at this beautiful MouSTARche!
 
-StarsKit is a lightfull Swift library to simplify and configure your app rating workflow.
+StarsKit is a Swift library to simplify, customize and configure your app rating workflow.
 
 It can be based on a remote, local or static configuration data with optionnals properties.
+
+<p align="center"><img width=32% src="./img/step_rate.png"> <img width=32% src="./img/step_feedback.png"> <img width=32% src="./img/step_store.png"></p>
 
 ## Requirements
 
 - iOS 9.0+
 - Swift 4+
 - Xcode 9.2+
-
-## Third parties dependencies
-
-Today we have third parties dependencies, but the purpose is to avoid them the most.
-
-To have a quick available library and significant customization, we use 3 dependencies:
-
-- [Extra/UIKit](https://github.com/smartnsoft/Extra): our library to simplify UIKit operation code
-- [Jelly](https://github.com/SebastianBoldt/Jelly): a simple UI component to simplify the rating transition display
-- [Cosmos](https://github.com/evgenyneu/Cosmos): a powerful and flexible stars slider UI component
-
-## Description
-
-### Customizable screens
-<p align="center"><img width=32% src="./img/step_rate.png"> <img width=32% src="./img/step_feedback.png"> <img width=32% src="./img/step_store.png"></p>
-
-The main feature of the library is to **simply use static or dynamic (remote) configuration to show native or custom app rating screen**.
-
-If the user chooses a negative rate, he will be redirected to the **feedback screen**.
-If the user chooses a positive rate, he will be redirected to the **Store review sreen**.
-
-You and only you choose what to do when the user choose to give a feedback (mail / other custom screen).
-This the same for when the user choose to rate the app: choose to redirect on the review page or anyhting else.
-
-### Native StoreKit screen
-
-You can also display the native `StoreKit` screen:
-
-<p align="center"><img width=32% src="./img/storekit.png"></p>
-
-### Features list
-
-- [X] Use localizable or configuration strings
-- [X] Default localizables strings : EN, FR
-- [X] Overridable localizables strings
-- [X] Static configuration strings
-- [X] Cocoapods integration
-- [X] Default & configurable step transitions
-- [X] Default display algorithm behavior
-- [X] Customizable display algorithm behavior
-- [X] Customizable stars style
-- [X] Customizable fonts, text & tint colors
-- [X] Rating & screen actions callbacks
-- [X] Configurable with dictionnary / data or remote URL: everything you want!
-- [X] Native iOS 10.3+ StoreKit integration
-- [ ] Carthage integration
-- [ ] Overridable layouts
-
-## Configurable metrics for display
-
-You can specify metrics to trigger the default display behavior or use your own one.
-
-- [X] Disable / enable the component
-- [X] Increment session counter
-- [X] Static configuration strings
-- [X] Days without crash
-- [X] Days before asking again
-- [X] Number of reminding
-- [X] Maximum of days betwteen session count
-- [ ] Email configuration
-- [X] Step 1: Rate screen
-- [X] Step 2: Feedback screen
-- [X] Step 3: Store review screen
-
 
 ## Example
 
@@ -96,9 +34,90 @@ it, simply add the following line to your Podfile:
 pod 'StarsKit'
 ```
 
+## Third party dependencies
+
+Today we have third parties dependencies, but the purpose is to avoid them the most.
+
+To have a quick available library and significant customization, we use 3 dependencies:
+
+- [Extra/UIKit](https://github.com/smartnsoft/Extra): our library to simplify UIKit operation code
+- [Jelly](https://github.com/SebastianBoldt/Jelly): a simple UI component to simplify the rating transition display
+- [Cosmos](https://github.com/evgenyneu/Cosmos): a powerful and flexible stars slider UI component
+
+## Description
+
+### Behavior
+
+The main feature of the library is to **simply use static or dynamic (remote) configuration to show native or custom app rating screen**.
+
+If the user chooses a negative rate, he will be redirected to the **feedback screen**.
+If the user chooses a positive rate, he will be redirected to the **Store review sreen**.
+
+You and only you choose what to do when the user choose to give a feedback, like:
+
+- send a an e-mail
+- launch your own feedback screen
+
+It's the same when the user chooses to rate the app: 
+
+- redirect the user on the AppStore review page
+- call a custom analytics
+
+### Native StoreKit screen
+
+You can also display the native `StoreKit` screen instead of custom screens (iOS 10.3+ only):
+
+<p align="center"><img width=32% src="./img/storekit.png"></p>
+
+### Features list
+
+- [X] Use localizable or configuration strings
+- [X] Default localizables strings : 
+- - [X] EN
+- - [X] FR
+- [X] Overridable localizables strings
+- [X] Static configuration strings
+- [X] Cocoapods integration
+- [X] Default & configurable step transitions
+- [X] Default display algorithm behavior
+- [X] Customizable display algorithm behavior
+- [X] Customizable stars style
+- [X] Customizable fonts, text & tint colors
+- [X] Rating & screen actions callbacks
+- [X] Configurable with dictionnary / data or remote URL: everything you want!
+- [X] Native iOS 10.3+ StoreKit integration
+- [X] Overridable layouts
+- [ ] Additionnal condition checking on the default check
+- [ ] Carthage integration
+
+## Configurable metrics for display
+
+You can specify metrics to trigger the default display behavior or use your own one.
+
+- [X] Disable / enable the component
+- [X] Increment sessions counter
+- 5X] Increment crashes counter
+- [X] Static configuration strings
+- [X] Days without crashes
+- [X] Days before asking again
+- [X] Number of reminding
+- [X] Maximum of days betwteen session count
+- [X] Step 1: Rate screen properties
+- [X] Step 2: Feedback screen properties
+- [X] Step 3: Store review screen properties
+
 ## Usage
 
-### Update the configuration
+### Display the rating
+
+```
+// Simply call:
+StarsKit.shared.displayRateIfNeeded()
+
+// You can also force the display via:
+StarsKit.shared.displayRateIfNeeded(forced: true)
+```
+### Update the configuration properties
 
 See also : `StarsKitProperties` enum keys.
 You have to conform the data dicitonnary to the expected keys.
@@ -113,6 +132,19 @@ let localJSONConfiguration = try JSONSerialization.jsonObject(with: data, option
 StarsKit.shared.updateConfig(from: localJSONConfiguration)
 ```
 
+### `StarsKit` instance & configuration
+
+Today StarsKit manages a default singleton instance.
+
+You can set-up your own `configuration`, `context` and `graphicContext` for StarsKit.
+
+You can also decide of:
+
+- **`validateRatingButtonEnable`**: disable or enable the submit step rating. If disable, the rate will be instantly submit after touch.
+- **`useDefaultBehavior`**: disable the default StarsKit display checking behavior and implement your own in the **`StarsKitDelegate`** via 
+- **`priorityUseNativeRate`**: enable the native rating in iOS 10.3+, if not available, it will use the StarsKit screens 👌🏼
+- **`localLocalizableStringsEnabled`**: enable the localization titles instead of configuration one. It will use the default StarKit strings. If you override them in your app localizable strings (with the same key), it will take them 😎.
+
 ### `StarsKitContext`: update the metrics 
 
 To trigger the pop-up rating display, you have to update the metrics.
@@ -126,11 +158,17 @@ StarsKit.shared.context.nbSessions += 1
 // or
 StarsKit.shared.incrementSession(by: 10)
 
-// You can also reset all the values
+// You can also reset all the app context values
 StarsKit.shared.resetContext()
+
+// You can also reset all the configuration properties
+// After a new major version update for instance
+StarsKit.shared.resetConfig()
 ```
 
-### `StarsKitGraphicContext`: UI customization
+## Customization
+
+### Use `StarsKitGraphicContext`
 
 Customizable items :
 
@@ -141,6 +179,38 @@ Customizable items :
 - header background image
 - ViewController presentation transition (via Jelly)
 - Stars style (via Cosmos)
+
+### Transitions & display (Jelly)
+
+StarsKit use Jelly fro customizable transitions. You can specify your own via the  the   `jellyCustomTransition` property in the `StarsKitGraphicContext`.
+
+<p align="center"><img width=48% src="./img/presentation_black.png"> <img width=48% src="./img/presentation_bottom.png"></p>
+
+Go to [Jelly repo](https://github.com/SebastianBoldt/Jelly) for more informations.
+
+### Stars (Cosmos)
+
+Cosmos provide a `CosmosSettings` property that can be set in the `StarsKitGraphicContext`.
+
+You specify you own stars image, if nil, Comsmos will use the specifed star path via `starPoints`.
+
+<p align="center"><img width=60% border=1 src="https://github.com/evgenyneu/Cosmos/raw/master/graphics/Screenshots/cosmos_star_rating_control_for_ios_swift_space.png"></p>
+
+Go to [Comos repo](https://github.com/evgenyneu/Cosmos) for more informations.
+
+### Step screens
+
+- Simply create the desired xib screen, with the same name than in StarsKit.
+- Sepcify the custom class and the module as "StarsKit".
+- Uncheck "Inherit Module From Target"
+
+IBOutlet are optionnals, so you can decide if you want to implement them or not.
+
+<p align="center"><img width=90% border=1 src="./img/custom_xib_class.png"></p>
+
+<p align="center"><img width=90% border=1 src="./img/custom_xib.png"></p>
+
+**Note**: if you want to test it in the demo project, simply check the `FeedbackViewController.xib` in the StarsKit-Example target.
 
 ### Override localizable strings
 
@@ -154,13 +224,14 @@ See the default `StarsKit.strings` keys.
 
 ### Override step controllers
 
-### Listen to callbacks - See `StarsKitDelegate`
+### `StarsKitDelegate` : listen to callbacks
 
 
 ``` swift
 // MARK: - StarsKitDelegate
 extension ViewController: StarsKitDelegate {
   func didValidateRating(to rate: Int) {
+  	// Why not send an analytic ?
     print("Did validate rating to rate \(rate)")
   }
   
@@ -172,7 +243,7 @@ extension ViewController: StarsKitDelegate {
     print("Did choose later button at step \(step)")
   }
   
-  func needDisplayRateScreen() -> Bool {
+  func needCustomDisplayRateScreen() -> Bool {
     //Implement your own behavior if you want
     return false
   }
@@ -192,7 +263,9 @@ extension ViewController: StarsKitDelegate {
 
 ## Contributors
 
-Jean-Charles Sorin - Smart&Soft
+Made in 🇫🇷 by the [Smart&Soft](https://smartnsoft.com/) iOS Team
+
+- Jean-Charles Sorin - Smart&Soft
 
 ## License
 
