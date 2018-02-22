@@ -29,19 +29,25 @@ protocol RatingCoordinatorDelegate: class {
 /// Coordinate the rating workflow
 final class RatingCoordinator {
   
+  // Current UI & logic contexts
   private var graphicContext: StarsKitGraphicContext
   private var context: StarsKitContext
   
+  // Current rating step
   private(set) var step: RatingStep {
     didSet {
       self.delegate?.didSwitchToStep(self.step)
     }
   }
   
+  // Main controller, which will contain childs
   private weak var starsPopViewController: StarsPopViewController?
+  
+  // Childs step controllers
   private var rateViewController: StarsRateViewController?
   private var storeViewController: StoreViewController?
   private var feedbackViewController: FeedbackViewController?
+  
   private weak var delegate: RatingCoordinatorDelegate?
   
   // MARK: Initializers

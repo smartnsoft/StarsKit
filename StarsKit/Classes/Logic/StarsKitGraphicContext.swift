@@ -29,23 +29,31 @@ import Jelly
 /// UI customization properties for your rating steps screens
 public class StarsKitGraphicContext {
   
+  // MARK: StarsKit view customizations
+  
+  // The global corner radius to apply on the main displayed view
+  public lazy var cornerRadius: CGFloat = 10
+  
+  // Top header title & style of the main screen header
   public lazy var mainTitleFont: UIFont = UIFont.boldSystemFont(ofSize: 16)
   public lazy var mainTitleColor: UIColor = .white
+  public var backgroundHeaderTitleImage: UIImage?
+  public lazy var backgroundHeaderColor: UIColor = .white
   
+  // Title style of the description text in step screens
   public lazy var indicationTitleFont: UIFont = UIFont.boldSystemFont(ofSize: 18)
   public lazy var indicationTitleColor: UIColor = .darkGray
   
+  // Style of the action button in step screens
   public lazy var actionButtonBackgroundColor: UIColor = .blue
   public lazy var actionButtonTitleColor: UIColor = .white
   public lazy var actionButtonTitleFont: UIFont = UIFont.boldSystemFont(ofSize: 15)
   
+  // Style of the later button in step screens
   public lazy var laterTitleFont: UIFont = UIFont.boldSystemFont(ofSize: 15)
   public lazy var laterTitleTintColor: UIColor = .lightGray
   
-  public var backgroundHeaderTitleImage: UIImage?
-  public lazy var backgroundHeaderColor: UIColor = .white
-  public lazy var cornerRadius: CGFloat = 10
-  
+  // Stars images if need, else use the cosmos settings below
   public lazy var emptyStarImage: UIImage? = UIImage(named: "shape_default",
                                                      in: Bundle(for: StarsKit.self),
                                                      compatibleWith: nil)
@@ -56,7 +64,12 @@ public class StarsKitGraphicContext {
   public lazy var preferredStatusBarStyle = UIStatusBarStyle.lightContent
   public lazy var stepTransitionOptions: UIViewAnimationOptions = .transitionCrossDissolve
   
-  // Third parties customizations
+  // MARK: Third parties customizations
+  
+  // Cosmos
+  public lazy var cosmosSettings: CosmosSettings = CosmosSettings.default
+  
+  // Jelly
   public lazy var defaultJellyPresentation: JellyPresentation = {
     var presentation = JellySlideInPresentation(cornerRadius: Double(self.cornerRadius),
                                                 backgroundStyle: .blur(effectStyle: .extraLight),
@@ -68,9 +81,7 @@ public class StarsKitGraphicContext {
     presentation.isTapBackgroundToDismissEnabled = false
     return presentation
   }()
-  
-  public lazy var cosmosSettings: CosmosSettings = CosmosSettings.default
-  
+
   public lazy var jellyCustomTransition: JellyPresentation = {
     self.defaultJellyPresentation
   }()

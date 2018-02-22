@@ -13,7 +13,7 @@
     "likeMainText": "Let us know on the AppStore in a minute!",
     "likeActionButton": "Let's go!",
     "likeExitButton": "Later 😥",
-  "maxNumberOfReminder" : 3,
+    "maxNumberOfReminder": 3,
     "emailSupport": "starskit@smartnsoft.com",
     "emailObject": "Application StarsKit",
     "daysWithoutCrash": 15,

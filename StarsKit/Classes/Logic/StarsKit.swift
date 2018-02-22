@@ -39,7 +39,7 @@ public class StarsKit {
   /// or validate after with a specific submit button.
   public var validateRatingButtonEnable = true
   
-  /// Defines if StarsKit will appluy its own behavior process or if you want to apply yours.
+  /// Defines if StarsKit will apply its own behavior process or if you want to apply yours.
   public var useDefaultBehavior = true
   
   /// Defines if you want to enable the StoreKit Rating Controller (from iOS 10.3 only).
@@ -56,8 +56,8 @@ public class StarsKit {
   /// or if it uses the configuration strings ones
   public var localLocalizableStringsEnabled = false
   
+  /// We have to keep a strong value to keep the animator alive
   fileprivate var jellyAnimator: JellyAnimator?
-  
   
   /// Use the StarsKitDelegate to have configuration & event feedbacks
   public weak var delegate: StarsKitDelegate?
@@ -69,6 +69,21 @@ public class StarsKit {
   public init(delegate: StarsKitDelegate? = nil, uiDelegate: StarsKitUIDelegate? = nil) {
     self.delegate = delegate
     self.uiDelegate = uiDelegate
+  }
+  
+  // MARK: Display update
+  private func displayRating() {
+    if let controller = self.uiDelegate?.presenterController() {
+      
+      let alertController = StarsPopViewController(graphicContext: self.graphicContext)
+      let alertPresentation = self.graphicContext.jellyCustomTransition
+      self.jellyAnimator = JellyAnimator(presentation: alertPresentation)
+      self.jellyAnimator?.prepare(viewController: alertController)
+      self.uiDelegate?.didRatingScreenWillAppear()
+      controller.present(alertController, animated: true, completion: {
+        self.uiDelegate?.didRatingScreenDidAppear()
+      })
+    }
   }
   
   /// Starts the rating checking and display the rating view if needed.
@@ -97,22 +112,9 @@ public class StarsKit {
     return false
   }
   
-  private func displayRating() {
-    if let controller = self.uiDelegate?.presenterController() {
-      
-      let alertController = StarsPopViewController(graphicContext: self.graphicContext)
-      let alertPresentation = self.graphicContext.jellyCustomTransition
-      self.jellyAnimator = JellyAnimator(presentation: alertPresentation)
-      self.jellyAnimator?.prepare(viewController: alertController)
-      self.uiDelegate?.didRatingScreenWillAppear()
-      controller.present(alertController, animated: true, completion: {
-        self.uiDelegate?.didRatingScreenDidAppear()
-      })
-    }
-  }
-  
   /// MARK: Metrics update
   
+  /// See the `StarsKitContextProperties`
   /// **Warning**: Be sure about calling a reset context !
   public func resetContext() {
     self.resetCrashMetrics()
@@ -123,6 +125,7 @@ public class StarsKit {
     self.context.lastSessionDate = nil
   }
   
+  /// See the `StarsKitConfigProperties`
   public func resetConfig() {
     self.configuration.daysBeforeAskingAgain = 0
     self.configuration.daysWithoutCrash = 0

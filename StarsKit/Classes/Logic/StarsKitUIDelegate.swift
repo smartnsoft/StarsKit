@@ -22,7 +22,6 @@
 
 import Foundation
 
-
 /// StarsKit UI event delegation
 public protocol StarsKitUIDelegate: class {
   

@@ -30,15 +30,16 @@ public final class StarsKitContext {
     }
     
     set {
-      if StarsKit.shared.useSessionSpaceChecking {
-        if self.lastSessionDate == nil || Date().isAfter(self.lastSessionDate, pastDays: StarsKit.shared.configuration.maxDaysBetweenSession) {
-          UserDefaults.standard.set(newValue, forKey: StarsKitContextProperties.nbSessions.userDefaultsKey)
+      // The two sessions have a too large interval between them to increment the session count
+      // In ohers words, the user not enough use the app for incrementing the session count.
+      if StarsKit.shared.useSessionSpaceChecking && Date().isAfter(self.lastSessionDate, pastDays: StarsKit.shared.configuration.maxDaysBetweenSession) {
+          UserDefaults.standard.set(1, forKey: StarsKitContextProperties.nbSessions.userDefaultsKey)
           self.lastSessionDate = Date()
-        }
       } else {
         UserDefaults.standard.set(newValue, forKey: StarsKitContextProperties.nbSessions.userDefaultsKey)
         self.lastSessionDate = Date()
       }
+      
       if newValue == 0 {
         self.lastSessionDate = nil
       }

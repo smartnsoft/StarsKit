@@ -34,20 +34,15 @@ public protocol StarsKitDelegate: class {
   ///   - rate: The user app rate level
   func didUpdateRating(from context: StarsKitContext, to rate: Int)
   
-  //TODO: Start display
-  //TODO: End display
-  
   /// User tap on the submit rating button
   ///
   /// - Parameter rate: The user app rate level
   func didValidateRating(to rate: Int)
   
-  
   /// User tap on the action related to a screen step
   ///
   /// - Parameter step: The last step displayed
   func didChooseAction(`at` step: RatingStep)
-  
   
   /// User tap on the later button related to a screen step
   ///

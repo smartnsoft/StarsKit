@@ -61,7 +61,7 @@ extension TimeInterval {
 
 extension Date {
   func isAfter(_ date: Date?, pastDays: Int) -> Bool {
-    return self.timeIntervalSinceReferenceDate > ((date?.timeIntervalSinceReferenceDate ?? self.timeIntervalSinceReferenceDate)
+    return self.timeIntervalSinceReferenceDate > ((date?.timeIntervalSinceReferenceDate ?? TimeInterval.greatestFiniteMagnitude)
       + (Double(pastDays) * TimeInterval.dayInSeconds))
   }
 }
