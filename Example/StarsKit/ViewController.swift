@@ -54,7 +54,7 @@ class ViewController: UIViewController {
     StarsKit.shared.localLocalizableStringsEnabled = sender.isOn
   }
   @IBAction func didTapShowRatingButton(_ sender: Any) {
-    StarsKit.shared.checkRateDisplay(forced: true)
+    StarsKit.shared.displayRateIfNeeded(forced: true)
     self.updateDisplayMetrics()
   }
   

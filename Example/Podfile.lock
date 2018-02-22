@@ -6,9 +6,11 @@ PODS:
     - Cosmos (~> 15.0)
     - Extra/UIKit (~> 1.1)
     - Jelly (~> 1.2)
+  - SwiftDate (4.5.1)
 
 DEPENDENCIES:
   - StarsKit (from `../`)
+  - SwiftDate (~> 4.5.1)
 
 EXTERNAL SOURCES:
   StarsKit:
@@ -19,7 +21,8 @@ SPEC CHECKSUMS:
   Extra: 34839d5a5fcaa1a957ea0b5ebcac88ba807bad43
   Jelly: 70e542dd201460211f0f20042bc2c2d31ae239a1
   StarsKit: 680f59fd2932ed11666e179d84f8a69418cb7db6
+  SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
 
-PODFILE CHECKSUM: fbfc0135d9a1bf9c702d3335966ea7bb7862f075
+PODFILE CHECKSUM: bae0c7ddfe0714c5e6987929c060cc3fb50f2aad
 
 COCOAPODS: 1.4.0

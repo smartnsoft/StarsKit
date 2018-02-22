@@ -4,5 +4,9 @@ platform :ios, '9.0'
 
 target 'StarsKit_Example' do
   pod 'StarsKit', :path => '../'
+end
 
+target 'StarsKit_ExampleTests' do
+  pod 'SwiftDate', '~> 4.5.1'
+  pod 'StarsKit', :path => '../'
 end

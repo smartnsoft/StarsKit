@@ -59,7 +59,8 @@ public class StarsKit {
   }
   
   /// Start the rating checking and display the rating view if needed
-  public func checkRateDisplay(forced: Bool = false) {
+  @discardableResult
+  public func displayRateIfNeeded(forced: Bool = false) -> Bool {
     
     if forced
       || (self.useDefaultBehavior && StarsKitChecker.needDisplayRateScreen(for: self))
@@ -84,7 +85,9 @@ public class StarsKit {
           controller.present(alertController, animated: true, completion: nil)
         }
       }
+      return true
     }
+    return false
   }
   
   /// MARK: Metrics update
@@ -96,6 +99,16 @@ public class StarsKit {
     self.context.nbReminders = 0
     self.context.userAlreadyRespondsToAction = false
     self.context.lastDisplayDate = nil
+  }
+  
+  public func resetConfig() {
+    self.configuration.daysBeforeAskingAgain = 0
+    self.configuration.daysWithoutCrash = 0
+    self.configuration.disabled = true
+    self.configuration.displaySessionCount = 0
+    self.configuration.maxDaysBetweenSession = 0
+    self.configuration.maxNumberOfReminder = 0
+    self.configuration.positiveStarsLimit = 0
   }
   
   public func resetCrashMetrics() {

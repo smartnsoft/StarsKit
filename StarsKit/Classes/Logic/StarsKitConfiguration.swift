@@ -47,7 +47,7 @@ public final class StarsKitConfiguration {
     }
   }
   
-  public private(set) var positiveStarsLimit: Int {
+  public internal(set) var positiveStarsLimit: Int {
     get {
       return UserDefaults.standard.integer(forKey: StarsKitProperties.positiveStarsLimit.userDefaultsKey)
     }
@@ -57,7 +57,7 @@ public final class StarsKitConfiguration {
     }
   }
   
-  public private(set) var daysWithoutCrash: Int {
+  public internal(set) var daysWithoutCrash: Int {
     get {
       return UserDefaults.standard.integer(forKey: StarsKitProperties.daysWithoutCrash.userDefaultsKey)
     }
@@ -67,7 +67,7 @@ public final class StarsKitConfiguration {
     }
   }
   
-  public private(set) var maxNumberOfReminder: Int {
+  public internal(set) var maxNumberOfReminder: Int {
     get {
       return UserDefaults.standard.integer(forKey: StarsKitProperties.maxNumberOfReminder.userDefaultsKey)
     }
@@ -77,7 +77,7 @@ public final class StarsKitConfiguration {
     }
   }
   
-  public private(set) var maxDaysBetweenSession: Int {
+  public internal(set) var maxDaysBetweenSession: Int {
     get {
       return UserDefaults.standard.integer(forKey: StarsKitProperties.maxDaysBetweenSession.userDefaultsKey)
     }
@@ -87,7 +87,7 @@ public final class StarsKitConfiguration {
     }
   }
   
-  public private(set) var daysBeforeAskingAgain: Int {
+  public internal(set) var daysBeforeAskingAgain: Int {
     get {
       return UserDefaults.standard.integer(forKey: StarsKitProperties.daysBeforeAskingAgain.userDefaultsKey)
     }

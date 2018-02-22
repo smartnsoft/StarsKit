@@ -43,11 +43,13 @@ public final class StarsKitChecker {
     let context = client.context
     
     if context.nbSessions >= configuration.displaySessionCount
-      && context.nbReminders < configuration.maxNumberOfReminder
+      //&& context.nbReminders < configuration.maxNumberOfReminder
       && !context.userAlreadyRespondsToAction
-      && (context.lastDisplayDate?.timeIntervalSinceNow ?? TimeInterval.greatestFiniteMagnitude) > (Double(configuration.daysBeforeAskingAgain) * TimeInterval.dayInSeconds)
-      && (context.lastCrashDate?.timeIntervalSinceNow ?? TimeInterval.greatestFiniteMagnitude) > (Double(configuration.daysWithoutCrash) * TimeInterval.dayInSeconds)
-      {
+      && (context.lastDisplayDate == nil || Date().isAfter(context.lastDisplayDate,
+                                                           pastDays: configuration.daysBeforeAskingAgain))
+      && (context.lastCrashDate == nil || Date().isAfter(context.lastCrashDate,
+                                                         pastDays: configuration.daysWithoutCrash))
+    {
       return true
     }
     return false
@@ -58,5 +60,12 @@ public final class StarsKitChecker {
 
 // MARK: - TimeInterval
 fileprivate extension TimeInterval {
-  static let dayInSeconds: TimeInterval = 24 * 3600
+  static let dayInSeconds: TimeInterval = 24 * 60 * 60
+}
+
+fileprivate extension Date {
+  func isAfter(_ date: Date?, pastDays: Int) -> Bool {
+    return self.timeIntervalSinceReferenceDate > ((date?.timeIntervalSinceReferenceDate ?? 0)
+      + (Double(pastDays) * TimeInterval.dayInSeconds))
+  }
 }
