@@ -2,13 +2,24 @@
 # * http://www.objc.io/issue-6/travis-ci.html
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode9.2
+# references:
+# * http://www.objc.io/issue-6/travis-ci.html
+# * https://github.com/supermarin/xcpretty#usage
+
 language: objective-c
-# cache: cocoapods
-# podfile: Example/Podfile
-# before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
+osx_image: xcode9
+xcode_project: Example/StarsKit.xcodeproj
+before_script:
+#If one of this failed we have error and all process is stopped
+- cd Example
+- pod install --repo-update --verbose
+
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/StarsKit.xcworkspace -scheme StarsKit-Example -sdk iphonesimulator11.2 ONLY_ACTIVE_ARCH=NO | xcpretty
-- pod lib lint
+# It's only one command who count for valid or not build session
+- fastlane scan -s StarsKit
+
+after_success:
+# I have put this in after_success coz it's failed.
+# It's failed coz Extra Module isn't include inside SubPodSpec
+- cd ..
+- pod lib lint --verbose

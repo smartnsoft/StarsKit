@@ -15,6 +15,7 @@
 		44CBCAE6203EBE010045F777 /* StubsReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CBCAE5203EBE010045F777 /* StubsReader.swift */; };
 		44CBCAE9203EBE160045F777 /* ConfigurationDisable.json in Resources */ = {isa = PBXBuildFile; fileRef = 44CBCAE8203EBE160045F777 /* ConfigurationDisable.json */; };
 		44CBCAEB203EC1480045F777 /* DefaultConfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 44CBCAEA203EC1480045F777 /* DefaultConfiguration.json */; };
+		44CBCAF3203ED4110045F777 /* StarsKit_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CBCAF2203ED4110045F777 /* StarsKit_ExampleUITests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -22,6 +23,16 @@
 		6817EAEA5A0BB1B23D2D44E8 /* Pods_StarsKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7F55B5009841DA7B6DDAC3 /* Pods_StarsKit_Example.framework */; };
 		F034C28FDCD991D00D3DBF6A /* Pods_StarsKit_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34350EA4936D1050D44070C7 /* Pods_StarsKit_ExampleTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44CBCAF5203ED4110045F777 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
+			remoteInfo = StarsKit_Example;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		01C52A637B4D435E246CB9BF /* Pods-StarsKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarsKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarsKit_Example/Pods-StarsKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -42,6 +53,9 @@
 		44CBCAE5203EBE010045F777 /* StubsReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubsReader.swift; sourceTree = "<group>"; };
 		44CBCAE8203EBE160045F777 /* ConfigurationDisable.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ConfigurationDisable.json; sourceTree = "<group>"; };
 		44CBCAEA203EC1480045F777 /* DefaultConfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DefaultConfiguration.json; sourceTree = "<group>"; };
+		44CBCAF0203ED4110045F777 /* StarsKit_ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarsKit_ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44CBCAF2203ED4110045F777 /* StarsKit_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsKit_ExampleUITests.swift; sourceTree = "<group>"; };
+		44CBCAF4203ED4110045F777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A7F55B5009841DA7B6DDAC3 /* Pods_StarsKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarsKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* StarsKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarsKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +76,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F034C28FDCD991D00D3DBF6A /* Pods_StarsKit_ExampleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44CBCAED203ED4110045F777 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,12 +125,22 @@
 			path = ConfigurationStubs;
 			sourceTree = "<group>";
 		};
+		44CBCAF1203ED4110045F777 /* StarsKit_ExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				44CBCAF2203ED4110045F777 /* StarsKit_ExampleUITests.swift */,
+				44CBCAF4203ED4110045F777 /* Info.plist */,
+			);
+			path = StarsKit_ExampleUITests;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for StarsKit */,
 				44CBCADB203EBD050045F777 /* StarsKit_ExampleTests */,
+				44CBCAF1203ED4110045F777 /* StarsKit_ExampleUITests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				A10537F6BEA60C3AD4AE8812 /* Pods */,
 				64EFBF607B3D9FE87A7807E5 /* Frameworks */,
@@ -121,6 +152,7 @@
 			children = (
 				607FACD01AFB9204008FA782 /* StarsKit_Example.app */,
 				44CBCADA203EBD050045F777 /* StarsKit_ExampleTests.xctest */,
+				44CBCAF0203ED4110045F777 /* StarsKit_ExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,6 +238,24 @@
 			productReference = 44CBCADA203EBD050045F777 /* StarsKit_ExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		44CBCAEF203ED4110045F777 /* StarsKit_ExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44CBCAF7203ED4110045F777 /* Build configuration list for PBXNativeTarget "StarsKit_ExampleUITests" */;
+			buildPhases = (
+				44CBCAEC203ED4110045F777 /* Sources */,
+				44CBCAED203ED4110045F777 /* Frameworks */,
+				44CBCAEE203ED4110045F777 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44CBCAF6203ED4110045F777 /* PBXTargetDependency */,
+			);
+			name = StarsKit_ExampleUITests;
+			productName = StarsKit_ExampleUITests;
+			productReference = 44CBCAF0203ED4110045F777 /* StarsKit_ExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		607FACCF1AFB9204008FA782 /* StarsKit_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "StarsKit_Example" */;
@@ -240,6 +290,11 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
+					44CBCAEF203ED4110045F777 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
@@ -262,6 +317,7 @@
 			targets = (
 				607FACCF1AFB9204008FA782 /* StarsKit_Example */,
 				44CBCAD9203EBD050045F777 /* StarsKit_ExampleTests */,
+				44CBCAEF203ED4110045F777 /* StarsKit_ExampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -273,6 +329,13 @@
 			files = (
 				44CBCAEB203EC1480045F777 /* DefaultConfiguration.json in Resources */,
 				44CBCAE9203EBE160045F777 /* ConfigurationDisable.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44CBCAEE203ED4110045F777 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +482,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44CBCAEC203ED4110045F777 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44CBCAF3203ED4110045F777 /* StarsKit_ExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCC1AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -430,6 +501,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44CBCAF6203ED4110045F777 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607FACCF1AFB9204008FA782 /* StarsKit_Example */;
+			targetProxy = 44CBCAF5203ED4110045F777 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4402EF0E203E1E39004E82AE /* Localizable.strings */ = {
@@ -496,6 +575,52 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		44CBCAF8203ED4110045F777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StarsKit_ExampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "sns.StarsKit-ExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StarsKit_Example;
+			};
+			name = Debug;
+		};
+		44CBCAF9203ED4110045F777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StarsKit_ExampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "sns.StarsKit-ExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StarsKit_Example;
 			};
 			name = Release;
 		};
@@ -644,6 +769,15 @@
 			buildConfigurations = (
 				44CBCAE0203EBD050045F777 /* Debug */,
 				44CBCAE1203EBD050045F777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44CBCAF7203ED4110045F777 /* Build configuration list for PBXNativeTarget "StarsKit_ExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44CBCAF8203ED4110045F777 /* Debug */,
+				44CBCAF9203ED4110045F777 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
