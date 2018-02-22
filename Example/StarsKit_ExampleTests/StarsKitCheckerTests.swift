@@ -120,11 +120,12 @@ class StarsKitCheckerTests: XCTestCase {
 }
 
 final class StarsKitClient: StarsKitDelegate {
+  
   func presenterController() -> UIViewController {
     return UIViewController()
   }
   
-  func needDisplayRateScreen() -> Bool {
+  func needCustomDisplayRateScreen() -> Bool {
     return StarsKit.shared.context.nbSessions > 6
   }
   

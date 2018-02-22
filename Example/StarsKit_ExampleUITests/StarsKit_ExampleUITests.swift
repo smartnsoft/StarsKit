@@ -62,8 +62,8 @@ class StarsKit_ExampleUITests: XCTestCase {
     let app = XCUIApplication()
     app.buttons["Show Rating"].tap()
     app.otherElements["Rating"].tap()
-    app.buttons["Valider"].tap()
-    app.buttons["Plus tard"].tap()
+    app.buttons["Submit"].tap()
+    app.buttons["Later"].tap()
     
   }
   
@@ -72,7 +72,7 @@ class StarsKit_ExampleUITests: XCTestCase {
     let app = XCUIApplication()
     app.buttons["Show Rating"].tap()
     app.otherElements["Rating"].tap()
-    app.buttons["Plus tard"].tap()
+    app.buttons["Later 😥"].tap()
     
   }
   
@@ -91,8 +91,8 @@ class StarsKit_ExampleUITests: XCTestCase {
     let app = XCUIApplication()
     app.buttons["Show Rating"].tap()
     app.otherElements["Rating"].tap()
-    app.buttons["Valider"].tap()
-    app.buttons["Plus tard"].tap()
+    app.buttons["Submit"].tap()
+    app.buttons["Later"].tap()
     
   }
   
@@ -105,9 +105,9 @@ class StarsKit_ExampleUITests: XCTestCase {
     let ratingElement = app.otherElements["Rating"]
     ratingElement.tap()
     
-    let validerButton = app.buttons["Valider"]
+    let validerButton = app.buttons["Submit"]
     validerButton.tap()
-    app.buttons["Faire une suggestion"].tap()
+    app.buttons["Make a suggestion"].tap()
 
     
   }
@@ -120,9 +120,9 @@ class StarsKit_ExampleUITests: XCTestCase {
     let ratingElement = app.otherElements["Rating"]
     ratingElement.tap()
     
-    let validerButton = app.buttons["Valider"]
+    let validerButton = app.buttons["Submit"]
     validerButton.tap()
-    app.buttons["Plus tard"].tap()
+    app.buttons["Later"].tap()
   }
   
 }

@@ -24,7 +24,7 @@ import UIKit
 
 
 /// When the user like the app, it will be redirect to this screen
-final public class StoreViewController: StepViewController {
+public class StoreViewController: StepViewController {
   
   // MARK: Initializers
   init(graphicContext: StarsKitGraphicContext, coordinator: StarsRatingCoordinator) {

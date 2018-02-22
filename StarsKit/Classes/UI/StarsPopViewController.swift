@@ -23,10 +23,9 @@
 import UIKit
 import Extra
 
-
 /// The root view controller of the rating process
 /// It will use child view containement to display other steps
-final public class StarsPopViewController: UIViewController {
+public class StarsPopViewController: UIViewController {
   
   @IBOutlet weak var ibTitleLabel: UILabel!
   @IBOutlet weak var ibBackgroundImageView: UIImageView!

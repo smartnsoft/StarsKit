@@ -23,7 +23,7 @@
 import UIKit
 import Cosmos
 
-final public class StarsRateViewController: StepViewController {
+public class StarsRateViewController: StepViewController {
   
   @IBOutlet weak var ibCosmosView: CosmosView!
   
