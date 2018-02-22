@@ -38,7 +38,7 @@ pod 'StarsKit'
 
 Today we have third parties dependencies, but the purpose is to avoid them the most.
 
-To have a quick available library and significant customization, we use 3 dependencies:
+We also wan to have a quick available library and significant customization, we use 3 dependencies:
 
 - [Extra/UIKit](https://github.com/smartnsoft/Extra): our library to simplify UIKit operation code
 - [Jelly](https://github.com/SebastianBoldt/Jelly): a simple UI component to simplify the rating transition display
@@ -55,7 +55,7 @@ If the user chooses a positive rate, he will be redirected to the **Store review
 
 You and only you choose what to do when the user choose to give a feedback, like:
 
-- send a an e-mail
+- send an e-mail
 - launch your own feedback screen
 
 It's the same when the user chooses to rate the app: 
@@ -97,7 +97,7 @@ You can specify metrics to trigger the default display behavior or use your own 
 
 - [X] Disable / enable the component
 - [X] Increment sessions counter
-- 5X] Increment crashes counter
+- [X] Increment crashes counter
 - [X] Static configuration strings
 - [X] Days without crashes
 - [X] Days before asking again
@@ -120,7 +120,7 @@ StarsKit.shared.displayRateIfNeeded(forced: true)
 ```
 ### Update the configuration properties
 
-See also : `StarsKitProperties` enum keys.
+See also : `StarsKitConfigProperties` enum keys.
 You have to conform the data dicitonnary to the expected keys.
 
 **StarsKit offers you the possibility of using any configuration source**: local JSON file, static dictionnary, remote file (remote JSON or Firebase remote configuration file).
@@ -168,6 +168,8 @@ StarsKit.shared.resetContext()
 StarsKit.shared.resetConfig()
 ```
 
+See also `StarsKitContextProperties` for the user defaults properties.
+
 ## Customization
 
 ### Use `StarsKitGraphicContext`
@@ -194,7 +196,8 @@ Go to [Jelly repo](https://github.com/SebastianBoldt/Jelly) for more information
 
 Cosmos provide a `CosmosSettings` property that can be set in the `StarsKitGraphicContext`.
 
-You specify you own stars image, if nil, Comsmos will use the specifed star path via `starPoints`.
+You specify you own stars images (filled/empty).
+If nil, Cosmos will use the specifed star path via `starPoints`.
 
 <p align="center"><img width=60% border=1 src="https://github.com/evgenyneu/Cosmos/raw/master/graphics/Screenshots/cosmos_star_rating_control_for_ios_swift_space.png"></p>
 
@@ -202,8 +205,8 @@ Go to [Comos repo](https://github.com/evgenyneu/Cosmos) for more informations.
 
 ### Step screens
 
-- Simply create the desired xib screen, with the same name than in StarsKit.
-- Sepcify the custom class and the module as "StarsKit".
+- Simply create the desired xib screen, with the same name than in StarsKit
+- Specify the custom class and the module as "StarsKit"
 - Uncheck "Inherit Module From Target"
 
 IBOutlet are optionnals, so you can decide if you want to implement them or not.
