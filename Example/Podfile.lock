@@ -1,6 +1,6 @@
 PODS:
   - Cosmos (15.0.0)
-  - Extra/UIKit (1.1.0)
+  - Extra/UIKit (1.1.1)
   - Jelly (1.2.4)
   - StarsKit (0.1.0):
     - Cosmos (~> 15.0)
@@ -18,7 +18,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Cosmos: a6dbd3d0baa0cc8f51f8598f7508d5a09d0a9ade
-  Extra: 34839d5a5fcaa1a957ea0b5ebcac88ba807bad43
+  Extra: 7c4e5aff4904ecdadc615f63d4c2f0c20910c028
   Jelly: 70e542dd201460211f0f20042bc2c2d31ae239a1
   StarsKit: 680f59fd2932ed11666e179d84f8a69418cb7db6
   SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
