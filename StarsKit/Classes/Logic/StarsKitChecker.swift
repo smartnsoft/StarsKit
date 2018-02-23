@@ -36,17 +36,14 @@ public final class StarsKitChecker {
     
     let configuration = client.configuration
     let context = client.context
-    
-    if context.nbSessions >= configuration.displaySessionCount
+
+    return context.nbSessions >= configuration.displaySessionCount
       && context.nbReminders < configuration.maxNumberOfReminder
       && !context.userAlreadyRespondsToAction
       && (context.lastDisplayDate == nil || Date().isAfter(context.lastDisplayDate,
                                                            pastDays: configuration.daysBeforeAskingAgain))
       && (context.lastCrashDate == nil || Date().isAfter(context.lastCrashDate,
-                                                         pastDays: configuration.daysWithoutCrash)) {
-      return true
-    }
-    return false
+                                                         pastDays: configuration.daysWithoutCrash))
     
   }
 }

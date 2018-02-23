@@ -30,18 +30,25 @@ public final class StarsKitContext {
     }
     
     set {
-      // The two sessions have a too large interval between them to increment the session count
-      // In ohers words, the user not enough use the app for incrementing the session count.
-      if StarsKit.shared.useSessionSpaceChecking && Date().isAfter(self.lastSessionDate, pastDays: StarsKit.shared.configuration.maxDaysBetweenSession) {
+      if StarsKit.shared.useSessionSpaceChecking {
+        // The two sessions have a too large interval between them to increment the session count
+        // In others words, the user not enough use the app for incrementing the session count
+        // We reset it to 1
+        if self.lastSessionDate != nil && Date().isAfter(self.lastSessionDate, pastDays: StarsKit.shared.configuration.maxDaysBetweenSession) {
           UserDefaults.standard.set(1, forKey: StarsKitContextProperties.nbSessions.userDefaultsKey)
-          self.lastSessionDate = Date()
+        }
+        // Else, the session to up is on the same day, so it better to increment it on another day (next one)
+        else if self.lastSessionDate == nil || !Calendar.current.safe_isDate(self.lastSessionDate, inSameDaysAt: Date()) {
+          UserDefaults.standard.set(newValue, forKey: StarsKitContextProperties.nbSessions.userDefaultsKey)
+        }
       } else {
         UserDefaults.standard.set(newValue, forKey: StarsKitContextProperties.nbSessions.userDefaultsKey)
-        self.lastSessionDate = Date()
       }
       
-      if newValue == 0 {
+      if newValue <= 0 {
         self.lastSessionDate = nil
+      } else {
+        self.lastSessionDate = Date()
       }
       
     }
@@ -53,7 +60,11 @@ public final class StarsKitContext {
     }
     
     set {
-      self.lastCrashDate = Date()
+      if newValue <= 0 {
+        self.lastCrashDate = nil
+      } else {
+        self.lastCrashDate = Date()
+      }
       UserDefaults.standard.set(newValue, forKey: StarsKitContextProperties.nbCrashes.userDefaultsKey)
     }
   }
@@ -106,5 +117,14 @@ public final class StarsKitContext {
     set {
       UserDefaults.standard.set(newValue, forKey: StarsKitContextProperties.userAlreadyRespondsToAction.userDefaultsKey)
     }
+  }
+}
+
+extension Calendar {
+  func safe_isDate(_ date: Date?, inSameDaysAt otherDate: Date) -> Bool {
+    if let date = date, Calendar.current.isDate(date, inSameDayAs: otherDate) {
+      return true
+    }
+    return false
   }
 }

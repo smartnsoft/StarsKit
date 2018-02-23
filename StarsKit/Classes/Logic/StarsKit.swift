@@ -79,9 +79,9 @@ public class StarsKit {
       self.jellyAnimator = JellyAnimator(presentation: alertPresentation)
       self.jellyAnimator?.prepare(viewController: alertController)
       self.uiDelegate?.didRatingScreenWillAppear()
+      self.confirmDisplay()
       controller.present(alertController, animated: true, completion: {
         self.uiDelegate?.didRatingScreenDidAppear()
-        self.confirmDisplay()
       })
     }
   }

@@ -30,12 +30,12 @@ class StarsKitCheckerTests: XCTestCase {
   
   static func makeFakeSessions() {
     StarsKit.shared.context.nbSessions = 16
-    UserDefaults.standard.set(nil, forKey: "StarsKit.UserDefaults.lastSessionDate")
   }
   
   override func setUp() {
     super.setUp()
     StarsKit.shared.updateConfig(from: StubsReader.config(from: "DefaultConfiguration"))
+    StarsKit.shared.uiDelegate = self.client
   }
   
   override func tearDown() {
@@ -62,19 +62,19 @@ class StarsKitCheckerTests: XCTestCase {
   }
   
   func testDisplaySessionsLess() {
-    StarsKit.shared.context.nbSessions += 1
-    XCTAssertFalse(StarsKit.shared.displayRateIfNeeded(), "Pop-up have not to be displayed withtout enought number of sessions")
+    StarsKit.shared.context.nbSessions = 1
+    XCTAssertFalse(StarsKit.shared.displayRateIfNeeded(), "Pop-up have not to be displayed without enought number of sessions")
   }
   
   func testDisplayDate() {
     StarsKitCheckerTests.makeFakeSessions()
-    StarsKit.shared.displayRateIfNeeded()
+    XCTAssertTrue(StarsKit.shared.displayRateIfNeeded())
     XCTAssertFalse(StarsKit.shared.displayRateIfNeeded(), "Pop-up have to not be displayed after recently be displayed")
   }
   
   func testDisplayDateEnough() {
     StarsKitCheckerTests.makeFakeSessions()
-    StarsKit.shared.displayRateIfNeeded()
+    XCTAssertTrue(StarsKit.shared.displayRateIfNeeded())
     if let lastDisplayDate = StarsKit.shared.context.lastDisplayDate {
       let expiredDisplayDate = lastDisplayDate - 4.days
       UserDefaults.standard.set(expiredDisplayDate, forKey: "StarsKit.UserDefaults.context.lastDisplayDate")
@@ -118,34 +118,53 @@ class StarsKitCheckerTests: XCTestCase {
     
   }
   
-  func testReminders() {
-    
+  func testRemindersOutOfBound() {
+    StarsKitCheckerTests.makeFakeSessions()
     for _ in 1...3 {
-      StarsKit.shared.context.nbSessions += 6
-      StarsKit.shared.displayRateIfNeeded()
+      StarsKit.shared.context.nbSessions += 1
+      XCTAssertTrue(StarsKit.shared.displayRateIfNeeded())
       if let lastDisplayDate = StarsKit.shared.context.lastDisplayDate {
         let expiredDisplayDate = lastDisplayDate - 4.days
         UserDefaults.standard.set(expiredDisplayDate, forKey: "StarsKit.UserDefaults.context.lastDisplayDate")
       }
       UserDefaults.standard.set(nil, forKey: "StarsKit.UserDefaults.context.lastSessionDate")
     }
-    print("nbReminders = \(StarsKit.shared.context.nbReminders)")
-    XCTAssertFalse(StarsKit.shared.displayRateIfNeeded(), "Custom checking needs to display rating")
+    XCTAssertFalse(StarsKit.shared.displayRateIfNeeded(), "Custom checking has not to display rating")
   }
   
   func testRemindersEnough() {
     
+    StarsKitCheckerTests.makeFakeSessions()
     for _ in 1...2 {
-      StarsKit.shared.context.nbSessions += 6
-      StarsKit.shared.displayRateIfNeeded()
+      StarsKit.shared.context.nbSessions += 1
+      XCTAssertTrue(StarsKit.shared.displayRateIfNeeded())
       if let lastDisplayDate = StarsKit.shared.context.lastDisplayDate {
         let expiredDisplayDate = lastDisplayDate - 4.days
         UserDefaults.standard.set(expiredDisplayDate, forKey: "StarsKit.UserDefaults.context.lastDisplayDate")
       }
       UserDefaults.standard.set(nil, forKey: "StarsKit.UserDefaults.context.lastSessionDate")
     }
-    print("nbReminders = \(StarsKit.shared.context.nbReminders)")
     XCTAssertTrue(StarsKit.shared.displayRateIfNeeded(), "Custom checking needs to display rating")
+  }
+  
+  func testSessionIncrementSameDay() {
+    StarsKit.shared.context.nbSessions = 0
+    StarsKit.shared.context.nbSessions += 1
+    StarsKit.shared.context.nbSessions += 1
+    XCTAssertTrue(StarsKit.shared.context.nbSessions == 1)
+  }
+  
+  func testSessionIncrementDifferentDay() {
+    StarsKit.shared.context.nbSessions = 0
+    StarsKit.shared.context.nbSessions += 1
+    //One day ellapsed
+    if let lastSessionDate = UserDefaults.standard.value(forKey: "StarsKit.UserDefaults.context.lastSessionDate") as? Date {
+      let newDate = lastSessionDate - 1.day
+      UserDefaults.standard.set(newDate, forKey: "StarsKit.UserDefaults.context.lastSessionDate")
+    }
+    
+    StarsKit.shared.context.nbSessions += 1
+    XCTAssertTrue(StarsKit.shared.context.nbSessions == 2)
   }
   
 }
@@ -169,6 +188,30 @@ final class StarsKitClient: StarsKitDelegate {
   }
   
   func didChooseLater(at step: RatingStep) {
+    //
+  }
+  
+  
+}
+
+extension StarsKitClient: StarsKitUIDelegate {
+  func presenterController() -> UIViewController? {
+    return UIViewController() //mock controller
+  }
+  
+  func didRatingScreenWillAppear() {
+    //
+  }
+  
+  func didRatingScreenDidAppear() {
+    //
+  }
+  
+  func didRatingScreenWillDisappear() {
+    //
+  }
+  
+  func didRatingScreenDidDisappear() {
     //
   }
   
