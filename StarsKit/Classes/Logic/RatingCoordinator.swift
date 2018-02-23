@@ -60,12 +60,12 @@ final class RatingCoordinator {
     self.graphicContext = graphicContext
     self.context = context
     self.delegate = delegate
-    self.step = RatingStep.rating(context: context)
+    self.step = RatingStep.rating
   }
   
   // MARK: Workflow
   func start() {
-    self.step = RatingStep.rating(context: context)
+    self.step = RatingStep.rating
     self.rateViewController = StarsRateViewController(graphicContext: self.graphicContext, coordinator: self)
     if let starsPopViewController = self.starsPopViewController, let starsRateController = self.rateViewController {
       starsPopViewController.ex.addChildViewController(starsRateController,
@@ -91,7 +91,7 @@ final class RatingCoordinator {
   }
   
   private func makeFeedback() {
-    self.step = .feedback(context: self.context)
+    self.step = .feedback
     if let starsPopViewController = self.starsPopViewController {
       let feebackController = FeedbackViewController(graphicContext: self.graphicContext, coordinator: self)
       self.feedbackViewController = feebackController
@@ -102,7 +102,7 @@ final class RatingCoordinator {
   }
   
   private func makeStoreReview() {
-    self.step = .storeReview(context: self.context)
+    self.step = .storeReview
     if let starsPopViewController = self.starsPopViewController {
       let storeViewController = StoreViewController(graphicContext: self.graphicContext, coordinator: self)
       self.storeViewController = storeViewController

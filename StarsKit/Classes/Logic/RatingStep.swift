@@ -28,9 +28,9 @@ import Foundation
 /// - feedback: User has to choose giving a feedback because of disliking
 /// - storeReview: User has the choice of giving an AppStore review
 public enum RatingStep {
-  case rating(context: StarsKitContext)
-  case feedback(context: StarsKitContext)
-  case storeReview(context: StarsKitContext)
+  case rating
+  case feedback
+  case storeReview
   
   func title() -> String {
     switch self {

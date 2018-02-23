@@ -71,6 +71,8 @@ class ViewController: UIViewController {
           StarsKit.shared.graphicContext.backgroundHeaderTitleImage = bgImage
           StarsKit.shared.delegate = self
           StarsKit.shared.uiDelegate = self
+//          StarsKit.shared.graphicContext.emptyStarImage = nil
+//          StarsKit.shared.graphicContext.emptyStarImage = nil
           self.updateDisplayMetrics()
         }
       } catch {
