@@ -14,9 +14,10 @@ Pod::Spec.new do |s|
 
   s.source_files = 'StarsKit/Classes/**/*'
 
-  s.resource_bundles = {
-    'StarsKit' => ['StarsKit/Assets/StarsKit.bundle/*.lproj/*.strings', 'StarsKit/Assets/StarsKitImages.xcassets']
-  }
+  s.resources = [
+    'StarsKit/Assets/*.lproj/*.strings',
+    'StarsKit/Assets/StarsKitImages.xcassets'
+    ]
 
   s.frameworks = 'UIKit'
   s.dependency 'Cosmos', '~> 15.0'

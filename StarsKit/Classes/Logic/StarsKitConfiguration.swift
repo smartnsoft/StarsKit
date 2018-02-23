@@ -156,17 +156,16 @@ public final class StarsKitConfiguration {
     if StarsKit.shared.localLocalizableStringsEnabled {
       let overridedLocalizable = NSLocalizedString(key.localizableKey, bundle: Bundle.main, comment: "")
       if overridedLocalizable == key.localizableKey {
-        let bundlePath = Bundle(for: StarsKit.self).path(forResource: "StarsKit", ofType: "bundle")
-        if let bundlePath = bundlePath, let resourceBundle = Bundle(path: bundlePath) {
-          return NSLocalizedString(key.localizableKey, tableName: "StarsKit", bundle: resourceBundle, comment: "")
-        }
+        return NSLocalizedString(key.localizableKey,
+                                 tableName: "StarsKit",
+                                 bundle: Bundle(for: StarsKit.self),
+                                 comment: "")
       } else {
         return overridedLocalizable
       }
     } else {
       return UserDefaults.standard.string(forKey: key.userDefaultsKey) ?? ""
     }
-    return ""
   }
   
 }
