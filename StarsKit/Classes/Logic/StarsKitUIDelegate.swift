@@ -26,7 +26,7 @@ import Foundation
 public protocol StarsKitUIDelegate: class {
   
   /// Ask which controller is needed to display the rate pop-up
-  func presenterController() -> UIViewController
+  func presenterController() -> UIViewController?
   
   /// Rating screen is gonna to be displayed
   func didRatingScreenWillAppear()

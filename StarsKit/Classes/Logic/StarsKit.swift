@@ -81,6 +81,7 @@ public class StarsKit {
       self.uiDelegate?.didRatingScreenWillAppear()
       controller.present(alertController, animated: true, completion: {
         self.uiDelegate?.didRatingScreenDidAppear()
+        self.confirmDisplay()
       })
     }
   }
@@ -93,13 +94,11 @@ public class StarsKit {
       || (self.useDefaultBehavior && StarsKitChecker.needDisplayRateScreen(for: self))
       || (self.delegate != nil && self.delegate?.needCustomDisplayRateScreen() == true) {
       
-      self.context.nbReminders += 1
-      self.context.lastDisplayDate = Date()
-      
       if self.priorityUseNativeRate {
         //Use 10.3 + native app rating
         if #available(iOS 10.3, *) {
           SKStoreReviewController.requestReview()
+          self.confirmDisplay()
         } else {
           self.displayRating()
         }
@@ -112,6 +111,11 @@ public class StarsKit {
   }
   
   /// MARK: Metrics update
+  
+  private func confirmDisplay() {
+    self.context.nbReminders += 1
+    self.context.lastDisplayDate = Date()
+  }
   
   /// See the `StarsKitContextProperties`
   /// **Warning**: Be sure about calling a reset context !

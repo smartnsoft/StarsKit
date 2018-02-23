@@ -169,7 +169,7 @@ extension ViewController: StarsKitUIDelegate {
     print("didRatingScreenDidDisappear")
   }
   
-  func presenterController() -> UIViewController {
+  func presenterController() -> UIViewController? {
     // Return the controller where the rate screen will be presented
     // The current, the top most one, anywhere, anyone
     return self
