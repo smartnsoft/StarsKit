@@ -115,25 +115,32 @@ final class RatingCoordinator {
   
   // MARK: Step ending events
   func didChooseFeedback() {
-    StarsKit.shared.context.userAlreadyRespondsToAction = true
-    StarsKit.shared.delegate?.didChooseAction(at: self.step)
-    self.dismiss()
+    self.dismissAction(at: self.step)
   }
   
   func didChooseStoreReview() {
-    StarsKit.shared.context.userAlreadyRespondsToAction = true
-    StarsKit.shared.delegate?.didChooseAction(at: self.step)
-    self.dismiss()
+    self.dismissAction(at: self.step)
   }
   
   func later() {
-    StarsKit.shared.delegate?.didChooseLater(at: self.step)
-    self.dismiss()
+    self.dismissLater(at: self.step)
   }
   
-  private func dismiss() {
+  private func dismissAction(at step: RatingStep) {
+    StarsKit.shared.context.userAlreadyRespondsToAction = true
+    
     StarsKit.shared.uiDelegate?.didRatingScreenWillDisappear()
     self.starsPopViewController?.dismiss(animated: true, completion: {
+      StarsKit.shared.delegate?.didChooseAction(at: self.step)
+      StarsKit.shared.uiDelegate?.didRatingScreenDidDisappear()
+    })
+    
+  }
+  
+  private func dismissLater(at step: RatingStep) {
+    StarsKit.shared.uiDelegate?.didRatingScreenWillDisappear()
+    self.starsPopViewController?.dismiss(animated: true, completion: {
+      StarsKit.shared.delegate?.didChooseLater(at: self.step)
       StarsKit.shared.uiDelegate?.didRatingScreenDidDisappear()
     })
   }
