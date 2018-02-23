@@ -144,7 +144,7 @@ You can also decide of:
 - **`validateRatingButtonEnable`**: disable or enable the submit step rating. If disable, the rate will be instantly submit after touch.
 - **`useDefaultBehavior`**: disable the default StarsKit display checking behavior and implement your own in the `StarsKitDelegate`
 - **`priorityUseNativeRate`**: enable the native rating in iOS 10.3+, if not available, it will use the StarsKit screens 👌🏼
-- **`useSessionSpaceChecking`**: disable/enable the default checking of time ellapsed between sessions. If enable, when you update the session count, **the session count will only be updated if the time between session is completly ellapsed.**. In ohers words, the user not enough use the app for incrementing the session count.
+- **`useSessionSpaceChecking`**: disable/enable the default checking of time ellapsed between sessions. If enable, when you update the session count, **the session count will only be updated if the time between session is completly ellapsed.**. In others words, the user not enough uses the app for incrementing the session count. The same if you want to increment the session the same day than the last before, it will not be setted.
 - **`localLocalizableStringsEnabled`**: enable the localization titles instead of configuration one. It will use the default StarKit strings. If you override them in your app localizable strings (with the same key), it will take them 😎.
 
 ### `StarsKitContext`: update the metrics 
