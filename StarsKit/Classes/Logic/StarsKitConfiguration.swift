@@ -22,7 +22,6 @@
 
 import Foundation
 
-
 /// The Stars
 public final class StarsKitConfiguration {
   
@@ -97,7 +96,7 @@ public final class StarsKitConfiguration {
     }
   }
   
-  //MARK: Configuration update
+  // MARK: Configuration update
   
   /// Update the StarsKit configuration. It will change the fire values.
   ///
@@ -108,8 +107,7 @@ public final class StarsKitConfiguration {
     self.updateLocalizables(from: config)
   }
   
-  //MARK: Private methods
-  
+  // MARK: Private methods
   
   /// Update localizable UserDefaults strings
   ///
@@ -144,7 +142,6 @@ public final class StarsKitConfiguration {
   private func updateLocalizableString(string: String, `for` key: StarsKitLocalizableKeys) {
     UserDefaults.standard.setValue(string, forKey: key.userDefaultsKey)
   }
-  
   
   /// Returns the localizable title for a specific key.
   ///

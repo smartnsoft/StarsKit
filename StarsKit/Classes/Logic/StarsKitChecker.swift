@@ -27,7 +27,6 @@ public final class StarsKitChecker {
   
   @discardableResult
   
-  
   /// Default display checking
   ///
   /// - Parameter client: StareKit check instance
@@ -44,15 +43,13 @@ public final class StarsKitChecker {
       && (context.lastDisplayDate == nil || Date().isAfter(context.lastDisplayDate,
                                                            pastDays: configuration.daysBeforeAskingAgain))
       && (context.lastCrashDate == nil || Date().isAfter(context.lastCrashDate,
-                                                         pastDays: configuration.daysWithoutCrash))
-    {
+                                                         pastDays: configuration.daysWithoutCrash)) {
       return true
     }
     return false
     
   }
 }
-
 
 // MARK: - TimeInterval
 extension TimeInterval {

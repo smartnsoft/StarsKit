@@ -1,12 +1,18 @@
 use_frameworks!
 
-platform :ios, '9.0'
-
-target 'StarsKit_Example' do
+abstract_target 'StarsKitAbstract' do
+  platform :ios, '9.0'
+  
   pod 'StarsKit', :path => '../'
+  pod 'SwiftLint'
+  
+  target 'StarsKit_Example' do
+  end
+  
+  target 'StarsKit_ExampleTests' do
+    pod 'SwiftDate', '~> 4.5.1'
+  end
+  
 end
 
-target 'StarsKit_ExampleTests' do
-  pod 'SwiftDate', '~> 4.5.1'
-  pod 'StarsKit', :path => '../'
-end
+

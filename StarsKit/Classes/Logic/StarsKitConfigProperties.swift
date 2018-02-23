@@ -34,7 +34,7 @@ internal enum StarsKitConfigProperties: String {
   case maxNumberOfReminder
   case maxDaysBetweenSession
   
-  static let allIntValues : [StarsKitConfigProperties] = [.displaySessionCount,
+  static let allIntValues: [StarsKitConfigProperties] = [.displaySessionCount,
                                                           .positiveStarsLimit,
                                                           .daysWithoutCrash,
                                                           .daysBeforeAskingAgain,

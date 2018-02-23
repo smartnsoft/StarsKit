@@ -60,7 +60,6 @@ public class StarsPopViewController: UIViewController {
                                               delegate: self)
     self.coordinator?.start()
     
-    
   }
   
   private func prepareView() {
@@ -74,7 +73,6 @@ public class StarsPopViewController: UIViewController {
   }
   
 }
-
 
 // MARK: - RatingCoordinatorDelegate
 extension StarsPopViewController: RatingCoordinatorDelegate {

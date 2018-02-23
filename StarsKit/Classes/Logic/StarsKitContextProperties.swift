@@ -35,7 +35,7 @@ internal enum StarsKitContextProperties: String {
   case userAlreadyRespondsToAction
   case localLocalizableStringsEnabled
   
-  static let allIntValues : [StarsKitContextProperties] = [.nbSessions,
+  static let allIntValues: [StarsKitContextProperties] = [.nbSessions,
                                                            .nbCrashes,
                                                            .nbReminders]
   

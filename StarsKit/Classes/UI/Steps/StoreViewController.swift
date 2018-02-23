@@ -22,7 +22,6 @@
 
 import UIKit
 
-
 /// When the user like the app, it will be redirect to this screen
 public class StoreViewController: StepViewController {
   

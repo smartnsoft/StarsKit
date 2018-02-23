@@ -25,7 +25,6 @@ import UIKit
 import Cosmos
 import Jelly
 
-
 /// UI customization properties for your rating steps screens
 public class StarsKitGraphicContext {
   
