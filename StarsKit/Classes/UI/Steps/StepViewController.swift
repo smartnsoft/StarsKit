@@ -46,6 +46,7 @@ public class StepViewController: UIViewController {
   // MARK: View Life Cycle
   override public func viewDidLoad() {
     super.viewDidLoad()
+    self.ibIndicatorLabel?.adjustsFontSizeToFitWidth = true
     self.prepareViews()
   }
   

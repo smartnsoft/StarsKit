@@ -25,16 +25,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="e6b-Xs-CAc">
-                    <rect key="frame" x="0.0" y="0.0" width="383" height="205"/>
+                    <rect key="frame" x="0.0" y="10" width="383" height="195"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNY-HG-oer">
-                            <rect key="frame" x="30" y="0.0" width="323" height="20"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNY-HG-oer">
+                            <rect key="frame" x="30" y="0.0" width="383" height="19.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOZ-fG-jjk" customClass="CosmosView" customModule="Cosmos">
-                            <rect key="frame" x="30" y="40" width="323" height="105"/>
+                            <rect key="frame" x="191.5" y="39.5" width="323" height="95.5"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="cFo-jS-vBk"/>
@@ -49,10 +49,10 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3ZT-1G-8aI">
-                            <rect key="frame" x="30" y="165" width="323" height="40"/>
+                            <rect key="frame" x="30" y="155" width="383" height="40"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnS-nd-VTc">
-                                    <rect key="frame" x="0.0" y="0.0" width="151.5" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="191.5" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="t6p-gJ-08i"/>
                                     </constraints>
@@ -62,7 +62,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukm-JX-UCC">
-                                    <rect key="frame" x="171.5" y="0.0" width="151.5" height="40"/>
+                                    <rect key="frame" x="161.5" y="0.0" width="191.5" height="40"/>
                                     <state key="normal" title="Button"/>
                                     <connections>
                                         <action selector="didTapActionButton:" destination="-1" eventType="touchUpInside" id="Ojf-kB-cWn"/>
@@ -82,7 +82,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="e6b-Xs-CAc" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-20" id="Kb4-jB-pGl"/>
-                <constraint firstItem="e6b-Xs-CAc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gX5-YS-pKd"/>
+                <constraint firstItem="e6b-Xs-CAc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="gX5-YS-pKd"/>
                 <constraint firstItem="e6b-Xs-CAc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="oT6-SZ-U6I"/>
                 <constraint firstItem="e6b-Xs-CAc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rPj-zr-Ws1"/>
             </constraints>
