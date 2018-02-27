@@ -103,6 +103,7 @@ You can specify metrics to trigger the default display behavior or use your own 
 - [X] Days before asking again
 - [X] Number of reminding
 - [X] Maximum of days betwteen session count
+- [X] email properties: mail address, mail subject, mail header body
 - [X] Step 1: Rate screen properties
 - [X] Step 2: Feedback screen properties
 - [X] Step 3: Store review screen properties

@@ -33,6 +33,9 @@ internal enum StarsKitConfigProperties: String {
   case daysBeforeAskingAgain
   case maxNumberOfReminder
   case maxDaysBetweenSession
+  case emailSupport
+  case emailObject
+  case emailHeaderContent
   
   static let allIntValues: [StarsKitConfigProperties] = [.displaySessionCount,
                                                           .positiveStarsLimit,
@@ -40,6 +43,10 @@ internal enum StarsKitConfigProperties: String {
                                                           .daysBeforeAskingAgain,
                                                           .maxNumberOfReminder,
                                                           .maxDaysBetweenSession]
+  
+  static let allStringValues: [StarsKitConfigProperties] = [.emailSupport,
+                                                            .emailObject,
+                                                            .emailHeaderContent]
   
   var userDefaultsKey: String {
     return "StarsKit.UserDefaults.config.\(self)"

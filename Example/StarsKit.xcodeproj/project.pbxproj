@@ -21,7 +21,6 @@
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
-		6817EAEA5A0BB1B23D2D44E8 /* Pods_StarsKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7F55B5009841DA7B6DDAC3 /* Pods_StarsKit_Example.framework */; };
 		CAA1F5F21459A5EAFAB2C65E /* Pods_StarsKitAbstract_StarsKit_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC9EE6816F8688BB05CE66C /* Pods_StarsKitAbstract_StarsKit_ExampleTests.framework */; };
 		F034C28FDCD991D00D3DBF6A /* Pods_StarsKit_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34350EA4936D1050D44070C7 /* Pods_StarsKit_ExampleTests.framework */; };
 /* End PBXBuildFile section */
@@ -100,7 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6817EAEA5A0BB1B23D2D44E8 /* Pods_StarsKit_Example.framework in Frameworks */,
 				5F5D6FDE5B63DFF92C096955 /* Pods_StarsKitAbstract_StarsKit_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +314,7 @@
 					};
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = R78Q854ZRC;
 						LastSwiftMigration = 0900;
 					};
 				};
@@ -764,6 +763,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = R78Q854ZRC;
 				INFOPLIST_FILE = StarsKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -782,6 +782,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = R78Q854ZRC;
 				INFOPLIST_FILE = StarsKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -9,6 +9,7 @@ import UIKit
 import StarsKit
 import Extra
 import Jelly
+import MessageUI
 
 enum TransitionType: Int {
   case `default`
@@ -48,7 +49,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var ibNbSessionsLabel: UILabel!
   @IBOutlet weak var ibNbCrashLabel: UILabel!
   @IBOutlet weak var ibLastCrashDate: UILabel!
-
+  
   @IBOutlet weak var ibSessionintervalChecking: UISwitch!
   
   override func viewDidLoad() {
@@ -71,8 +72,8 @@ class ViewController: UIViewController {
           StarsKit.shared.graphicContext.backgroundHeaderTitleImage = bgImage
           StarsKit.shared.delegate = self
           StarsKit.shared.uiDelegate = self
-//          StarsKit.shared.graphicContext.emptyStarImage = nil
-//          StarsKit.shared.graphicContext.emptyStarImage = nil
+          //          StarsKit.shared.graphicContext.emptyStarImage = nil
+          //          StarsKit.shared.graphicContext.emptyStarImage = nil
           self.updateDisplayMetrics()
         }
       } catch {
@@ -85,6 +86,23 @@ class ViewController: UIViewController {
     self.ibNbCrashLabel.text = "Crashes: \(StarsKit.shared.context.nbCrashes)"
     self.ibNbSessionsLabel.text = "Sessions: \(StarsKit.shared.context.nbSessions)"
     self.ibLastCrashDate.text = "Last crash at: \(StarsKit.shared.context.lastCrashDate?.description ?? "?")"
+  }
+  
+  private func sendMail() {
+    if MFMailComposeViewController.canSendMail() == true {
+      
+      let recipients = [StarsKit.shared.configuration.emailSupport ?? ""]
+      let mailController = MFMailComposeViewController()
+      mailController.mailComposeDelegate = self
+      mailController.setToRecipients(recipients)
+      mailController.setSubject(StarsKit.shared.configuration.emailObject ?? "")
+      mailController.setMessageBody(StarsKit.shared.configuration.emailHeaderContent ?? "", isHTML: false)
+      
+      self.present(mailController, animated: true, completion: {
+        //
+      })
+    }
+    
   }
   
   @IBAction func didSwitchNativeRating(_ sender: UISwitch) {
@@ -133,6 +151,9 @@ extension ViewController: StarsKitDelegate {
   }
   
   func didChooseAction(at step: RatingStep) {
+    if step == .feedback {
+      self.sendMail()
+    }
     print("Did choose action button at step \(step)")
   }
   
@@ -175,5 +196,23 @@ extension ViewController: StarsKitUIDelegate {
     // Return the controller where the rate screen will be presented
     // The current, the top most one, anywhere, anyone
     return self
+  }
+}
+
+// MARK: MFMessageComposeViewControllerDelegate
+extension ViewController: MFMailComposeViewControllerDelegate {
+  
+  func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    controller.dismiss(animated: true) { () -> Void in
+      switch result {
+      case .sent:
+        print("mail send")
+      case .failed:
+        print("mail failed")
+      case .saved:
+        print("mail saved")
+      default: break
+      }
+    }
   }
 }

@@ -96,6 +96,36 @@ public final class StarsKitConfiguration {
     }
   }
   
+  public internal(set) var emailSupport: String? {
+    get {
+      return UserDefaults.standard.string(forKey: StarsKitConfigProperties.emailSupport.userDefaultsKey)
+    }
+    
+    set {
+      UserDefaults.standard.set(newValue, forKey: StarsKitConfigProperties.emailSupport.userDefaultsKey)
+    }
+  }
+  
+  public internal(set) var emailObject: String? {
+    get {
+      return UserDefaults.standard.string(forKey: StarsKitConfigProperties.emailObject.userDefaultsKey)
+    }
+    
+    set {
+      UserDefaults.standard.set(newValue, forKey: StarsKitConfigProperties.emailObject.userDefaultsKey)
+    }
+  }
+  
+  public internal(set) var emailHeaderContent: String? {
+    get {
+      return UserDefaults.standard.string(forKey: StarsKitConfigProperties.emailHeaderContent.userDefaultsKey)
+    }
+    
+    set {
+      UserDefaults.standard.set(newValue, forKey: StarsKitConfigProperties.emailHeaderContent.userDefaultsKey)
+    }
+  }
+  
   // MARK: Configuration update
   
   /// Update the StarsKit configuration. It will change the fire values.
@@ -131,6 +161,12 @@ public final class StarsKitConfiguration {
     StarsKitConfigProperties.allIntValues.forEach { (property) in
       if let intValue = config[property.rawValue] as? Int {
         self.updateInt(value: intValue, for: property)
+      }
+    }
+    
+    StarsKitConfigProperties.allStringValues.forEach { (property) in
+      if let stringValue = config[property.rawValue] as? String {
+        UserDefaults.standard.setValue(stringValue, forKey: property.userDefaultsKey)
       }
     }
   }
