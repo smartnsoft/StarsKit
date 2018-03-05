@@ -85,7 +85,7 @@ class StarsKitCheckerTests: XCTestCase {
   func testDisplayCrash() {
     StarsKitCheckerTests.makeFakeSessions()
     StarsKit.shared.context.nbCrashes = 1
-    XCTAsser—————tFalse(StarsKit.shared.displayRateIfNeeded(), "Pop-up have to not be displayed after recently have a crash displayed")
+    XCTAssertFalse(StarsKit.shared.displayRateIfNeeded(), "Pop-up have to not be displayed after recently have a crash displayed")
   }
   
   func testDisplayCrashAfter() {
