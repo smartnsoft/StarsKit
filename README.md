@@ -11,7 +11,7 @@
 
 StarsKit is a Swift library to simplify, customize and configure your app rating workflow.
 
-It can be based on a remote, local or static configuration data with optionnals properties.
+It can be based on a remote, local or static configuration data with optionals properties.
 
 <p align="center"><img width=32% src="./img/step_rate.png"> <img width=32% src="./img/step_feedback.png"> <img width=32% src="./img/step_store.png"></p>
 
@@ -38,7 +38,7 @@ pod 'StarsKit'
 
 Today we have third parties dependencies, but the purpose is to avoid them the most.
 
-We also wan to have a quick available library and significant customization, we use 3 dependencies:
+We also want to have a quickly available library and significant customization, we use 3 dependencies:
 
 - [Extra/UIKit](https://github.com/smartnsoft/Extra): our library to simplify UIKit operation code
 - [Jelly](https://github.com/SebastianBoldt/Jelly): a simple UI component to simplify the rating transition display
@@ -51,16 +51,16 @@ We also wan to have a quick available library and significant customization, we 
 The main feature of the library is to **simply use static or dynamic (remote) configuration to show native or custom app rating screen**.
 
 If the user chooses a negative rate, he will be redirected to the **feedback screen**.
-If the user chooses a positive rate, he will be redirected to the **Store review sreen**.
+If the user chooses a positive rate, he will be redirected to the **Store review screen**.
 
-You and only you choose what to do when the user choose to give a feedback, like:
+You and only you choose what to do when the user chooses to give a feedback, like:
 
 - send an e-mail
 - launch your own feedback screen
 
 It's the same when the user chooses to rate the app: 
 
-- redirect the user on the AppStore review page
+- redirect the user to the AppStore review page
 - call a custom analytics
 
 ### Native StoreKit screen
@@ -72,10 +72,10 @@ You can also display the native `StoreKit` screen instead of custom screens (iOS
 ### Features list
 
 - [X] Use localizable or configuration strings
-- [X] Default localizables strings : 
+- [X] Default localizable strings : 
 - - [X] EN
 - - [X] FR
-- [X] Overridable localizables strings
+- [X] Overridable localizable strings
 - [X] Static configuration strings
 - [X] Cocoapods integration
 - [X] Default & configurable step transitions
@@ -84,25 +84,25 @@ You can also display the native `StoreKit` screen instead of custom screens (iOS
 - [X] Customizable stars style
 - [X] Customizable fonts, text & tint colors
 - [X] Rating & screen actions callbacks
-- [X] Configurable with dictionnary / data or remote URL: everything you want!
+- [X] Configurable with dictionary/data or remote URL: everything you want!
 - [X] Native iOS 10.3+ StoreKit integration
 - [X] Overridable layouts
-- [X] Life cycle display events ([will/did]appear/disappear)
-- [ ] Additionnal condition checking on the default check
+- [X] Lifecycle display events ([will/did]appear/disappear)
+- [ ] Additional condition checking on the default check
 - [ ] Carthage integration
 
 ## Configurable metrics for display
 
 You can specify metrics to trigger the default display behavior or use your own one.
 
-- [X] Disable / enable the component
+- [X] Disable/enable the component
 - [X] Increment sessions counter
 - [X] Increment crashes counter
 - [X] Static configuration strings
 - [X] Days without crashes
 - [X] Days before asking again
 - [X] Number of reminding
-- [X] Maximum of days betwteen session count
+- [X] Maximum of days between session count
 - [X] email properties: mail address, mail subject, mail header body
 - [X] Step 1: Rate screen properties
 - [X] Step 2: Feedback screen properties
@@ -116,13 +116,13 @@ You can specify metrics to trigger the default display behavior or use your own 
 // Simply call:
 StarsKit.shared.displayRateIfNeeded()
 
-// You can also force the display via:
+// You can also force the display:
 StarsKit.shared.displayRateIfNeeded(forced: true)
 ```
 ### Update the configuration properties
 
-See also : `StarsKitConfigProperties` enum keys.
-You have to conform the data dicitonnary to the expected keys.
+See also: `StarsKitConfigProperties` enum keys.
+You have to conform the data dictionary to the expected keys.
 
 **StarsKit offers you the possibility of using any configuration source**: local JSON file, static dictionnary, remote file (remote JSON or Firebase remote configuration file).
 
@@ -142,10 +142,10 @@ You can set-up your own `configuration`, `context` and `graphicContext` for Star
 
 You can also decide of:
 
-- **`validateRatingButtonEnable`**: disable or enable the submit step rating. If disable, the rate will be instantly submit after touch.
+- **`validateRatingButtonEnable`**: disable or enable the submit step rating. If disabled, the rate will be instantly submited after user touch.
 - **`useDefaultBehavior`**: disable the default StarsKit display checking behavior and implement your own in the `StarsKitDelegate`
 - **`priorityUseNativeRate`**: enable the native rating in iOS 10.3+, if not available, it will use the StarsKit screens 👌🏼
-- **`useSessionSpaceChecking`**: disable/enable the default checking of time ellapsed between sessions. If enable, when you update the session count, **the session count will only be updated if the time between session is completly ellapsed.**. In others words, the user not enough uses the app for incrementing the session count. The same if you want to increment the session the same day than the last before, it will not be setted.
+- **`useSessionSpaceChecking`**: disable/enable the default checking of time elapsed between sessions. If enabled, when you update the session count, **the session count will only be updated if the time between session is completely elapsed.**. In others words, the user not enough uses the app for incrementing the session count. The same if you want to increment the session the same day than the last before, it will not be set.
 - **`localLocalizableStringsEnabled`**: enable the localization titles instead of configuration one. It will use the default StarKit strings. If you override them in your app localizable strings (with the same key), it will take them 😎.
 
 ### `StarsKitContext`: update the metrics 
@@ -187,22 +187,22 @@ Customizable items :
 
 ### Transitions & display (Jelly)
 
-StarsKit use Jelly fro customizable transitions. You can specify your own via the  the   `jellyCustomTransition` property in the `StarsKitGraphicContext`.
+StarsKit uses Jelly fro customizable transitions. You can specify your own via the `jellyCustomTransition` property in the `StarsKitGraphicContext`.
 
 <p align="center"><img width=48% src="./img/presentation_black.png"> <img width=48% src="./img/presentation_bottom.png"></p>
 
-Go to [Jelly repo](https://github.com/SebastianBoldt/Jelly) for more informations.
+Go to [Jelly repo](https://github.com/SebastianBoldt/Jelly) for more information.
 
 ### Stars (Cosmos)
 
-Cosmos provide a `CosmosSettings` property that can be set in the `StarsKitGraphicContext`.
+Cosmos provides a `CosmosSettings` property that can be set in the `StarsKitGraphicContext`.
 
-You specify you own stars images (filled/empty).
-If nil, Cosmos will use the specifed star path via `starPoints`.
+You specify your own stars images (filled/empty).
+If nil, Cosmos will use the specified star path via `starPoints`.
 
 <p align="center"><img width=60% border=1 src="https://github.com/evgenyneu/Cosmos/raw/master/graphics/Screenshots/cosmos_star_rating_control_for_ios_swift_space.png"></p>
 
-Go to [Comos repo](https://github.com/evgenyneu/Cosmos) for more informations.
+Go to [Comos repo](https://github.com/evgenyneu/Cosmos) for more information.
 
 ### Step screens
 
@@ -210,7 +210,7 @@ Go to [Comos repo](https://github.com/evgenyneu/Cosmos) for more informations.
 - Specify the custom class and the module as "StarsKit"
 - Uncheck "Inherit Module From Target"
 
-IBOutlet are optionnals, so you can decide if you want to implement them or not.
+IBOutlets are optionnals, so you can decide if you want to implement them or not.
 
 <p align="center"><img width=90% border=1 src="./img/custom_xib_class.png"></p>
 
