@@ -169,6 +169,27 @@ StarsKit.shared.resetContext()
 StarsKit.shared.resetConfig()
 ```
 
+You can also use the `nbCrashes` property with **Fabric and Crashlytics**:
+
+``` swift
+
+extension AppDelegate {
+  
+  func setupFabricSDK(_ application: UIApplication) {
+    Fabric.with([Crashlytics.self])
+    Crashlytics.sharedInstance().delegate = self
+  }
+}
+
+// MARK: - CrashlyticsDelegate
+extension AppDelegate: CrashlyticsDelegate {
+  func crashlyticsDidDetectReport(forLastExecution report: CLSReport) {
+    StarsKit.shared.context.nbCrashes += 1
+  }
+}
+
+```
+
 See also `StarsKitContextProperties` for the user defaults properties.
 
 ## Customization
