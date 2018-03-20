@@ -9,7 +9,7 @@
 
 ### Look at this beautiful MouSTARche!
 
-StarsKit is a Swift library to simplify, customize and configure your app rating workflow.
+StarsKit is a Swift library to simplify, customize and configure your iOS app rating workflow.
 
 It can be based on a remote, local or static configuration data with optionnals properties.
 
