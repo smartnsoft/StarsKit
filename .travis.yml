@@ -16,7 +16,7 @@ before_script:
 
 script:
 # It's only one command who count for valid or not build session
-- fastlane scan -s StarsKit
+- fastlane scan -s StarsKit-Example
 
 after_success:
 # I have put this in after_success coz it's failed.

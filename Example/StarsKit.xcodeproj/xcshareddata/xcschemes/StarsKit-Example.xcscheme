@@ -22,15 +22,15 @@
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "YES"
+            buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "StarsKit_Tests.xctest"
-               BlueprintName = "StarsKit_Tests"
+               BlueprintIdentifier = "44CBCAD9203EBD050045F777"
+               BuildableName = "StarsKit_ExampleTests.xctest"
+               BlueprintName = "StarsKit_ExampleTests"
                ReferencedContainer = "container:StarsKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "StarsKit_Tests.xctest"
-               BlueprintName = "StarsKit_Tests"
+               BlueprintIdentifier = "44CBCAD9203EBD050045F777"
+               BuildableName = "StarsKit_ExampleTests.xctest"
+               BlueprintName = "StarsKit_ExampleTests"
                ReferencedContainer = "container:StarsKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
