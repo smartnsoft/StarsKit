@@ -66,10 +66,12 @@ class ViewController: UIViewController {
         let data = try Data(contentsOf: URL(fileURLWithPath: path))
         if let localJSONConfiguration = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any?] {
           StarsKit.shared.updateConfig(from: localJSONConfiguration)
-          let bgImage = UIImage.gradient(from: UIColor.ex.fromHexa("#0024a6"),
-                                         end: UIColor.ex.fromHexa("#d8012a"),
-                                         rect: CGRect(x: 0, y: 0, width: 50, height: 50))
+//          let bgImageGradient = UIImage.gradient(from: CGS("#007BFF"),
+//                                         end: UIColor.ex.fromHexa("#FFC107"),
+//                                         rect: CGRect(x: 0, y: 0, width: 50, height: 50))
+          let bgImage = UIColor.ex.fromHexa("#42aaf4")?.ex.toImage()
           StarsKit.shared.graphicContext.backgroundHeaderTitleImage = bgImage
+          StarsKit.shared.graphicContext.actionButtonBackgroundColor = UIColor.ex.fromHexa("#007BFF")!
           StarsKit.shared.delegate = self
           StarsKit.shared.uiDelegate = self
           //          StarsKit.shared.graphicContext.emptyStarImage = nil
