@@ -13,6 +13,9 @@ abstract_target 'StarsKitAbstract' do
     pod 'SwiftDate', '~> 4.5.1'
   end
   
+  target 'StarsKit_ExampleUITests' do
+  end
+  
 end
 
 

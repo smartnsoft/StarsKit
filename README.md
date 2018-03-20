@@ -1,9 +1,9 @@
 # StarsKit
 
 [![CI Status](http://img.shields.io/travis/smartnsoft/StarsKit.svg?style=flat)](https://travis-ci.org/smartnsoft/StarsKit)
-[![Version](https://img.shields.io/cocoapods/v/StarsKit.svg?style=flat)](http://cocoapods.org/pods/StarsKit)
-[![License](https://img.shields.io/cocoapods/l/StarsKit.svg?style=flat)](http://cocoapods.org/pods/StarsKit)
-[![Platform](https://img.shields.io/cocoapods/p/StarsKit.svg?style=flat)](http://cocoapods.org/pods/StarsKit)
+[![Version](https://img.shields.io/cocoapods/v/StarsKit.svg?style=flat)](https://img.shields.io/cocoapods/v/StarsKit.svg?style=flat)
+[![License](https://img.shields.io/cocoapods/l/StarsKit.svg?style=flat)](https://img.shields.io/cocoapods/l/StarsKit.svg?style=flat)
+[![Platform](https://img.shields.io/cocoapods/p/StarsKit.svg?style=flat)](https://img.shields.io/cocoapods/p/StarsKit.svg?style=flat)
 
 <img width=100% src="./img/Cover.jpg">
 

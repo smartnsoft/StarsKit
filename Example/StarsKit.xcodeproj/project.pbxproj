@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E8CCB42337A3938097E6250 /* Pods_StarsKitAbstract_StarsKit_ExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1436CC997A251EB5CEF076DE /* Pods_StarsKitAbstract_StarsKit_ExampleUITests.framework */; };
 		4402EF10203E1E39004E82AE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4402EF0E203E1E39004E82AE /* Localizable.strings */; };
 		4421E1F6203D8ECB004F058F /* UIImage+StarsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4421E1F5203D8ECB004F058F /* UIImage+StarsKit.swift */; };
 		442A9027203C75EB00512A74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442A9026203C75EB00512A74 /* LaunchScreen.storyboard */; };
@@ -22,7 +23,6 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		CAA1F5F21459A5EAFAB2C65E /* Pods_StarsKitAbstract_StarsKit_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC9EE6816F8688BB05CE66C /* Pods_StarsKitAbstract_StarsKit_ExampleTests.framework */; };
-		F034C28FDCD991D00D3DBF6A /* Pods_StarsKit_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34350EA4936D1050D44070C7 /* Pods_StarsKit_ExampleTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +39,7 @@
 		01C52A637B4D435E246CB9BF /* Pods-StarsKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarsKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarsKit_Example/Pods-StarsKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		053750C0D92FE3A6234ECBCD /* Pods-StarsKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarsKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarsKit_Example/Pods-StarsKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		0E99C04096DE554B6BD01760 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1436CC997A251EB5CEF076DE /* Pods_StarsKitAbstract_StarsKit_ExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarsKitAbstract_StarsKit_ExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AFB7B276C0CC1C9E2A8D6CB /* Pods-StarsKit_ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarsKit_ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarsKit_ExampleTests/Pods-StarsKit_ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D51679C39681124B4443E86 /* Pods_StarsKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarsKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34350EA4936D1050D44070C7 /* Pods_StarsKit_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarsKit_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,7 +68,9 @@
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		65099E71E2C3E80A6060AA12 /* Pods-StarsKitAbstract-StarsKit_ExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarsKitAbstract-StarsKit_ExampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarsKitAbstract-StarsKit_ExampleUITests/Pods-StarsKitAbstract-StarsKit_ExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		670063F38A24658D28E3C66A /* Pods-StarsKitAbstract-StarsKit_ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarsKitAbstract-StarsKit_ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarsKitAbstract-StarsKit_ExampleTests/Pods-StarsKitAbstract-StarsKit_ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6C482853F34DC3E6411C7426 /* Pods-StarsKitAbstract-StarsKit_ExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarsKitAbstract-StarsKit_ExampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarsKitAbstract-StarsKit_ExampleUITests/Pods-StarsKitAbstract-StarsKit_ExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8553D2C6A6DE1EC2D7B0475F /* Pods-StarsKitAbstract-StarsKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarsKitAbstract-StarsKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarsKitAbstract-StarsKit_Example/Pods-StarsKitAbstract-StarsKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A4A903802E90B6A0A4775B01 /* StarsKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = StarsKit.podspec; path = ../StarsKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AF0E0142E4401BE273BF4737 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -83,7 +86,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F034C28FDCD991D00D3DBF6A /* Pods_StarsKit_ExampleTests.framework in Frameworks */,
 				CAA1F5F21459A5EAFAB2C65E /* Pods_StarsKitAbstract_StarsKit_ExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E8CCB42337A3938097E6250 /* Pods_StarsKitAbstract_StarsKit_ExampleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +213,7 @@
 				34350EA4936D1050D44070C7 /* Pods_StarsKit_ExampleTests.framework */,
 				B18033F3757FD75A6915F0E3 /* Pods_StarsKitAbstract_StarsKit_Example.framework */,
 				3FC9EE6816F8688BB05CE66C /* Pods_StarsKitAbstract_StarsKit_ExampleTests.framework */,
+				1436CC997A251EB5CEF076DE /* Pods_StarsKitAbstract_StarsKit_ExampleUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -227,6 +231,8 @@
 				8553D2C6A6DE1EC2D7B0475F /* Pods-StarsKitAbstract-StarsKit_Example.release.xcconfig */,
 				670063F38A24658D28E3C66A /* Pods-StarsKitAbstract-StarsKit_ExampleTests.debug.xcconfig */,
 				3F6DDF5EF0209A1770D33D8F /* Pods-StarsKitAbstract-StarsKit_ExampleTests.release.xcconfig */,
+				65099E71E2C3E80A6060AA12 /* Pods-StarsKitAbstract-StarsKit_ExampleUITests.debug.xcconfig */,
+				6C482853F34DC3E6411C7426 /* Pods-StarsKitAbstract-StarsKit_ExampleUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -258,9 +264,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44CBCAF7203ED4110045F777 /* Build configuration list for PBXNativeTarget "StarsKit_ExampleUITests" */;
 			buildPhases = (
+				BE9ED487546223A31FE45D55 /* [CP] Check Pods Manifest.lock */,
 				44CBCAEC203ED4110045F777 /* Sources */,
 				44CBCAED203ED4110045F777 /* Frameworks */,
 				44CBCAEE203ED4110045F777 /* Resources */,
+				7ED37AD09A74E3355F7EA89B /* [CP] Embed Pods Frameworks */,
+				6E1A5291391ABCFA78B7980C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -404,6 +413,45 @@
 			shellPath = /bin/sh;
 			shellScript = "$PODS_ROOT/SwiftLint/swiftlint autocorrect\n$PODS_ROOT/SwiftLint/swiftlint";
 		};
+		6E1A5291391ABCFA78B7980C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StarsKitAbstract-StarsKit_ExampleUITests/Pods-StarsKitAbstract-StarsKit_ExampleUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7ED37AD09A74E3355F7EA89B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-StarsKitAbstract-StarsKit_ExampleUITests/Pods-StarsKitAbstract-StarsKit_ExampleUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/Extra/Extra.framework",
+				"${BUILT_PRODUCTS_DIR}/Jelly/Jelly.framework",
+				"${BUILT_PRODUCTS_DIR}/StarsKit/StarsKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Extra.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Jelly.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StarsKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StarsKitAbstract-StarsKit_ExampleUITests/Pods-StarsKitAbstract-StarsKit_ExampleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8FF7162899C9615EC463BF3C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -461,6 +509,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StarsKitAbstract-StarsKit_ExampleTests/Pods-StarsKitAbstract-StarsKit_ExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE9ED487546223A31FE45D55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarsKitAbstract-StarsKit_ExampleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D373FB60F1B1882578BA2B46 /* [CP] Copy Pods Resources */ = {
@@ -612,6 +678,7 @@
 		};
 		44CBCAF8203ED4110045F777 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65099E71E2C3E80A6060AA12 /* Pods-StarsKitAbstract-StarsKit_ExampleUITests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -636,6 +703,7 @@
 		};
 		44CBCAF9203ED4110045F777 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C482853F34DC3E6411C7426 /* Pods-StarsKitAbstract-StarsKit_ExampleUITests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
