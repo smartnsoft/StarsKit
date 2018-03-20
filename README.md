@@ -90,6 +90,8 @@ You can also display the native `StoreKit` screen instead of custom screens (iOS
 - [X] Lifecycle display events ([will/did]appear/disappear)
 - [ ] Additional condition checking on the default check
 - [ ] Carthage integration
+- [ ] Configurable key for parsing
+- [ ] Firebase extension to bind Remote Config to StarsKit data
 
 ## Configurable metrics for display
 
