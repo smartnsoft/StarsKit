@@ -11,7 +11,7 @@
 
 StarsKit is a Swift library to simplify, customize and configure your app rating workflow.
 
-It can be based on a remote, local or static configuration data with optionals properties.
+It can be based on a remote, local or static configuration data with optionnals properties.
 
 <p align="center"><img width=32% src="./img/step_rate.png"> <img width=32% src="./img/step_feedback.png"> <img width=32% src="./img/step_store.png"></p>
 
@@ -28,15 +28,15 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Installation
 
 StarsKit is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+it, add the following line to your Podfile:
 
-```ruby
+``` ruby
 pod 'StarsKit'
 ```
 
-## Third party dependencies
+## Third-party dependencies
 
-Today we have third parties dependencies, but the purpose is to avoid them the most.
+Today we have third-parties dependencies, but the purpose is to avoid them the most.
 
 We also want to have a quickly available library and significant customization, we use 3 dependencies:
 
@@ -48,7 +48,7 @@ We also want to have a quickly available library and significant customization, 
 
 ### Behavior
 
-The main feature of the library is to **simply use static or dynamic (remote) configuration to show native or custom app rating screen**.
+The main feature of the library is to **use static or dynamic (remote) configuration to show native or custom app rating screen**.
 
 If the user chooses a negative rate, he will be redirected to the **feedback screen**.
 If the user chooses a positive rate, he will be redirected to the **Store review screen**.
@@ -115,7 +115,7 @@ You can specify metrics to trigger the default display behavior or use your own 
 ### Display the rating
 
 ```
-// Simply call:
+// Call this, the algorithm will do the rest:
 StarsKit.shared.displayRateIfNeeded()
 
 // You can also force the display:
@@ -128,7 +128,35 @@ You have to conform the data dictionary to the expected keys.
 
 **StarsKit offers you the possibility of using any configuration source**: local JSON file, static dictionnary, remote file (remote JSON or Firebase remote configuration file).
 
-To update the configuration, simply give the dictionnary data :
+JSON StarsKit configuration example:
+
+``` json
+{
+    "disabled": false,
+    "displaySessionCount": 3,
+    "mainTitle": "Your opinion interests us :)",
+    "mainText": "Do you like the app StarsKit?",
+    "mainActionButton": "Submit",
+    "positiveStarsLimit": 4,
+    "dislikeMainTitle": "Your opinion interests us",
+    "dislikeMainText": "Help us to improve the app StarsKit",
+    "dislikeActionButton": "Make a suggestion",
+    "dislikeExitButton": "Later",
+    "likeMainTitle": "You like our app! Thanks!",
+    "likeMainText": "Let us know on the AppStore in a minute!",
+    "likeActionButton": "Let's go!",
+    "likeExitButton": "Later 😥",
+    "maxNumberOfReminder": 3,
+    "maxDaysBetweenSession": 3,
+    "emailSupport": "starskit@smartnsoft.com",
+    "emailObject": "Application StarsKit",
+    "daysWithoutCrash": 15,
+    "daysBeforeAskingAgain": 3,
+    "emailHeaderContent": "Why do you not like the app?"
+}
+```
+
+To update the configuration, give the dictionnary data :
 
 ``` swift
 let data = try Data(contentsOf: URL(fileURLWithPath: path))
@@ -229,7 +257,7 @@ Go to [Comos repo](https://github.com/evgenyneu/Cosmos) for more information.
 
 ### Step screens
 
-- Simply create the desired xib screen, with the same name than in StarsKit
+- Create the desired xib screen, with the same name than in StarsKit
 - Specify the custom class and the module as "StarsKit"
 - Uncheck "Inherit Module From Target"
 
@@ -239,7 +267,7 @@ IBOutlets are optionnals, so you can decide if you want to implement them or not
 
 <p align="center"><img width=90% border=1 src="./img/custom_xib.png"></p>
 
-**Note**: if you want to test it in the demo project, simply check the `FeedbackViewController.xib` in the StarsKit-Example target.
+**Note**: if you want to test it in the demo project, check the `FeedbackViewController.xib` in the StarsKit-Example target.
 
 ### Override localizable strings
 
@@ -317,9 +345,7 @@ extension ViewController: StarsKitUIDelegate {
 
 ## Contributors
 
-Made in 🇫🇷 by the [Smart&Soft](https://smartnsoft.com/) iOS Team
-
-- Jean-Charles Sorin - Smart&Soft
+Made in 🇫🇷 by the [Smart&Soft](https://smartnsoft.com/) iOS Team.
 
 ## License
 
