@@ -26,6 +26,7 @@ import Cosmos
 public class StarsRateViewController: StepViewController {
   
   @IBOutlet weak var ibCosmosView: CosmosView!
+  @IBOutlet weak var ibSmileyRateView: SmileyRateView!
   
   init(graphicContext: StarsKitGraphicContext, coordinator: RatingCoordinator) {
     let nibName = "StarsRateViewController"
@@ -49,19 +50,30 @@ public class StarsRateViewController: StepViewController {
       self.ibActionButton?.isEnabled = false
     }
     
-    var cosmosSettings = StarsKit.shared.graphicContext.cosmosSettings
-    cosmosSettings.emptyImage = self.graphicContext.emptyStarImage
-    cosmosSettings.filledImage = self.graphicContext.filledStarImage
-    cosmosSettings.fillMode = .full
-    cosmosSettings.starSize = 33
-    self.ibCosmosView.settings = cosmosSettings
-    
-    self.ibCosmosView.didFinishTouchingCosmos = { [weak self] rating in
-      self?.coordinator?.endRating(to: rating)
-      self?.ibActionButton?.isEnabled = true
+    if StarsKit.shared.customImageMode  {
+      self.ibCosmosView.removeFromSuperview()
+      self.ibSmileyRateView.images = self.graphicContext.customImages
+      self.ibSmileyRateView.computeView()
+      self.ibSmileyRateView.didFinishTouchingCosmos = { [weak self] rating in
+        self?.coordinator?.endRating(to: rating)
+        self?.ibActionButton?.isEnabled = true
+      }
+    } else {
+      self.ibSmileyRateView.removeFromSuperview()
+      var cosmosSettings = StarsKit.shared.graphicContext.cosmosSettings
+      cosmosSettings.emptyImage = self.graphicContext.emptyStarImage
+      cosmosSettings.filledImage = self.graphicContext.filledStarImage
+      cosmosSettings.fillMode = .full
+      cosmosSettings.starSize = 33
+      self.ibCosmosView.settings = cosmosSettings
+      
+      self.ibCosmosView.didFinishTouchingCosmos = { [weak self] rating in
+        self?.coordinator?.endRating(to: rating)
+        self?.ibActionButton?.isEnabled = true
+      }
     }
   }
-
+  
   @IBAction func didTapActionButton(_ sender: Any) {
     self.coordinator?.validateRating(to: self.ibCosmosView.rating)
   }
@@ -69,5 +81,5 @@ public class StarsRateViewController: StepViewController {
   @IBAction public func didChooseDismissAction(_ sender: Any) {
     self.coordinator?.later()
   }
-
+  
 }

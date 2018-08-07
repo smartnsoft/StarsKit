@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,29 +16,27 @@
                 <outlet property="ibCosmosView" destination="VOZ-fG-jjk" id="ahP-LG-FEb"/>
                 <outlet property="ibIndicatorLabel" destination="pNY-HG-oer" id="nTZ-m4-F7B"/>
                 <outlet property="ibLaterButton" destination="cnS-nd-VTc" id="SXN-Ry-Sfy"/>
+                <outlet property="ibSmileyRateView" destination="4La-G7-vj8" id="a7n-4F-jXQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="383" height="225"/>
+            <rect key="frame" x="0.0" y="0.0" width="1168" height="317"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="e6b-Xs-CAc">
-                    <rect key="frame" x="0.0" y="10" width="383" height="195"/>
+                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="e6b-Xs-CAc">
+                    <rect key="frame" x="0.0" y="0.0" width="1168" height="287"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNY-HG-oer">
-                            <rect key="frame" x="30" y="0.0" width="383" height="19.5"/>
+                            <rect key="frame" x="30" y="0.0" width="1108" height="24.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOZ-fG-jjk" customClass="CosmosView" customModule="Cosmos">
-                            <rect key="frame" x="191.5" y="39.5" width="323" height="95.5"/>
+                            <rect key="frame" x="422.5" y="44.5" width="323" height="71"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="cFo-jS-vBk"/>
-                            </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="rating">
                                     <real key="value" value="5"/>
@@ -48,11 +46,15 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4La-G7-vj8" customClass="SmileyRateView" customModule="StarsKit" customModuleProvider="target">
+                            <rect key="frame" x="422.5" y="135.5" width="323" height="91.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3ZT-1G-8aI">
-                            <rect key="frame" x="30" y="155" width="383" height="40"/>
+                            <rect key="frame" x="30" y="247" width="1108" height="40"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnS-nd-VTc">
-                                    <rect key="frame" x="0.0" y="0.0" width="191.5" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="544" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="t6p-gJ-08i"/>
                                     </constraints>
@@ -62,7 +64,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukm-JX-UCC">
-                                    <rect key="frame" x="161.5" y="0.0" width="191.5" height="40"/>
+                                    <rect key="frame" x="564" y="0.0" width="544" height="40"/>
                                     <state key="normal" title="Button"/>
                                     <connections>
                                         <action selector="didTapActionButton:" destination="-1" eventType="touchUpInside" id="Ojf-kB-cWn"/>
@@ -73,9 +75,12 @@
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="3ZT-1G-8aI" secondAttribute="trailing" constant="30" id="7sP-tc-dIL"/>
+                        <constraint firstItem="4La-G7-vj8" firstAttribute="width" secondItem="VOZ-fG-jjk" secondAttribute="width" id="HWf-xV-Npw"/>
                         <constraint firstAttribute="trailing" secondItem="pNY-HG-oer" secondAttribute="trailing" constant="30" id="c3q-2x-Pu1"/>
+                        <constraint firstItem="4La-G7-vj8" firstAttribute="trailing" secondItem="VOZ-fG-jjk" secondAttribute="trailing" id="k6u-Ne-j3q"/>
                         <constraint firstItem="3ZT-1G-8aI" firstAttribute="leading" secondItem="e6b-Xs-CAc" secondAttribute="leading" constant="30" id="rgv-GG-bE9"/>
                         <constraint firstItem="pNY-HG-oer" firstAttribute="leading" secondItem="e6b-Xs-CAc" secondAttribute="leading" constant="30" id="tX7-TQ-ENc"/>
+                        <constraint firstItem="4La-G7-vj8" firstAttribute="leading" secondItem="VOZ-fG-jjk" secondAttribute="leading" id="we1-sD-hVZ"/>
                     </constraints>
                 </stackView>
             </subviews>
@@ -88,7 +93,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="-2.5" y="-163.5"/>
+            <point key="canvasLocation" x="-3" y="-160.5"/>
         </view>
     </objects>
 </document>

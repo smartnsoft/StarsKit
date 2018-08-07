@@ -60,6 +60,9 @@ public class StarsKitGraphicContext {
                                                       in: Bundle(for: StarsKit.self),
                                                       compatibleWith: nil)
   
+  public lazy var customImages: [UIImage]? = [UIImage(named: "shape_selected",
+                                                      in: Bundle(for: StarsKit.self),
+                                                      compatibleWith: nil)]
   public lazy var preferredStatusBarStyle = UIStatusBarStyle.lightContent
   public lazy var stepTransitionOptions: UIViewAnimationOptions = .transitionCrossDissolve
   

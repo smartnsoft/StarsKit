@@ -38,6 +38,9 @@ public class StarsKit {
   /// or validate after with a specific submit button.
   public var validateRatingButtonEnable = true
   
+  /// Defines if StarsKit will use custom images provided by you instead of the stars.
+  public var customImageMode = false
+  
   /// Defines if StarsKit will apply its own behavior process or if you want to apply yours.
   public var useDefaultBehavior = true
   

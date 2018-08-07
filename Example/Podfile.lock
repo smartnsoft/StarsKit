@@ -7,16 +7,24 @@ PODS:
     - Extra/UIKit (~> 1.1)
     - Jelly (~> 1.2)
   - SwiftDate (4.5.1)
-  - SwiftLint (0.25.0)
+  - SwiftLint (0.27.0)
 
 DEPENDENCIES:
   - StarsKit (from `../`)
   - SwiftDate (~> 4.5.1)
   - SwiftLint
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Cosmos
+    - Extra
+    - Jelly
+    - SwiftDate
+    - SwiftLint
+
 EXTERNAL SOURCES:
   StarsKit:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   Cosmos: a6dbd3d0baa0cc8f51f8598f7508d5a09d0a9ade
@@ -24,8 +32,8 @@ SPEC CHECKSUMS:
   Jelly: 70e542dd201460211f0f20042bc2c2d31ae239a1
   StarsKit: ce5c6f258f8ca4d87b7f88afcf4287b15b2bd09a
   SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
-  SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
 
 PODFILE CHECKSUM: 3b049c0acf565e8c11c3e49a4a2b93d8ea36f173
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
