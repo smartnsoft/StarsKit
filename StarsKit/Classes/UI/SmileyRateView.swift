@@ -6,40 +6,53 @@
 
 import UIKit
 
-
 @available(iOS 9.0, *)
 class SmileyRateView: UIView {
 
   @IBOutlet var ibStackView: UIStackView!
   
   var images: [UIImage]?
+  var rating: Double = 0
+  private let nibName = "SmileyRateView"
+  private var view: UIView!
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    commonInit()
+    xibSetUp()
   }
   
   required init?(coder aDecoder: NSCoder) {
      super.init(coder: aDecoder)
-    commonInit()
+    xibSetUp()
   }
   
-  private func commonInit() {
-    Bundle.main.loadNibNamed("SmileyRateView", owner: self, options: nil)
+  func xibSetUp() {
+    view = loadViewFromNib()
+    view.frame = self.bounds
+    view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+    addSubview(view)
+  }
+  
+  func loadViewFromNib() -> UIView? {
+    let bundle = Bundle(for: type(of: self))
+    let nib = UINib(nibName: nibName, bundle: bundle)
+    let view: UIView? = nib.instantiate(withOwner: self, options: nil)[0] as? UIView ?? nil
+    return view
   }
   
   /// Closure will be called when the user lifts finger from the cosmos view. The touch rating argument is passed to the closure.
-  open var didFinishTouching: ((Double)->())?
+  open var didFinishTouching: ((Double) -> Void)?
   
   func computeView () {
   
-    ibStackView.spacing = 0
+    self.ibStackView.spacing = 10
     var index = 1
     images?.forEach { (image: UIImage) in
       let button = UIButton(type: .custom)
       button.setImage(image, for: .normal)
       button.alpha = 1
       button.tag = index
+      button.imageView?.contentMode = .scaleAspectFit
       index += 1
       button.addTarget(self, action: #selector(SmileyRateView.selectRate(_:)), for: UIControlEvents.touchUpInside)
       self.ibStackView.addArrangedSubview(button)
@@ -48,7 +61,6 @@ class SmileyRateView: UIView {
   }
   
   @objc private func selectRate(_ sender: UIButton) {
-    
     if !sender.isSelected {
       self.ibStackView.arrangedSubviews.forEach { button in
         if let button = button as? UIButton, button != sender {
@@ -60,10 +72,10 @@ class SmileyRateView: UIView {
         }
       }
       self.animateButton(button: sender)
-      didFinishTouching?(Double(sender.tag))
+      self.rating = Double(sender.tag)
+      self.didFinishTouching?(Double(sender.tag))
     }
     sender.isSelected = true
-    
   }
   
   private func animateButton(button: UIButton) {

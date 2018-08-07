@@ -52,6 +52,7 @@ class ViewController: UIViewController {
   
   @IBOutlet weak var ibSessionintervalChecking: UISwitch!
   
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -71,6 +72,16 @@ class ViewController: UIViewController {
 //                                         rect: CGRect(x: 0, y: 0, width: 50, height: 50))
           let bgImage = UIColor.ex.fromHexa("#42aaf4")?.ex.toImage()
           StarsKit.shared.graphicContext.backgroundHeaderTitleImage = bgImage
+          
+          if let image1 = UIImage(named: "ic_notation_1",in: Bundle(for: StarsKit.self),
+                                  compatibleWith: nil), let image2 = UIImage(named: "ic_notation_2",in: Bundle(for: StarsKit.self),
+                                                                             compatibleWith: nil), let image3 = UIImage(named: "ic_notation_3",in: Bundle(for: StarsKit.self),
+                                                                                                                        compatibleWith: nil), let image4 = UIImage(named: "ic_notation_4",in: Bundle(for: StarsKit.self),
+                                                                                                                                                                   compatibleWith: nil), let image5 = UIImage(named: "ic_notation_5",in: Bundle(for: StarsKit.self),
+                                                                                                                                                                                                              compatibleWith: nil) {
+          StarsKit.shared.graphicContext.customImages = [image1, image2, image3, image4, image5]
+        }
+        
           StarsKit.shared.graphicContext.actionButtonBackgroundColor = UIColor.ex.fromHexa("#007BFF")!
           StarsKit.shared.delegate = self
           StarsKit.shared.uiDelegate = self
@@ -105,6 +116,10 @@ class ViewController: UIViewController {
       })
     }
     
+  }
+  
+  @IBAction func didSwitchCustomImageMode(_ sender: UISwitch) {
+    StarsKit.shared.customImageMode = sender.isOn
   }
   
   @IBAction func didSwitchNativeRating(_ sender: UISwitch) {

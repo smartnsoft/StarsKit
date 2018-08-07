@@ -27,6 +27,7 @@ public class StarsRateViewController: StepViewController {
   
   @IBOutlet weak var ibCosmosView: CosmosView!
   @IBOutlet weak var ibSmileyRateView: SmileyRateView!
+  @IBOutlet weak var ibStackView: UIStackView!
   
   init(graphicContext: StarsKitGraphicContext, coordinator: RatingCoordinator) {
     let nibName = "StarsRateViewController"
@@ -50,11 +51,11 @@ public class StarsRateViewController: StepViewController {
       self.ibActionButton?.isEnabled = false
     }
     
-    if StarsKit.shared.customImageMode  {
-      self.ibCosmosView.removeFromSuperview()
-      self.ibSmileyRateView.images = self.graphicContext.customImages
+    if StarsKit.shared.customImageMode {
+     self.ibCosmosView.removeFromSuperview()
+      self.ibSmileyRateView.images = StarsKit.shared.graphicContext.customImages
       self.ibSmileyRateView.computeView()
-      self.ibSmileyRateView.didFinishTouchingCosmos = { [weak self] rating in
+      self.ibSmileyRateView.didFinishTouching = { [weak self] rating in
         self?.coordinator?.endRating(to: rating)
         self?.ibActionButton?.isEnabled = true
       }
@@ -75,7 +76,7 @@ public class StarsRateViewController: StepViewController {
   }
   
   @IBAction func didTapActionButton(_ sender: Any) {
-    self.coordinator?.validateRating(to: self.ibCosmosView.rating)
+    self.coordinator?.validateRating(to: StarsKit.shared.customImageMode ?self.ibSmileyRateView.rating : self.ibCosmosView.rating )
   }
   
   @IBAction public func didChooseDismissAction(_ sender: Any) {
