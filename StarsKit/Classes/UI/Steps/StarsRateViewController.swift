@@ -25,9 +25,11 @@ import Cosmos
 
 public class StarsRateViewController: StepViewController {
   
-  @IBOutlet weak var ibCosmosView: CosmosView!
+  @IBOutlet weak var ibStarsRateView: StarsView!
   @IBOutlet weak var ibSmileyRateView: SmileyRateView!
   @IBOutlet weak var ibStackView: UIStackView!
+  
+  @IBOutlet var ibRateViews: [RateView]!
   
   init(graphicContext: StarsKitGraphicContext, coordinator: RatingCoordinator) {
     let nibName = "StarsRateViewController"
@@ -51,36 +53,33 @@ public class StarsRateViewController: StepViewController {
       self.ibActionButton?.isEnabled = false
     }
     
+    for rateView in self.ibRateViews {
+      rateView.delegate = self
+    }
+    
     if StarsKit.shared.customImageMode {
-     self.ibCosmosView.removeFromSuperview()
-      self.ibSmileyRateView.images = StarsKit.shared.graphicContext.customImages
+     self.ibStarsRateView.removeFromSuperview()
       self.ibSmileyRateView.computeView()
-      self.ibSmileyRateView.didFinishTouching = { [weak self] rating in
-        self?.coordinator?.endRating(to: rating)
-        self?.ibActionButton?.isEnabled = true
-      }
     } else {
       self.ibSmileyRateView.removeFromSuperview()
-      var cosmosSettings = StarsKit.shared.graphicContext.cosmosSettings
-      cosmosSettings.emptyImage = self.graphicContext.emptyStarImage
-      cosmosSettings.filledImage = self.graphicContext.filledStarImage
-      cosmosSettings.fillMode = .full
-      cosmosSettings.starSize = 33
-      self.ibCosmosView.settings = cosmosSettings
-      
-      self.ibCosmosView.didFinishTouchingCosmos = { [weak self] rating in
-        self?.coordinator?.endRating(to: rating)
-        self?.ibActionButton?.isEnabled = true
-      }
     }
   }
   
   @IBAction func didTapActionButton(_ sender: Any) {
-    self.coordinator?.validateRating(to: StarsKit.shared.customImageMode ?self.ibSmileyRateView.rating : self.ibCosmosView.rating )
+    self.coordinator?.validateRating(to: StarsKit.shared.customImageMode ?self.ibSmileyRateView.rating : self.ibStarsRateView.rating )
   }
   
   @IBAction public func didChooseDismissAction(_ sender: Any) {
     self.coordinator?.later()
+  }
+  
+}
+
+extension StarsRateViewController: RateViewDelegate {
+  
+  public func onSelectRate(rating: Double) {
+    self.coordinator?.endRating(to: rating)
+    self.ibActionButton?.isEnabled = true
   }
   
 }

@@ -13,12 +13,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StarsRateViewController" customModule="StarsKit" customModuleProvider="target">
             <connections>
                 <outlet property="ibActionButton" destination="ukm-JX-UCC" id="o4H-9S-gWh"/>
-                <outlet property="ibCosmosView" destination="VOZ-fG-jjk" id="ahP-LG-FEb"/>
                 <outlet property="ibIndicatorLabel" destination="pNY-HG-oer" id="nTZ-m4-F7B"/>
                 <outlet property="ibLaterButton" destination="cnS-nd-VTc" id="SXN-Ry-Sfy"/>
                 <outlet property="ibSmileyRateView" destination="4La-G7-vj8" id="a7n-4F-jXQ"/>
                 <outlet property="ibStackView" destination="e6b-Xs-CAc" id="z5y-So-2lN"/>
+                <outlet property="ibStarsRateView" destination="VOZ-fG-jjk" id="ahP-LG-FEb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="ibRateViews" destination="VOZ-fG-jjk" collectionClass="NSMutableArray" id="Z2D-uv-uZU"/>
+                <outletCollection property="ibRateViews" destination="4La-G7-vj8" collectionClass="NSMutableArray" id="2QG-KH-isT"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -35,7 +37,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOZ-fG-jjk" customClass="CosmosView" customModule="Cosmos">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOZ-fG-jjk" customClass="StarsView" customModule="StarsKit" customModuleProvider="target">
                             <rect key="frame" x="422.5" y="40.5" width="323" height="86"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <userDefinedRuntimeAttributes>

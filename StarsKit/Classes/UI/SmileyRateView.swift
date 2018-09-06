@@ -1,14 +1,33 @@
+// The MIT License (MIT)
 //
-//  SmileyRateView.swift
+// Copyright (c) 2018 Smart&Soft
 //
-//  Created by Willy on 06/08/2018.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 
 import UIKit
 
 @available(iOS 9.0, *)
-class SmileyRateView: UIView {
 
+class SmileyRateView: UIView, RateView {
+  
+  var delegate: RateViewDelegate?
+  
   @IBOutlet var ibStackView: UIStackView!
   
   var images: [UIImage]?
@@ -39,12 +58,9 @@ class SmileyRateView: UIView {
     let view: UIView? = nib.instantiate(withOwner: self, options: nil)[0] as? UIView ?? nil
     return view
   }
-  
-  /// Closure will be called when the user lifts finger from the cosmos view. The touch rating argument is passed to the closure.
-  open var didFinishTouching: ((Double) -> Void)?
-  
+
   func computeView () {
-  
+    self.images = StarsKit.shared.graphicContext.customImages
     self.ibStackView.spacing = 10
     var index = 1
     images?.forEach { (image: UIImage) in
@@ -63,17 +79,16 @@ class SmileyRateView: UIView {
   @objc private func selectRate(_ sender: UIButton) {
     if !sender.isSelected {
       self.ibStackView.arrangedSubviews.forEach { button in
-        if let button = button as? UIButton, button != sender {
-          button.isSelected = false
-          button.alpha = 0.5
-          UIView.animate(withDuration: 0.3) {
-            button.transform = CGAffineTransform.identity
-          }
+      guard let button = button as? UIButton, button != sender else { return }
+        button.isSelected = false
+        button.alpha = 0.5
+        UIView.animate(withDuration: 0.3) {
+          button.transform = CGAffineTransform.identity
         }
       }
       self.animateButton(button: sender)
       self.rating = Double(sender.tag)
-      self.didFinishTouching?(Double(sender.tag))
+      self.delegate?.onSelectRate(rating: Double(sender.tag))
     }
     sender.isSelected = true
   }

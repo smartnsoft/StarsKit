@@ -52,7 +52,7 @@ public class StarsKitGraphicContext {
   public lazy var laterTitleFont: UIFont = UIFont.boldSystemFont(ofSize: 15)
   public lazy var laterTitleTintColor: UIColor = .lightGray
   
-  // Stars images if need, else use the cosmos settings below
+  // Stars images if need, else use the cosmos settings below, only used when customImageMode is set to false
   public lazy var emptyStarImage: UIImage? = UIImage(named: "shape_default",
                                                      in: Bundle(for: StarsKit.self),
                                                      compatibleWith: nil)
@@ -60,7 +60,18 @@ public class StarsKitGraphicContext {
                                                       in: Bundle(for: StarsKit.self),
                                                       compatibleWith: nil)
   
-  public  var customImages: [UIImage]?
+  // Customs images if need, only used when customImageMode is set to true
+  public  var customImages: [UIImage]? {
+    var images: [UIImage] = []
+    if let image1 = UIImage(named: "ic_notation_1", in: Bundle(for: StarsKit.self), compatibleWith: nil),
+      let image2 = UIImage(named: "ic_notation_2", in: Bundle(for: StarsKit.self), compatibleWith: nil),
+      let image3 = UIImage(named: "ic_notation_3", in: Bundle(for: StarsKit.self), compatibleWith: nil),
+      let image4 = UIImage(named: "ic_notation_4", in: Bundle(for: StarsKit.self), compatibleWith: nil),
+      let image5 = UIImage(named: "ic_notation_5", in: Bundle(for: StarsKit.self), compatibleWith: nil) {
+      images = [image1, image2, image3, image4, image5]
+    }
+    return images
+  }
   
   public lazy var preferredStatusBarStyle = UIStatusBarStyle.lightContent
   public lazy var stepTransitionOptions: UIViewAnimationOptions = .transitionCrossDissolve
