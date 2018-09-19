@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary          = 'StarsKit is a Swift library to simplify, customize and configure your app rating workflow.'
 
   s.homepage         = 'https://github.com/smartnsoft/StarsKit'
-  s.screenshots      = 'https://github.com/smartnsoft/StarsKit/blob/master/img/step_rate.png', 'https://github.com/smartnsoft/StarsKit/blob/master/img/step_feedback.png', 'https://github.com/smartnsoft/StarsKit/blob/master/img/step_store.png'
+  s.screenshots      = 'https://github.com/smartnsoft/StarsKit/blob/master/img/step_rate.png?raw=true', 'https://github.com/smartnsoft/StarsKit/blob/master/img/step_feedback.png?raw=true', 'https://github.com/smartnsoft/StarsKit/blob/master/img/step_store.png?raw=true'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Smart&Soft' => 'contact@smartnsoft.com' }
   s.source           = { :git => 'https://github.com/smartnsoft/StarsKit.git', :tag => s.version.to_s }
