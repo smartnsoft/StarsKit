@@ -35,6 +35,15 @@ public final class StarsKitConfiguration {
       UserDefaults.standard.set(newValue, forKey: StarsKitConfigProperties.disabled.userDefaultsKey)
     }
   }
+
+  public internal(set) var prefersNativeRating: Bool {
+    get {
+      return UserDefaults.standard.bool(forKey: StarsKitConfigProperties.prefersNativeRating.userDefaultsKey)
+    }
+    set {
+      UserDefaults.standard.set(newValue, forKey: StarsKitConfigProperties.prefersNativeRating.userDefaultsKey)
+    }
+  }
   
   public internal(set) var displaySessionCount: Int {
     get {
@@ -132,13 +141,13 @@ public final class StarsKitConfiguration {
   ///
   /// - Parameter config: Key-Value dictionnary with StarsKitProperties & StarsKitLocalizableKeys keys
   func update(with config: [String: Any?]) {
-    
+
     self.updateMetrics(from: config)
     self.updateLocalizables(from: config)
   }
   
   // MARK: Private methods
-  
+
   /// Update localizable UserDefaults strings
   ///
   /// - Parameter config: Key-Value dictionnary with StarsKitLocalizableKeys keys
@@ -154,10 +163,13 @@ public final class StarsKitConfiguration {
   ///
   /// - Parameter config: Key-Value dictionnary with StarsKitProperties keys
   private func updateMetrics(from config: [String: Any?]) {
-    if let isDisabled = config[StarsKitConfigProperties.disabled.rawValue] as? Bool {
-      self.disabled = isDisabled
+
+    StarsKitConfigProperties.allBoolValues.forEach { (property) in
+      if let boolValue = config[property.rawValue] as? Bool {
+        UserDefaults.standard.setValue(boolValue, forKey: property.userDefaultsKey)
+      }
     }
-    
+
     StarsKitConfigProperties.allIntValues.forEach { (property) in
       if let intValue = config[property.rawValue] as? Int {
         self.updateInt(value: intValue, for: property)

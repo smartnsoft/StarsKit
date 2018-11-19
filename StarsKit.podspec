@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'StarsKit'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'StarsKit is a Swift library to simplify, customize and configure your app rating workflow.'
 
   s.homepage         = 'https://github.com/smartnsoft/StarsKit'

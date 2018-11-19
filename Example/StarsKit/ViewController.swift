@@ -114,10 +114,6 @@ class ViewController: UIViewController {
     StarsKit.shared.customImageMode = sender.isOn
   }
   
-  @IBAction func didSwitchNativeRating(_ sender: UISwitch) {
-    StarsKit.shared.priorityUseNativeRate = sender.isOn
-  }
-  
   @IBAction func didSwitchLocalizable(_ sender: UISwitch) {
     StarsKit.shared.localLocalizableStringsEnabled = sender.isOn
   }
