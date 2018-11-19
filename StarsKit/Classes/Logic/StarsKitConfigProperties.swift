@@ -27,6 +27,7 @@ import Foundation
 /// Those keys will be used in the configuration update via a dictionnary.
 internal enum StarsKitConfigProperties: String {
   case disabled
+  case prefersNativeRating
   case displaySessionCount
   case positiveStarsLimit
   case daysWithoutCrash
@@ -36,6 +37,9 @@ internal enum StarsKitConfigProperties: String {
   case emailSupport
   case emailObject
   case emailHeaderContent
+
+  static let allBoolValues: [StarsKitConfigProperties] = [.disabled,
+                                                          .prefersNativeRating]
   
   static let allIntValues: [StarsKitConfigProperties] = [.displaySessionCount,
                                                           .positiveStarsLimit,

@@ -1,5 +1,6 @@
 {
     "disabled": false,
+    "prefersNativeRating": false,
     "displaySessionCount": 3,
     "mainTitle": "Your opinion interests us :)",
     "mainText": "Do you like the app StarsKit?",

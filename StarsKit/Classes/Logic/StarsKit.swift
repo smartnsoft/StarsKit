@@ -44,9 +44,6 @@ public class StarsKit {
   /// Defines if StarsKit will apply its own behavior process or if you want to apply yours.
   public var useDefaultBehavior = true
   
-  /// Defines if you want to enable the StoreKit Rating Controller (from iOS 10.3 only).
-  public var priorityUseNativeRate = false
-  
   /// Defines if you want to enable the time condition space between to sessions.
   ///
   /// If the session set is to close in the given period time, the session number will not be set.
@@ -97,7 +94,7 @@ public class StarsKit {
       || (self.useDefaultBehavior && StarsKitChecker.needDisplayRateScreen(for: self))
       || (self.delegate != nil && self.delegate?.needCustomDisplayRateScreen() == true) {
       
-      if self.priorityUseNativeRate {
+      if configuration.prefersNativeRating {
         //Use 10.3 + native app rating
         if #available(iOS 10.3, *) {
           SKStoreReviewController.requestReview()
@@ -136,6 +133,7 @@ public class StarsKit {
     self.configuration.daysBeforeAskingAgain = 0
     self.configuration.daysWithoutCrash = 0
     self.configuration.disabled = false
+    self.configuration.prefersNativeRating = false
     self.configuration.displaySessionCount = 0
     self.configuration.maxDaysBetweenSession = 0
     self.configuration.maxNumberOfReminder = 0
