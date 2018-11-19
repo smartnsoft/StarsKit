@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
     ]
 
   s.frameworks = 'UIKit'
-  s.dependency 'Cosmos', '~> 15.0'
-  s.dependency 'Extra/UIKit', '~> 1.1'
-  s.dependency 'Jelly', '~> 1.2'
+  s.dependency 'Cosmos', '15.0'
+  s.dependency 'Extra/UIKit', '1.1'
+  s.dependency 'Jelly', '1.2.4'
 end

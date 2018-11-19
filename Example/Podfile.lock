@@ -5,7 +5,7 @@ PODS:
   - StarsKit (0.3.0):
     - Cosmos (~> 15.0)
     - Extra/UIKit (~> 1.1)
-    - Jelly (~> 1.2)
+    - Jelly (~> 1.2.4)
   - SwiftDate (4.5.1)
   - SwiftLint (0.27.0)
 
@@ -30,7 +30,7 @@ SPEC CHECKSUMS:
   Cosmos: a6dbd3d0baa0cc8f51f8598f7508d5a09d0a9ade
   Extra: 7c4e5aff4904ecdadc615f63d4c2f0c20910c028
   Jelly: 70e542dd201460211f0f20042bc2c2d31ae239a1
-  StarsKit: b9b0cbe6bfb9dee0c2c65ff3ae93a2d388dd52fb
+  StarsKit: 76644fc035a63308bd5ad7cfd5fb28878c5e8059
   SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
 
