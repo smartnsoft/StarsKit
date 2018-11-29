@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'StarsKit'
-  s.version          = '0.3.0'
+  s.version          = '0.3.1'
   s.summary          = 'StarsKit is a Swift library to simplify, customize and configure your app rating workflow.'
 
   s.homepage         = 'https://github.com/smartnsoft/StarsKit'
@@ -21,6 +21,6 @@ Pod::Spec.new do |s|
 
   s.frameworks = 'UIKit'
   s.dependency 'Cosmos', '15.0'
-  s.dependency 'Extra/UIKit', '1.1'
+  s.dependency 'Extra/UIKit', '~> 1.1.0'
   s.dependency 'Jelly', '1.2.4'
 end
