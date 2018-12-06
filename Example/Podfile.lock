@@ -1,11 +1,11 @@
 PODS:
-  - Cosmos (15.0.0)
-  - Extra/UIKit (1.1.1)
-  - Jelly (1.2.4)
-  - StarsKit (0.3.0):
-    - Cosmos (~> 15.0)
-    - Extra/UIKit (~> 1.1)
-    - Jelly (~> 1.2.4)
+  - Cosmos (17.0.0)
+  - Extra/UIKit (1.2.0)
+  - Jelly (1.2.5)
+  - StarsKit (0.4.0):
+    - Cosmos (~> 17.0)
+    - Extra/UIKit (~> 1.2.0)
+    - Jelly (~> 1.2.5)
   - SwiftDate (4.5.1)
   - SwiftLint (0.27.0)
 
@@ -27,10 +27,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Cosmos: a6dbd3d0baa0cc8f51f8598f7508d5a09d0a9ade
-  Extra: 7c4e5aff4904ecdadc615f63d4c2f0c20910c028
-  Jelly: 70e542dd201460211f0f20042bc2c2d31ae239a1
-  StarsKit: 76644fc035a63308bd5ad7cfd5fb28878c5e8059
+  Cosmos: 309e489f21ffc91a1eeecfebef7f817cd2fcfba6
+  Extra: 29591a8ffff56c0152b05b857b6d5e395d5bd520
+  Jelly: cc6b6a81ed3c476fe0126b10526ee9eb8c98bb45
+  StarsKit: e9fb17bee108159cae27426a15a702586b2fec39
   SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
 

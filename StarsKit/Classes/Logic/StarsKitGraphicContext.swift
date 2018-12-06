@@ -74,7 +74,7 @@ public class StarsKitGraphicContext {
   }
   
   public lazy var preferredStatusBarStyle = UIStatusBarStyle.lightContent
-  public lazy var stepTransitionOptions: UIViewAnimationOptions = .transitionCrossDissolve
+  public lazy var stepTransitionOptions: UIView.AnimationOptions = .transitionCrossDissolve
   
   // MARK: Third parties customizations
   

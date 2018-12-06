@@ -26,7 +26,7 @@ import UIKit
 
 class SmileyRateView: UIView, RateView {
   
-  var delegate: RateViewDelegate?
+  weak var delegate: RateViewDelegate?
   
   @IBOutlet var ibStackView: UIStackView!
   
@@ -48,7 +48,7 @@ class SmileyRateView: UIView, RateView {
   func xibSetUp() {
     view = loadViewFromNib()
     view.frame = self.bounds
-    view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+    view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     addSubview(view)
   }
   
@@ -70,7 +70,7 @@ class SmileyRateView: UIView, RateView {
       button.tag = index
       button.imageView?.contentMode = .scaleAspectFit
       index += 1
-      button.addTarget(self, action: #selector(SmileyRateView.selectRate(_:)), for: UIControlEvents.touchUpInside)
+      button.addTarget(self, action: #selector(SmileyRateView.selectRate(_:)), for: .touchUpInside)
       self.ibStackView.addArrangedSubview(button)
     }
     
