@@ -14,7 +14,6 @@ StarsKit is a Swift library to simplify, customize and configure your iOS app ra
 It can be based on a remote, local or static configuration data with optionnals properties.
 
 <p align="center"><img width=32% src="./img/step_rate.png"> <img width=32% src="./img/step_feedback.png"> <img width=32% src="./img/step_store.png"></p>
-
 ## Requirements
 
 - iOS 9.0+
@@ -68,7 +67,6 @@ It's the same when the user chooses to rate the app:
 You can also display the native `StoreKit` screen instead of custom screens (iOS 10.3+ only):
 
 <p align="center"><img width=32% src="./img/storekit.png"></p>
-
 ### Features list
 
 - [X] Use localizable or configuration strings
@@ -175,7 +173,8 @@ You can also decide of:
 
 - **`validateRatingButtonEnable`**: disable or enable the submit step rating. If disabled, the rate will be instantly submited after user touch.
 - **`useDefaultBehavior`**: disable the default StarsKit display checking behavior and implement your own in the `StarsKitDelegate`
-- **`useSessionSpaceChecking`**: disable/enable the default checking of time elapsed between sessions. If enabled, when you update the session count, **the session count will only be updated if the time between session is completely elapsed.**. In others words, the user not enough uses the app for incrementing the session count. The same if you want to increment the session the same day than the last before, it will not be set.
+- **`useSessionSpaceChecking`**: enable/disable the time checking when incrementing StarsKit's sessions counter.
+  Default is `true` which means StarsKit will **only count 1 session a day**, but also that StarsKit will **reset the sessoins counter** if too much time has passed since the last session. (see `StarsKitConfiguration.maxDaysBetweenSession`).That behavior allow us to target only active users.
 - **`localLocalizableStringsEnabled`**: enable the localization titles instead of configuration one. It will use the default StarKit strings. If you override them in your app localizable strings (with the same key), it will take them 😎.
 
 ### `StarsKitContext`: update the metrics 
@@ -241,7 +240,6 @@ Customizable items :
 StarsKit uses Jelly fro customizable transitions. You can specify your own via the `jellyCustomTransition` property in the `StarsKitGraphicContext`.
 
 <p align="center"><img width=48% src="./img/presentation_black.png"> <img width=48% src="./img/presentation_bottom.png"></p>
-
 Go to [Jelly repo](https://github.com/SebastianBoldt/Jelly) for more information.
 
 ### Stars (Cosmos)
@@ -252,7 +250,6 @@ You specify your own stars images (filled/empty).
 If nil, Cosmos will use the specified star path via `starPoints`.
 
 <p align="center"><img width=60% border=1 src="https://github.com/evgenyneu/Cosmos/raw/master/graphics/Screenshots/cosmos_star_rating_control_for_ios_swift_space.png"></p>
-
 Go to [Comos repo](https://github.com/evgenyneu/Cosmos) for more information.
 
 ### Step screens
@@ -264,9 +261,7 @@ Go to [Comos repo](https://github.com/evgenyneu/Cosmos) for more information.
 IBOutlets are optionnals, so you can decide if you want to implement them or not.
 
 <p align="center"><img width=90% border=1 src="./img/custom_xib_class.png"></p>
-
 <p align="center"><img width=90% border=1 src="./img/custom_xib.png"></p>
-
 **Note**: if you want to test it in the demo project, check the `FeedbackViewController.xib` in the StarsKit-Example target.
 
 ### Override localizable strings

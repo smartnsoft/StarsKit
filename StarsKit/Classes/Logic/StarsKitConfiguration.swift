@@ -36,6 +36,8 @@ public final class StarsKitConfiguration {
     }
   }
 
+  /// When `SKStoreReviewController` is available, should StarsKit ask for a rating using this, or
+  /// should the custom UI always be used?
   public internal(set) var prefersNativeRating: Bool {
     get {
       return UserDefaults.standard.bool(forKey: StarsKitConfigProperties.prefersNativeRating.userDefaultsKey)
@@ -44,7 +46,8 @@ public final class StarsKitConfiguration {
       UserDefaults.standard.set(newValue, forKey: StarsKitConfigProperties.prefersNativeRating.userDefaultsKey)
     }
   }
-  
+
+  /// The minimum number of sessions to have before asking for a rating.
   public internal(set) var displaySessionCount: Int {
     get {
       return UserDefaults.standard.integer(forKey: StarsKitConfigProperties.displaySessionCount.userDefaultsKey)
@@ -55,6 +58,10 @@ public final class StarsKitConfiguration {
     }
   }
   
+  /// The treshold value determing if the user's rating is positive or negative.
+  /// That is to say: values in [0,`positiveStarsLimit`[ will be considered as negative,
+  /// and values in [`positiveStarsLimit`,5] will be positive
+  ///
   public internal(set) var positiveStarsLimit: Int {
     get {
       return UserDefaults.standard.integer(forKey: StarsKitConfigProperties.positiveStarsLimit.userDefaultsKey)
@@ -65,6 +72,7 @@ public final class StarsKitConfiguration {
     }
   }
   
+  /// The minimum number of days without crash to wait before asking for a rating.
   public internal(set) var daysWithoutCrash: Int {
     get {
       return UserDefaults.standard.integer(forKey: StarsKitConfigProperties.daysWithoutCrash.userDefaultsKey)
@@ -75,6 +83,7 @@ public final class StarsKitConfiguration {
     }
   }
   
+  /// The number of time StarsKit will ask for a rating before giving up.
   public internal(set) var maxNumberOfReminder: Int {
     get {
       return UserDefaults.standard.integer(forKey: StarsKitConfigProperties.maxNumberOfReminder.userDefaultsKey)
@@ -85,6 +94,11 @@ public final class StarsKitConfiguration {
     }
   }
   
+  /// When `StarsKit.shared.useSessionSpaceChecking = true`, the maximum number of days between 2 registered sessions.
+  /// If you increment the sessions counter and the last session is older than `maxDaysBetweenSession` days,
+  /// the session count will be reset.
+  ///
+  /// Not used if `StarsKit.shared.useSessionSpaceChecking = false`
   public internal(set) var maxDaysBetweenSession: Int {
     get {
       return UserDefaults.standard.integer(forKey: StarsKitConfigProperties.maxDaysBetweenSession.userDefaultsKey)
@@ -94,7 +108,8 @@ public final class StarsKitConfiguration {
       UserDefaults.standard.set(newValue, forKey: StarsKitConfigProperties.maxDaysBetweenSession.userDefaultsKey)
     }
   }
-  
+
+  /// The minimum number of days to wait before asking for a rating again.
   public internal(set) var daysBeforeAskingAgain: Int {
     get {
       return UserDefaults.standard.integer(forKey: StarsKitConfigProperties.daysBeforeAskingAgain.userDefaultsKey)
@@ -104,7 +119,8 @@ public final class StarsKitConfiguration {
       UserDefaults.standard.set(newValue, forKey: StarsKitConfigProperties.daysBeforeAskingAgain.userDefaultsKey)
     }
   }
-  
+
+  /// The email adress to be used in the user's feedback after a negative rating.
   public internal(set) var emailSupport: String? {
     get {
       return UserDefaults.standard.string(forKey: StarsKitConfigProperties.emailSupport.userDefaultsKey)
@@ -114,7 +130,8 @@ public final class StarsKitConfiguration {
       UserDefaults.standard.set(newValue, forKey: StarsKitConfigProperties.emailSupport.userDefaultsKey)
     }
   }
-  
+
+  /// The object of the email to be sent as feedback after a negative rating.
   public internal(set) var emailObject: String? {
     get {
       return UserDefaults.standard.string(forKey: StarsKitConfigProperties.emailObject.userDefaultsKey)
@@ -124,7 +141,8 @@ public final class StarsKitConfiguration {
       UserDefaults.standard.set(newValue, forKey: StarsKitConfigProperties.emailObject.userDefaultsKey)
     }
   }
-  
+
+  /// The content's placeholder of the email to be sent as feedback after a negative rating.
   public internal(set) var emailHeaderContent: String? {
     get {
       return UserDefaults.standard.string(forKey: StarsKitConfigProperties.emailHeaderContent.userDefaultsKey)
