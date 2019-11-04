@@ -56,6 +56,7 @@ public class StepViewController: UIViewController {
     self.ibIndicatorLabel?.textAlignment = .center
     self.ibIndicatorLabel?.text = self.coordinator?.step.indicatorTitle()
     self.ibIndicatorLabel?.font = self.graphicContext.indicationTitleFont
+    self.ibIndicatorLabel?.textColor = self.graphicContext.indicationTitleColor
     
     self.ibActionButton?.setTitle(self.coordinator?.step.actionTitle(), for: .normal)
     self.ibActionButton?.tintColor = self.graphicContext.actionButtonTitleColor
