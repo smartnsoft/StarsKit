@@ -14,6 +14,7 @@ StarsKit is a Swift library to simplify, customize and configure your iOS app ra
 It can be based on a remote, local or static configuration data with optionnals properties.
 
 <p align="center"><img width=32% src="./img/step_rate.png"> <img width=32% src="./img/step_feedback.png"> <img width=32% src="./img/step_store.png"></p>
+
 ## Requirements
 
 - iOS 9.0+
